@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@core/*": ["./src/core/*"],
+      "@gateway/*": ["./src/gateway/*"],
+      "@channels/*": ["./src/channels/*"],
+      "@agents/*": ["./src/agents/*"],
+      "@tools/*": ["./src/tools/*"],
+      "@skills/*": ["./src/skills/*"],
+      "@memory/*": ["./src/memory/*"],
+      "@hooks/*": ["./src/hooks/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "tests"]
+}

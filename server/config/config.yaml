@@ -1,0 +1,31 @@
+# MyOpenClaw 主配置
+# 所有子配置通过 include 引入
+
+include:
+  - agents/default.yaml
+  - channels/webchat.yaml
+  - channels/telegram.yaml
+  - channels/discord.yaml
+  - channels/feishu.yaml
+
+# ── Gateway 网关配置 ──
+gateway:
+  host: 127.0.0.1
+  port: 18780
+  heartbeatInterval: 30000
+  maxConnections: 1000
+  requestTimeout: 30000
+
+# ── 日志 ──
+logging:
+  level: info
+
+# ── 安全 ──
+security:
+  rateLimit:
+    max: 100
+    windowMs: 60000
+
+# ── 存储路径 ──
+storage:
+  dataDir: ./data

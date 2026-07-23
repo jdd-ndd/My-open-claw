@@ -1,0 +1,12 @@
+# Agent 默认配置
+default:
+  model: gpt-4o
+  maxTokens: 4096
+  temperature: 0.7
+  maxReActSteps: 10
+  allowedTools:
+    - fs
+    - exec
+    - http
+    - browser
+    - memory_search

@@ -1,0 +1,5 @@
+# Telegram 渠道配置
+telegram:
+  enabled: false
+  name: "Telegram"
+  token: "${TELEGRAM_BOT_TOKEN}"

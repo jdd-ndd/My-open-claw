@@ -1,0 +1,41 @@
+{
+  "name": "myopenclaw",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MyOpenClaw - 本地优先、自托管的开源 AI Agent 框架",
+  "license": "MIT",
+  "author": "MyOpenClaw Core Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myopenclaw/myopenclaw"
+  },
+  "engines": {
+    "node": ">=20.10.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "pnpm --filter @myopenclaw/server dev",
+    "build": "pnpm --filter @myopenclaw/server build && pnpm --filter @myopenclaw/web build",
+    "typecheck": "pnpm --filter @myopenclaw/server typecheck",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "test": "pnpm --filter @myopenclaw/server test",
+    "test:unit": "pnpm --filter @myopenclaw/server test:unit",
+    "test:integration": "pnpm --filter @myopenclaw/server test:integration",
+    "test:e2e": "pnpm --filter @myopenclaw/server test:e2e",
+    "test:watch": "pnpm --filter @myopenclaw/server test:watch",
+    "test:coverage": "pnpm --filter @myopenclaw/server test:coverage",
+    "clean": "rimraf dist coverage .turbo",
+    "env:check": "node scripts/env-check.mjs"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.4.0"
+  }
+}

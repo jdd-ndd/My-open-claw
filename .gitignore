@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Turbo
+.turbo/
+
+# Test coverage
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+.docker/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Debug
+*.heapsnapshot
