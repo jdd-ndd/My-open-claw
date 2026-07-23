@@ -10,7 +10,7 @@ import { EventEmitter } from 'node:events';
 import { appendFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { createLogger } from '../../core/utils/logger.js';
-import type { MemoryStorage } from '../storage.js';
+import type { MemoryStorage } from '../core/storage.js';
 import type { AuditLogEntry, AuditLogQuery } from './types.js';
 
 const log = createLogger('gateway:audit');
@@ -92,16 +92,18 @@ export class AuditLogger extends EventEmitter {
     this.buffer = [];
 
     for (const entry of entries) {
-      this.storage.prepare(
-        `INSERT INTO audit_logs (id,category,event,timestamp,channel_id,user_id,agent_id,session_id,task_id,details,source_ip,duration,success,error)
-         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
-      ).run(
-        entry.id, entry.category, entry.event, entry.timestamp,
-        entry.channelId ?? null, entry.userId ?? null, entry.agentId ?? null,
-        entry.sessionId ?? null, entry.taskId ?? null,
-        JSON.stringify(entry.details), entry.sourceIp ?? null,
-        entry.duration ?? null, entry.success ? 1 : 0, entry.error ?? null,
-      );
+      this.storage
+        .prepare(
+          `INSERT INTO audit_logs (id,category,event,timestamp,channel_id,user_id,agent_id,session_id,task_id,details,source_ip,duration,success,error)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        )
+        .run(
+          entry.id, entry.category, entry.event, entry.timestamp,
+          entry.channelId ?? null, entry.userId ?? null, entry.agentId ?? null,
+          entry.sessionId ?? null, entry.taskId ?? null,
+          JSON.stringify(entry.details), entry.sourceIp ?? null,
+          entry.duration ?? null, entry.success ? 1 : 0, entry.error ?? null,
+        );
     }
   }
 

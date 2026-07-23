@@ -7,16 +7,13 @@
  *
  * 本文件为 orchestration 层，通过组合以下单一职责模块完成网关功能：
  * - {@link ConnectionStore} 连接与元数据存储
- * - {@link createMessenger} 消息发送与广播
+ * - {@link Messenger} 消息发送与广播
  * - {@link registerHttpRoutes} HTTP 路由注册
  * - {@link handleConnection} WebSocket 连接与消息处理
  * - {@link startHeartbeat} / {@link stopHeartbeat} 心跳保活
  *
- * Fastify 带来以下能力：
- * - 结构化路由（schema-based validation）
- * - CORS / Compression 插件开箱即用
- * - 请求/响应日志
- * - 优雅关闭（graceful shutdown）
+ * 所有子系统共享同一个 {@link MemoryStorage} 实例，
+ * 确保路由、审计、调度的数据一致性。
  *
  * @module @myopenclaw/server/gateway
  */
@@ -27,6 +24,7 @@ import fastifyWebsocket from '@fastify/websocket';
 import fastifyCors from '@fastify/cors';
 import fastifyCompress from '@fastify/compress';
 import { createLogger } from '../../core/utils/logger.js';
+import { MemoryStorage } from '../core/storage.js';
 import { MessageRouter } from '../router/index.js';
 import { ConnectionStore } from './connection-store.js';
 import { createMessenger } from './messaging.js';
@@ -62,6 +60,9 @@ export class GatewayServer extends EventEmitter {
   /** Fastify 应用实例 */
   private fastify: FastifyInstance | null = null;
 
+  /** 共享内存存储实例（路由器、审计、调度器共用） */
+  readonly storage: MemoryStorage;
+
   /** 消息路由器实例 */
   readonly router: MessageRouter;
 
@@ -86,7 +87,9 @@ export class GatewayServer extends EventEmitter {
       requestTimeout: config?.requestTimeout ?? 30_000,
     };
 
-    this.router = new MessageRouter();
+    // 创建共享存储并注入到 MessageRouter
+    this.storage = new MemoryStorage();
+    this.router = new MessageRouter(this.storage);
     this.router.initDatabase();
 
     this.store = new ConnectionStore();
@@ -95,24 +98,16 @@ export class GatewayServer extends EventEmitter {
 
   /**
    * 启动网关服务器
-   *
-   * 1. 创建 Fastify 实例并注册插件（CORS / Compression / WebSocket）
-   * 2. 注册 HTTP 路由（health / status / connections / sessions）
-   * 3. 注册 WebSocket handler
-   * 4. 监听端口
-   * 5. 启动心跳定时器
    */
   async start(): Promise<void> {
     log.info({ host: this.config.host, port: this.config.port }, 'GatewayServer 正在启动...');
 
-    // ① 创建 Fastify
     this.fastify = Fastify({
-      logger: false, // 使用 pino 统一日志
+      logger: false,
       requestTimeout: this.config.requestTimeout,
       maxParamLength: 200,
     });
 
-    // ② 注册插件
     await this.fastify.register(fastifyCors, {
       origin: true,
       methods: ['GET', 'POST', 'OPTIONS'],
@@ -126,13 +121,11 @@ export class GatewayServer extends EventEmitter {
     });
 
     await this.fastify.register(fastifyWebsocket, {
-      options: { maxPayload: DEFAULT_WS_MAX_PAYLOAD }, // 1MB max message
+      options: { maxPayload: DEFAULT_WS_MAX_PAYLOAD },
     });
 
-    // ③ 注册 HTTP 路由
     registerHttpRoutes(this.fastify, this.store, this.router, this.config);
 
-    // ④ 注册 WebSocket 路由
     const wsDeps = {
       store: this.store,
       router: this.router,
@@ -148,13 +141,11 @@ export class GatewayServer extends EventEmitter {
       });
     });
 
-    // ⑤ 监听
     await this.fastify.listen({
       host: this.config.host,
       port: this.config.port,
     });
 
-    // ⑥ 启动心跳
     this.heartbeatTimer = startHeartbeat(this.store, this.config.heartbeatInterval);
 
     log.info({ host: this.config.host, port: this.config.port }, 'GatewayServer 启动完成');
@@ -163,23 +154,18 @@ export class GatewayServer extends EventEmitter {
 
   /**
    * 停止网关服务器
-   *
-   * 依次：清除心跳 → 关闭所有连接 → 关闭 Fastify（含优雅关闭）
    */
   async stop(): Promise<void> {
     log.info('GatewayServer 正在关闭...');
 
-    // ① 清除心跳
     stopHeartbeat(this.heartbeatTimer);
     this.heartbeatTimer = null;
 
-    // ② 关闭所有 WebSocket 连接
     for (const [, ws] of this.store.entries()) {
       ws.close(1_001, 'Server shutdown');
     }
     this.store.clear();
 
-    // ③ 关闭 Fastify（包含 graceful shutdown）
     if (this.fastify) {
       await this.fastify.close();
       this.fastify = null;
@@ -198,8 +184,6 @@ export class GatewayServer extends EventEmitter {
 
   /**
    * 向所有已连接客户端广播消息（兼容旧 API）
-   *
-   * @returns 发送统计 { sent, total }
    */
   broadcast(message: GatewayMessage): { sent: number; total: number } {
     return this.messenger.broadcast(message);

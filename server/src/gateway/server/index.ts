@@ -8,13 +8,12 @@
  * - http-routes: HTTP REST 路由注册
  * - websocket-handler: WebSocket 连接与消息处理
  * - heartbeat: 心跳保活
- * - server: 主 GatewayServer 编排类
+ * - gateway-server: 主 GatewayServer 编排类
  *
  * @module @myopenclaw/server/gateway/server
  */
 
-export { GatewayServer } from './server.js';
-export type { GatewayServerConfig } from './types.js';
+export { GatewayServer, type GatewayServerConfig } from './gateway-server.js';
 
 export { ConnectionStore, type ConnectionMetadata } from './connection-store.js';
 
