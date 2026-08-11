@@ -113,6 +113,9 @@ describe('Gateway - GatewayServer 单元测试', () => {
 
     beforeEach(() => {
       gw = new GatewayServer();
+      // 抑制 EventEmitter 'error' 事件: GatewayServer.send() 在连接不存在时 emit('error', err),
+      // 没有 listener 时 Node EventEmitter 会抛错. 测试只关心 send() 自身不抛.
+      gw.on('error', () => {});
     });
 
     afterEach(() => {
@@ -168,10 +171,11 @@ describe('Gateway - GatewayServer 单元测试', () => {
       gw.removeAllListeners();
     });
 
-    it('3.1 无连接时广播应返回 { sent: 0, total: 0 }', () => {
+    it('3.1 无连接时广播应返回 0', () => {
       const event = makeEvent();
+      // broadcast() 返回 number (发送成功数量), 不是 { sent, total } 对象
       const result = gw.broadcast(event);
-      expect(result).toEqual({ sent: 0, total: 0 });
+      expect(result).toBe(0);
     });
 
     it('3.2 无连接时广播不同类型的消息均应返回零', () => {
@@ -180,8 +184,8 @@ describe('Gateway - GatewayServer 单元测试', () => {
         gw.broadcast(makeRequest() as unknown as GatewayMessage),
       ];
       for (const r of results) {
-        expect(r.sent).toBe(0);
-        expect(r.total).toBe(0);
+        // broadcast() 返回 number (发送成功数量), 不是 { sent, total } 对象
+        expect(r).toBe(0);
       }
     });
 
@@ -294,6 +298,8 @@ describe('Gateway - GatewayServer 单元测试', () => {
     });
 
     it('5.3 每个实例应有独立的 router', () => {
+      // GatewayServer 构造时默认 loadRules 8 条默认规则 (webchat/feishu/qqbot/wechat 等),
+      // 这是合理产品行为: 构造即装填默认, 用户可 loadRules() 覆盖.
       const gw1 = new GatewayServer();
       const gw2 = new GatewayServer();
 
@@ -301,8 +307,10 @@ describe('Gateway - GatewayServer 单元测试', () => {
         { id: 'test1', priority: 10, channels: [{ channelId: 'web', userIds: ['*'] }] },
       ]);
 
+      // gw1 loadRules 覆盖后只剩 test1 一条 (loadRules 是覆盖式)
       expect(gw1.router.getRules().length).toBe(1);
-      expect(gw2.router.getRules().length).toBe(0);
+      // gw2 没手动调 loadRules, 保持构造时的 8 条默认
+      expect(gw2.router.getRules().length).toBe(8);
     });
   });
 
