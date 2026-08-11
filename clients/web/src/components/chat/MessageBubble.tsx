@@ -193,7 +193,7 @@ function renderExternalSourceLabel(source: ExternalSourceInfo): React.ReactNode 
   );
 }
 
-export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
+const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
   const { role, content, status, externalSource } = message;
   const isUser = role === 'user';
   const isError = status === 'error';
@@ -381,3 +381,5 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
     </div>
   );
 };
+
+export default MessageBubble;
