@@ -42,3 +42,8 @@ temp/
 
 # Debug
 *.heapsnapshot
+
+# Server runtime data (memory store, sessions, audit logs)
+# Test runs and runtime will populate server/data/ — never commit.
+server/data/
+

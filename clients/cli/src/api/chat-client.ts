@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
-import { CLIWebSocketClient, WebSocketEvent } from './websocket.js';
+import type { CLIWebSocketClient } from './websocket.js';
+import { WebSocketEvent } from './websocket.js';
 import type { AttachmentInfo, ChatDeltaPayload, ChatDonePayload, ResponseMessage } from './types.js';
 import { SHARED_USER_ID } from '../config/sync-defaults.js';
 
