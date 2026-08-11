@@ -17,6 +17,7 @@ describe('Core - Schemas', () => {
       channelId: 'webchat',
       userId: 'user-001',
       sessionId: 'session-001',
+      agentId: 'agent-default',
       type: 'text',
       role: 'user',
       content: '你好，世界',

@@ -9,14 +9,14 @@ describe('Core - Config', () => {
     clearConfigCache();
   });
 
-  it('loadConfig 应返回包含 gateway 配置的对象', () => {
+  it('loadConfig 应返回包含 network 配置的对象', () => {
     const config = loadConfig();
     expect(config).toBeDefined();
-    expect(config).toHaveProperty('gateway');
+    expect(config).toHaveProperty('network');
   });
 
   it('getConfig 应支持点路径访问', () => {
-    const port = getConfig<number>('gateway.port');
+    const port = getConfig<number>('network.ws.port');
     expect(port).toBe(18780);
   });
 
