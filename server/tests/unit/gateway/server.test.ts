@@ -5,9 +5,16 @@
  *
  * @module test
  */
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, beforeAll, afterEach, vi } from 'vitest';
 import { GatewayServer } from '../../../src/gateway/index.js';
 import type { GatewayMessage, RequestMessage, ResponseMessage, EventMessage } from '../../../src/gateway/protocol.js';
+
+// 测试隔离: 跳过真实外部依赖 (QQBot/飞书 渠道启动、scheduler 磁盘读写)
+// gateway-server.ts 在 GATEWAY_TEST_MODE=1 时不走 channelsBootstrap.start()
+// 也不 loadSavedTasks, start/stop 链路只验证网关骨架逻辑.
+beforeAll(() => {
+  process.env.GATEWAY_TEST_MODE = '1';
+});
 
 // ─── 工具函数 ───────────────────────────────────
 
@@ -225,7 +232,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
       expect(startedConfig.port).toBe(gw.config.port);
 
       await gw.stop();
-    });
+    }, 15_000);
 
     it('4.2 stop 应触发 stopped 事件', async () => {
       await gw.start();

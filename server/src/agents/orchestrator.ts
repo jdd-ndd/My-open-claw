@@ -513,6 +513,8 @@ export class AgentOrchestrator {
                   (loopParsed.thought ? `\n\n当前分析: ${loopParsed.thought}` : '');
               }
               taskComplete = true;
+              // P1.3 fix: 死循环强制收尾属于"未正常完成",应标记为 max_iterations 而非 completed
+              terminatedReason = 'max_iterations';
               break;
             }
           }
@@ -553,6 +555,8 @@ export class AgentOrchestrator {
                 .replace(/<action[^>]*?\/>/g, '');
             }
             taskComplete = true;
+            // P1.3 fix: 文本重复强制收尾同样属于"未正常完成"
+            terminatedReason = 'max_iterations';
             break;
           }
         }
@@ -618,6 +622,15 @@ export class AgentOrchestrator {
           const reflectParsed = this.planner.parseCoT(reflectResult.content);
           reply = reflectParsed.finalAnswer ?? reflectResult.content;
           taskComplete = true;
+          break;
+        }
+
+        // 最大迭代保护
+        if (this.loop.isIterationExceeded(this.maxIterations)) {
+          terminatedReason = 'max_iterations';
+          const source = reflectResult.content || llmOutput;
+          const maxParsed = this.planner.parseCoT(source);
+          reply = maxParsed.finalAnswer ?? source;
           break;
         }
 
