@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599338_3d5da7fe",
+  "userId": "load-user-43ao",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHJ64N14VGJEX3D4K44Q",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNHRTHAGGCKGNYGB0PB4J",
+      "role": "assistant",
+      "content": "连接正常，有什么可以帮你的？",
+      "timestamp": 1785984632602
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599542,
+    "lastActiveAt": 1785984632602,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

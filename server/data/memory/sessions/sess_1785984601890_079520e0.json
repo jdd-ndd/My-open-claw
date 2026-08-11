@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601890_079520e0",
+  "userId": "load-user-pi3w",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM1NX4J9VM41YFMNHNZE",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984602037
+    },
+    {
+      "id": "01KZAFP2GA80ERV4YH4M95YJ8R",
+      "role": "assistant",
+      "content": "好的，已恢复对话。有什么我可以继续帮你的吗？",
+      "timestamp": 1785984649738
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602082,
+    "lastActiveAt": 1785984649738,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

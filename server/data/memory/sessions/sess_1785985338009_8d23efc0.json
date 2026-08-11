@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985338009_8d23efc0",
+  "userId": "load-user-86ok",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2SHB1XDC6E6S4PFDN1S",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985338119
+    },
+    {
+      "id": "01KZAGCV2BQ7SQXAQJ2KSNYJZY",
+      "role": "assistant",
+      "content": "这个消息看起来像是一个内部连接 ID（\"conn_msg_18\"），但可能被误发送到了聊天窗口。你是想询问什么问题，还是要我处理某个任务？可以直接告诉我你的需求。",
+      "timestamp": 1785985395787
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338135,
+    "lastActiveAt": 1785985395787,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985337849_96c1f9fa",
+  "userId": "load-user-g7u3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2SCV5YF68D461HE7W67",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985338118
+    },
+    {
+      "id": "01KZAGDDC00C9NC9Y4EE5JSWBG",
+      "role": "assistant",
+      "content": "任务被取消或忽略。\n\n- [记忆 0.98] conn_msg_1\n\n连接已建立。等待用户请求。\n\n- [记忆 0.79] conn_msg_4\n\nconn_msg_4\n\n- [记忆 0.78] conn_msg_53\n\nconn_msg_53\n\n- [记忆 0.77] conn_msg_54\n\nconn_msg_54\n\n- [记忆 0.75] conn_msg_15\n\nconn_msg_15\n\n- [记忆 0.74] conn_msg_16\n\nconn_msg_16\n\n- [记忆 0.72] conn_msg_55\n\nconn_msg_55\n\n- [记忆 0.71] conn_msg_2\n\nconn_msg_2\n\n- [记忆 0.69] conn_msg_56\n\nconn_msg_56\n\n- [记忆 0.68] conn_msg_5\n\nconn_msg_5\n\n- [记忆 0.67] conn_msg_63\n\nconn_msg_63\n\n- [记忆 0.67] conn_msg_74\n\nconn_msg_74\n\n- [记忆 0.67] conn_msg_25\n\nconn_msg_25\n\n- [记忆 0.67] conn_msg_13\n\nconn_msg_13\n\n- [记忆 0.67] conn_msg_29\n\nconn_msg_29\n\n- [记忆 0.66] conn_msg_72\n\nconn_msg_72\n\n- [记忆 0.66] conn_msg_35\n\nconn_msg_35\n\n- [记忆 0.66] conn_msg_73\n\nconn_msg_73\n\n- [记忆 0.66] conn_msg_75\n\nconn_msg_75",
+      "timestamp": 1785985414528
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338132,
+    "lastActiveAt": 1785985414528,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

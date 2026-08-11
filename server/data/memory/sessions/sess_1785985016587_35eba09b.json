@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985016587_35eba09b",
+  "userId": "load-user-eo8r",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG196H2PR5EF3GTVJCN720",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985016920
+    },
+    {
+      "id": "01KZAG453829M9F61N6X66RVPH",
+      "role": "assistant",
+      "content": "用户您好！您提供的这段内容看起来是一个对话记录或聊天日志，其中包含了多段文本，但您没有提出具体的任务要求。\n\n请问您希望我如何处理这些内容呢？例如：\n- **总结对话内容**：对这段对话进行概括和摘要？\n- **提取关键信息**：从中提取特定的人物、时间、事件或决策？\n- **格式转换**：将其转换为其他格式（如表格、结构化数据、报告等）？\n- **分析内容**：对对话中的观点、情绪或逻辑进行分析？\n\n请告诉我您的具体需求，我会立即为您处理！",
+      "timestamp": 1785985111144
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016953,
+    "lastActiveAt": 1785985111144,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

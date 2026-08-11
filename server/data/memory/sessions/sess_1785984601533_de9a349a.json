@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984601533_de9a349a",
+  "userId": "load-user-7v2z",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMKZZ737ANXEVFAEP4EW5",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984602035
+    },
+    {
+      "id": "01KZAFNPG2N1P72VM6GYJS5GKP",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984637442
+    },
+    {
+      "id": "01KZAFP9KZQNW5JF4XNJ1K6A35",
+      "role": "assistant",
+      "content": "<thought>用户发送了 `conn_msg_4`，这是一个连接确认消息。检索历史记忆结果为空，没有找到相关上下文。这是一个简单的连接确认请求，无需进一步工具调用，直接确认即可。</thought>\n\n<final_answer>\n✅ 连接确认：`conn_msg_4` 已收到。\n\n我是 MyOpenClaw Assistant，通用任务处理智能助手，随时待命。有什么我可以帮你的？",
+      "timestamp": 1785984657023
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602048,
+    "lastActiveAt": 1785984657023,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

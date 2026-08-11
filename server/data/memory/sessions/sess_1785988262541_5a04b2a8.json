@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988262541_5a04b2a8",
+  "userId": "load-user-opvu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4B4F6C9DR5WA11D4WYCJ",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785988263025
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988263035,
+    "lastActiveAt": 1785988263055,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

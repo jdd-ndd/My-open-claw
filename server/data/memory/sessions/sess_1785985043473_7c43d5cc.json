@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043473_7c43d5cc",
+  "userId": "load-user-vra4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23FQC3JNHAK4SR9HF8BJ",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985043845
+    },
+    {
+      "id": "01KZAG3KB36QRADYAT7FCQ2AM9",
+      "role": "assistant",
+      "content": "收到你的消息了！连接正常 ✅\n\n有什么我可以帮你的吗？不管是代码问题、项目搭建、网页分析，还是日常查询，都可以随时问我。",
+      "timestamp": 1785985092963
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043877,
+    "lastActiveAt": 1785985092963,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

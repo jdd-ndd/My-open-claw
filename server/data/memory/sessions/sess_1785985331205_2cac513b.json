@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985331205_2cac513b",
+  "userId": "load-user-fy3m",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWCYNG4GS7KP2CN9ZQKK",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985331582
+    },
+    {
+      "id": "01KZAGCSQ271G4PPTKQV45NWNJ",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985394402
+    },
+    {
+      "id": "01KZAGEV9SYMNAHRNSSBAQ9507",
+      "role": "assistant",
+      "content": "我没有在长期记忆中找到与 `conn_msg_11` 相关的内容。这个标识看起来像是一个消息 ID 或连接标识，但系统中没有存储对应的历史记录。\n\n你是想让我根据这个 ID 去查找某条具体消息，还是有其他需求？可以说得再具体一点，我马上帮你处理。",
+      "timestamp": 1785985461561
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331592,
+    "lastActiveAt": 1785985461561,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

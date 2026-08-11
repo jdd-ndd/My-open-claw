@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051675_cc44e25c",
+  "userId": "load-user-2ylf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BDBR49DM5AN4C70XT99",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985051905
+    },
+    {
+      "id": "01KZAG56QS5QFGNQPGTYS0YSAV",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了 \"conn_msg_15\"，这看起来像是一个连接消息的 ID。我目前没有看到之前的对话历史。请问你有什么需要我帮忙的吗？我可以帮你处理文件、执行命令、浏览网页、查询天气等。请告诉我你的需求！",
+      "timestamp": 1785985145593
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051967,
+    "lastActiveAt": 1785985145593,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601950_5182a378",
+  "userId": "load-user-pv8s",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM1X2606SBZWW2RQA0CP",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785984602037
+    },
+    {
+      "id": "01KZAFP7A03HF54T9Z65A8YXAP",
+      "role": "assistant",
+      "content": "我是 MyOpenClaw Assistant，你的通用任务处理智能助手 ✨\n\n看起来你发了一个连接消息，我这边已经正常收到了。有什么我可以帮你的吗？无论是文件处理、数据分析、系统操作，还是其他任何任务，尽管说就是了。",
+      "timestamp": 1785984654656
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602088,
+    "lastActiveAt": 1785984654656,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

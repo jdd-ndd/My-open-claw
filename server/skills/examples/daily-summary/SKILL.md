@@ -1,3 +1,21 @@
+---
+name: daily-summary
+description: 每日总结技能，自动汇总指定日期的对话记录与任务完成情况生成日报
+version: 1.0.0
+author: MyOpenClaw Team
+triggers:
+  - 每日总结
+  - 日报
+  - 工作总结
+  - 今日汇总
+  - daily summary
+  - 总结今天
+tools:
+  - memory_search/search
+  - fs/write_file
+priority: normal
+---
+
 # 每日总结技能
 
 ## 用途

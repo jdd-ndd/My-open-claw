@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985331355_80af661c",
+  "userId": "load-user-8u1c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWD3VDF49RRFMWXV12SD",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985331583
+    },
+    {
+      "id": "01KZAGDSH1WQQ9ZGMBK430B35G",
+      "role": "assistant",
+      "content": "I didn't quite understand your message \"conn_msg_15\". Could you please clarify what you need help with? I'm here to assist with a wide range of tasks, such as file operations, web browsing, code review, project setup, and more. Let me know how I can help!",
+      "timestamp": 1785985426977
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331595,
+    "lastActiveAt": 1785985426978,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

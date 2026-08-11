@@ -1,0 +1,104 @@
+{
+  "sessionId": "sess_1785984977232_ef880e00",
+  "userId": "user-s",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG02BHXP14B4TXKAAT0TD3",
+      "role": "user",
+      "content": "msg1",
+      "timestamp": 1785984977261
+    },
+    {
+      "id": "01KZAG02HXF09B9SBGAJDX0HDB",
+      "role": "user",
+      "content": "msg2",
+      "timestamp": 1785984977463
+    },
+    {
+      "id": "01KZAG06EK3RZ53BDCDT04DDTR",
+      "role": "assistant",
+      "content": "你好！看起来你发送了一些测试文本。请问有什么我可以帮助你的吗？",
+      "timestamp": 1785984981459
+    },
+    {
+      "id": "01KZAG8VFJCCRKD92N57FZD97K",
+      "role": "user",
+      "content": "msg1",
+      "timestamp": 1785985265135
+    },
+    {
+      "id": "01KZAG8VV7F4HY39V3E5SCNVB2",
+      "role": "user",
+      "content": "msg2",
+      "timestamp": 1785985265509
+    },
+    {
+      "id": "01KZAG91P59NCX0DXSWJWTFB1S",
+      "role": "assistant",
+      "content": "你好！我收到了你发送的两条\"msg1\"消息。这看起来像是在测试消息功能。\n\n请问有什么我可以帮助你的吗？无论是文件操作、网页分析、代码审查，还是其他任务，我都可以协助处理。😊",
+      "timestamp": 1785985271493
+    },
+    {
+      "id": "01KZAG91Z546FJW1RQ1R1ZFKYZ",
+      "role": "assistant",
+      "content": "好的，我看到你发送了多条消息。这些消息已经被存储为长期记忆，以便未来会话中可以回忆起来。\n\n如果你有任何任务需要处理，或者想测试某些功能，随时告诉我！",
+      "timestamp": 1785985271781
+    },
+    {
+      "id": "01KZAJPTRC2D69TXQJY1P1QDF9",
+      "role": "user",
+      "content": "msg1",
+      "timestamp": 1785987820294
+    },
+    {
+      "id": "01KZAJPV6395SZCZKGN41R48RF",
+      "role": "user",
+      "content": "msg2",
+      "timestamp": 1785987820732
+    },
+    {
+      "id": "01KZAJQ2CNRSCR9TEE1AR9ANG0",
+      "role": "assistant",
+      "content": "看起来你还在测试消息功能。现在记忆库中已经存储了多条 `msg1` 记录（相似度 1.00）。\n\n如果你在测试长期记忆功能，可以尝试：\n- 发送一些**有意义的内容**（比如设定偏好、记录待办事项等），之后我们可以用 `memory_search/search` 来检索验证\n- 提问之前发送过的内容，看看记忆检索是否生效\n\n需要我帮你做什么吗？",
+      "timestamp": 1785987828117
+    },
+    {
+      "id": "01KZAJQ3645YXYW87XZB7X35H4",
+      "role": "assistant",
+      "content": "你好！我注意到你一直在发送 \"msg1\" 和 \"msg2\" 这些测试消息。😊\n\n系统已经将这些消息存储为长期记忆（可以看到记忆面板中已经有 5 条相关记忆），这有助于在未来会话中保持上下文连贯性。\n\n如果你是在测试消息系统或记忆功能，目前看起来一切正常！如果需要测试其他功能（如文件操作、网页抓取、代码审查等），随时告诉我，我很乐意协助！",
+      "timestamp": 1785987828932
+    },
+    {
+      "id": "01KZAJZMNAV04MK1526S3EB0H3",
+      "role": "user",
+      "content": "msg1",
+      "timestamp": 1785988108968
+    },
+    {
+      "id": "01KZAJZN53Q9FA7427S0T93GWE",
+      "role": "user",
+      "content": "msg2",
+      "timestamp": 1785988109474
+    },
+    {
+      "id": "01KZAJZSSCZAM50KQWVC6R9211",
+      "role": "assistant",
+      "content": "你好！我收到了你发送的多条 \"msg1\" 消息。\n\n看起来你可能是在测试消息功能，或者有其他需要帮助的地方。请随时告诉我有什么可以帮你的！",
+      "timestamp": 1785988114220
+    },
+    {
+      "id": "01KZAJZTTGSFXXSRVDR1G2F9VK",
+      "role": "assistant",
+      "content": "收到你的消息：**msg1** 和 **msg2**（两次）。\n\n这些消息已经被记录下来了。如果你是在测试消息功能——一切工作正常！✅\n\n有什么具体任务需要我帮忙的吗？随时告诉我。",
+      "timestamp": 1785988115280
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984977261,
+    "lastActiveAt": 1785988115280,
+    "messageCount": 15,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984580629_eb4c76bf",
+  "userId": "user-zuni87vtci",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKZ2GCP2BHMGQ7YPY4G43",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984580683
+    },
+    {
+      "id": "01KZAFN7ZT69Z1XYP6QQMF7PD0",
+      "role": "assistant",
+      "content": "已收到您的并发消息，系统处理正常。请问有什么可以帮您的？",
+      "timestamp": 1785984622586
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984580684,
+    "lastActiveAt": 1785984622586,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

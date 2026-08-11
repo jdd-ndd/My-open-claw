@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069734_af7d9c61",
+  "userId": "load-user-3hsa",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X8MVNFZKWJYKXKP9GZH",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985070247
+    },
+    {
+      "id": "01KZAG4CJHNVHDF3RAVFJ41BX0",
+      "role": "assistant",
+      "content": "你好！我已收到你的消息（conn_msg_7），连接正常。\n\n请问有什么我可以帮你的吗？我可以协助你处理文件、执行命令、浏览网页、查询天气、代码审查、快速搭建项目等各种任务。尽管告诉我你的需求！",
+      "timestamp": 1785985118801
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070273,
+    "lastActiveAt": 1785985118801,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

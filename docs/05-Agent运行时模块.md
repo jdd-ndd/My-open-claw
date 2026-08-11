@@ -1,9 +1,13 @@
 # MyOpenClaw Agent 运行时模块
 
-> **版本**：v1.0.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.1.2  
+> **修订日期**：2026-08-04  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布
+
+---
+
+> **实现状态**：Agent 运行时模块已完整实现。AgentOrchestrator（1,311 行）驱动完整的 Lobster 六阶段循环（感知→思考→规划→执行→观察→反思），Planner 实现 CoT 思维链 XML 解析与子任务安全校验，LLM 适配器完整支持 DeepSeek/OpenAI/Claude/Local 四套模型，ReActLoop 提供迭代计数器与阶段事件记录。
 
 ---
 
@@ -281,24 +285,15 @@ Reflect 阶段由 LLM 对整个执行链做反思：检查工具返回是否符�
 
 ```typescript
 /**
- * Agent 运行时状态枚举
+ * Agent 运行时状态类型
  * 
  * Agent 在整个生命周期中处于以下四种状态之一。
  * 状态流转由 Orchestrator 严格控制，外部不可直接修改。
+ * 
+ * 注意：实际代码中使用的是 TypeScript 类型别名（type union），
+ * 而非 enum。值为 'idle' | 'thinking' | 'executing' | 'error'。
  */
-export enum AgentState {
-  /** 空闲：等待用户输入，未在执行任何任务 */
-  Idle = 'idle',
-  
-  /** 思考：正在调用 LLM 进行推理和任务规划 */
-  Thinking = 'thinking',
-  
-  /** 执行：正在调用工具执行子任务 */
-  Acting = 'acting',
-  
-  /** 异常：执行过程中发生错误，等待恢复或人工介入 */
-  Error = 'error'
-}
+export type AgentState = 'idle' | 'thinking' | 'executing' | 'error';
 ```
 
 ### 4.2 Orchestrator 接口
@@ -369,7 +364,7 @@ export interface AgentRunInput {
   message: string;
   /** 会话 ID，用于隔离不同会话的上下文 */
   sessionId: string;
-  /** 渠道 ID（telegram/discord/webchat 等） */
+  /** 渠道 ID（webchat/qqbot/feishu/wechat/cli 等） */
   channelId: string;
   /** 用户 ID */
   userId: string;

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987900038_62d294e6",
+  "userId": "load-user-3pnq",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJS9ZSTAGS7720SHDX27ZK",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785987901329
+    },
+    {
+      "id": "01KZAJY46ND1M3300QXYMFXR57",
+      "role": "assistant",
+      "content": "好的，我们接着之前的说。你那台电脑出现“准备自动修复”的提示后，现在是什么状态？\n\n请告诉我下面这些情况，我好进一步判断：\n\n- **强制重启后**：连续开关机 3 次，有没有成功进入“高级启动选项”那个蓝底菜单？\n- **进入高级启动后**：里面的“启动修复”或“系统还原”你是试过了吗？结果如何？\n- **现在屏幕是什么样**：还是停在“准备自动修复”不动，还是变成黑屏、重启循环，或者显示别的错误代码（比如 0xc00000xx 这类）？\n\n另外，如果你大概知道是正常关机/更新/突然断电/装完某个软件之后出现的问题，也顺便说一下，这样我能帮你定位得更准。",
+      "timestamp": 1785988059349
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987901345,
+    "lastActiveAt": 1785988059349,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

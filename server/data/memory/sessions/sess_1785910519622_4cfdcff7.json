@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785910519622_4cfdcff7",
+  "userId": "20FFBAD92B5FBA7530DA915B337199AB",
+  "channelId": "qqbot",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZ88ZSTNJTZ7MKP34NAN8KZM",
+      "role": "user",
+      "content": "你好",
+      "timestamp": 1785910519634
+    },
+    {
+      "id": "01KZ88ZYGQA94B7KP2XJNKHJPJ",
+      "role": "assistant",
+      "content": "你好！很高兴见到你😊\n\n我是 MyOpenClaw Assistant，你的通用任务智能助手。我可以帮你处理各种任务，比如：\n\n- 📁 文件管理与操作\n- 💻 执行命令与进程管理\n- 🌐 网页浏览与信息抓取\n- 🔍 记忆检索与上下文回忆\n- 🌤️ 天气查询、汇率转换等实用工具\n- 📊 数学计算与单位换算\n- 🛣️ 路线规划\n\n有什么我可以帮你的吗？尽管吩咐！",
+      "timestamp": 1785910524439
+    },
+    {
+      "id": "01KZ8959WW0ZM8JTAXF1C5FW3N",
+      "role": "user",
+      "content": "你咋那",
+      "timestamp": 1785910699928
+    },
+    {
+      "id": "01KZ895KAG40ZMAVMGFTHM0CS6",
+      "role": "assistant",
+      "content": "在呢在呢！😄 随时待命，就等着帮你处理各种任务呢～\n\n有啥需要尽管说，不管是查天气、算数学、搜网页还是搞文件，我都能帮你搞定！",
+      "timestamp": 1785910709585
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785910519634,
+    "lastActiveAt": 1785910709585,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

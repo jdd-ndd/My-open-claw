@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612478_ee6a1839",
+  "userId": "load-user-elba",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYK5PWK8Q6J0KXZG1BQP",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984612869
+    },
+    {
+      "id": "01KZAFP9YPVYMC1RQR17YSWX8P",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984657366
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612893,
+    "lastActiveAt": 1785984657366,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

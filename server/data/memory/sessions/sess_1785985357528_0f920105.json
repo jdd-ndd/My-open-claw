@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985357528_0f920105",
+  "userId": "load-user-cxsx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWN7EN03QNQ5B4YMK20",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985357675
+    },
+    {
+      "id": "01KZAGDNDFTYZFV53HGES9W16F",
+      "role": "assistant",
+      "content": "您好！我是您的智能助手，已经准备好为您服务。看起来您发送了一个连接消息（conn_msg_17）。请问有什么我可以帮您的吗？无论是查询信息、执行任务、文件操作还是其他需求，请随时告诉我。",
+      "timestamp": 1785985422767
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357693,
+    "lastActiveAt": 1785985422767,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

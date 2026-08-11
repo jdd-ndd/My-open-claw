@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069515_285de72b",
+  "userId": "load-user-zonb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X7MNTS9QAJCM4X5GY2H",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985070246
+    },
+    {
+      "id": "01KZAG49NDVMY8NBKZW94NYEGJ",
+      "role": "assistant",
+      "content": "连接已建立！我是 MyOpenClaw Assistant，您的通用任务处理智能助手。\n\n我可以帮您：\n- 📁 文件管理与操作\n- 🌐 网页浏览与内容抓取\n- 💻 执行 Shell 命令\n- 🧮 数学计算与单位换算\n- 🌤️ 天气查询\n- 💱 汇率换算\n- 🗺️ 路径规划\n- 📰 新闻摘要\n- 🔍 记忆检索\n- 📝 代码审查、项目搭建、网页分析等\n\n请问有什么可以帮您的？",
+      "timestamp": 1785985115821
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070252,
+    "lastActiveAt": 1785985115821,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

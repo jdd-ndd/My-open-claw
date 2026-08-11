@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987946986_6a1a8643",
+  "userId": "load-user-ybzt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQVARAM2BZ3XPWR76E4E",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785987948324
+    },
+    {
+      "id": "01KZAJX8GS935M7AHW6YDR51QB",
+      "role": "assistant",
+      "content": "[用户输入]\n给我浏览一下百度首页",
+      "timestamp": 1785988031001
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948328,
+    "lastActiveAt": 1785988031001,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

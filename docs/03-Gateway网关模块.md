@@ -1,9 +1,13 @@
 # MyOpenClaw Gateway 网关模块
 
-> **版本**：v1.0.1  
+> **版本**：v1.0.2  
 > **修订日期**：2026-07-23  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布（已同步 Fastify 迁移）
+
+---
+
+> **实现状态**：Gateway 网关模块已完整实现，包括 Fastify WebSocket/HTTP 服务、消息路由、状态管理、安全沙箱、定时任务调度和审计日志。当前使用 MemoryStorage（内存存储）作为数据存储后端。
 
 ---
 
@@ -37,7 +41,7 @@ Gateway 网关是 MyOpenClaw 系统的中枢控制平面（Control Plane），�
 
 Gateway 在系统中的定位可以类比为网络架构中的 API 网关，但职责更为广泛：
 
-- **对外**：作为统一入口，接收来自各渠道（Telegram、Discord、飞书、WebChat 等）和客户端（CLI、SDK、WebUI）的消息请求
+- **对外**：作为统一入口，接收来自各渠道（WebChat、QQBot、飞书、微信、CLI 等）和客户端（CLI、SDK、WebUI）的消息请求
 - **对内**：协调 Agent Runtime、工具执行层、存储层等内部模块的协作
 - **横切关注点**：提供安全鉴权、流量控制、审计日志等系统级横切能力
 
@@ -61,7 +65,7 @@ Gateway 在系统中的定位可以类比为网络架构中的 API 网关，但�
 │                     MyOpenClaw 系统架构                         │
 │                                                              │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │
-│  │ Telegram │  │ Discord  │  │  飞书    │  │ WebChat  │    │
+│  │  QQBot   │  │  微信    │  │  飞书    │  │ WebChat  │    │
 │  │ 渠道     │  │ 渠道     │  │ 渠道     │  │ 渠道     │    │
 │  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘    │
 │       │              │              │              │          │
@@ -96,7 +100,7 @@ Gateway 的网络入口层基于 **Fastify** 框架构建，通过插件化架�
 - **@fastify/cors**：跨域资源共享，支持多客户端来源
 - **@fastify/compress**：响应压缩（gzip/brotli），减少带宽消耗
 
-所有服务共享单一端口（默认 `18780`），WebSocket 连接通过 `/ws` 路径接入，HTTP API 通过 `/api/*` 路径访问。
+Gateway 使用单一端口（默认 `18780`，不再区分 wsPort/httpPort），WebSocket 连接通过 `/ws` 路径接入，HTTP API 通过 `/api/*` 路径访问。同端口同时承载 WebSocket 和 HTTP 协议。
 
 #### 消息协议设计
 
@@ -476,13 +480,13 @@ export class GatewayServer extends EventEmitter {
 
 #### 核心机制
 
-**消息归一化**：不同渠道的消息格式各异（Telegram 的 Update 对象、Discord 的 Message 对象、飞书的事件回调等），路由器首先将其归一化为统一的 `NormalizedMessage` 结构。
+**消息归一化**：不同渠道的消息格式各异（QQBot 的消息对象、飞书的事件回调、WebChat 的实时消息等），路由器首先将其归一化为统一的 `NormalizedMessage` 结构。
 
 **路由匹配**：通过「渠道 ID + 用户 ID」组合作为路由键，匹配对应的 Agent 配置。支持通配符匹配、正则匹配等多种路由规则。
 
 **会话绑定**：首次消息创建会话，后续消息复用会话上下文，确保对话连续性。
 
-**会话持久化**：所有会话状态持久化到 SQLite 数据库，支持服务重启后会话恢复。
+**会话持久化**：所有会话状态通过 MemoryStorage（内存存储兼容层）管理，支持服务重启后会话恢复。
 
 #### 消息归一化结构
 
@@ -497,7 +501,7 @@ export class GatewayServer extends EventEmitter {
 export interface NormalizedMessage {
   /** 消息唯一 ID */
   messageId: string;
-  /** 来源渠道 ID（如 telegram / discord / feishu / webchat） */
+  /** 来源渠道 ID（如 webchat / qqbot / feishu / wechat） */
   channelId: string;
   /** 发送用户 ID（渠道内的用户标识） */
   userId: string;
@@ -584,7 +588,7 @@ export interface Session {
 // 消息路由与会话管理器实现
 
 import { EventEmitter } from 'events';
-import type { Database } from 'better-sqlite3';
+import type { MemoryStorage } from '../storage';
 import type { NormalizedMessage, RoutingRule, Session } from './types';
 
 /**
@@ -599,15 +603,15 @@ export class MessageRouter extends EventEmitter {
 
   /**
    * 构造函数
-   * @param db - SQLite 数据库实例，用于会话持久化
+   * @param storage - MemoryStorage 实例，用于会话数据管理
    */
-  constructor(private db: Database) {
+  constructor(private storage: MemoryStorage) {
     super();
     this.initDatabase();
   }
 
   /**
-   * 初始化数据库表结构
+   * 初始化存储表结构
    */
   private initDatabase(): void {
     // 创建会话表
@@ -920,7 +924,7 @@ interface SessionRow {
 
 | 状态类别 | 说明 | 示例 |
 |----------|------|------|
-| 渠道连接状态 | 各渠道适配器的连接状态 | `{ channelId: 'telegram', status: 'connected' }` |
+| 渠道连接状态 | 各渠道适配器的连接状态 | `{ channelId: 'webchat', status: 'connected' }` |
 | Agent 运行状态 | 各 Agent 的当前运行状态 | `{ agentId: 'default', status: 'idle' }` |
 | 任务队列 | 待执行和执行中的任务队列 | `{ taskId: 'task_001', status: 'pending' }` |
 | 配置缓存 | 系统配置的内存缓存 | `{ key: 'gateway.port', value: 18780 }` |
@@ -1692,7 +1696,7 @@ export interface TaskExecutionResult {
 
 import { EventEmitter } from 'events';
 import { cron } from 'cron-parser';
-import type { Database } from 'better-sqlite3';
+import type { MemoryStorage } from '../storage';
 import type { ScheduledTask, TaskExecutionResult } from './types';
 import { TaskType, TaskStatus } from './types';
 
@@ -1710,7 +1714,7 @@ export class TaskScheduler extends EventEmitter {
   private cronCheckInterval: NodeJS.Timeout | null = null;
 
   constructor(
-    private db: Database,
+    private storage: MemoryStorage,
     private agentInvoker: AgentInvoker
   ) {
     super();
@@ -2163,14 +2167,14 @@ import { EventEmitter } from 'events';
 import { createWriteStream, WriteStream } from 'fs';
 import { mkdirSync } from 'fs';
 import { dirname } from 'path';
-import type { Database } from 'better-sqlite3';
+import type { MemoryStorage } from '../storage';
 import type { AuditLogEntry, AuditLogQuery } from './types';
 import { AuditCategory } from './types';
 
 /**
  * 审计日志模块
  * 全链路记录系统操作日志
- * 同时写入 SQLite 数据库（便于查询）和文件（便于归档）
+ * 同时写入存储层（便于查询）和文件（便于归档）
  */
 export class AuditLogger extends EventEmitter {
   /** 文件写入流 */
@@ -2181,7 +2185,7 @@ export class AuditLogger extends EventEmitter {
   private flushTimer: NodeJS.Timeout | null = null;
 
   constructor(
-    private db: Database,
+    private storage: MemoryStorage,
     private logFilePath: string
   ) {
     super();
@@ -2624,8 +2628,8 @@ storage:
 flowchart TB
     %% 消息来源
     subgraph Sources["消息来源"]
-        TG["Telegram 渠道"]
-        DC["Discord 渠道"]
+        QQ["QQBot 渠道"]
+        WX["微信 渠道"]
         FS["飞书渠道"]
         WC["WebChat 渠道"]
         CLI["CLI 客户端"]
@@ -2634,7 +2638,7 @@ flowchart TB
 
     %% Gateway 入口
     subgraph GW["Gateway 网关"]
-        WS["WebSocket/HTTP 服务<br/>端口 18780/18790"]
+        WS["WebSocket/HTTP 服务<br/>端口 18780"]
         
         %% 安全检查
         subgraph SEC["安全沙箱"]
@@ -2667,7 +2671,7 @@ flowchart TB
     end
 
     %% Memory
-    MEM["Memory 持久存储<br/>SQLite / 向量数据库"]
+    MEM["Memory 持久存储<br/>MemoryStorage / 向量数据库"]
 
     %% 消息流转
     Sources --> WS
@@ -3018,7 +3022,7 @@ pnpm myopenclaw logs --level debug | grep "connection"
 
 **现象**：
 ```
-[WARN] 路由失败: 没有找到匹配的路由规则: channel=telegram, user=123456
+[WARN] 路由失败: 没有找到匹配的路由规则: channel=webchat, user=123456
 ```
 
 **排查步骤**：
@@ -3039,7 +3043,7 @@ pnpm myopenclaw logs | grep "Router.*规则"
 # 步骤 4：修改 Agent 配置
 # 编辑 ~/.myopenclaw/agents/default.yaml
 # channels:
-#   - channelId: "telegram"
+#   - channelId: "webchat"
 #     userIds: ["*"]
 ```
 
@@ -3115,5 +3119,5 @@ pnpm myopenclaw logs --type audit --filter "danger:blocked"
 | `logging.level` | info | 生产环境用 info，排查问题时用 debug |
 | `logging.maxSize` | 50 | 日志文件大小，过大影响磁盘 |
 | `logging.maxFiles` | 7 | 保留天数，根据合规要求调整 |
-| SQLite WAL 模式 | 启用 | 提升并发读写性能 |
+| MemoryStorage 写入模式 | 启用 | 提升并发读写性能 |
 | 审计日志批量写入间隔 | 5000ms | 平衡写入性能和实时性 |

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985026708_79207958",
+  "userId": "load-user-46hl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K81B5MTWD8YCGDJJ6F5",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985027249
+    },
+    {
+      "id": "01KZAG38Z7ECMDJRPGW3XEGFBZ",
+      "role": "assistant",
+      "content": "由于消息频次限制，当前任务已暂停。管理员，连接数已超限，请稍后重试。",
+      "timestamp": 1785985082343
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027260,
+    "lastActiveAt": 1785985082343,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

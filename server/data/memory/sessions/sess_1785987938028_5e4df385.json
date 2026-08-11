@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987938028_5e4df385",
+  "userId": "load-user-higt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEKE8TQ88G3ZBWX7QCYB",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785987938801
+    },
+    {
+      "id": "01KZAJW85MRJ56P4D3N8CJAYXK",
+      "role": "assistant",
+      "content": "收到连接消息，会话正常。有什么可以帮您的？",
+      "timestamp": 1785987997876
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938833,
+    "lastActiveAt": 1785987997876,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984604592_1f68ff88",
+  "userId": "load-user-0sn2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPKR8M79CR98PXAJWBCS",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785984604645
+    },
+    {
+      "id": "01KZAFNHEYSNV4M4E2PP2V6F7H",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984632286
+    },
+    {
+      "id": "01KZAFPRGV8S03K9S4B44RHEFD",
+      "role": "assistant",
+      "content": "抱歉，时间查询服务暂时无响应，未能获取到当前时间。建议您稍后重试或检查系统时间设置。如有其他需求，我随时为您服务。",
+      "timestamp": 1785984672283
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604700,
+    "lastActiveAt": 1785984672283,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

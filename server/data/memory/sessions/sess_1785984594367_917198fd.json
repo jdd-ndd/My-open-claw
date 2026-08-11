@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594367_917198fd",
+  "userId": "load-user-zgss",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCQ2X4FEQ6SS6HF15P2S",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984594526
+    },
+    {
+      "id": "01KZAFNS062A76FWF43QN3TRZB",
+      "role": "assistant",
+      "content": "我需要澄清一下——虽然我保留对话摘要，但我一次只看到一条消息。我仍然没有看到你的名字和电子邮件。你可以再次分享它们，或者我们可以继续讨论其他事情。我在这里帮忙！",
+      "timestamp": 1785984640006
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594570,
+    "lastActiveAt": 1785984640006,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

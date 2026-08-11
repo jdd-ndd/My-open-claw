@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985027077_849faf41",
+  "userId": "load-user-p7c7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K9XHDNA0ZF7WK4MTCSG",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985027250
+    },
+    {
+      "id": "01KZAG4YRD9HRHW4WYS7KMAVDF",
+      "role": "assistant",
+      "content": "这是 OpenClaw 的 Meta-Agent 标准配置：\n\n```json\n{\n  \"name\": \"meta-agent\",\n  \"version\": \"1.0.0\",\n  \"description\": \"OpenClaw 元代理 - 智能任务路由与子代理调度\",\n  \"engine\": {\n    \"provider\": \"anthropic\",\n    \"model\": \"claude-3.5-sonnet\"\n  },\n  \"routing\": {\n    \"strategy\": \"semantic_match\",\n    \"confidence_threshold\": 0.7,\n    \"fallback_agent\": \"general-assistant\"\n  },\n  \"sub_agents\": [\n    {\n      \"name\": \"code-reviewer\",\n      \"description\": \"代码审查与质量分析\",\n      \"trigger_keywords\": [\"审查\", \"review\", \"代码质量\", \"bug\", \"重构\"],\n      \"skill_path\": \"skills/code_review.md\"\n    },\n    {\n      \"name\": \"data-analyst\",\n      \"description\": \"数据分析与可视化\",\n      \"trigger_keywords\": [\"分析数据\", \"图表\", \"统计\", \"报告\"],\n      \"skill_path\": \"skills/data_analyst.md\"\n    },\n    {\n      \"name\": \"translator\",\n      \"description\": \"多语言翻译与本地化\",\n      \"trigger_keywords\": [\"翻译\", \"translate\", \"本地化\"],\n      \"skill_path\": \"skills/translator.md\"\n    },\n    {\n      \"name\": \"general-assistant\",\n      \"description\": \"通用问答与日常任务\",\n      \"is_default\": true,\n      \"skill_path\": \"skills/general_assistant.md\"\n    }\n  ],\n  \"toolkit\": {\n    \"allowed_tools\": [\n      \"fs/read_file\",\n      \"fs/write_file\",\n      \"exec/shell\",\n      \"http/request\"\n    ],\n    \"sandbox_mode\": \"restricted\"\n  },\n  \"memory\": {\n    \"vector_store\": \"chromadb\",\n    \"session_retention\": 24,\n    \"max_context_tokens\": 12000\n  }\n}\n```\n\n---\n\n**配置说明**\n\n| 字段 | 说明 |\n|------|------|\n| `routing.strategy` | `semantic_match` 语义匹配、`keyword` 关键词匹配、`llm_router` 用 LLM 判断 |\n| `confidence_threshold` | 匹配阈值，低于此值降级到 fallback_agent |\n| `trigger_keywords` | 触发该子代理的关键词，空数组表示需语义判断 |\n| `skill_path` | 指向具体技能定义文件（Markdown 格式） |\n| `sandbox_mode` | `restricted` 受限 / `full` 全权限 / `readonly` 只读 |\n\n需要我进一步解释某个字段，或调整为你的实际场景吗？",
+      "timestamp": 1785985137421
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027298,
+    "lastActiveAt": 1785985137421,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

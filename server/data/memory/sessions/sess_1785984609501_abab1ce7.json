@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609501_abab1ce7",
+  "userId": "load-user-u7yt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVV6X0E0VD1GQ28FRS1E",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785984610087
+    },
+    {
+      "id": "01KZAFNSM4XTEB5AZAM2WGRV9F",
+      "role": "assistant",
+      "content": "您好！看起来您发送的消息是“conn_msg_1”，我不太确定您想表达什么。请问您需要什么帮助呢？您可以详细说明您的需求，比如文件操作、网页分析、代码审查，或者只是想聊天。我随时为您服务！",
+      "timestamp": 1785984640644
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610092,
+    "lastActiveAt": 1785984640644,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

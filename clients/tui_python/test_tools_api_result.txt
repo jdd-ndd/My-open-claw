@@ -1,0 +1,35 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.14, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\25044\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: D:\模板\My open claw\clients\tui_python
+configfile: pyproject.toml
+plugins: anyio-4.14.2, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 24 items
+
+tests/test_tools_api.py::ToolMetaTests::test_normalize_tool_full_fields PASSED [  4%]
+tests/test_tools_api.py::ToolMetaTests::test_normalize_tool_invalid_parameters_returns_empty_dict PASSED [  8%]
+tests/test_tools_api.py::ToolMetaTests::test_normalize_tool_missing_fields_uses_defaults PASSED [ 12%]
+tests/test_tools_api.py::ToolMetaTests::test_tool_meta_default_fields PASSED [ 16%]
+tests/test_tools_api.py::SkillMetaTests::test_normalize_skill_full_fields PASSED [ 20%]
+tests/test_tools_api.py::SkillMetaTests::test_normalize_skill_invalid_lists_returns_empty PASSED [ 25%]
+tests/test_tools_api.py::SkillMetaTests::test_skill_meta_default_fields PASSED [ 29%]
+tests/test_tools_api.py::ToolsApiClientTests::test_http_base_from_ws PASSED [ 33%]
+tests/test_tools_api.py::ToolsApiClientTests::test_http_base_from_wss PASSED [ 37%]
+tests/test_tools_api.py::ToolsApiClientTests::test_list_skills_parses_response PASSED [ 41%]
+tests/test_tools_api.py::ToolsApiClientTests::test_list_tools_empty_response PASSED [ 45%]
+tests/test_tools_api.py::ToolsApiClientTests::test_list_tools_invalid_data_returns_empty PASSED [ 50%]
+tests/test_tools_api.py::ToolsApiClientTests::test_list_tools_parses_response PASSED [ 54%]
+tests/test_tools_api.py::ToolsApiClientTests::test_list_tools_with_category_filter PASSED [ 58%]
+tests/test_tools_api.py::SlashEntryConversionTests::test_skill_to_slash_entry_basic PASSED [ 62%]
+tests/test_tools_api.py::SlashEntryConversionTests::test_slash_entry_extended_fields_default PASSED [ 66%]
+tests/test_tools_api.py::SlashEntryConversionTests::test_tool_to_slash_entry_basic PASSED [ 70%]
+tests/test_tools_api.py::SlashEntryConversionTests::test_tool_to_slash_entry_empty_name_safe PASSED [ 75%]
+tests/test_tools_api.py::SlashEntryConversionTests::test_tool_to_slash_entry_with_compound_name PASSED [ 79%]
+tests/test_tools_api.py::LocalSlashEntriesTests::test_local_entries_all_source_local PASSED [ 83%]
+tests/test_tools_api.py::LocalSlashEntriesTests::test_local_entries_have_required_fields PASSED [ 87%]
+tests/test_tools_api.py::LocalSlashEntriesTests::test_local_entries_unique_slash PASSED [ 91%]
+tests/test_tools_api.py::LocalSlashEntriesTests::test_local_slash_entries_not_empty PASSED [ 95%]
+tests/test_tools_api.py::LocalSlashEntriesTests::test_slash_entries_alias_matches_local PASSED [100%]
+
+============================= 24 passed in 0.95s ==============================

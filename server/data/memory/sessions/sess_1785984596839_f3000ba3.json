@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596839_f3000ba3",
+  "userId": "load-user-edmf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF58XNP6FV7KF92R0BCF",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984597042
+    },
+    {
+      "id": "01KZAFNSAF777GVS7CK0D0N8C8",
+      "role": "assistant",
+      "content": "你好！我看到你提到了 conn_msg_14。这似乎是你们系统中的一个连接消息记录。\n\n如果你需要我帮忙处理或分析这些连接消息，可以告诉我具体需求。或者，如果你有其他问题，比如需要配置某个功能、调试某个模块，或者想了解某些技术细节，随时可以问我！",
+      "timestamp": 1785984640335
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597082,
+    "lastActiveAt": 1785984640335,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

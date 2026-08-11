@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063956_8f3ee03e",
+  "userId": "load-user-y1jd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2QA2CBBR2DFBVJPCXWCK",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985064100
+    },
+    {
+      "id": "01KZAG4ZNZ51HSCZP9SEYBZQPA",
+      "role": "assistant",
+      "content": "在典型的实时通信系统（如 WebSocket、长连接服务）里，`conn_msg_id` 通常代表 **连接消息标识**，用来关联一条消息所属的连接。\n\n**结论：同一个连接内，多条消息会出现相同的 `conn_msg_id`；不同连接间的 `conn_msg_id` 不会相同。**\n\n具体来说：\n\n1. **同一个连接**发送的多条消息 → 每条消息都携带**相同的 `conn_msg_id`**，用于表明“这条消息来自哪个连接”。所以你会看到该连接下的所有消息共享一个 ID，这是正常的，便于服务端把消息与连接状态绑定。\n\n2. **不同连接** → 即使连接到同一个服务，每个连接也会被分配**唯一的 `conn_msg_id`**（例如基于连接创建时的 UUID、自增 ID 等）。因此两个不同用户/客户端的消息，其 `conn_msg_id` 一定不同，不会冲突。\n\n如果你是在调试日志中看到重复的 `conn_msg_id`，那很可能只是同一条连接发送了多条消息，这是预期行为，不是 bug。",
+      "timestamp": 1785985138367
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064159,
+    "lastActiveAt": 1785985138367,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

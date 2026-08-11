@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985356773_7fcba40b",
+  "userId": "load-user-fwip",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNVZP6YV7DAQRWQQASM8",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985357672
+    },
+    {
+      "id": "01KZAGD0X6YBEPG0GW18DNWV30",
+      "role": "assistant",
+      "content": "这是一个测试连接消息。我已准备就绪，您可以开始提出任务了。",
+      "timestamp": 1785985401766
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357676,
+    "lastActiveAt": 1785985401766,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

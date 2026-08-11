@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618393_4a8072dc",
+  "userId": "load-user-yuf4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN481DV7PBK9MG1NKPZ70",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785984618634
+    },
+    {
+      "id": "01KZAFP3JASJHSZSWR6VSS7RPD",
+      "role": "assistant",
+      "content": "你好！我是 **MyOpenClaw Assistant**，你的通用任务处理智能助手！👋\n\n我拥有以下能力：\n\n## 🛠️ 工具列表\n- **文件操作**：读取、写入、删除、列出目录文件\n- **Shell 执行**：运行系统命令、管理进程\n- **浏览器**：打开网页、点击元素、填写表单、抓取内容\n- **HTTP 请求**：发起 GET/POST 等网络请求\n- **天气查询**：搜索城市、当前天气、天气预报\n- **路线规划**：地理编码、规划路线\n- **计算器**：表达式计算、单位换算、进制转换\n- **货币汇率**：实时汇率查询\n- **记忆搜索**：检索长期向量记忆\n- **时间/新闻/IP/假期**：实用工具\n- **代码审查/项目搭建/网页分析**：专业技能\n\n你想测试哪些工具？尽管给我指令，比如\"查一下北京天气\"、\"读取某个文件\"、\"规划从 A 到 B 的路线\"等等！😊",
+      "timestamp": 1785984650826
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618671,
+    "lastActiveAt": 1785984650826,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

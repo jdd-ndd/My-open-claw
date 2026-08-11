@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318141_73ba175c",
+  "userId": "load-user-z6ki",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFW0W75FA0QEQWP5SZMB",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985318761
+    },
+    {
+      "id": "01KZAGF7Q9VMWR1XEFGNYZ4V50",
+      "role": "assistant",
+      "content": "收到，conn_msg_4 连接正常！👋\n\n我在这里，随时准备帮助你处理各种任务。有什么我可以帮你的吗？比如：\n\n- 📄 文件操作与管理\n- 🌐 网页内容抓取与分析  \n- 💻 代码审查与项目搭建\n- ⚙️ Shell 命令执行\n- 🔍 记忆检索与对话回顾\n- 🌤️ 天气、汇率、新闻等信息查询\n\n尽管吩咐！",
+      "timestamp": 1785985474281
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318766,
+    "lastActiveAt": 1785985474281,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

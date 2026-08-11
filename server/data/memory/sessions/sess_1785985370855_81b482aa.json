@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370855_81b482aa",
+  "userId": "load-user-conk",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC304WQZJWBHQTR9S6GGS",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985371098
+    },
+    {
+      "id": "01KZAGD8M08BZ7MM5RHRW11S1Z",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息，但 \"conn_msg_15\" 看起来像是一个连接标识或测试消息。请问有什么我可以帮你的吗？你可以直接告诉我想做的事情，比如代码审查、创建项目、分析网页，或者查询天气、时间等。",
+      "timestamp": 1785985409664
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371112,
+    "lastActiveAt": 1785985409664,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

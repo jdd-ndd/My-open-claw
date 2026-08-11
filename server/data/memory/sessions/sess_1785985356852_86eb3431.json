@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985356852_86eb3431",
+  "userId": "load-user-7ulr",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNW2HKXERB8HA6F9CKZ5",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985357672
+    },
+    {
+      "id": "01KZAGDNR63Y02W0NQZE4N6KK4",
+      "role": "assistant",
+      "content": "收到你的测试消息 \"conn_msg_2\"！连接正常，有什么我可以帮你的吗？",
+      "timestamp": 1785985423110
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357679,
+    "lastActiveAt": 1785985423110,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

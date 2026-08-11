@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377098_23255b30",
+  "userId": "load-user-msoz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9P53E5XZPWFYGFD4EKN",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985377969
+    },
+    {
+      "id": "01KZAGD3GC9Z63BMXPCN0DHE8P",
+      "role": "assistant",
+      "content": "因为我是 MyOpenClaw Assistant，可以用中文回复。我可以帮助你处理各种任务，如文件操作、代码审查、网页分析、天气查询、汇率转换等。\n\n请问有什么我可以帮助你的？",
+      "timestamp": 1785985404428
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377973,
+    "lastActiveAt": 1785985404428,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

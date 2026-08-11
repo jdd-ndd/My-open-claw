@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618302_bc227952",
+  "userId": "load-user-cmmi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN47MM1PSC3D0PFEKT6H9",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785984618633
+    },
+    {
+      "id": "01KZAFNNHKK6J7GM6G7XAW4MA4",
+      "role": "assistant",
+      "content": "我们正在处理 conn_msg_10。这是一个连接消息，可能表示对话的第10轮。当前没有其他具体指令，因此只需要确认已收到并准备继续。已收到第10条连接消息，继续处理后续任务。",
+      "timestamp": 1785984636467
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618663,
+    "lastActiveAt": 1785984636467,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599225_287ed805",
+  "userId": "load-user-ox7a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHHN6T06W7T1VH9QT5V3",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNR2WXP3EQQ77WJ6Y4ECR",
+      "role": "assistant",
+      "content": "你好！👋 准备好了，随时可以开始调试。\n\n请告诉我你想要调试的内容，比如：\n- 一段代码（直接贴过来即可）\n- 某个文件路径（我可以帮你读取）\n- 一个 bug 描述或错误日志\n- 项目运行问题\n\n我会帮你分析并解决问题！",
+      "timestamp": 1785984639068
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599531,
+    "lastActiveAt": 1785984639068,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

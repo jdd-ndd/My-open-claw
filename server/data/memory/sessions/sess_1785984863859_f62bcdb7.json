@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984863859_f62bcdb7",
+  "userId": "load-user-zmyv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFWM5YM7R3VJQMD5KD0ZDR",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984864415
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984864423,
+    "lastActiveAt": 1785984864446,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

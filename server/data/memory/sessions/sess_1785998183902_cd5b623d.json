@@ -1,0 +1,50 @@
+{
+  "sessionId": "sess_1785998183902_cd5b623d",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAXAB0H5JG3ZH5FCQ701QQ1",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785998945296
+    },
+    {
+      "id": "01KZAXAEW0EZGA06SPJAQ79AJ0",
+      "role": "assistant",
+      "content": "你好！有什么我可以帮你的吗？ 😊",
+      "timestamp": 1785998949248
+    },
+    {
+      "id": "01KZAXHQZZ6462PC75FYJK6A28",
+      "role": "user",
+      "content": "帮我在桌面测试文件夹中生成一个project文件",
+      "timestamp": 1785999187966
+    },
+    {
+      "id": "01KZAXJ777ANC0ZGVGDZAWZ9H5",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785999203559
+    },
+    {
+      "id": "01KZAXJW89KKAR3BAXYFTAJQ66",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785999225097
+    },
+    {
+      "id": "01KZAXKR0DRMTKWQXPVP53W9CK",
+      "role": "assistant",
+      "content": "现在让我确定桌面路径并检查\"测试文件夹\"是否存在。\n\n```\nls ~/Desktop/ 2>/dev/null || ls ~/桌面/ 2>/dev/null || echo \"桌面路径未找到\"\n```\n\n<action name=\"exec/shell\" args='{\"command\":\"ls ~/Desktop/ 2>/dev/null || ls ~/桌面/ 2>/dev/null || echo \\\"桌面路径未找到\\\"\", \"timeout\":10000}' />",
+      "timestamp": 1785999253517
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785998945296,
+    "lastActiveAt": 1785999253517,
+    "messageCount": 6,
+    "compressed": false
+  }
+}

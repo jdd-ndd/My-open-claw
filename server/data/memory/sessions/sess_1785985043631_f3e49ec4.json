@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043631_f3e49ec4",
+  "userId": "load-user-bnan",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23GK2K6XFMX4BMKGB3MT",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985043846
+    },
+    {
+      "id": "01KZAG46DTBFEZWHNZV4TTSPBR",
+      "role": "assistant",
+      "content": "用户发送的消息 \"conn_msg_14\" 看起来像是一个连接标识或测试消息，没有明确的操作请求。我无法从这条消息中推断出具体任务，因此需要提示用户提供更多上下文或明确需求。",
+      "timestamp": 1785985112506
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043894,
+    "lastActiveAt": 1785985112506,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

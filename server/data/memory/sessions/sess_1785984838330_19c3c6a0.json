@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984838330_19c3c6a0",
+  "userId": "user-vq3wh38gmfs",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVTPXNXG4E99RMN5ZQNTA",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984838364
+    },
+    {
+      "id": "01KZAFY5AY8FN3P7MENKE7EGNY",
+      "role": "assistant",
+      "content": "收到你的消息。请问有什么可以帮助你的？你可以直接告诉我你的需求，比如创建项目、分析网页、审查代码、查询天气、汇率换算等等。",
+      "timestamp": 1785984914782
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984838364,
+    "lastActiveAt": 1785984914782,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037977_12fcc196",
+  "userId": "load-user-i82t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XYYB8SC15QRR9W3G6X9",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985038160
+    },
+    {
+      "id": "01KZAG459P4STYVHDZDHT2A9F1",
+      "role": "assistant",
+      "content": "你好！我已经收到你的消息了。😊\n\n看起来这可能是一条连接测试消息。我已经准备就绪，随时可以帮你处理各种任务，比如：\n\n- 📁 文件操作（读取、写入、搜索文件）\n- 🌐 网页浏览与分析\n- 🖥️ 执行 Shell 命令\n- 🔍 信息检索与记忆搜索\n- 📊 数据处理与转换\n- 💡 以及其他通用任务\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785985111350
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038209,
+    "lastActiveAt": 1785985111350,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

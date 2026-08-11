@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987830000_288787a9",
+  "userId": "user-qpdxynfcibk",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJQ49P84YZYFK6TATXCAR3",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785987830066
+    },
+    {
+      "id": "01KZAJQHJA8FJPQ6SP39WWGEQ8",
+      "role": "assistant",
+      "content": "收到你的并发消息啦！👋 系统运行正常，随时可以处理你的请求。请问有什么我可以帮你的吗？",
+      "timestamp": 1785987843659
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987830067,
+    "lastActiveAt": 1785987843659,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

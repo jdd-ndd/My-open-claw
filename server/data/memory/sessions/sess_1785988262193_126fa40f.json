@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988262193_126fa40f",
+  "userId": "load-user-vnyc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4B48S0A7EWH9861PJKF1",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785988263025
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988263031,
+    "lastActiveAt": 1785988263048,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

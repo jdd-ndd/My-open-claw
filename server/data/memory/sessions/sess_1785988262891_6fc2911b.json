@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988262891_6fc2911b",
+  "userId": "load-user-ly40",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4B4MNJC35EYBW9XE0CKJ",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785988263026
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988263040,
+    "lastActiveAt": 1785988263060,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

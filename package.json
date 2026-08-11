@@ -10,23 +10,21 @@
     "url": "https://github.com/myopenclaw/myopenclaw"
   },
   "engines": {
-    "node": ">=20.10.0",
-    "pnpm": ">=9.0.0"
+    "node": ">=20.10.0"
   },
-  "packageManager": "pnpm@9.0.0",
+  "workspaces": [
+    "server",
+    "clients/web",
+    "clients/cli"
+  ],
   "scripts": {
-    "dev": "pnpm --filter @myopenclaw/server dev",
-    "build": "pnpm --filter @myopenclaw/server build && pnpm --filter @myopenclaw/web build",
-    "typecheck": "pnpm --filter @myopenclaw/server typecheck",
+    "dev": "npm run dev --workspace @myopenclaw/server",
+    "build": "npm run build --workspace @myopenclaw/server && npm run build --workspace @myopenclaw/web",
+    "typecheck": "npm run typecheck --workspace @myopenclaw/server",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
-    "test": "pnpm --filter @myopenclaw/server test",
-    "test:unit": "pnpm --filter @myopenclaw/server test:unit",
-    "test:integration": "pnpm --filter @myopenclaw/server test:integration",
-    "test:e2e": "pnpm --filter @myopenclaw/server test:e2e",
-    "test:watch": "pnpm --filter @myopenclaw/server test:watch",
-    "test:coverage": "pnpm --filter @myopenclaw/server test:coverage",
+    "test": "npm run test --workspace @myopenclaw/server",
     "clean": "rimraf dist coverage .turbo",
     "env:check": "node scripts/env-check.mjs"
   },

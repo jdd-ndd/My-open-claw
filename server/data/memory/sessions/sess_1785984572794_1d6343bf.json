@@ -1,0 +1,62 @@
+{
+  "sessionId": "sess_1785984572794_1d6343bf",
+  "userId": "shared-user",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKQCYQMSCV84QNCAMYYYW",
+      "role": "user",
+      "content": "bootstrap session",
+      "timestamp": 1785984572827
+    },
+    {
+      "id": "01KZAFKQGQKNSA76W30WMTYFM2",
+      "role": "user",
+      "content": "hello from sender",
+      "timestamp": 1785984572945
+    },
+    {
+      "id": "01KZAFKW4W4F68Z10Z7N4TDAYK",
+      "role": "assistant",
+      "content": "Hello! 会话已启动，我是 MyOpenClaw Assistant，随时准备帮助你处理各种任务。\n\n有什么我可以帮你的吗？无论是文件操作、代码审查、网页分析、天气查询、货币换算还是其他任务，尽管说～",
+      "timestamp": 1785984577692
+    },
+    {
+      "id": "01KZAFM1DDKPA1B2STM58XCPN5",
+      "role": "assistant",
+      "content": "会话已就绪！我是 MyOpenClaw Assistant，你的通用任务智能助手。\n\n我可以帮你处理各种任务，包括：\n- 📁 文件读写与管理\n- 🌐 网页分析和浏览器操作\n- 💻 执行 Shell 命令\n- 🔍 代码审查和项目搭建\n- 🧮 计算器、汇率转换、单位换算\n- 🌤 天气查询、IP 定位、节假日查询\n- 🗺 路线规划、地理编码\n- 💰 加密货币价格查询\n- 📰 最新新闻头条\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785984583085
+    },
+    {
+      "id": "01KZAFVMVVN6AZQ9TCNW9EHP25",
+      "role": "user",
+      "content": "bootstrap session",
+      "timestamp": 1785984832377
+    },
+    {
+      "id": "01KZAFVN33EJAV0CGR71H69N9K",
+      "role": "user",
+      "content": "hello from sender",
+      "timestamp": 1785984832609
+    },
+    {
+      "id": "01KZAFVZYXDAAVBCSQ1EHX7T8Y",
+      "role": "assistant",
+      "content": "<thought>\n用户发送了 \"bootstrap session\" 和两条 \"hello from sender\" 消息，这看起来是会话初始化或测试消息。这是一个简单的交互，不需要调用任何工具，直接友好回复即可。\n</thought>\n\n<final_answer>\n👋 Hello! 会话已成功启动并同步。\n\n我是 **MyOpenClaw Assistant**，已准备就绪。检测到来自 sender 的三条引导消息：\n- ✅ bootstrap session\n- ✅ hello from sender (×2)\n\n当前状态：**连接正常，所有技能和工具已加载**。\n\n有什么任务需要我处理吗？尽管吩咐～",
+      "timestamp": 1785984843741
+    },
+    {
+      "id": "01KZAFW0MG8J2YGKZFN9BWA6K3",
+      "role": "assistant",
+      "content": "会话引导完成！✅\n\n我是 **MyOpenClaw Assistant**，你的通用任务智能助手，已准备就绪。\n\n**当前可用能力一览：**\n\n| 类别 | 功能 |\n|------|------|\n| 📁 文件操作 | 读取、写入、删除、目录浏览 |\n| 💻 命令执行 | Shell 命令、进程管理 |\n| 🌐 浏览器 | 打开页面、内容抓取、表单填充 |\n| 🔍 代码技能 | 代码审查 (code-review)、快速项目搭建 (quick-setup) |\n| 🌤 生活服务 | 天气查询、IP定位、节假日、汇率转换 |\n| 🧮 计算 | 数学表达式、单位换算、进制转换 |\n| 💰 加密 | 加密货币实时价格 |\n| 🗺 出行 | 地理编码、路线规划 |\n| 📰 资讯 | 最新新闻头条 |\n| 🧠 记忆 | 长期向量记忆检索 |\n\n有什么事情需要我处理吗？尽管吩咐！",
+      "timestamp": 1785984844432
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984572827,
+    "lastActiveAt": 1785984844432,
+    "messageCount": 8,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985027137_65abdd5e",
+  "userId": "load-user-rh3t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1KA8N9DW634KKRTHW16J",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985027250
+    },
+    {
+      "id": "01KZAG3RRC1KQ7JW1MNN6PQA6F",
+      "role": "assistant",
+      "content": "用户发了\"conn_msg_17\"，我先查看一下浏览器当前页面的连接状态，确认 WebSocket 是否已接通。",
+      "timestamp": 1785985098508
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027304,
+    "lastActiveAt": 1785985098508,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

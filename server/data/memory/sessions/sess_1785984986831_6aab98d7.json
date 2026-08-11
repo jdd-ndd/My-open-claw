@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984986831_6aab98d7",
+  "userId": "user-62imlc3b9b5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0BQJYD2DBR4T2QR2S371",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984986863
+    },
+    {
+      "id": "01KZAG4KYWYCPM7H9RP9S49JPY",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息。看起来 \"concurrent message\" 可能是一个测试消息，或者你想了解关于并发消息处理的相关内容？\n\n请问有什么我可以帮助你的吗？无论是代码审查、项目搭建、网页分析，还是其他任务，我都很乐意协助！😊",
+      "timestamp": 1785985126364
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984986863,
+    "lastActiveAt": 1785985126364,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

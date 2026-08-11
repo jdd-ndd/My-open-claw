@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984871813_aba5f36a",
+  "userId": "load-user-utus",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFWW5D8B48JSQ6WXCEBW2B",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984872592
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984872600,
+    "lastActiveAt": 1785984872621,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

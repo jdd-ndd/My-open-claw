@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984986392_bd68198a",
+  "userId": "user-cjawiivfu2f",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0B9V376M0A8WEW0C9SJN",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984986423
+    },
+    {
+      "id": "01KZAG4N2TXA610H2AH25CDGNT",
+      "role": "assistant",
+      "content": "。我将友好地回应，询问用户需要什么帮助。</thought>\n<final_answer>我收到了你的信息，但看起来你还没有输入具体的问题或任务。我是你的智能助手，可以帮你处理文件、浏览网页、查询天气、执行命令、计算等等。请告诉我你需要什么帮助吧！",
+      "timestamp": 1785985127514
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984986423,
+    "lastActiveAt": 1785985127514,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

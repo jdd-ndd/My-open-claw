@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988244556_94c3f3b0",
+  "userId": "load-user-kymb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK3SM1YG0FJDYC9KXFK5X9",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785988245064
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988245087,
+    "lastActiveAt": 1785988245121,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

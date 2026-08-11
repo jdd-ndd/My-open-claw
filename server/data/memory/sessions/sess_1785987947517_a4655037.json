@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947517_a4655037",
+  "userId": "load-user-3bsy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQWM31T79SQW84R18F4P",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785987948326
+    },
+    {
+      "id": "01KZAJWMF7TS1N8DPN5YQ6SBAX",
+      "role": "assistant",
+      "content": "抱歉，我暂时没有音频播放能力，无法直接为你播放歌曲 😅\n\n另外，\"明天长\"这个歌名似乎不太常见，你可能想找的是以下这些歌曲之一？\n- **《明天你好》** — 牛奶咖啡\n- **《明天会更好》** — 经典合唱歌曲\n- **《明天过后》** — 张杰\n\n如果确认是其中某一首，你可以去 QQ 音乐、网易云音乐、Spotify 等平台搜索播放哦！需要我帮你搜索这些歌曲的更多信息吗？",
+      "timestamp": 1785988010471
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948355,
+    "lastActiveAt": 1785988010471,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

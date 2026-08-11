@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985357202_54c7cd18",
+  "userId": "load-user-zi7o",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWCR5W1JAT41YW3QMHP",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985357674
+    },
+    {
+      "id": "01KZAGCZRAYV72FQ343PVV2GGR",
+      "role": "assistant",
+      "content": "这是一个连接消息标识符，看起来像是系统消息或测试消息。请问有什么我可以帮助你的吗？",
+      "timestamp": 1785985400586
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357687,
+    "lastActiveAt": 1785985400586,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

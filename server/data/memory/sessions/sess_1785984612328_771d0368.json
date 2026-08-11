@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612328_771d0368",
+  "userId": "load-user-vw0j",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYJDAFTPRTT0WS0T0YZV",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984612868
+    },
+    {
+      "id": "01KZAFNSF6XRYS0RAM2572VD1H",
+      "role": "assistant",
+      "content": "你好！我是你的 AI 助手，很高兴为你服务。\n\n如果你有任何问题或需要帮助，请随时告诉我，例如：\n\n- 📄 **文件操作** - 创建、读取、编辑文件\n- 🌐 **网页搜索** - 获取最新信息\n- ⚙️ **命令执行** - 运行 Shell 命令\n- 🌤️ **天气查询** - 查看任意城市天气\n- 💱 **汇率与加密货币** - 实时价格查询\n- 🧮 **数学计算** - 表达式求值、单位换算\n- 📍 **路径规划** - 获取两地之间的路线\n\n直接描述你的需求即可！",
+      "timestamp": 1785984640486
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612879,
+    "lastActiveAt": 1785984640486,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

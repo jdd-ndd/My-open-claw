@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984987278_9412c57e",
+  "userId": "user-r7yyi0qwo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0C5HQZJX5ZAFYW3ZWJFX",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984987310
+    },
+    {
+      "id": "01KZAG4V4R8P8CT9G2H9GFHBSP",
+      "role": "assistant",
+      "content": "你提到了“并发消息”（concurrent message）。这通常指在计算中同时处理多个消息或请求的能力，常见于多线程、异步编程、消息队列、分布式系统等场景。如果你是想了解具体实现、最佳实践，或者有特定的并发问题需要解决，请告诉我更多细节，我可以提供进一步的帮助。",
+      "timestamp": 1785985133720
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984987310,
+    "lastActiveAt": 1785985133720,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

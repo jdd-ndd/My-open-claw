@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987956571_be7bd760",
+  "userId": "load-user-tsq9",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0VXJ35YS3THCPP0VJMC",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785987957520
+    },
+    {
+      "id": "01KZAJWEFJSYT982DEEC993WBE",
+      "role": "assistant",
+      "content": "这似乎是一条测试消息或系统标识符。请问有什么我可以帮到您的吗？",
+      "timestamp": 1785988004338
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957547,
+    "lastActiveAt": 1785988004338,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

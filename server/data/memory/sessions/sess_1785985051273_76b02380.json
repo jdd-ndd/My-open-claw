@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051273_76b02380",
+  "userId": "load-user-3s9g",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BBP848PBNBTMZ3TE0CD",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785985051903
+    },
+    {
+      "id": "01KZAG40899CCZAHCHVV9R9GA2",
+      "role": "assistant",
+      "content": "你好！我注意到你发来了一条消息，但内容似乎不完整——看起来像是记忆标识 `conn_msg_6`，而没有具体的查询内容。\n\n请问有什么我可以帮你的吗？无论是代码审查、项目搭建、文件操作，还是查询信息，我都很乐意协助！",
+      "timestamp": 1785985106185
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051930,
+    "lastActiveAt": 1785985106185,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

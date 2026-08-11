@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985331433_94ed2e8d",
+  "userId": "load-user-m1xc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWD6AAJPXK9ZN9ZQJFHK",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985331583
+    },
+    {
+      "id": "01KZAGDQM8980GS4XZGRCXD7QF",
+      "role": "assistant",
+      "content": "连接正常，请问有什么需要处理的？",
+      "timestamp": 1785985425032
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331598,
+    "lastActiveAt": 1785985425032,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

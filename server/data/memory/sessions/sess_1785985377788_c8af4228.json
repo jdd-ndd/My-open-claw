@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377788_c8af4228",
+  "userId": "load-user-brck",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PSQXXQMNQEY6YJ3E18",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985377972
+    },
+    {
+      "id": "01KZAGD54E8Y98FH3SRMC4S4CB",
+      "role": "assistant",
+      "content": "抱歉，我不太理解 \"conn_msg_17\" 的含义。这看起来像是一个错误代码或加密消息。如果您遇到了连接问题或其他技术问题，请提供更多上下文，我会尽力帮助您！",
+      "timestamp": 1785985406094
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377986,
+    "lastActiveAt": 1785985406094,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

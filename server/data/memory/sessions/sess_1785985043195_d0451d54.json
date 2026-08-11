@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043195_d0451d54",
+  "userId": "load-user-n9th",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23E9FPKWQ0MD6Z5M4715",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985043843
+    },
+    {
+      "id": "01KZAG3891Y0JRDR50K7JY5ES5",
+      "role": "assistant",
+      "content": "用户已经连接，连接成功。不需要采取任何行动。",
+      "timestamp": 1785985081633
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043847,
+    "lastActiveAt": 1785985081633,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

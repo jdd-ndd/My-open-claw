@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609710_7b389553",
+  "userId": "load-user-ft5u",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVW707ZKRP7WSCMW9AQ7",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984610088
+    },
+    {
+      "id": "01KZAFNQF37X3312YF8GDJ7S03",
+      "role": "assistant",
+      "content": "好的，我已经准备好处理新的任务。请问您需要我执行什么操作？",
+      "timestamp": 1785984638435
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610112,
+    "lastActiveAt": 1785984638435,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

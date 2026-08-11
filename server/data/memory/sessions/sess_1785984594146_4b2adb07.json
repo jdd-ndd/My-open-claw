@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594146_4b2adb07",
+  "userId": "load-user-spco",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCNXTJQGEJCZAR86JN9F",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984594525
+    },
+    {
+      "id": "01KZAFNND1SR7S1WW20YJH3R8P",
+      "role": "assistant",
+      "content": "好的！有什么可以帮你的吗？你可以直接告诉我需求，比如：\n\n- 想查天气、汇率、加密货币价格\n- 需要计算或单位换算\n- 想分析网页内容\n- 需要文件操作或执行命令\n- 想快速搭建项目或审查代码\n\n直接说就行！",
+      "timestamp": 1785984636321
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594547,
+    "lastActiveAt": 1785984636321,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

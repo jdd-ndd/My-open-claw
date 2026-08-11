@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984840113_025b128a",
+  "userId": "user-zbifesp9zj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVWEPRFSJC8N2E009MZAM",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984840149
+    },
+    {
+      "id": "01KZAFY3JM8EY3EBKPD7PE4CCV",
+      "role": "assistant",
+      "content": "您好！我注意到您发送了“concurrent message”消息。请问有什么可以帮助您的吗？如果您有具体的任务需要处理，请随时告诉我。",
+      "timestamp": 1785984912980
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984840149,
+    "lastActiveAt": 1785984912980,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

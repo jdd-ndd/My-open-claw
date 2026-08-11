@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785996928278_1c532822",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAVFE6NDNPXV41VFZAKMXG7",
+      "role": "user",
+      "content": "",
+      "timestamp": 1785997015252
+    },
+    {
+      "id": "01KZAVFGFFF29WJENPA1VN5A47",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785997017583
+    },
+    {
+      "id": "01KZAVFRDE0N8YV7Y6FRTVEFE1",
+      "role": "assistant",
+      "content": "✅ Sync smoke test passed! 同步烟雾测试通过，一切正常。",
+      "timestamp": 1785997025710
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785997015252,
+    "lastActiveAt": 1785997025710,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985357288_84c3e887",
+  "userId": "load-user-zx9b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWFS04PR0TNSP5VJHPN",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985357674
+    },
+    {
+      "id": "01KZAGDRY1JJR1Q2Y51STS97WA",
+      "role": "assistant",
+      "content": "用户发来的内容“conn_msg_12”看起来像是一个内部消息 ID 或连接标识，我暂时无法确定你的具体意图。\n\n请问你需要帮助的是什么？例如：\n\n- 是否需要查看某条消息/连接的详情？\n- 是否想继续某个之前的任务或代码审查？\n- 或者这只是一个误发内容？\n\n请补充说明，我会尽快帮你处理。",
+      "timestamp": 1785985426369
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357688,
+    "lastActiveAt": 1785985426369,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

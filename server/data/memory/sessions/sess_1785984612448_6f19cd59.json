@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612448_6f19cd59",
+  "userId": "load-user-jb5h",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYK0YX3GDT6J62SYYETH",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984612868
+    },
+    {
+      "id": "01KZAFPDTYMEQ4T7MRA3XVZXGM",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，通用任务处理智能助手。会话已建立，你可以随时向我提出任务或问题，我会全力以赴协助你。有什么需要帮忙的吗？",
+      "timestamp": 1785984661342
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612890,
+    "lastActiveAt": 1785984661342,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

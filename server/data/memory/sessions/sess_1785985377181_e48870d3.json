@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377181_e48870d3",
+  "userId": "load-user-hvef",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9P8BW6C6BW827Q6BNM6",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985377970
+    },
+    {
+      "id": "01KZAGDHNQH56DHX9Q5ZK1ZCAC",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息\"conn_msg_3\"，但这看起来像是一个系统内部标识符或测试消息，我不太确定您具体想表达什么。\n\n请问您是想：\n- 进行某个特定任务？\n- 测试系统功能？\n- 还是不小心发送了这条消息？\n\n请告诉我您的实际需求，我会全力帮助您！😊",
+      "timestamp": 1785985418935
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377975,
+    "lastActiveAt": 1785985418935,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

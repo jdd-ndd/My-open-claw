@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051169_525a1b03",
+  "userId": "load-user-703t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BBCPCR46335S26K458S",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985051903
+    },
+    {
+      "id": "01KZAG5EVGARDMG4WHH1YQ9EEC",
+      "role": "assistant",
+      "content": "我不确定 `/conn_msg_4` 代表什么操作。这不是我能识别的系统命令或工具，当前会话中也没有定义过这个别名。\n\n你能告诉我这个命令的具体含义吗？例如：\n- 它是一个 Shell 脚本？\n- 连接某个消息服务的快捷方式？\n- 还是其他自定义操作？\n\n告诉我你想做什么，我会立刻帮你完成。",
+      "timestamp": 1785985153904
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051922,
+    "lastActiveAt": 1785985153904,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

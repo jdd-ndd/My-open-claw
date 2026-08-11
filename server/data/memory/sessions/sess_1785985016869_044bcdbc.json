@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985016869_044bcdbc",
+  "userId": "load-user-qcgl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG197ZR9RV8KTHKEXV821Y",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985016921
+    },
+    {
+      "id": "01KZAG53F8JVVPVGFG3YS2YT1P",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985142248
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016983,
+    "lastActiveAt": 1785985142248,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

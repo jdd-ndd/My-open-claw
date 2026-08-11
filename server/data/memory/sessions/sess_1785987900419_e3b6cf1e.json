@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987900419_e3b6cf1e",
+  "userId": "load-user-chj3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSA0RHXCDP0XBPMJSYXT7",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785987901330
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987901364,
+    "lastActiveAt": 1785987901464,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

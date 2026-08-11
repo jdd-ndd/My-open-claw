@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947255_adee2faf",
+  "userId": "load-user-shyj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQW0S9W01ACN0XTGZ1QQ",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785987948325
+    },
+    {
+      "id": "01KZAJW1GX2GP439071EC34YRV",
+      "role": "assistant",
+      "content": "<thought>当前没有用户请求，等待用户输入。</thought>",
+      "timestamp": 1785987991069
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948341,
+    "lastActiveAt": 1785987991069,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

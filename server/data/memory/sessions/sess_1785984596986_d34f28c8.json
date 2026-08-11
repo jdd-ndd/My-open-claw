@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596986_d34f28c8",
+  "userId": "load-user-hsj0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF5Y4XMQRPRQR5T4TY7S",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785984597043
+    },
+    {
+      "id": "01KZAFP6Q5ZYXAJZK47FPFH3S2",
+      "role": "assistant",
+      "content": "用户发送了 \"conn_msg_19\"，这看起来可能是一个连接消息标识或错误代码。请提供更多上下文，例如：\n\n- 这个代码出现在什么系统或平台上？\n- 完整的错误信息或日志是什么？\n- 您遇到了什么具体问题？\n\n这样我可以帮您更准确地分析和解决问题。",
+      "timestamp": 1785984654053
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597096,
+    "lastActiveAt": 1785984654053,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

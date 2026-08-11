@@ -1,0 +1,29 @@
+# QQBot 渠道配置
+# 通过 QQ 开放平台 (https://q.qq.com) 创建机器人获取凭证
+
+channelId: "qqbot"
+enabled: true
+
+# QQ Bot 应用凭证
+appId: "${QQBOT_APP_ID}"
+botToken: "${QQBOT_BOT_TOKEN}"
+clientSecret: "${QQBOT_CLIENT_SECRET}"
+
+# WebSocket 连接配置
+websocket:
+  url: "wss://api.sgroup.qq.com/websocket"
+  heartbeatInterval: 30000
+
+# 消息处理配置
+message:
+  allowGroupMessage: true
+  requireMentionInGroup: false
+  allowedUserIds: []
+
+# 重连配置
+reconnect:
+  enabled: true
+  maxAttempts: 10
+  initialInterval: 1000
+  maxInterval: 30000
+  backoffFactor: 2

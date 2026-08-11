@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596868_5a3c8bb8",
+  "userId": "load-user-77fx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF5CJT9S6K57TB6P2K94",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984597042
+    },
+    {
+      "id": "01KZAFQ1CQF8Z64JAPVT8D49W2",
+      "role": "assistant",
+      "content": "我注意到你发了一个连接消息 `conn_msg_15`，我从长期记忆中看到我们之前正要开始做**代码审查**，你之前说「帮我审查代码」。\n\n不过当前消息里我还没有看到需要审查的代码。要继续代码审查的话，请把代码贴出来（支持直接粘贴代码块、文件路径、或者 GitHub 链接），我会帮你全面分析代码质量、安全性、可维护性等。",
+      "timestamp": 1785984681367
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597086,
+    "lastActiveAt": 1785984681367,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

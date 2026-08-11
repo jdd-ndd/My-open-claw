@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987956439_b5531092",
+  "userId": "load-user-kuew",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0VKDT18Q1KWPA4CNS3X",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785987957519
+    },
+    {
+      "id": "01KZAJWH3M8EZ90TRWZS6QKXYN",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了 \"conn_msg_5\"，这看起来像是一个连接消息标识符或测试消息。有什么我可以帮你的吗？无论是文件操作、网络搜索、代码审查，还是其他任何任务，我都准备好了。请告诉我你的具体需求！",
+      "timestamp": 1785988007028
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957541,
+    "lastActiveAt": 1785988007028,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

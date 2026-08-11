@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985021351_a96f93dc",
+  "userId": "load-user-liid",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E1BX3T0MQR2EZDKQDD8",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985021915
+    },
+    {
+      "id": "01KZAG4PT1S9PT91MKAEV0QNFT",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985129281
+    },
+    {
+      "id": "01KZAG5KVPB19SW4TEVW9K5TTV",
+      "role": "assistant",
+      "content": "<thought>\n用户请求全面分析南京大学，但目前只获取了当前时间，没有任何关于南京大学的信息。任务尚未完成，需要继续收集信息。我应该从南京大学官网、百度百科等来源获取内容。由于一次只能执行一个工具调用，我先打开南京大学官网。\n</thought>\n<action name=\"browser/open\" args='{\"url\": \"https://www.nju.edu.cn\", \"timeout\": 30000}' />",
+      "timestamp": 1785985159030
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021923,
+    "lastActiveAt": 1785985159030,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

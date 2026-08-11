@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599280_042259cd",
+  "userId": "load-user-l9yv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHHX00W0V70MYV7KE7CB",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNPNJ9PX0B3W976B02HEW",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785984637618
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599537,
+    "lastActiveAt": 1785984637618,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

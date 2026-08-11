@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318025_e7e68c35",
+  "userId": "load-user-i3sd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFVXYR1325XQEYY4V2KG",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985318760
+    },
+    {
+      "id": "01KZAGETBNPGZJAP4HAS05QPBY",
+      "role": "assistant",
+      "content": "你好！我已收到你的连接测试消息 (conn_msg_1)。系统运行正常，请问有什么我可以帮你的吗？",
+      "timestamp": 1785985460597
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318764,
+    "lastActiveAt": 1785985460597,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

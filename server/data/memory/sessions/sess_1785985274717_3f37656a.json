@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985274717_3f37656a",
+  "userId": "user-g8dh9v900l",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG94WBGE875ECXHNMBR1JP",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785985274762
+    },
+    {
+      "id": "01KZAG9EA2ZN2VJ1SR7A4CH76G",
+      "role": "assistant",
+      "content": "您好！我是 MyOpenClaw Assistant，通用任务处理智能助手。看起来系统发送了一个并发通知，但暂时没有看到您的具体请求。请问有什么可以帮您的？",
+      "timestamp": 1785985284418
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985274762,
+    "lastActiveAt": 1785985284418,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

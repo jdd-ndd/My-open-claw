@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318326_04556dc5",
+  "userId": "load-user-4hd9",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFW6NW2YN8VCVBNEGNR3",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985318762
+    },
+    {
+      "id": "01KZAGER03CMEPTGT2KZ1Q6CHJ",
+      "role": "assistant",
+      "content": "我来帮您打开桌面文件夹。首先让我看看您的用户目录结构。\n\n<action name=\"fs/list_dir\" args='{\"path\": \"/Users/jensen\"}'>",
+      "timestamp": 1785985458179
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318771,
+    "lastActiveAt": 1785985458179,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

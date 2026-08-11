@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618270_6cb21a27",
+  "userId": "load-user-tbfa",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN47FDB8DT1HYBSH9YSJ6",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984618633
+    },
+    {
+      "id": "01KZAFP59HVVW057D0KAGRTPX3",
+      "role": "assistant",
+      "content": "连接已建立，我是 MyOpenClaw 通用任务处理助手。请问有什么可以帮您的？",
+      "timestamp": 1785984652593
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618660,
+    "lastActiveAt": 1785984652593,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

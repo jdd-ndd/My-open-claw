@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987938236_39d3a724",
+  "userId": "load-user-jg7c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEKYV9VSGFV81SGTW27N",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785987938801
+    },
+    {
+      "id": "01KZAJWXCXNE7CCVY2W2VCE7D0",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988019613
+    },
+    {
+      "id": "01KZAJYB2Q6WBEVZZ2J45B4EKH",
+      "role": "assistant",
+      "content": "你好！我尝试搜索了与 \"conn_msg_12\" 相关的历史记忆，但没有找到匹配的记录。\n\n\"conn_msg_12\" 看起来像是一个消息标识符或连接消息。请问你能告诉我更多背景信息吗？比如：\n- 这是你想查找的某段对话的关键词？\n- 还是你想让我执行某个任务的指令？\n- 或者你只是在测试连接？\n\n告诉我你的需求，我会尽全力帮你处理！😊",
+      "timestamp": 1785988066391
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938843,
+    "lastActiveAt": 1785988066391,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

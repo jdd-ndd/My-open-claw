@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985016841_4e662889",
+  "userId": "load-user-jc5c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG197T3JX2NTTTZ8PPA0TD",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985016921
+    },
+    {
+      "id": "01KZAG4GY1W417QT6QXZZK3V27",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985123265
+    },
+    {
+      "id": "01KZAG5H87JDA8W19KNPEKFTNT",
+      "role": "assistant",
+      "content": "你好！看起来你发送了 \"conn_msg_18\"，但这似乎是一条不完整的消息或内部标识符。我不太确定你想做什么。\n\n如果你需要帮助，可以告诉我：\n- 想要连接某个服务或工具？\n- 需要处理文件、执行命令？\n- 查询天气、汇率、新闻等信息？\n- 进行代码审查、项目搭建？\n- 或者其他任何任务？\n\n请详细描述你的需求，我会尽力协助你！😊",
+      "timestamp": 1785985156359
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016980,
+    "lastActiveAt": 1785985156359,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

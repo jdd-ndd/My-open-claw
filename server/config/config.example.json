@@ -1,0 +1,134 @@
+{
+  "$schema": "https://myopenclaw.dev/schemas/config.schema.json",
+  "app": {
+    "name": "myopenclaw",
+    "mode": "production"
+  },
+  "network": {
+    "ws": {
+      "host": "127.0.0.1",
+      "port": 18780,
+      "path": "/ws"
+    },
+    "http": {
+      "host": "127.0.0.1",
+      "port": 18790,
+      "basePath": ""
+    }
+  },
+  "llm": {
+    "provider": "deepseek",
+    "apiKey": "__SET_MYOC_LLM_API_KEY__",
+    "baseUrl": "https://api.deepseek.com",
+    "defaultModel": "deepseek-v4-flash",
+    "models": [
+      {
+        "id": "deepseek-v4-flash",
+        "name": "DeepSeek V4 Flash",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "supportsFunctions": true,
+        "supportsVision": false,
+        "supportsStreaming": true
+      }
+    ],
+    "modelParams": {
+      "temperature": 0.7,
+      "topP": 0.9,
+      "maxTokens": 4096,
+      "reasoningEffort": "high"
+    },
+    "rateLimit": {
+      "requestsPerMinute": 60,
+      "tokensPerMinute": 100000,
+      "concurrent": 16
+    },
+    "retry": {
+      "maxRetries": 2,
+      "initialBackoffMs": 500,
+      "maxBackoffMs": 10000,
+      "backoffMultiplier": 2.0
+    },
+    "streaming": {
+      "enabled": true,
+      "includeUsage": true
+    },
+    "proxy": {
+      "enabled": false,
+      "url": ""
+    }
+  },
+  "embedding": {
+    "provider": "openai",
+    "apiKey": "__SET_MYOC_EMBEDDING_API_KEY__",
+    "baseUrl": "https://api.openai.com/v1",
+    "model": "text-embedding-3-small",
+    "dimensions": 1536,
+    "batchSize": 64
+  },
+  "memory": {
+    "session": {
+      "maxMessages": 50,
+      "ttlSeconds": 86400
+    },
+    "vector": {
+      "backend": "local",
+      "dimension": 1536,
+      "distance": "cosine"
+    },
+    "persist": {
+      "backend": "sqlite",
+      "path": "~/.myopenclaw/data/memory.db"
+    }
+  },
+  "security": {
+    "authToken": "__SET_MYOC_SECURITY_AUTH_TOKEN__",
+    "apiRateLimit": {
+      "windowMs": 60000,
+      "max": 120
+    },
+    "sandbox": {
+      "workDir": "~/.myopenclaw/workspace",
+      "maxMemoryMb": 512,
+      "timeoutMs": 30000,
+      "allowNetwork": true
+    },
+    "tools": {
+      "allowedPaths": ["~/.myopenclaw/workspace"],
+      "blockedCommands": ["rm -rf /", "shutdown -h now"],
+      "requireConfirmation": ["exec/shell"],
+      "maxExecutionTimeMs": 60000,
+      "maxFileOperationBytes": 10485760
+    }
+  },
+  "paths": {
+    "data": "~/.myopenclaw/data",
+    "logs": "~/.myopenclaw/logs",
+    "workspace": "~/.myopenclaw/workspace",
+    "skills": "./skills",
+    "pidFile": "~/.myopenclaw/server.pid"
+  },
+  "logging": {
+    "level": "info",
+    "format": "pretty",
+    "output": "console",
+    "file": "~/.myopenclaw/logs/server.log",
+    "rotation": {
+      "enabled": true,
+      "maxSizeMb": 50,
+      "maxFiles": 10,
+      "compress": true
+    }
+  },
+  "agents": {
+    "maxConcurrent": 8
+  },
+  "features": {
+    "scheduler": true,
+    "audit": true,
+    "rateLimit": true,
+    "memory": true,
+    "vectorSearch": true,
+    "streaming": true
+  }
+}

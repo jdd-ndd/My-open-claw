@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606825_a7d2cb70",
+  "userId": "load-user-kjmz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS4VH078G7H91CBEZH6X",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFNK1AJ3G2NMD54PE3SAPT",
+      "role": "assistant",
+      "content": "Hello! How can I help you today? 😊",
+      "timestamp": 1785984633898
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607324,
+    "lastActiveAt": 1785984633898,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

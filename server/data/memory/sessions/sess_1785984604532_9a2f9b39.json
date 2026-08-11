@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604532_9a2f9b39",
+  "userId": "load-user-jqhc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPKGZ12HJSQ72F86KNTF",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984604645
+    },
+    {
+      "id": "01KZAFNZDZRD7N7R23EXEJAADJ",
+      "role": "assistant",
+      "content": "conn_msg_17\n\n这看起来像是一条系统消息或测试内容，如果你是在测试助手功能，请直接告诉我你的需求，我很乐意帮你解决问题！无论是代码、文件处理、信息查询还是其他任务，都可以随时吩咐 😊",
+      "timestamp": 1785984646591
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604694,
+    "lastActiveAt": 1785984646591,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

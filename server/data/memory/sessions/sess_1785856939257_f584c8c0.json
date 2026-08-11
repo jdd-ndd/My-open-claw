@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785856939257_f584c8c0",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZ6TCSERX2EY13SNAJDYMA55",
+      "role": "user",
+      "content": "重启验证测试消息",
+      "timestamp": 1785861662166
+    },
+    {
+      "id": "01KZ6TD1KSPYF10NXFB3D945S2",
+      "role": "assistant",
+      "content": "好的！我是你的通用任务处理智能助手，随时准备帮助你解决各种任务。\n\n如果你有任何需求，比如文件操作、代码审查、项目搭建、网页分析、数据查询、数学计算等等，我都可以帮你处理。我会先用 `<thought>` 分析你的请求，然后根据需要使用工具或直接给出回答。\n\n请随时告诉我你需要什么！",
+      "timestamp": 1785861670521
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785861662167,
+    "lastActiveAt": 1785861670521,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

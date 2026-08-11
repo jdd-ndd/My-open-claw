@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988221662_5e4f37e7",
+  "userId": "load-user-rixb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK33P8ME8FDWCVVRPWRREK",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785988222638
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988222646,
+    "lastActiveAt": 1785988222664,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

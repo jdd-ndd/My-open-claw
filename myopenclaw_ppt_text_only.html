@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My OpenClaw - PPT Text Draft</title>
+</head>
+<body>
+  <section>
+    <h1>My OpenClaw</h1>
+    <p>项目答辩版内容草稿</p>
+  </section>
+
+  <section>
+    <h2>01 项目背景与定位</h2>
+    <p>My OpenClaw 是一个本地优先、双端协同的 AI Agent 项目。</p>
+    <p>项目目标是把聊天入口、工具调用、会话管理、记忆能力和多端接入整合成一条完整工作链路。</p>
+    <p>核心定位是“可本地部署、可扩展、可演示、可持续开发”的个人 AI 助手框架。</p>
+  </section>
+
+  <section>
+    <h2>02 项目完成了什么</h2>
+    <p>项目已经完成 Web 客户端、Python TUI 客户端、Gateway 网关、Tools 工具层、Memory 记忆层和共享协议的完整闭环。</p>
+    <p>用户可以通过不同终端发起对话，系统会统一进入网关，再由 Agent 调度工具和记忆完成响应。</p>
+    <p>当前项目不是单纯的聊天页面，而是一个真正具备多步骤执行能力的 AI Agent 工程。</p>
+  </section>
+
+  <section>
+    <h2>03 项目特色功能</h2>
+    <p>支持 Web 与 TUI 双端协同，两种入口共用同一套会话与消息链路。</p>
+    <p>支持思考过程展示、流式回复、工具调用记录、历史会话切换和会话标题管理。</p>
+    <p>支持时间、天气、汇率、节假日、新闻、加密货币等实用工具调用。</p>
+    <p>支持本地记忆、会话上下文保留和后续功能扩展。</p>
+  </section>
+
+  <section>
+    <h2>04 系统整体架构</h2>
+    <p>系统采用 Hub-Spoke 架构。</p>
+    <p>上层是多种客户端入口，中间是 Gateway 网关，底层是 Agent Runtime、Tools 和 Memory。</p>
+    <p>所有消息都会先进入网关，再由网关统一分发给 Agent 和相关能力模块。</p>
+  </section>
+
+  <section>
+    <h2>05 核心工作流</h2>
+    <p>用户输入消息后，客户端通过 WebSocket 或 HTTP 把请求发送到 Gateway。</p>
+    <p>Gateway 负责会话路由、状态管理、消息下发和上行转发。</p>
+    <p>Agent 根据任务调用工具、读取记忆、生成流式回复，再回传到客户端展示。</p>
+  </section>
+
+  <section>
+    <h2>06 模块划分总览</h2>
+    <p>项目主要分为 Gateway、Channels、Agents、Tools、Skills、Memory、Core、Hooks、CLI 九大模块。</p>
+    <p>其中 Gateway、Agents、Memory 是核心逻辑，Channels 和 Tools 负责接入与执行，Core 负责公共结构与协议。</p>
+    <p>客户端部分则由 Web 和 Python TUI 承载实际交互体验。</p>
+  </section>
+
+  <section>
+    <h2>07 Gateway 模块</h2>
+    <p>Gateway 是系统控制中枢，负责 WebSocket 和 HTTP 通信、消息路由、会话状态、调度和审计日志。</p>
+    <p>它还承担安全沙箱、限流、健康检查、定时任务和优雅关闭等基础能力。</p>
+    <p>这是整个项目最关键的后端协同层。</p>
+  </section>
+
+  <section>
+    <h2>08 Agents 与 Tools</h2>
+    <p>Agents 负责任务拆解、执行编排、模型调用和多步推理闭环。</p>
+    <p>Tools 负责真正执行动作，比如时间查询、天气查询、汇率查询和新闻查询。</p>
+    <p>两者配合后，系统从“能聊天”升级为“能办事”。</p>
+  </section>
+
+  <section>
+    <h2>09 Memory 与 Skills</h2>
+    <p>Memory 负责短期上下文、长期记忆和会话持久化，让系统记住历史对话。</p>
+    <p>Skills 以描述式方式表达业务能力，作为 Agent 的能力索引与扩展入口。</p>
+    <p>这部分为后续新增能力留下了清晰接口。</p>
+  </section>
+
+  <section>
+    <h2>10 Web 客户端完成内容</h2>
+    <p>Web 客户端基于 React 18、Vite、TypeScript、Zustand 和 TailwindCSS 实现。</p>
+    <p>已完成 WebSocket 实时通信、消息流式渲染、会话管理、主题切换、Markdown 渲染和工具调用展示。</p>
+    <p>它是项目最完整、最适合演示的可视化入口。</p>
+  </section>
+
+  <section>
+    <h2>11 Python TUI 客户端完成内容</h2>
+    <p>TUI 客户端基于 Python + Textual 实现，面向命令行场景。</p>
+    <p>已完成启动页、聊天页、命令面板、状态栏和侧边栏等界面。</p>
+    <p>它适合本地调试、服务器环境和远程 SSH 使用。</p>
+  </section>
+
+  <section>
+    <h2>12 三人分工协作</h2>
+    <p>项目采用三人协作模式，并通过 RACI 矩阵明确每个模块的负责人、执行者、咨询者和知会者。</p>
+    <p>核心模块包括 Gateway、Agents、Memory、Channels、Tools、Core 等，均有明确责任归属。</p>
+    <p>这样保证了多人并行开发时的接口一致性和交付稳定性。</p>
+  </section>
+
+  <section>
+    <h2>13 分工与完成度</h2>
+    <p>从文档统计看，项目已经实现 9 大模块的完整落地，核心链路已全部打通。</p>
+    <p>Gateway、Agents、Tools、Memory、Core 等核心模块均处于可用状态，客户端也已完成主要交互功能。</p>
+    <p>整体完成度已经从原型阶段进入可演示、可扩展的工程阶段。</p>
+  </section>
+
+  <section>
+    <h2>14 使用的技术栈</h2>
+    <p>后端采用 TypeScript、Node.js、WebSocket、HTTP、pnpm workspace 和本地持久化方案。</p>
+    <p>Web 端采用 React 18、Vite、Zustand、TailwindCSS、React Markdown 等技术。</p>
+    <p>TUI 端采用 Python、Textual、Commander、ws 等技术完成命令行交互。</p>
+  </section>
+
+  <section>
+    <h2>15 工程化与协作规范</h2>
+    <p>项目使用 Git Flow、Conventional Commits、PR Review、CI/CD 和版本发布流程。</p>
+    <p>通过统一接口、模块文档、变更记录和责任分配，保证多人协作时不会互相打架。</p>
+    <p>这部分体现的是项目的工程能力，而不只是功能堆叠。</p>
+  </section>
+
+  <section>
+    <h2>16 项目亮点总结</h2>
+    <p>My OpenClaw 的价值不只是一个聊天工具，而是一套完整的本地 AI Agent 框架。</p>
+    <p>它实现了多端接入、统一网关、工具执行、记忆管理和流式交互。</p>
+    <p>同时，它还具备清晰的模块边界和后续持续扩展能力。</p>
+  </section>
+
+  <section>
+    <h2>17 当前成果与后续方向</h2>
+    <p>目前项目已经完成核心架构、主要客户端和常用工具链路。</p>
+    <p>后续可以继续补强更多渠道接入、更完整的测试、更细的权限控制和更丰富的记忆能力。</p>
+    <p>整体上，项目已经具备继续演进为完整 AI 助手平台的基础。</p>
+  </section>
+</body>
+</html>

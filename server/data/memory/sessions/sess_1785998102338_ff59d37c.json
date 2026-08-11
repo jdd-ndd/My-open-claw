@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785998102338_ff59d37c",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAWHN3B5XZFQW6X1EQ07AN4",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785998136424
+    },
+    {
+      "id": "01KZAWHQD8RBS6CGBQM0HR6J56",
+      "role": "assistant",
+      "content": "嗨！你好呀！有什么我可以帮你的吗？😊",
+      "timestamp": 1785998138792
+    },
+    {
+      "id": "01KZAWQDHYKKAMSB5R62EHVZ0E",
+      "role": "user",
+      "content": "你都会做些什么",
+      "timestamp": 1785998325309
+    },
+    {
+      "id": "01KZAWQT02SDCG2J7HGFJE8E9B",
+      "role": "assistant",
+      "content": "我能帮你做很多事情！以下是我的主要能力：\n\n## 📁 文件与系统\n- **文件操作**：读取、写入、删除文件，浏览目录\n- **命令执行**：在终端运行 Shell 命令，管理进程\n\n## 🌐 网络与浏览器\n- **浏览网页**：打开网页、抓取内容、填写表单\n- **HTTP 请求**：发送 GET/POST 等请求，调用 API\n\n## 🔍 信息查询\n- **天气**：实时天气 + 未来几天预报\n- **新闻**：最新头条新闻\n- **汇率 / 加密货币**：实时汇率转换、币价查询\n- **IP 定位**：查询 IP 的地理位置\n- **节假日**：各国法定节假日\n- **时间**：当前服务器时间\n\n## 🗺️ 出行路线\n- **地理编码**：地名 → 经纬度\n- **路线规划**：驾车 / 步行 / 骑行导航\n\n## 🧮 计算器\n- **数学运算**：表达式计算、三角函数、对数等\n- **单位换算**：长度、重量、温度、面积等\n- **进制转换**：二进制、十进制、十六进制互转\n\n## 🧠 智能辅助\n- **代码审查**：检查代码质量、安全性\n- **项目搭建**：快速初始化项目结构\n- **网页分析**：提取网页关键信息\n- **PPT 生成**：一键生成演示文稿\n- **记忆检索**：回忆历史对话\n\n---\n\n有什么需要我处理的，尽管吩咐！😊",
+      "timestamp": 1785998338050
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785998136425,
+    "lastActiveAt": 1785998338050,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

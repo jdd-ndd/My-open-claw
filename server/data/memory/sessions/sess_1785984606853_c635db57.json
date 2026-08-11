@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606853_c635db57",
+  "userId": "load-user-ece8",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS50SCVJ42J905HEB5MV",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFNXK7D4NE3KYY33JYXETW",
+      "role": "assistant",
+      "content": "用户发送了 `conn_msg_5` 字符串，看起来像是内部通信的消息标识符或误操作。我打算先解释这个字符串可能表示的含义，然后引导用户澄清他们的真实需求。",
+      "timestamp": 1785984644711
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607327,
+    "lastActiveAt": 1785984644711,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

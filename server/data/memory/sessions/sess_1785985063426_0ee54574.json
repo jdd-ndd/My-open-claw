@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063426_0ee54574",
+  "userId": "load-user-zwg6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q7KCWW3BSX3AYPKYWMW",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985064097
+    },
+    {
+      "id": "01KZAG42VZD4QE0HWFHSYCG5Y2",
+      "role": "assistant",
+      "content": "连接正常。",
+      "timestamp": 1785985108863
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064107,
+    "lastActiveAt": 1785985108863,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

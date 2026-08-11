@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615270_bb6b20dc",
+  "userId": "load-user-5gg5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1AC3GGS965J9CR7BCF3",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984615649
+    },
+    {
+      "id": "01KZAFP5EK93GYMD6CNXMASV43",
+      "role": "assistant",
+      "content": "你好！👋 我已成功连接并准备就绪。\n\n看起来你发送的是连接消息 **conn_msg_8**，我这边已经正常接收到了。连接一切正常！\n\n请问有什么我可以帮你的吗？无论是代码审查、项目搭建、网页分析，还是其他任何任务，我都很乐意协助你。",
+      "timestamp": 1785984652755
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615676,
+    "lastActiveAt": 1785984652755,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

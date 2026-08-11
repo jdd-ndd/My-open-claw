@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984593980_94eafead",
+  "userId": "load-user-erce",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCN0M3B025RKG3FXMEZ0",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785984594525
+    },
+    {
+      "id": "01KZAFNCRDENXMFADMWP0NSGWW",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984627469
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594530,
+    "lastActiveAt": 1785984627469,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

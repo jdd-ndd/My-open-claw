@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985364207_dc8a59ba",
+  "userId": "load-user-65en",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWCE13JVR2X6VX0VR5V3",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985364324
+    },
+    {
+      "id": "01KZAGDAVVZWHW6BFVDXW2VATV",
+      "role": "assistant",
+      "content": "您好！看起来您发送了一个连接消息标识符。请问有什么我可以帮助您的吗？无论是文件操作、网页分析、代码审查，还是其他任务，我都很乐意协助您！",
+      "timestamp": 1785985411963
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364341,
+    "lastActiveAt": 1785985411963,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985337888_cce72920",
+  "userId": "load-user-gnng",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2SD9WXCAEGYSFCHT71W",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985338118
+    },
+    {
+      "id": "01KZAGCN9363M5TRQCN8HR9BSQ",
+      "role": "assistant",
+      "content": "<action name=\"weather/lookup\" args='{\"query\": \"杭州\"}'>",
+      "timestamp": 1785985389859
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338133,
+    "lastActiveAt": 1785985389859,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

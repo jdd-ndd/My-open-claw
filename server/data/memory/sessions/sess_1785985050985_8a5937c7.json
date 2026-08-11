@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985050985_8a5937c7",
+  "userId": "load-user-1v9c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BAR6VKJV0E2SKFZ8A0Y",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985051902
+    },
+    {
+      "id": "01KZAG4W2SNWWD3A87R0XWG359",
+      "role": "assistant",
+      "content": "。\n\n但需要按照输出格式：先 <thought>，然后要么 <action> 要么 <final_answer>。这里不需要行动。\n\n所以：<thought>用户可能刚进入会话，没有具体请求。我应该友好地打个招呼。</thought><final_answer>你好！我是 MyOpenClaw Assistant，有什么可以帮你的吗？",
+      "timestamp": 1785985134681
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051909,
+    "lastActiveAt": 1785985134681,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

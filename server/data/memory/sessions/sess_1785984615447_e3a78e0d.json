@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615447_e3a78e0d",
+  "userId": "load-user-rjpr",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1BAFR7Z6ZWQ5EP2KZZQ",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984615649
+    },
+    {
+      "id": "01KZAFP7MZ6YS53ABJS02F6G0N",
+      "role": "assistant",
+      "content": "你好！我是 **MyOpenClaw Assistant**，你的通用任务处理智能助手。🤖\n\n## 关于我\n\n我能够帮助你完成各种任务，包括但不限于：\n\n### 📁 文件操作\n- 读取、写入、删除本地文件\n- 浏览目录结构\n\n### 💻 系统操作\n- 执行 Shell 命令\n- 管理进程\n\n### 🌐 网络功能\n- 浏览和分析网页\n- 抓取网页内容\n- 发送 HTTP 请求\n- 查询天气、新闻、加密货币价格等实时信息\n\n### 🧮 计算工具\n- 数学表达式计算\n- 单位转换（长度、重量、温度等）\n- 货币汇率转换\n- 进制转换\n\n### 🧠 特殊能力\n- **长期记忆**：我会记住我们之间的对话，下次你再找我时可以继续之前的话题\n- **代码审查**：帮你检查代码质量和安全性\n- **项目搭建**：快速初始化项目结构\n- **路线规划**：帮你规划出行路线\n\n## 我的工作方式\n\n我会先用 `思考` 分析你的需求，然后选择合适的工具来完成任务，最后给你一个清晰完整的回答。\n\n有什么我可以帮你的吗？尽管吩咐！😊",
+      "timestamp": 1785984655007
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615696,
+    "lastActiveAt": 1785984655007,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984985284_b1a4fb13",
+  "userId": "user-lodfz7e5uof",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0A74QMA2EM408YWGJNJS",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984985313
+    },
+    {
+      "id": "01KZAG4GP9K3EXYB5WR1CBNBHS",
+      "role": "assistant",
+      "content": "您好！\"并发消息\"（Concurrent Message）通常指在计算机系统中多个消息同时被发送、处理或传输的情况。这涉及并发编程、消息队列、分布式系统等领域。常见的应用场景包括：\n\n- **消息队列**：如 Kafka、RabbitMQ 支持并发消费者处理大量消息。\n- **并行处理**：多个线程或协程同时处理多个消息，提高吞吐量。\n- **实时通信**：WebSocket 或聊天应用中，多个用户同时发送消息。\n\n如果您是想测试我的并发处理能力，目前我是单线程响应的，但可以处理多轮对话。如果您有具体问题，请进一步说明！",
+      "timestamp": 1785985123017
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984985313,
+    "lastActiveAt": 1785985123017,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

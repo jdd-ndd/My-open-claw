@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984983251_d6cdcb1d",
+  "userId": "user-80xq5uvqrb6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG087G6BVWPHKKXZJX5HDE",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984983278
+    },
+    {
+      "id": "01KZAG0EXRCV3Z7V1D6H21B0Y6",
+      "role": "assistant",
+      "content": "您好！您发送了\"concurrent message\"，这是指\"并发消息\"吗？在计算机科学中，\"concurrent message\"通常与并发编程、消息传递系统相关，表示多个消息同时或交替处理。\n\n您是想了解这方面的知识，还是有其他任务需要我帮助？请随时告诉我具体需求！",
+      "timestamp": 1785984990136
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984983278,
+    "lastActiveAt": 1785984990136,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

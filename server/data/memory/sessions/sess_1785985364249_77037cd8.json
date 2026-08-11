@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985364249_77037cd8",
+  "userId": "load-user-m9kt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWCEJSY3J920PX6GGB0T",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985364324
+    },
+    {
+      "id": "01KZAGE2FBRSRGJKYAKZVWYXJH",
+      "role": "assistant",
+      "content": "你好！你发送的 \"conn_msg_19\" 看起来像是一个系统标识符或连接消息ID。我注意到这可能不是一个完整的请求。\n\n请问有什么我可以帮你的吗？无论是回答问题、处理文件、搜索信息还是其他任务，我都很乐意协助！😊",
+      "timestamp": 1785985436139
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364342,
+    "lastActiveAt": 1785985436139,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

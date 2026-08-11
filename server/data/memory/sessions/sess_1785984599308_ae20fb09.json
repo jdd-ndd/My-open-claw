@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599308_ae20fb09",
+  "userId": "load-user-axrj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHJ1EAT0SZDSY6MX8R4G",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNKS56STRJQY3ZACBX9T7",
+      "role": "assistant",
+      "content": "鉴于你只发了 `conn_msg_14`，我还不太确定你具体想做什么。  \n可以再描述一下你的需求吗？比如：\n\n- 想开始一个新的任务（编程、写作、数据分析、查资料等）  \n- 遇到某个问题需要解决  \n- 需要某个工具或技能帮忙  \n\n我会根据你说的内容，帮你快速处理。",
+      "timestamp": 1785984634661
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599540,
+    "lastActiveAt": 1785984634661,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

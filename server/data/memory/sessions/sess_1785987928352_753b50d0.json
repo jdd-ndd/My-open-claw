@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987928352_753b50d0",
+  "userId": "load-user-qtai",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5DSY6AK1Q4GHMNP817A",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785987929429
+    },
+    {
+      "id": "01KZAJWA4N792FEZGHYEGNPY0X",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785987999893
+    },
+    {
+      "id": "01KZAJY2TCN9KFTW3FA7FATFT3",
+      "role": "assistant",
+      "content": "很遗憾，我查询了长期记忆，但目前没有找到近期的聊天记录。这可能是因为：\n\n1. **这是一个新会话** — 当前会话 ID 是 `sess_1785987928352_753b50d0`，之前的对话可能在不同的会话中，且尚未被索引到长期记忆。\n2. **记忆尚未同步** — 历史对话可能还在处理中，尚未存入可检索的记忆库。\n\n**建议：** 如果您还记得之前聊过的大致主题或关键词，可以告诉我，我可以帮您针对性地查找。或者您可以简要复述一下之前讨论的内容，我们可以从那里继续！\n\n有什么我可以帮您的吗？",
+      "timestamp": 1785988057932
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929448,
+    "lastActiveAt": 1785988057932,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

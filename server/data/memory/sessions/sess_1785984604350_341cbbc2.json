@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604350_341cbbc2",
+  "userId": "load-user-peyn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPJM3CK233F10MADFCQE",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFNH5ACHT2PFGS81ZPFCR1",
+      "role": "assistant",
+      "content": "确认收到连接测试。一切正常。",
+      "timestamp": 1785984631978
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604676,
+    "lastActiveAt": 1785984631978,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

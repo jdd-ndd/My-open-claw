@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987957382_512b122a",
+  "userId": "load-user-54lb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0Y0D1026EV22QC21AWR",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785987957524
+    },
+    {
+      "id": "01KZAJWRV15ZW71B8899D3RRAK",
+      "role": "assistant",
+      "content": "你好！你发送的 \"conn_msg_19\" 看起来像是一个内部消息标识符或测试占位符，而不是一个明确的指令。\n\n请告诉我你具体想做什么？比如：\n- 数据分析\n- 文件管理\n- 网页查询\n- 代码编写/审查\n- 信息检索\n\n期待你的进一步说明！😊",
+      "timestamp": 1785988014946
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957588,
+    "lastActiveAt": 1785988014946,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

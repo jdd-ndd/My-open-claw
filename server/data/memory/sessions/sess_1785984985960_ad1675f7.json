@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984985960_ad1675f7",
+  "userId": "user-63v1jx9rbs2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0AWGBJAR06GJDJFTZ7R1",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984985996
+    },
+    {
+      "id": "01KZAG43FH7CSX3DPHMGFNV69V",
+      "role": "assistant",
+      "content": "你好！我已经收到了你的并发消息。我可以同时处理多个请求，请告诉我有什么可以帮你的？",
+      "timestamp": 1785985109489
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984985996,
+    "lastActiveAt": 1785985109489,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

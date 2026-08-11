@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985016753_f2c71e0e",
+  "userId": "load-user-fisv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG197BKFE6G8FQV427T4NA",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985016921
+    },
+    {
+      "id": "01KZAG4BC5XF91PJY5EF5C6VMX",
+      "role": "assistant",
+      "content": "你好！你发送的 \"conn_msg_15\" 看起来是一个连接消息或标识符。请问有什么我可以帮助你的吗？",
+      "timestamp": 1785985117573
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016970,
+    "lastActiveAt": 1785985117573,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

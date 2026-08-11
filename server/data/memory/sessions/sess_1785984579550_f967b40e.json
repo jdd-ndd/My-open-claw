@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984579550_f967b40e",
+  "userId": "user-djcay0ad27m",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKY0ATMPX5R7EYWF5J86C",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984579590
+    },
+    {
+      "id": "01KZAFN9PDFM4AEZZSWFY448G1",
+      "role": "assistant",
+      "content": "您好！\"concurrent message\" 通常可以理解为**并发消息**，在计算机科学中指的是多个消息或任务在同一时间段内被处理或传递的场景，常见于并发编程、分布式系统或消息队列中。\n\n如果您是想讨论并发消息的处理机制、相关技术栈（如 Kafka、RabbitMQ），或者想测试系统的并发能力，请随时告诉我具体需求，我会尽力提供帮助！\n\n您也可以描述一下您遇到的具体场景，比如“如何处理高并发消息？”或“如何实现消息的异步处理？”等，我会给出更针对性的建议。",
+      "timestamp": 1785984624333
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984579591,
+    "lastActiveAt": 1785984624333,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601504_27d7df19",
+  "userId": "load-user-6gs0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMKZVJZ6V4QYPH2MTB22X",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984602035
+    },
+    {
+      "id": "01KZAFNKMJEZNPVYXECFJQNF35",
+      "role": "assistant",
+      "content": "这似乎是一条未知消息，我不太确定该如何回应。请告诉我你需要什么帮助，我会尽力协助你。",
+      "timestamp": 1785984634514
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602045,
+    "lastActiveAt": 1785984634514,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

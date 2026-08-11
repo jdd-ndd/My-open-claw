@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984580452_d8f68fbc",
+  "userId": "user-80pjebi3mf3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKYWTC734YGFSPABSTXWW",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984580501
+    },
+    {
+      "id": "01KZAFN88NRRAB1W20VA5KX5AB",
+      "role": "assistant",
+      "content": "关于您的问题：\n\n**当前会话中，消息是顺序处理的**，而非并发处理。\n\n系统一次只会处理一条消息并返回结果，在下一条消息到达之前，会等待当前处理完成。虽然我支持上下文记忆，可以回顾之前的对话，但真正的并发处理能力目前尚未支持。\n\n如果您需要测试并发场景，可能需要通过多个独立的会话或客户端同时发送请求来模拟。\n\n有什么其他问题我可以帮您解答吗？",
+      "timestamp": 1785984622869
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984580502,
+    "lastActiveAt": 1785984622869,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

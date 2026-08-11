@@ -105,14 +105,14 @@ describe('Gateway - 协议类型', () => {
         type: 'event',
         id: 'evt-001',
         event: 'channel.connected',
-        payload: { channelId: 'discord', status: 'connected' },
+        payload: { channelId: 'qqbot', status: 'connected' },
         timestamp: '2026-07-22T10:00:00.000Z',
       };
 
       expect(msg.type).toBe('event');
       expect(msg.id).toBe('evt-001');
       expect(msg.event).toBe('channel.connected');
-      expect(msg.payload).toEqual({ channelId: 'discord', status: 'connected' });
+      expect(msg.payload).toEqual({ channelId: 'qqbot', status: 'connected' });
       expect(msg.timestamp).toBe('2026-07-22T10:00:00.000Z');
     });
 

@@ -1,0 +1,89 @@
+:root {
+  /* Aurora Prism — Light Theme */
+  --background: 220 40% 98%;
+  --foreground: 224 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 224 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 47% 11%;
+
+  /* Primary: Deep indigo-blue with teal undertones */
+  --primary: 232 75% 56%;
+  --primary-foreground: 210 40% 98%;
+
+  /* Secondary: Soft lavender-gray */
+  --secondary: 220 25% 94%;
+  --secondary-foreground: 224 47% 18%;
+
+  /* Muted: Cool gray */
+  --muted: 220 20% 96%;
+  --muted-foreground: 220 12% 42%;
+
+  /* Accent: Warm amber-gold for highlights */
+  --accent: 38 92% 58%;
+  --accent-foreground: 224 47% 11%;
+
+  /* Destructive */
+  --destructive: 0 82% 58%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Borders & Inputs */
+  --border: 220 24% 90%;
+  --input: 220 24% 90%;
+  --ring: 232 75% 56%;
+
+  /* Radii */
+  --radius: 0.75rem;
+
+  /* Extended palette */
+  --teal: 174 62% 47%;
+  --teal-foreground: 210 40% 98%;
+  --lavender: 262 83% 72%;
+  --lavender-foreground: 210 40% 98%;
+  --coral: 14 85% 66%;
+  --coral-foreground: 210 40% 98%;
+  --mint: 152 70% 52%;
+  --mint-foreground: 224 47% 11%;
+}
+
+.dark {
+  /* Aurora Prism — Dark Theme */
+  --background: 224 47% 7%;
+  --foreground: 210 40% 98%;
+
+  --card: 224 47% 10%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 224 47% 10%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 232 82% 68%;
+  --primary-foreground: 224 47% 11%;
+
+  --secondary: 224 30% 18%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 224 30% 16%;
+  --muted-foreground: 220 15% 68%;
+
+  --accent: 38 92% 62%;
+  --accent-foreground: 224 47% 11%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 224 30% 20%;
+  --input: 224 30% 20%;
+  --ring: 232 82% 68%;
+
+  --teal: 174 62% 52%;
+  --teal-foreground: 210 40% 98%;
+  --lavender: 262 83% 76%;
+  --lavender-foreground: 210 40% 98%;
+  --coral: 14 85% 70%;
+  --coral-foreground: 210 40% 98%;
+  --mint: 152 70% 56%;
+  --mint-foreground: 224 47% 11%;
+}

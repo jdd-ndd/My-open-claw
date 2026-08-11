@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984872416_b176045c",
+  "userId": "load-user-njtv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFWW61RAQ6353SC1KPNTAB",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984872595
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984872611,
+    "lastActiveAt": 1785984872641,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

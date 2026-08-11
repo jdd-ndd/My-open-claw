@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618518_0d5d5c2e",
+  "userId": "load-user-bc30",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN48JSMXX23ZPF8WGEJXD",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984618634
+    },
+    {
+      "id": "01KZAFNN897Y1KXG60NY9J0ADH",
+      "role": "assistant",
+      "content": "连接已恢复！我是 MyOpenClaw Assistant，可以帮你处理各种任务。有什么我可以帮你的吗？",
+      "timestamp": 1785984636169
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618684,
+    "lastActiveAt": 1785984636169,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

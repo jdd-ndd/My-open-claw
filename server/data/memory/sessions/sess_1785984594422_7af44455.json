@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594422_7af44455",
+  "userId": "load-user-vmc6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCQC3TJBQPFNKN948ASC",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984594526
+    },
+    {
+      "id": "01KZAFNMT68VTV9HYWBPY6X7FJ",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息，但 \"conn_msg_17\" 看起来像是一个连接标识符或测试消息。\n\n请问有什么我可以帮助您的吗？无论是文件操作、网页分析、代码审查、项目管理，还是其他任何任务，我都很乐意协助！",
+      "timestamp": 1785984635718
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594576,
+    "lastActiveAt": 1785984635718,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

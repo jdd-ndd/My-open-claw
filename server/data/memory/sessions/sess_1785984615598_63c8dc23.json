@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615598_63c8dc23",
+  "userId": "load-user-wgwb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1C5W8H28J4GEAXX7JV2",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785984615650
+    },
+    {
+      "id": "01KZAFNX8ND8W35DZBQHBHHQGY",
+      "role": "assistant",
+      "content": "用户说的是\"天气\"，但没有给出城市。请告诉我想查哪个城市？",
+      "timestamp": 1785984644373
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615711,
+    "lastActiveAt": 1785984644373,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

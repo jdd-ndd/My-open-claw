@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604257_2d371b2f",
+  "userId": "load-user-fkos",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPJ7CVPJ46N7SJ111GZR",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFP678QJ9FXDFTXDJ6YRCX",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，你的通用任务处理智能助手。看起来你可能刚刚完成连接。请问有什么我可以帮助你的吗？无论是文件操作、网页分析、代码审查、项目搭建，还是日常问答，我都可以处理。请随时告诉我你的需求！",
+      "timestamp": 1785984653544
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604668,
+    "lastActiveAt": 1785984653544,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

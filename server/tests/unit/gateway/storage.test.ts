@@ -33,12 +33,12 @@ describe('Gateway - MemoryStorage', () => {
   describe('prepare().run()', () => {
     it('应能插入行数据', () => {
       storage.ensureTable('users', '');
-      const stmt = storage.prepare('INSERT INTO users');
+      const stmt = storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)');
       expect(() => stmt.run('user-1', 'alice')).not.toThrow();
     });
 
     it('未建表时插入应自动创建表', () => {
-      const stmt = storage.prepare('INSERT INTO tasks');
+      const stmt = storage.prepare('INSERT INTO tasks (id, name) VALUES (?, ?)');
       expect(() => stmt.run('task-1', 'task-name')).not.toThrow();
     });
   });
@@ -46,8 +46,8 @@ describe('Gateway - MemoryStorage', () => {
   describe('prepare().get()', () => {
     it('应能通过 ID 检索已插入的行', () => {
       storage.ensureTable('users', '');
-      storage.prepare('INSERT INTO users').run('user-1', 'alice');
-      storage.prepare('INSERT INTO users').run('user-2', 'bob');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('user-1', 'alice');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('user-2', 'bob');
 
       const row = storage.prepare('SELECT * FROM users WHERE id = ?').get('user-1');
       expect(row).toBeDefined();
@@ -56,7 +56,7 @@ describe('Gateway - MemoryStorage', () => {
 
     it('查询不存在的 ID 应返回 undefined', () => {
       storage.ensureTable('users', '');
-      storage.prepare('INSERT INTO users').run('user-1', 'alice');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('user-1', 'alice');
 
       const row = storage.prepare('SELECT * FROM users WHERE id = ?').get('nonexistent');
       expect(row).toBeUndefined();
@@ -71,9 +71,9 @@ describe('Gateway - MemoryStorage', () => {
   describe('prepare().all()', () => {
     it('应返回所有行', () => {
       storage.ensureTable('users', '');
-      storage.prepare('INSERT INTO users').run('user-1', 'alice');
-      storage.prepare('INSERT INTO users').run('user-2', 'bob');
-      storage.prepare('INSERT INTO users').run('user-3', 'charlie');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('user-1', 'alice');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('user-2', 'bob');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('user-3', 'charlie');
 
       const rows = storage.prepare('SELECT * FROM users').all();
       expect(rows).toHaveLength(3);
@@ -97,11 +97,11 @@ describe('Gateway - MemoryStorage', () => {
       storage.ensureTable('users', '');
       storage.ensureTable('tasks', '');
 
-      storage.prepare('INSERT INTO users').run('u1', 'alice');
-      storage.prepare('INSERT INTO users').run('u2', 'bob');
-      storage.prepare('INSERT INTO tasks').run('t1', 'task-alpha');
-      storage.prepare('INSERT INTO tasks').run('t2', 'task-beta');
-      storage.prepare('INSERT INTO tasks').run('t3', 'task-gamma');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('u1', 'alice');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('u2', 'bob');
+      storage.prepare('INSERT INTO tasks (id, name) VALUES (?, ?)').run('t1', 'task-alpha');
+      storage.prepare('INSERT INTO tasks (id, name) VALUES (?, ?)').run('t2', 'task-beta');
+      storage.prepare('INSERT INTO tasks (id, name) VALUES (?, ?)').run('t3', 'task-gamma');
 
       const users = storage.prepare('SELECT * FROM users').all();
       const tasks = storage.prepare('SELECT * FROM tasks').all();
@@ -114,8 +114,8 @@ describe('Gateway - MemoryStorage', () => {
       storage.ensureTable('users', '');
       storage.ensureTable('orders', '');
 
-      storage.prepare('INSERT INTO users').run('u1', 'alice');
-      storage.prepare('INSERT INTO orders').run('o1', 'order-001');
+      storage.prepare('INSERT INTO users (id, name) VALUES (?, ?)').run('u1', 'alice');
+      storage.prepare('INSERT INTO orders (id, name) VALUES (?, ?)').run('o1', 'order-001');
 
       const users = storage.prepare('SELECT * FROM users').all();
       expect(users.map((r) => r.id)).toEqual(['u1']);

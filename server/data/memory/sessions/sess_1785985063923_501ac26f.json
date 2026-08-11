@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063923_501ac26f",
+  "userId": "load-user-q5nt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q9WNFA51BD02XKW3T4K",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985064099
+    },
+    {
+      "id": "01KZAG4WR3NE50DNA42N456C7M",
+      "role": "assistant",
+      "content": "我理解了，之前提到的三个选项都不符合您的需求。\n\n为了更好地帮助您，能否请您具体说明一下：\n- 您想要我做什么？\n- 或者您对那份技术状态文档有什么其他想法？\n\n这样我可以更准确地协助您。",
+      "timestamp": 1785985135363
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064156,
+    "lastActiveAt": 1785985135363,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

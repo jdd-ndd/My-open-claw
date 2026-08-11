@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601742_3bedfc27",
+  "userId": "load-user-tsjm",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM0YDE78E7K8R9KH3EYN",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984602036
+    },
+    {
+      "id": "01KZAFNYYXZFCATENGRZ2K2JW9",
+      "role": "assistant",
+      "content": "这是一个看起来像内部连接消息的标识符。我在当前会话中已经准备就绪，如果你有具体的任务或问题，可以直接告诉我，我会尽快处理。",
+      "timestamp": 1785984646109
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602068,
+    "lastActiveAt": 1785984646109,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

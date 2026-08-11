@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988262657_baca4158",
+  "userId": "load-user-yhlr",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4B4HAVZ4EN9XXZXZBR5X",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785988263026
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988263036,
+    "lastActiveAt": 1785988263057,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

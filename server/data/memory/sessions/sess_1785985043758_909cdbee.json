@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043758_909cdbee",
+  "userId": "load-user-3xbq",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23H8PGFQYTKNJT0GGKBX",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985043847
+    },
+    {
+      "id": "01KZAG4QGS62B8AA67PRBJFWSP",
+      "role": "assistant",
+      "content": "这句诗出自《水浒传》中宋江在浔阳楼题写的 **反诗**，全句如下：\n\n**「生当鼎食，死当封侯，男子生平志已酬。」**\n\n### 释义\n- **生当鼎食**：活着的时候要享受列鼎而食的荣华富贵（鼎是古代烹煮食物的器具，也是权力的象征，“列鼎而食”代表极高的地位）。\n- **死当封侯**：死后也要有王侯的封号，名垂青史。\n- **男子生平志已酬**：这样才算不枉此生，大丈夫的志向得以实现。\n\n### 背景\n这是宋江被发配江州后，独自到浔阳楼饮酒，感怀身世、壮志未酬时写下的反诗。诗中流露出对朝廷的不满和强烈的功名欲望，也正是这首诗后来成了他被判死刑的导火索。\n\n你想了解这首反诗的其他几句，或者想聊聊宋江这个人物的故事吗？",
+      "timestamp": 1785985130009
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043906,
+    "lastActiveAt": 1785985130009,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

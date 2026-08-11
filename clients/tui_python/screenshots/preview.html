@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>StatusPane 紧凑布局全维度对比</title>
+<style>
+  body { background: #0d1117; color: #d8e1e8; font-family: 'Segoe UI', -apple-system, system-ui, sans-serif; padding: 24px; margin: 0; }
+  h1 { font-size: 22px; margin: 0 0 4px; color: #3b9ddd; }
+  h2 { font-size: 16px; color: #d8e1e8; margin-top: 32px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  .sub { color: #8b95a1; font-size: 13px; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; }
+  .label { color: #3b9ddd; font-size: 13px; font-weight: bold; margin-bottom: 6px; font-family: 'Cascadia Code', 'Fira Code', monospace; }
+  .label .meta { color: #8b95a1; font-weight: normal; font-size: 11px; margin-left: 8px; }
+  .frame { background: #07090b; border: 1px solid #21262d; border-radius: 6px; overflow: hidden; line-height: 0; }
+  .frame object { width: 100%; display: block; }
+  .legend { margin-top: 6px; font-size: 11px; color: #8b95a1; line-height: 1.5; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 3px; vertical-align: -1px; }
+  .s-build { background: #3b9ddd; } .s-plan { background: #a78bfa; }
+  .s-low   { background: #6b7280; } .s-med  { background: #fb923c; }
+  .s-high  { background: #fbbf24; } .s-max  { background: #ef4444; }
+  .s-model { background: #8b95a1; }
+  code { background: #21262d; padding: 1px 6px; border-radius: 3px; font-size: 12px; color: #ffa62b; }
+</style>
+</head>
+<body>
+<h1>StatusPane 紧凑布局 · 全维度对比</h1>
+<p class="sub">
+  <code>mode · model · intensity</code> 单行三段；mode 和 intensity 按语义高亮，model 灰色普通。
+  切换 <code>Shift+Tab</code> 翻 work mode，<code>Ctrl+M</code> 翻 intensity，<code>Ctrl+Shift+M</code> 翻 model。
+</p>
+
+<h2>A. work_mode × intensity（3 组精选）</h2>
+<div class="grid">
+  <div class="card">
+    <div class="label">Build + max<span class="meta">默认状态</span></div>
+    <div class="frame"><object data="status_build_max.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-build"></span>Build 蓝 &nbsp;·&nbsp; <span class="swatch s-max"></span>max 红</div>
+  </div>
+  <div class="card">
+    <div class="label">Plan + high<span class="meta">Shift+Tab 切到 plan</span></div>
+    <div class="frame"><object data="status_plan_high.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-plan"></span>Plan 紫 &nbsp;·&nbsp; <span class="swatch s-high"></span>high 黄</div>
+  </div>
+  <div class="card">
+    <div class="label">Build + low<span class="meta">强度降到 low</span></div>
+    <div class="frame"><object data="status_build_low.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-build"></span>Build 蓝 &nbsp;·&nbsp; <span class="swatch s-low"></span>low 灰(不抢眼)</div>
+  </div>
+</div>
+
+<h2>B. intensity 4 档（Build + 各档位，<code>Ctrl+M</code> 循环）</h2>
+<div class="grid-4">
+  <div class="card">
+    <div class="label">low<span class="meta">省 token</span></div>
+    <div class="frame"><object data="intensity_low.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-low"></span>灰 #6b7280</div>
+  </div>
+  <div class="card">
+    <div class="label">medium<span class="meta">均衡</span></div>
+    <div class="frame"><object data="intensity_medium.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-med"></span>橙 #fb923c</div>
+  </div>
+  <div class="card">
+    <div class="label">high<span class="meta">较强</span></div>
+    <div class="frame"><object data="intensity_high.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-high"></span>黄 #fbbf24</div>
+  </div>
+  <div class="card">
+    <div class="label">max<span class="meta">最高档</span></div>
+    <div class="frame"><object data="intensity_max.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-max"></span>红 #ef4444</div>
+  </div>
+</div>
+
+<h2>C. model 3 档（Build + max + 各模型，<code>Ctrl+Shift+M</code> 循环）</h2>
+<div class="grid-3">
+  <div class="card">
+    <div class="label">deepseek-v4-pro<span class="meta">默认</span></div>
+    <div class="frame"><object data="model_deepseek-v4-pro.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-model"></span>灰 #8b95a1</div>
+  </div>
+  <div class="card">
+    <div class="label">deepseek-v4-flash<span class="meta">快速版</span></div>
+    <div class="frame"><object data="model_deepseek-v4-flash.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-model"></span>灰 #8b95a1</div>
+  </div>
+  <div class="card">
+    <div class="label">gpt-4o<span class="meta">OpenAI</span></div>
+    <div class="frame"><object data="model_gpt-4o.svg" type="image/svg+xml"></object></div>
+    <div class="legend"><span class="swatch s-model"></span>灰 #8b95a1</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344572_55316da6",
+  "userId": "load-user-u8sh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94X911BP7VC2DYD5D8S",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985344631
+    },
+    {
+      "id": "01KZAGDZPA7C3DPMJGKJZRZFRM",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息，但 \"conn_msg_19\" 看起来像是一个连接标识符或系统消息，而不是实际的提问内容。\n\n请问你需要什么帮助？你可以随时向我提问，例如：\n\n- 📄 **阅读或编辑文件**\n- 🌐 **搜索网页或抓取内容**\n- 💻 **执行命令或代码审查**\n- 📊 **数据分析或计算**\n- 🌤️ **天气、新闻、汇率等实用信息**\n\n请告诉我你的需求，我会尽力帮你完成！",
+      "timestamp": 1785985433290
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344646,
+    "lastActiveAt": 1785985433290,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

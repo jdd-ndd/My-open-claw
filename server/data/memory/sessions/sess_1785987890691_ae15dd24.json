@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987890691_ae15dd24",
+  "userId": "load-user-auby",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJS0PWRBAZPJ16QQD4GCEN",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785987891834
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987891850,
+    "lastActiveAt": 1785987891932,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

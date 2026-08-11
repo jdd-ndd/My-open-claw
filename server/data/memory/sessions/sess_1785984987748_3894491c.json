@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984987748_3894491c",
+  "userId": "user-iaepl94zk9f",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0CMBYXNX4VP8G7F5PTYC",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984987783
+    },
+    {
+      "id": "01KZAG4NPYNQWNA0YRNJ4D6QRQ",
+      "role": "assistant",
+      "content": "收到你的消息！👋\n\n看起来你在测试系统的消息处理能力。我这边一切正常，随时准备帮你处理各种任务。\n\n有什么我可以帮你的吗？无论是文件操作、网页分析、代码审查、天气查询、数学计算，还是其他任何需求，尽管告诉我！",
+      "timestamp": 1785985128158
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984987783,
+    "lastActiveAt": 1785985128158,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

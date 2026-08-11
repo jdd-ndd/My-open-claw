@@ -6,7 +6,7 @@
  * @module test
  */
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { GatewayServer } from '../../../src/gateway/server.js';
+import { GatewayServer } from '../../../src/gateway/index.js';
 import type { GatewayMessage, RequestMessage, ResponseMessage, EventMessage } from '../../../src/gateway/protocol.js';
 
 // ─── 工具函数 ───────────────────────────────────

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037599_bfc810d5",
+  "userId": "load-user-aofa",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XX1F4EG6EC7KQCQ95RJ",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985038158
+    },
+    {
+      "id": "01KZAG3XFHSZAT85S2P5ASGFZ4",
+      "role": "assistant",
+      "content": "连接已建立，你好！我是 MyOpenClaw Assistant。\n\n有什么可以帮你的吗？无论是文件操作、网页分析、代码审查还是其他任务，尽管说。",
+      "timestamp": 1785985103345
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038170,
+    "lastActiveAt": 1785985103345,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

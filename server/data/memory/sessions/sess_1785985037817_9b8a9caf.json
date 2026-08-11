@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037817_9b8a9caf",
+  "userId": "load-user-kju1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XY5G77MFNQP2AN37652",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985038159
+    },
+    {
+      "id": "01KZAG396XPE4VXP0EMD6NHAZC",
+      "role": "assistant",
+      "content": "Connecting确认连接正常，消息序号 10 收到。有什么我可以帮你的吗？",
+      "timestamp": 1785985082589
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038194,
+    "lastActiveAt": 1785985082589,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

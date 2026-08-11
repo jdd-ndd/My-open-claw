@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985057391_0a0f4fa5",
+  "userId": "load-user-8rxl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H7BQJ18TEBEMAVHXF6Q",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985057930
+    },
+    {
+      "id": "01KZAG5APZGTPPZW2N488AKYX1",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985149663
+    },
+    {
+      "id": "01KZAG5TTY26GHHCZZV98KV2T8",
+      "role": "assistant",
+      "content": "<thought>浏览器打开失败，可能是 GitHub 对无头浏览器有反爬机制。让我尝试用 HTTP 请求直接获取页面内容，或者用 browser/scrape 来抓取。GitHub 的 issue 页面内容通常也可以通过 API 或者直接 HTTP 获取到 HTML。让我试试 http/request。</thought>\n<action name=\"http/request\" args='{\"url\":\"https://github.com/nicetake/wechat-bot/issues/2\",\"method\":\"GET\",\"headers\":{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\",\"Accept\":\"text/html,application/xhtml+xml\"}}' />",
+      "timestamp": 1785985166174
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057947,
+    "lastActiveAt": 1785985166174,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

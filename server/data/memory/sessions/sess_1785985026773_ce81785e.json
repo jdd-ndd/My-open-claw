@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985026773_ce81785e",
+  "userId": "load-user-9c86",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K8C00VAT7BSCMV259MQ",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985027249
+    },
+    {
+      "id": "01KZAG45QSCD7HBBVD03XM2KCB",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了 \"conn_msg_5\"，这似乎是一个短代码或测试消息。请问有什么我可以帮助你的吗？你可以告诉我你需要什么，比如查询天气、文件操作、代码审查等。我随时准备为你服务！",
+      "timestamp": 1785985111801
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027266,
+    "lastActiveAt": 1785985111801,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

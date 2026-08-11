@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063464_60088519",
+  "userId": "load-user-lgsb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q7SBX1QDMXEPWGRAAGM",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985064098
+    },
+    {
+      "id": "01KZAG466D4DTYX3VS70SX3YK8",
+      "role": "assistant",
+      "content": "你好！我收到了你发的「conn_msg_3」，不过不太确定你想表达什么。\n\n如果你想测试连接——没问题，我一直在线。如果你有具体的问题或任务需要处理，直接告诉我即可。",
+      "timestamp": 1785985112269
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064111,
+    "lastActiveAt": 1785985112269,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

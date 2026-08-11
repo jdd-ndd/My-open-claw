@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985032177_5b2d8bfb",
+  "userId": "load-user-ul8u",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RERHK1W4HT07KTHPY52",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG4FP3SDAP8GW5SVNR57EP",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985121987
+    },
+    {
+      "id": "01KZAG5FZ5BS5TPPEZSV6K8YK1",
+      "role": "assistant",
+      "content": "<thought>上一次 browser/open 调用返回了空结果，可能是网络波动或超时导致的失败。用户希望打开百度首页，我需要重新尝试一次。</thought>\n\n<action name=\"browser/open\" args='{\"url\": \"https://www.baidu.com\"}' />",
+      "timestamp": 1785985155046
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032587,
+    "lastActiveAt": 1785985155046,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

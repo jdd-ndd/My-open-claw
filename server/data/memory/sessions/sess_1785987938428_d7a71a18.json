@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987938428_d7a71a18",
+  "userId": "load-user-h2ks",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEME29KCK9VA525EDDCG",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785987938802
+    },
+    {
+      "id": "01KZAJX4BBDKMZ6GS1190QHZ2E",
+      "role": "assistant",
+      "content": "您好！您发送了“conn_msg_15”，它看起来像是一条系统连接消息。请问有什么我可以帮您的吗？如果您遇到了连接问题或需要执行特定任务，请详细说明，我会尽力协助。",
+      "timestamp": 1785988026731
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938854,
+    "lastActiveAt": 1785988026731,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

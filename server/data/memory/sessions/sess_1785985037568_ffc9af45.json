@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037568_ffc9af45",
+  "userId": "load-user-tyui",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XWWGNJZ27EKKHMB1MY0",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985038158
+    },
+    {
+      "id": "01KZAG41XT5658DAC0JW1482AW",
+      "role": "assistant",
+      "content": "你好！我是 **MyOpenClaw Assistant**，你的通用任务处理智能助手！👋\n\n很高兴收到你的连接测试消息。我已经在线并准备就绪，随时可以帮你处理各种任务，包括：\n\n- 💬 **日常问答** - 回答各种问题\n- 📁 **文件操作** - 读取、写入、管理本地文件\n- 🌐 **网页浏览** - 打开网页、抓取内容、分析信息\n- 💻 **命令执行** - 在 Shell 中运行命令\n- 🧮 **计算工具** - 数学运算、单位换算、汇率转换\n- 🌤️ **天气查询** - 查询各地天气和预报\n- 🗺️ **路线规划** - 地理编码和路径规划\n- 📝 **代码审查** - 检查代码质量与安全性\n- 🚀 **快速搭建** - 初始化项目结构\n\n有什么我可以帮你的吗？请随时告诉我你的需求！😊",
+      "timestamp": 1785985107898
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038167,
+    "lastActiveAt": 1785985107898,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

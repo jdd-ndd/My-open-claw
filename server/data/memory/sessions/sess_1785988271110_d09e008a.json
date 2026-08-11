@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988271110_d09e008a",
+  "userId": "load-user-rvcd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4KCF2KB6QS8CRA65BE0B",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785988271476
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988271486,
+    "lastActiveAt": 1785988271503,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

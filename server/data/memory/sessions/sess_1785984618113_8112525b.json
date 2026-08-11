@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618113_8112525b",
+  "userId": "load-user-dqop",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN46R1C8KQ69H84MPWF5H",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984618633
+    },
+    {
+      "id": "01KZAFNMNPDESGHMB1T50TFRCF",
+      "role": "assistant",
+      "content": "你好！你发送了 \"conn_msg_4\"。如果你有任何问题或需要帮助，请告诉我。",
+      "timestamp": 1785984635574
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618646,
+    "lastActiveAt": 1785984635574,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

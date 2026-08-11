@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984578815_1175dee2",
+  "userId": "user-8icgno6j5c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKX9931YJ2CQF96F48N4N",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984578853
+    },
+    {
+      "id": "01KZAFN8D08JQPF06DS27JVCCX",
+      "role": "assistant",
+      "content": "您好！我注意到您发送了“concurrent message”，但没有附带需要审查的代码。请问您想让我审查哪段代码呢？\n\n您可以：\n- 直接粘贴代码内容\n- 提供需要审查的文件路径\n\n请补充具体信息，我会立即为您进行代码审查。",
+      "timestamp": 1785984623008
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984578853,
+    "lastActiveAt": 1785984623008,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

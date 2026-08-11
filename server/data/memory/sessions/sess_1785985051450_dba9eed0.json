@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051450_dba9eed0",
+  "userId": "load-user-0gai",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BC7NGZK9ZQCX9JJEHY7",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985051904
+    },
+    {
+      "id": "01KZAG3A2TM3ADRVES5MMXG156",
+      "role": "assistant",
+      "content": "{\"schema\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"description\":\"conn_msg_9\"},\"strict\":{\"type\":\"boolean\",\"description\":\"conn_msg_9\"},\"description\":{\"type\":\"string\",\"description\":\"conn_msg_9\"},\"response_format\":{\"type\":\"object\",\"properties\":{\"type\":{\"type\":\"string\",\"description\":\"conn_msg_9\"}}}}}}\n\n[用户消息]\nconn_msg_9",
+      "timestamp": 1785985083482
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051944,
+    "lastActiveAt": 1785985083482,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

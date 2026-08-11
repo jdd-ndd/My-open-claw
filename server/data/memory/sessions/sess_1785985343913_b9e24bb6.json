@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985343913_b9e24bb6",
+  "userId": "load-user-ut9w",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94A4YM3R4XNPBBJH6JD",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985344629
+    },
+    {
+      "id": "01KZAGEFQXBFWJ2MGK28CNCA17",
+      "role": "assistant",
+      "content": "要在本地部署并微调多模态大模型（MLLM），你需要从 **硬件选型 → 环境与软件 → 模型选择 → 数据集构建 → 微调流程** 这几个维度做准备。以下是具体清单：\n\n## 🖥️ 一、硬件准备（消费级 vs 入门专业级）\n\n| 用途 | 最低配置（勉强可跑） | 推荐配置（较流畅） |\n|------|---------------------|-------------------|\n| **推理（直接使用）** |  单卡 RTX 3060 12GB（FP16 量化） | RTX 4070 Ti SUPER 16GB 或 RTX 4090 24GB |\n| **微调（LoRA/QLoRA）** | 单卡 RTX 3090/4090 24GB | 双卡 3090/4090 或 A6000 48GB |\n| **全量微调（Full Fine‑tune）** |  多卡 24GB 或 A100 80GB | 多卡 A100 80GB，建议租用云服务器 |\n\n- **内存**：≥ 64 GB（微调大分辨率图片时需要大量内存）\n- **存储**：NVMe SSD ≥ 2TB（模型权重 + 图片数据集 + 日志/检查点都很占空间）\n- **电力与散热**：单张 4090 满载 ~450W，双卡需要≥1200W 高品质电源，并确保机箱散热\n\n> ⚠️ 如果你目前手头没有高性能显卡，**可先用云 GPU（如 AutoDL、恒源云、Google Colab Pro+）把微调流程跑通，再决定是否自购机器**。\n\n---\n\n## 🛠️ 二、软件与环境\n\n### 1. 基础环境\n- **操作系统**：Ubuntu 22.04/24.04（生态最好），Windows 下也可用 WSL2\n- **GPU 驱动**：NVIDIA Driver ≥ 535\n- **CUDA**：11.8 或 12.1（视框架支持）\n- **包管理**：Conda（Miniconda）或 Python venv\n\n### 2. 核心深度学习框架\n- **PyTorch** ≥ 2.0（支持 `torch.compile` 和 Flash‑Attention）\n- **Transformers** + **PEFT（参数高效微调）** + **accelerate** + **bitsandbytes**（4‑bit/8‑bit 量化）\n- **图像处理**：Pillow, opencv‑python, albumentations\n\n### 3. 多模态微调专用框架（任选其一）\n| 框架 | 优势 | 适用场景 |\n|------|------|----------|\n| **LLaMA‑Factory** | 图形化 + 命令行，支持数十种模型，一键 LoRA 微调 | 快速上手，对新手友好 |\n| **XTuner**（上海 AI Lab） | 原生支持 InternVL、LLaVA 等，训练高效 | InternVL2、LLaVA 系列微调 |\n| **FastChat / Vicuna 方案** | 老牌微调框架，文档丰富 | 深度定制训练 |\n| **DeepSpeed + HuggingFace Trainer** | 最灵活，但需要手写代码 | 有编程经验的研发人员 |\n\n### 4. 推理部署工具（微调后使用）\n- **ollama** + **open‑webui**：轻量本地部署，支持多模态（需用 llama.cpp 的视觉版本）\n- **vLLM**：高性能推理引擎，已支持 LLaVA 等多模态模型\n- **TGI (Text Generation Inference)**：HuggingFace 出品，支持量化\n\n---\n\n## 🧠 三、开源多模态模型推荐\n\n| 模型 | 参数量 | 推荐大小 | 特点 |\n|------|--------|----------|------|\n| **Qwen2‑VL**（阿里） | 2B / 7B / 72B | 7B（平衡精度与硬件） | 中文+多国语言极好，图文理解强，可动态分辨率 |\n| **InternVL2**（上海 AI Lab） | 1B / 2B / 4B / 8B / 26B / 76B | 4B 或 8B | 在 OCR、图表、文档分析上 SOTA，中文优秀 |\n| **LLaVA‑1.6** | 7B / 13B / 34B | 7B‑Vicuna‑1.5 | 经典多模态模型，社区庞大，微调资料最丰富 |\n| **Phi‑3.5‑Vision**（微软） | 4.2B | 4.2B | 轻量高效，适合资源受限设备 |\n| **MiniCPM‑V**（面壁智能） | 2.4B / 8B | 2.4B 可在手机端运行 | 超轻量，中文友好，适合简单图表分析 |\n\n**建议**：\n- 如果你的业务图片以**中文文档、表格、图表**为主 → 优先选 **InternVL2‑4B / 8B** 或 **Qwen2‑VL‑7B**\n- 如果你需要**最丰富的教程和社区支持** → 选 **LLaVA‑1.6‑7B**\n\n---\n\n## 📊 四、数据集准备（最关键的一步）\n\n微调的效果 **60% 取决于数据质量**，业务图片尤其需要自己标注。\n\n### 1. 数据格式\n多模态模型微调通常使用 **OpenAI 兼容的多轮对话格式**，例如：\n\n```json\n{\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": [\n        {\"type\": \"text\", \"text\": \"这张发票的总金额是多少？\"},\n        {\"type\": \"image\", \"image\": \"/path/to/invoice_001.jpg\"}\n      ]\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"总金额为 ¥1,250.00 元。\"\n    }\n  ]\n}\n```\n> 不同框架略微有差异，LLaMA‑Factory 和 XTuner 都支持上述 JSONL 格式。\n\n### 2. 数据规模建议\n- **LoRA 微调（推荐）**：500～5000 张高质量标注图片即可看到明显效果\n- **全量微调**：需要 1 万张以上，且容易过拟合，不推荐在消费级硬件上做\n\n### 3. 标注工具\n- **Label Studio**（开源，支持图像问答标注）\n- **CVAT**（适合目标检测，但也可以导出分类/描述标注）\n- **自己写脚本**：用现有强模型（如 GPT‑4V、Qwen‑VL‑Max）预标注，再人工修正（最省力）\n\n### 4. 数据多样性\n包含以下维度的图片，以提升泛化能力：\n- 不同的光照、角度、分辨率\n- 不同业务场景（如发票、合同、表格、产品图、截图）\n- 反向样本（模糊图片 + 合理回答如“图片不清晰，请重新上传”）\n\n---\n\n## 🚀 五、从零开始的推荐路线图（可照做）\n\n| 步骤 | 具体操作 | 预计耗时 |\n|------|----------|----------|\n| ① | 准备硬件或租用云 GPU（如 AutoDL 的 A6000 实例） | 1 天 |\n| ② | 安装 Ubuntu + 驱动 + CUDA + Conda + PyTorch | 半天 |\n| ③ | 拉取 LLaMA‑Factory 仓库，运行一两个官方案例（如 LLaVA‑1.6‑7B 的 LoRA 微调） | 1 天 |\n| ④ | 用 50 张业务图片，手动标注成 OpenAI 对话格式，跑通自己的微调流程 | 1 天 |\n| ⑤ | 评估效果，迭代标注（增补数据、修正错误标注） | 1～2 周 |\n| ⑥ | 合并模型权重，用 ollama 或 vLLM 在本地部署推理服务 | 1 天 |\n\n---\n\n## ⚠️ 额外提醒\n- **安全性**：业务图片可能含敏感信息，本地部署正是为了避免泄露，请勿将数据上传至公共 API。\n- **监控资源**：微调时用 `nvitop` 或 `gpustat` 实时查看显存占用，避免 OOM。\n- **备份**：定期将模型检查点、数据集上传至移动硬盘/NAS，防止磁盘故障。\n\n如果你能告知你的**显卡型号**以及**业务图片的具体类型**（如发票、物流面单、X 光片等），我可以给出更精准的配置建议。祝你顺利打造自己的业务图片分析助手！",
+      "timestamp": 1785985449725
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344633,
+    "lastActiveAt": 1785985449725,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

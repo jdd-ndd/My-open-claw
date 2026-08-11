@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051118_21cab58b",
+  "userId": "load-user-14io",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BB8M8M9N74XQZA3DTER",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985051903
+    },
+    {
+      "id": "01KZAG4B49VBD6D0H3REKVV4MT",
+      "role": "assistant",
+      "content": "已收到您的消息 (conn_msg_3)，会话连接正常。我是您的智能助手，请问有什么可以帮您的？",
+      "timestamp": 1785985117321
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051918,
+    "lastActiveAt": 1785985117321,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985070148_ea45b6fe",
+  "userId": "load-user-0c8d",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2XACZT790YKVJ6DNK0D7",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985070249
+    },
+    {
+      "id": "01KZAG4AWBWTX82F0K9H278862",
+      "role": "assistant",
+      "content": "用户想要创建一个 Web 前端个人博客应用。我需要使用 `quick-setup` 技能来搭建项目结构。\n\n<action name=\"quick-setup\" args='{\"task\":\"创建项目\",\"projectPath\":\"web-personal-blog\",\"stack\":\"前端\",\"requirement\":\"一个完整的个人博客前端应用，包含文章列表、文章详情、分类标签、关于我页面，使用现代前端技术栈，响应式设计，美观简洁的 UI\"}'>",
+      "timestamp": 1785985117067
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070311,
+    "lastActiveAt": 1785985117067,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

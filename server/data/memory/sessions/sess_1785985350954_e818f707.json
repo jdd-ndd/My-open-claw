@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985350954_e818f707",
+  "userId": "load-user-li9a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDSWB6G0YKHQEC01HMD",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985351057
+    },
+    {
+      "id": "01KZAGDVBW77MWGZG5JAHAA9CS",
+      "role": "assistant",
+      "content": "系统已识别到标识符：**conn_msg_18**。    \n\n看起来这是一个测试连接状态的标识符，没有附带具体的指令或问题。\n\n如果你需要我帮忙处理什么任务，可以随时描述你的需求——我可以帮你：\n- 处理文件或代码\n- 搜索信息或天气\n- 分析网页内容\n- 查询汇率、节日、新闻等\n\n请告诉我你需要什么帮助？我已经识别到标识符 `conn_msg_18`。它看起来像一个系统内部 ID，可能用于日志或连接追踪。如果你需要做具体的操作（例如查询这个会话的相关信息、测试连接状态等），请告诉我，我可以继续帮你处理。",
+      "timestamp": 1785985428860
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351072,
+    "lastActiveAt": 1785985428860,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

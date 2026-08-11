@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984838856_a29a0949",
+  "userId": "user-axstzvlznke",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVV7JBRJP441JY0AAAM8H",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984838897
+    },
+    {
+      "id": "01KZAFY7GPM706PMBSH6S65WB9",
+      "role": "assistant",
+      "content": "<thought>\n用户连续发送了多条消息，包括\"hello\"和\"concurrent message\"。这看起来像是在测试并发消息处理能力，或者用户只是想表达关于并发消息的某些需求。我需要友好地回应，并询问用户具体需要什么帮助。这是个简单对话，不需要调用工具。\n</thought>\n\n<final_answer>\n你好！我注意到你发送了多条消息，包括\"hello\"和\"concurrent message\"。\n\n我可以很好地处理多条消息，每条消息我都会认真对待并逐一回复。😊\n\n如果你是在测试并发消息的处理能力，那完全没问题——我能够接收并响应连续发送的消息。\n\n请问有什么我可以帮你的吗？无论是代码审查、项目搭建、网页分析，还是其他任何任务，我都很乐意协助！",
+      "timestamp": 1785984917014
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984838897,
+    "lastActiveAt": 1785984917014,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

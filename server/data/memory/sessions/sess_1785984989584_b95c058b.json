@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984989584_b95c058b",
+  "userId": "user-okamtiesf4j",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0EDKG742S8CT65NWVNS4",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984989616
+    },
+    {
+      "id": "01KZAG3PR4EPJY4K2KS3B04EFW",
+      "role": "assistant",
+      "content": "收到你的并发消息。如果你在测试多轮对话或并发能力，系统正常运转中。有什么需要帮忙的？",
+      "timestamp": 1785985096452
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984989616,
+    "lastActiveAt": 1785985096452,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

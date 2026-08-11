@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947320_84db8525",
+  "userId": "load-user-8by0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQW5A61CQ3ANBVBR72B6",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785987948326
+    },
+    {
+      "id": "01KZAJXBK3YVBMX6HV8Z1A0R55",
+      "role": "assistant",
+      "content": "这是 OpenClaw 连接消息。连接已建立。",
+      "timestamp": 1785988034147
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948344,
+    "lastActiveAt": 1785988034147,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

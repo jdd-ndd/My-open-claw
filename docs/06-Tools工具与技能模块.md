@@ -1,9 +1,57 @@
 # MyOpenClaw Tools 工具与技能模块
 
-> **版本**：v1.0.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.0.2  
+> **修订日期**：2026-07-23  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布
+
+---
+
+> **实现状态（v1.0.3 更新）**：
+> - ToolRegistry 完整实现（注册/查询/校验/调度/安全/超时全在）
+> - **13 个内置工具全部为真实 delegate 实现**（fs/read_file 等 4 个、exec/shell+process、browser/open+click+fill_form+scrape、memory_search/search、http/request），文档之前描述的"5 个 stub"已过时
+> - 工厂函数 `createToolRegistry()` 一次性装载 13 个工具（见 `server/src/tools/index.ts`）
+> - SkillLoader 完整实现（YAML frontmatter 逐行解析 + Markdown body 提取）
+> - SkillRegistry 完整实现（触发词匹配 + 优先级加权 + 自动注入 LLM 提示词）
+>
+> **重要使用提示**：
+> - 早期版本的 `Orchestrator` 默认走 `MockToolRegistry` / `MockSkillRegistry`（位于 `server/src/agents/mock.ts`），导致真实 13 个工具完全没被使用
+> - **生产环境必须使用 `await AgentRuntimeAdapter.create(opts)`**，它会异步装载真实 `ToolRegistry` + `SkillRegistry`
+> - `mock.ts` 已标记 `@deprecated`，仅保留给单元测试和历史兼容回退
+
+### 1.3 模块依赖图（生产 vs Mock）
+
+```
+生产环境（推荐）:
+  AgentBridge.bind(AgentRuntimeAdapter.create())
+        │
+        ▼
+  AgentRuntimeAdapter ──┬─► LLMAdapter (DeepSeek / OpenAI / ...)
+                        ├─► ToolRegistry ← createToolRegistry() 装载 13 个真实工具
+                        └─► SkillRegistry ← loadFromDirectory('skills/') 扫描 SKILL.md
+                              │
+                              ▼
+                        AgentOrchestrator.run()
+                              │
+                              ├─► Planner (XML action tag 解析 — ADR 0001)
+                              ├─► ToolRegistry.invoke() ──► SecurityManager (统一黑名单)
+                              ├─► Memory (Session + Vector)
+                              └─► HookPipeline
+
+测试 / 单测 / 兜底:
+  new AgentRuntimeAdapter()  (不传 orchestrator,走 Orchestrator 内部默认)
+        │
+        ▼
+  AgentOrchestrator 默认注入 MockToolRegistry + MockSkillRegistry + MockMemory
+                              │
+                              ▼
+                        Orchestrator.run() ──► MockToolRegistry.execute() 直接执行 Mock 行为
+```
+
+**关键不变量**：
+- Planner.validate() 与 ToolRegistry.invoke() 复用同一份 `DEFAULT_BLOCKED_TOOLS` + `DEFAULT_DANGEROUS_PATTERNS`（从 `server/src/tools/security/index.ts` 单源导入）
+- Orchestrator 自身 **不 import** 任何 Mock 类（仅 `mock.ts` 自身），靠 `OrchestratorOptions` 注入
+- `createToolRegistry()` 在 `server/src/tools/index.ts`，是工厂的唯一入口
 
 ---
 
@@ -1324,6 +1372,27 @@ const postResult = await registry.invoke('http/request', {
 ## 5. Skills 业务技能
 
 Skills 是 MyOpenClaw 独创的声明式能力扩展机制。通过编写 Markdown 描述文件（SKILL.md），无需编写任何代码即可扩展 Agent 的业务能力。
+
+实际代码中的类型定义（`skills/types.ts`）：
+
+```typescript
+/** 技能元数据 */
+export interface SkillMeta {
+  readonly name: string;
+  readonly description: string;
+  readonly version: string;
+  readonly requires: string[];
+}
+
+/** 技能实例 */
+export interface Skill {
+  readonly meta: SkillMeta;
+  readonly content: string;
+  readonly filePath: string;
+}
+```
+
+SkillLoader（`skills/loader.ts`）负责从文件系统加载 SKILL.md 文件，SkillRegistry（`skills/registry.ts`）管理已注册技能。当前已实现基础文件读取和注册管理功能。
 
 ### 5.1 SKILL.md 格式定义
 

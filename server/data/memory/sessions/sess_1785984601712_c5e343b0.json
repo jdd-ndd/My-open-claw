@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601712_c5e343b0",
+  "userId": "load-user-svqt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM0TGEEBQB1SECK9ZBCB",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785984602036
+    },
+    {
+      "id": "01KZAFNQXT6WSAMGVVKYXMSPGR",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"conn_msg_10\"。这看起来像是连接测试消息。请问有什么我可以帮你的吗？如果你有任何任务或问题，欢迎告诉我。 😊",
+      "timestamp": 1785984638906
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602065,
+    "lastActiveAt": 1785984638906,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

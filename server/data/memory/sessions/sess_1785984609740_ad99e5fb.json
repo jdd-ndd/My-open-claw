@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609740_ad99e5fb",
+  "userId": "load-user-1tv1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVWBAY7KK7PJ4VWNMXZC",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984610088
+    },
+    {
+      "id": "01KZAFNQKTB3ZK7G1QA9QTJKST",
+      "role": "assistant",
+      "content": "你好，收到你的消息，但我没理解 \"conn_msg_9\" 的具体含义。如果你有任何问题或需要帮助，请详细说明，我会尽力协助你。",
+      "timestamp": 1785984638586
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610114,
+    "lastActiveAt": 1785984638586,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

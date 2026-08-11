@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987947844_c830d69a",
+  "userId": "load-user-eelh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQXE5S3W94EWGGCFP4NV",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785987948327
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948371,
+    "lastActiveAt": 1785987948462,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

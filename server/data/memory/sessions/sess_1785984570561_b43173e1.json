@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785984570561_b43173e1",
+  "userId": "user-b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKN6XQT48PTNKM75BGHYM",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785984570587
+    },
+    {
+      "id": "01KZAFKQT07E5QHG33JD8X3PK7",
+      "role": "assistant",
+      "content": "你好！有什么我可以帮你的吗？",
+      "timestamp": 1785984573249
+    },
+    {
+      "id": "01KZAFVJ4XB6923P3YYES3BB9N",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785984829595
+    },
+    {
+      "id": "01KZAFVRWY4SGWPX2GBRD15ESG",
+      "role": "assistant",
+      "content": "你好！很高兴再次见到你。有什么我可以帮你的吗？无论是回答问题、处理文件、查找信息，还是其他任务，我都很乐意协助！",
+      "timestamp": 1785984836510
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984570587,
+    "lastActiveAt": 1785984836510,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

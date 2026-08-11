@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063386_6abb7412",
+  "userId": "load-user-nldf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q7D885WAYEB64DY0CSE",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985064097
+    },
+    {
+      "id": "01KZAG3ZNJD6MTZM238CNPJVHN",
+      "role": "assistant",
+      "content": "连接正常！双向互通测试成功。我可以正常接收并回复你的消息。有什么需要帮助的吗？",
+      "timestamp": 1785985105586
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064103,
+    "lastActiveAt": 1785985105586,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

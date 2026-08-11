@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032020_0b7398a8",
+  "userId": "load-user-ylxs",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RDYMA6K3GK57YZ4J4FE",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985032558
+    },
+    {
+      "id": "01KZAG3DXQGCYE8W6AS02RBZ07",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，通用任务处理智能助手，很高兴为你服务。\n\n请告诉我你有什么需求，我会尽力帮你完成——无论是文件管理、网页分析、代码审查、项目搭建，还是查询天气、汇率、规划路线等，都可以直接说。",
+      "timestamp": 1785985087415
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032572,
+    "lastActiveAt": 1785985087415,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

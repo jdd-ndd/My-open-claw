@@ -1,0 +1,41 @@
+# 微信渠道配置
+# 支持三种模式：公众号(webhook)、企微(wecom)、小程序(miniprogram)
+
+wechat:
+  channelId: "wechat"
+  enabled: true
+
+  # 模式选择：miniprogram(小程序) / webhook(公众号) / wecom(企业微信)
+  mode: "miniprogram"
+
+  # 通用配置（三种模式共用）
+  appId: "${WECHAT_APP_ID}"
+  appSecret: "${WECHAT_APP_SECRET}"
+  token: "${WECHAT_TOKEN}"
+  encodingAESKey: "${WECHAT_ENCODING_AES_KEY}"
+
+  # HTTP 回调服务器配置（需公网可达，用于接收微信 Webhook）
+  callbackPort: 9879
+  callbackPath: "/webhook/wechat"
+
+  # 企业微信模式配置（mode 为 wecom 时使用）
+  # corpId: "${WECOM_CORP_ID}"
+  # agentId: 1000001
+  # secret: "${WECOM_SECRET}"
+
+  # 消息处理配置
+  message:
+    maxLength: 2048
+    autoReply: true
+
+  # Token 刷新配置
+  tokenRefresh:
+    interval: 7200000
+
+  # 重连配置
+  reconnect:
+    enabled: true
+    maxAttempts: 0                    # 0 表示无限重连
+    initialInterval: 1000
+    maxInterval: 30000
+    backoffFactor: 2

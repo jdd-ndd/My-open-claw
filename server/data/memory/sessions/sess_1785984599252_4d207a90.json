@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599252_4d207a90",
+  "userId": "load-user-ejl2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHHS42YH9F2K0F6B36GY",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNTY8J2M5W4QQS75RW2VR",
+      "role": "assistant",
+      "content": "没有收到完整的消息内容。看起来你发送了 `conn_msg_12` 这个标识，但没有附带具体的消息正文。\n\n能否提供更多信息？例如：\n- 这条消息的完整内容是什么？\n- 或者你把消息粘贴过来，我来帮你解读？",
+      "timestamp": 1785984641992
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599534,
+    "lastActiveAt": 1785984641992,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

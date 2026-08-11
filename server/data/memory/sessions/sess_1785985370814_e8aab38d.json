@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985370814_e8aab38d",
+  "userId": "load-user-jrs7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC303A96VTWN63KA644H6",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985371098
+    },
+    {
+      "id": "01KZAGEKKSJHWB1WNSTH9VY6GC",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985453689
+    },
+    {
+      "id": "01KZAGEZ64T898VNNMTZFF1WZ1",
+      "role": "assistant",
+      "content": "让我重新查询汇率，之前的返回结果似乎有问题。\n\n<action name=\"calculator/currency\" args='{\"amount\":1000,\"base\":\"CNY\",\"target\":\"USD\"}' />",
+      "timestamp": 1785985465540
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371111,
+    "lastActiveAt": 1785985465540,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

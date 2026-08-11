@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988212507_7cd0a02e",
+  "userId": "load-user-cbah",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK2TNBKWTDTGFWNSKS4QZG",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785988213393
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988213399,
+    "lastActiveAt": 1785988213419,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

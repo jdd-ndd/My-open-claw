@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985350798_abb787d8",
+  "userId": "load-user-y36x",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDKAFE722V1NK66H1CY",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985351057
+    },
+    {
+      "id": "01KZAGD455TVGJZ27XK15QGTV5",
+      "role": "assistant",
+      "content": "这似乎是一条连接消息，而不是一个实际的请求。\n\n我可以帮你做很多事情——分析网页、审查代码、快速搭建项目，或者只是聊聊天。请告诉我你需要什么，我会立即开始处理。",
+      "timestamp": 1785985405093
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351069,
+    "lastActiveAt": 1785985405093,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984840650_1e77b899",
+  "userId": "user-pxvmvidu1in",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVX03ZD13SW8T58SQ61TB",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984840705
+    },
+    {
+      "id": "01KZAFY6XWBQC3WY1ZKJMX4XA2",
+      "role": "assistant",
+      "content": "# 多路消息流并行处理框架\n\n多路消息流并行处理框架是一种能够同时处理来自多个来源的消息/事件流的系统架构。以下是核心要点：\n\n---\n\n## 🏗️ 核心架构模式\n\n### 1. **消息队列驱动架构**\n```\n生产者 → 消息队列(Kafka/RabbitMQ) → 消费者组(并行)\n```\n- **Kafka** - 高吞吐、持久化、支持分区并行\n- **RabbitMQ** - 灵活路由、支持多种消息模式\n- **Pulsar** - 云原生、多租户\n\n### 2. **流处理引擎**\n| 框架 | 特点 |\n|------|------|\n| **Apache Flink** | 真正的流处理，低延迟，精确一次语义 |\n| **Spark Streaming** | 微批处理，生态丰富 |\n| **Storm** | 实时流处理，逐条处理 |\n\n### 3. **Actor 模型 (Erlang/Akka)**\n- 每个消息流对应一个 Actor\n- 天然隔离、无锁并发\n- 适合高并发场景\n\n---\n\n## 🔑 关键设计要素\n\n| 要素 | 说明 |\n|------|------|\n| **背压控制** | 防止生产者压垮消费者 |\n| **消息顺序性** | 分区键设计保证同键消息有序 |\n| **容错与重试** | 死信队列、幂等性设计 |\n| **水平扩展** | 增加分区/消费者实例 |\n| **状态管理** | 有状态处理的状态后端（RocksDB 等）|\n\n---\n\n## 💡 典型场景\n- 📡 **IoT 设备数据采集** - 百万设备并行上报\n- 💰 **实时风控** - 多路交易流并行检测\n- 📊 **实时大屏** - 多数据源聚合展示\n- 🔔 **推送系统** - 多通道(APP/短信/邮件)消息路由\n\n---\n\n## 🚀 快速选型参考\n\n```\n低延迟(<10ms)实时计算 → Apache Flink\n大数据量批流一体   → Spark Streaming  \n轻量级消息分发     → Redis Streams / RabbitMQ\n微服务间异步通信   → 消息队列 + 事件驱动\n```\n\n你是想了解某个具体框架的实现细节，还是有特定的业务场景需要设计架构方案？我可以进一步深入讲解！",
+      "timestamp": 1785984916412
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984840705,
+    "lastActiveAt": 1785984916412,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

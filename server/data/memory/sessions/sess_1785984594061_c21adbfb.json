@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594061_c21adbfb",
+  "userId": "load-user-81yr",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCNF61PAS1HPQRBH0P8D",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984594525
+    },
+    {
+      "id": "01KZAFP2NNGJ6TFH4GKMBFDN22",
+      "role": "assistant",
+      "content": "我来帮您开始编程！在开始搭建项目框架之前，让我先了解一下您的需求。\n\n[任务清单]\n1. 确认项目类型（Web应用、API服务、CLI工具、库等）\n2. 确认使用的编程语言和框架\n3. 搭建项目基础结构\n4. 配置开发环境和依赖\n\n请问您想创建什么类型的项目呢？比如：\n\n- **Web应用**（React、Vue、Next.js 等）\n- **API服务**（Express、FastAPI、Gin 等）\n- **CLI命令行工具**（Python、Go、Node.js 等）\n- **移动应用**（React Native、Flutter 等）\n- **数据科学项目**（Python + Jupyter）\n- **其他类型**\n\n另外，有偏好的编程语言吗？或者有具体的技术栈想法，都可以告诉我！\n- [记忆 1.00] conn_msg_5",
+      "timestamp": 1785984649910
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594538,
+    "lastActiveAt": 1785984649910,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

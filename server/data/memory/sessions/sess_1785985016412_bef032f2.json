@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985016412_bef032f2",
+  "userId": "load-user-gsk0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG195GF5GR7JD0JFQ5TBNS",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985016920
+    },
+    {
+      "id": "01KZAG3MCAH3KVMD9QV3Y4HKTY",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985094026
+    },
+    {
+      "id": "01KZAG52F4MSA6ZYZMM9Z4KGZA",
+      "role": "assistant",
+      "content": "你好！我收到了 \"conn_msg_4\"，但在长期记忆中没有找到与之相关的历史对话或记录。这可能是一个会话消息 ID 或测试标识符。\n\n请问你具体想做什么？比如：\n- 想查看某个之前的对话内容？\n- 需要我执行某个任务？\n- 还是仅仅在测试连接？\n\n请告诉我更多信息，我会尽力帮助你！",
+      "timestamp": 1785985141220
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016934,
+    "lastActiveAt": 1785985141220,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

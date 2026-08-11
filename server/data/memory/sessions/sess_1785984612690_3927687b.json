@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612690_3927687b",
+  "userId": "load-user-uz5a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYM4CM1XSJT56SGV78NZ",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984612869
+    },
+    {
+      "id": "01KZAFPJVRY11GT2PD2569PFZB",
+      "role": "assistant",
+      "content": "结束并提醒用户提供具体请求。\n</thought>\n<final_answer>看起来我还没有收到您的具体请求。请告诉我您想让我做什么，我会尽力帮助您！",
+      "timestamp": 1785984666488
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612912,
+    "lastActiveAt": 1785984666488,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

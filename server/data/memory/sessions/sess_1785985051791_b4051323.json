@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051791_b4051323",
+  "userId": "load-user-hs99",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BDTTNEENYC2NRSY9GTD",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985051906
+    },
+    {
+      "id": "01KZAG3YE1GM7Y8XQK1QB6XBT8",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，你的智能助手。\n\n我可以帮你处理各种任务，比如文件操作、执行命令、网页抓取与分析、HTTP 请求，还有一些实用工具（天气查询、汇率换算、计算器、进程管理等）。\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785985104321
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051979,
+    "lastActiveAt": 1785985104321,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987956828_a8b5aec3",
+  "userId": "load-user-pt8a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0WM9Y2R36NRZF2SA85P",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785987957522
+    },
+    {
+      "id": "01KZAJXGVM0PAEF30T6JC77G65",
+      "role": "assistant",
+      "content": "Connecting to your channel... \n\nGot your signal \"conn_msg_11\". I'm online and ready to help — what can I do for you today?",
+      "timestamp": 1785988039540
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957560,
+    "lastActiveAt": 1785988039540,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

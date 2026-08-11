@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985337621_ab1846d3",
+  "userId": "load-user-dzx0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2S3RSKD2TKWDVDXS8R0",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985338116
+    },
+    {
+      "id": "01KZAGDF74T93SRWP6YM6YEJ30",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息，但看起来内容不完整或是一条连接测试消息。请告诉我你需要什么帮助，比如：\n\n- 想查什么信息？\n- 需要执行什么任务？\n- 想使用某个技能？\n\n随时补充更多细节！",
+      "timestamp": 1785985416420
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338126,
+    "lastActiveAt": 1785985416420,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

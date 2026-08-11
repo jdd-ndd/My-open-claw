@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987833158_b456d1df",
+  "userId": "user-fxbiruxesnn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJQ7CHHZQ23MBSDENHSPM9",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785987833229
+    },
+    {
+      "id": "01KZAJY19NSHYXWE8F0785HQFX",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"concurrent message\"。请问有什么可以帮你的吗？如果有具体任务，欢迎告诉我。",
+      "timestamp": 1785988056373
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987833229,
+    "lastActiveAt": 1785988056373,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

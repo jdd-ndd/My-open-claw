@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612418_461bc1c4",
+  "userId": "load-user-t9u7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYJVTX4XVJX71BPNRY2J",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984612868
+    },
+    {
+      "id": "01KZAFNXWXY6D3RVB4PRQ1HAGB",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息，但 \"conn_msg_6\" 看起来像是一条系统连接标识或测试消息。请问您有什么我可以帮助您的吗？如果需要任何任务处理、信息查询或文件操作，请随时告诉我！",
+      "timestamp": 1785984645021
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612887,
+    "lastActiveAt": 1785984645021,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

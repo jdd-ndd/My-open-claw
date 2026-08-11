@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063856_38fc64e7",
+  "userId": "load-user-r4z6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q9K1JW93Z20KGVK8VY6",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985064099
+    },
+    {
+      "id": "01KZAG4KPX86XT98SXWS0YF3GB",
+      "role": "assistant",
+      "content": "[conn_msg_14] 查询结果如下：\n\n- 查询的 IP 地址: **xAcKFcT3S8**\n- 查询状态: **失败**\n\n输入的内容不是一个有效的 IP 地址 → `xAcKFcT3S8` 不符合 IPv4 或 IPv6 的格式要求。 请检查拼写，并提供一个合法的 IP（例如 `8.8.8.8` 或 `2001:4860:4860::8888`），我再帮你重新查询。```\n好的，我收到了一组历史记忆，内容是关于一次失败的 IP 地址查询记录。记忆中显示，之前有一个请求试图查询 `xAcKFcT3S8` 的地理位置，但因为该字符串不是有效的 IP 地址格式而失败了。\n\n我已经了解了这个历史，并准备好处理您的下一个请求。请告诉我您需要我做什么。",
+      "timestamp": 1785985126109
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064150,
+    "lastActiveAt": 1785985126109,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

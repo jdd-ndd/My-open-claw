@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985350281_f6438df1",
+  "userId": "load-user-va98",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFD32DP7H9KA6J4HAP84",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985351055
+    },
+    {
+      "id": "01KZAGDKG844XJCS3GHGN62YFX",
+      "role": "assistant",
+      "content": "Hello! I'm here and ready to help. How can I assist you today?",
+      "timestamp": 1785985420808
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351058,
+    "lastActiveAt": 1785985420808,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

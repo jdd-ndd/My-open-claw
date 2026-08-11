@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928287_a3496b34",
+  "userId": "load-user-n9k4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5DKB81RZ9HPCY6B63XA",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785987929429
+    },
+    {
+      "id": "01KZAJW531KEEEH94GZMTGRR6E",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息\"conn_msg_3\"，但不太确定你具体需要什么帮助。如果你有任何问题或需要我执行某个任务，请随时告诉我！",
+      "timestamp": 1785987994721
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929444,
+    "lastActiveAt": 1785987994721,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

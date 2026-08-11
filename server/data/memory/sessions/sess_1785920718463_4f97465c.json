@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785920718463_4f97465c",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZ8JV63VPNSE9A9EJTYGR43X",
+      "role": "user",
+      "content": "今天的时间",
+      "timestamp": 1785920854135
+    },
+    {
+      "id": "01KZ8JV8J8TWCBYZB2GGTQ5F1Y",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785920856648
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785920854135,
+    "lastActiveAt": 1785920856648,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

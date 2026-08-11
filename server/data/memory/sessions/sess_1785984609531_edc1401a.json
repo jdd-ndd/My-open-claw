@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609531_edc1401a",
+  "userId": "load-user-fh0e",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVVB68V2NZJ98YSXG4X2",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984610087
+    },
+    {
+      "id": "01KZAFPAV3PX76NDNK94E957X9",
+      "role": "assistant",
+      "content": "你好！我已准备就绪，随时可以为你提供帮助。\n\n我可以协助你处理以下事务：\n- 📄 **文件操作**：读取、写入、删除文件\n- 🖥️ **命令执行**：运行 Shell 命令、管理进程\n- 🌐 **网页浏览**：打开网页、抓取内容、分析页面\n- 🌤️ **天气查询**：查看各地天气和预报\n- 🧮 **计算器**：数学表达式、单位换算、货币转换、进制转换\n- 📰 **新闻快讯**：获取最新头条新闻\n- 💰 **加密货币**：查询实时币价\n- 🗺️ **路线规划**：两地之间的路线和导航\n- 🧠 **长期记忆**：回忆历史对话和偏好\n- 📝 **代码审查**：审查代码质量和安全性\n- 🚀 **快速搭建**：快速初始化项目结构\n\n请问有什么可以帮你的？",
+      "timestamp": 1785984658275
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610095,
+    "lastActiveAt": 1785984658275,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

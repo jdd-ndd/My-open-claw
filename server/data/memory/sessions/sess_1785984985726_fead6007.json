@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984985726_fead6007",
+  "userId": "user-l4gh3zcl1sn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0AN5C4090XQP14TBZVFF",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984985761
+    },
+    {
+      "id": "01KZAG4PKA59M739QQGYQZE0V6",
+      "role": "assistant",
+      "content": "您好！我注意到您发送了 \"concurrent message\"。请问您是想：\n\n1. **了解并发消息处理**的概念？\n2. **测试我的并发处理能力**？\n3. 还是其他方面的需求？\n\n请告诉我您的具体需求，我会全力协助您！😊",
+      "timestamp": 1785985129066
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984985762,
+    "lastActiveAt": 1785985129066,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

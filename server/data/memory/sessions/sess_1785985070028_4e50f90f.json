@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985070028_4e50f90f",
+  "userId": "load-user-e27x",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X9WD67319DQTPRPYM95",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985070248
+    },
+    {
+      "id": "01KZAG4XN3RTMMHAEQDMS804BJ",
+      "role": "assistant",
+      "content": "我准备好了，这是一个经典的文档生成任务。为了高效处理，我会先检查工作目录结构，确认是否已有可复用的文件。\n\n<action name=\"fs/list_dir\" args='{\"path\":\"/\"}'>",
+      "timestamp": 1785985136291
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070300,
+    "lastActiveAt": 1785985136291,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

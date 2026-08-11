@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021652_85557100",
+  "userId": "load-user-qbfa",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E2ZN7YFK4WW99JN9D0C",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985021916
+    },
+    {
+      "id": "01KZAG3SDF64EZ40AAQZWJZEVY",
+      "role": "assistant",
+      "content": "我已就绪，可以开始处理你的请求。有什么需要处理的吗？",
+      "timestamp": 1785985099183
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021957,
+    "lastActiveAt": 1785985099183,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

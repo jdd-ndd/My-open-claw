@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985043538_045775f3",
+  "userId": "load-user-huqx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23G2X9TDSJH31NCEB3VX",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985043846
+    },
+    {
+      "id": "01KZAG386AQRWWXB3F7G8DRAWC",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985081547
+    },
+    {
+      "id": "01KZAG3NS62VY8GN4YT9W3ST1V",
+      "role": "assistant",
+      "content": "你好！👋 很高兴见到你～有什么我可以帮你的吗？",
+      "timestamp": 1785985095462
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043884,
+    "lastActiveAt": 1785985095462,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

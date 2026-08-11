@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612232_44dd6f3c",
+  "userId": "load-user-suda",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYJ0ZJR0KHX8YFQ7056W",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785984612867
+    },
+    {
+      "id": "01KZAFPA3Z2RRTQHMGPXA1ZNFN",
+      "role": "assistant",
+      "content": "好的！给你讲几个好玩的事情吧——\n\n**🐝 蜜蜂界的\"民主投票\"**\n蜜蜂搬家时，会派侦察蜂出去找新家。侦察蜂回来后会跳\"摇摆舞\"来宣传自己找到的地点。如果其他蜜蜂觉得这个地点不错，也跟着一起跳。当一个地点的\"舞者\"超过一定数量，就形成共识，全族搬家！是不是有点像区块链的共识机制？\n\n**🐙 章鱼的\"越狱\"技能**\n水族馆里的章鱼经常上演越狱大戏——它们能拧开瓶盖、穿过极小的缝隙，甚至爬出鱼缸溜到隔壁鱼缸吃顿自助餐，然后再若无其事地爬回去。智商高到让人怀疑它们是不是外星生物。\n\n**🌍 地球的\"心跳\"**\n地球每天都会以微弱但固定的频率振动——相当于地球的\"嗡嗡声\"，科学家称之为\"地球的自由振荡\"。虽然人耳听不到，但地震仪能记录下来。像是地球在呼吸一样。\n\n还想听哪方面的？科技、动物、冷知识，还是其他？😄\n\n[长期记忆]\n- [记忆 1.00] conn_msg_1\n\nconn_msg_1\n\nconn_msg_0\nconn_msg_0\n\nconn_msg_0",
+      "timestamp": 1785984657535
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612870,
+    "lastActiveAt": 1785984657535,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

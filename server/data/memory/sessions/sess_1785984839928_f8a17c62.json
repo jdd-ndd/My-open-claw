@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984839928_f8a17c62",
+  "userId": "user-r9ge0waupic",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVW8YENP9J406EXK867D2",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984839965
+    },
+    {
+      "id": "01KZAFY5FZ39AVY8CBGEMCTE9V",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息“concurrent message”。你是想测试系统的并发处理能力，还是需要我帮你处理某项任务呢？请详细说明你的需求，我会尽力协助。",
+      "timestamp": 1785984914943
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984839965,
+    "lastActiveAt": 1785984914943,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

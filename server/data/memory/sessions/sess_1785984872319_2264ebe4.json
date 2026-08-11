@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984872319_2264ebe4",
+  "userId": "load-user-boaz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFWW5WYE2G7Y7G3TQ85GJY",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984872594
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984872610,
+    "lastActiveAt": 1785984872637,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

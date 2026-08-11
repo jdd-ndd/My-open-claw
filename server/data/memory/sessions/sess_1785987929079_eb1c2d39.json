@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987929079_eb1c2d39",
+  "userId": "load-user-o4gz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5FWDPTRNDFMX2KWAVR2",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785987929431
+    },
+    {
+      "id": "01KZAJW5J7WEJR0KGF3EJGJCFZ",
+      "role": "assistant",
+      "content": "用户直接发送了 \"conn_msg_15\"，这看起来像是测试或调试消息。上下文不明确，需要询问具体意图。由于没有更多上下文，应该在回答中保持开放，询问用户具体意图并提供帮助。简要说明这条消息可能的情况。",
+      "timestamp": 1785987995207
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929487,
+    "lastActiveAt": 1785987995207,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

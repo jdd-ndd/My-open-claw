@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377490_d82770e1",
+  "userId": "load-user-2c9m",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PG1E9A2CA116WDQC15",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985377971
+    },
+    {
+      "id": "01KZAGE16R71B7ZVGMV6QP12V5",
+      "role": "assistant",
+      "content": "当前这条日志 `{\"Message\":\"\",\"Type\":\"Text\"}` 是一条 Message 为空的 Text 类型日志，信息量极少，单靠这一条无法判断程序最终是启动失败还是成功。\n\n结合之前发现的 `Socket.host` 解析异常（配置中心 `TestCAS` 返回的 `Socket.host` 不是合法的 `host:port` 格式），关键缺失信息是：\n- Connector 初始化最终是否成功？\n- 后续启动流程有没有报其他异常？\n- 进程最终是否正常运行并监听端口？\n\n**建议**：请提供包含 Connector 初始化前后、以及启动完成标志位的完整日志片段，这样我才能给出确定的结论。如果能提供日志文件路径，我可以直接帮你读取分析。",
+      "timestamp": 1785985434840
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377981,
+    "lastActiveAt": 1785985434840,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596418_9b6f0ad7",
+  "userId": "load-user-skft",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF3BB1191CFX6SKX6HP3",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785984597040
+    },
+    {
+      "id": "01KZAFP5RECYNH3J0YE4YRCZBH",
+      "role": "assistant",
+      "content": "你好！我已准备就绪，可以随时为你提供帮助。请问有什么我可以为你做的吗？",
+      "timestamp": 1785984653070
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597043,
+    "lastActiveAt": 1785984653070,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985021560_f9fef474",
+  "userId": "load-user-mmq6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E2FNSV06KP6A1VB796B",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985021916
+    },
+    {
+      "id": "01KZAG4QRB1VYG6EYMBXZPTCCX",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985130251
+    },
+    {
+      "id": "01KZAG5N2SHZTEESH38ME5CJYT",
+      "role": "assistant",
+      "content": "让我先确认当前工作目录，然后再列出文件结构。\n\n<action name=\"exec/shell\" args='{\"command\":\"pwd && ls -la\",\"timeout\":10000}' />",
+      "timestamp": 1785985160281
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021946,
+    "lastActiveAt": 1785985160281,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

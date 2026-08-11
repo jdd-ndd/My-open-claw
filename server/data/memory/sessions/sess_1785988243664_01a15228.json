@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988243664_01a15228",
+  "userId": "load-user-ebos",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK3SKFWKRJYJVBZKCB17QB",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785988245061
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988245074,
+    "lastActiveAt": 1785988245103,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

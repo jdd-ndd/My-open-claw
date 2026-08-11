@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984867909_df4c7ce6",
+  "userId": "load-user-bobq",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFWR3PQGAWW2P8Z802J37V",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984868439
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984868448,
+    "lastActiveAt": 1785984868470,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

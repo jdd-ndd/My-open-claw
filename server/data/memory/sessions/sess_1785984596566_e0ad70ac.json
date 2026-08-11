@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596566_e0ad70ac",
+  "userId": "load-user-11wk",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF416AXSMA5T11Y3T8G4",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFP2YRC8M82X69R9V1EMMW",
+      "role": "assistant",
+      "content": "你好！我注意到你输入了 `conn_msg_5`，但我不太确定你想要表达什么。😊\n\n这可能是：\n1. **连接测试消息** - 想确认我是否在线？\n2. **某个消息ID或引用** - 想查找之前的对话记录？\n3. **特定指令/代码** - 有什么特殊含义？\n\n能否告诉我你具体需要什么帮助？我随时准备为你处理任务！",
+      "timestamp": 1785984650200
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597057,
+    "lastActiveAt": 1785984650200,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

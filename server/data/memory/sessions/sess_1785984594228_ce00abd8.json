@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594228_ce00abd8",
+  "userId": "load-user-d7kh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCPB04410M6YA0WTHSY6",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785984594526
+    },
+    {
+      "id": "01KZAFP2B49623V4E0W0DT2X9C",
+      "role": "assistant",
+      "content": "您好！我注意到您希望我帮您审查代码，但消息中没有看到具体的代码内容。请将您需要审查的代码粘贴过来，我会从以下几个方面为您进行审查：\n\n- 🔒 **安全性**：是否存在安全漏洞\n- 📐 **代码质量**：命名规范、代码结构、可读性\n- ⚡ **性能**：是否有性能瓶颈\n- 🛡️ **错误处理**：异常处理是否完善\n- 📝 **可维护性**：是否易于理解和修改\n\n请提供代码，我马上为您分析！",
+      "timestamp": 1785984649572
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594555,
+    "lastActiveAt": 1785984649572,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

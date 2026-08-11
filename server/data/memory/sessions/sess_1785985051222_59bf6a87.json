@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985051222_59bf6a87",
+  "userId": "load-user-u8kf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BBH81ET1DZSKG4A9M28",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985051903
+    },
+    {
+      "id": "01KZAG4VBV37XXN8J1J10NF0J6",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985133947
+    },
+    {
+      "id": "01KZAG5PHCZY0K9SCVA5RX05MY",
+      "role": "assistant",
+      "content": "<thought>\n用户请求获取当前时间，system/time 工具已经执行，但返回结果是空字符串。这可能是因为没有指定时区参数导致的。让我重新调用并指定时区（例如 Asia/Shanghai），以确保返回正确的时间信息。\n</thought>\n\n<action name=\"system/time\" args='{\"timezone\": \"Asia/Shanghai\"}' />",
+      "timestamp": 1785985161772
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051926,
+    "lastActiveAt": 1785985161772,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

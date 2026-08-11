@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985356814_ddebdfa4",
+  "userId": "load-user-h9v2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNW144YZG27B61GC0ND0",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985357672
+    },
+    {
+      "id": "01KZAGCTBFPXD4PCP4P7DKXK18",
+      "role": "assistant",
+      "content": "这是一条连接确认消息。连接正常，有什么需要我协助的吗？",
+      "timestamp": 1785985395055
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357677,
+    "lastActiveAt": 1785985395055,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

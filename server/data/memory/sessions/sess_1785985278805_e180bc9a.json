@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985278805_e180bc9a",
+  "userId": "user-siringizmx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG98W0BTPA3CJT5H7K4CYE",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785985278847
+    },
+    {
+      "id": "01KZAGDJJH0JBQT7ZCDXF7VAM3",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"concurrent message\"。请问有什么我可以帮助你的吗？如果有具体的任务或问题，请随时告诉我。",
+      "timestamp": 1785985419857
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985278847,
+    "lastActiveAt": 1785985419857,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

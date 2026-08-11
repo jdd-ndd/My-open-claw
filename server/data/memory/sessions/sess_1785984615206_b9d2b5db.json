@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615206_b9d2b5db",
+  "userId": "load-user-aggl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1A0NGT8AA8SA3SJMEXY",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984615648
+    },
+    {
+      "id": "01KZAFP742P6TK1CSCMYFJ7PMC",
+      "role": "assistant",
+      "content": "我不太确定你指的是什么，`conn_msg_6` 看起来像是一个系统内部的消息标识符或连接编号，但我目前没有关于它的上下文。\n\n能多告诉我一些背景吗？比如：\n- 这个标识符是从哪里来的？（日志、错误提示、控制台输出？）\n- 你想对它做什么？（解析内容、排查问题、追踪来源？）\n\n有了更多信息我就能帮你进一步处理了。",
+      "timestamp": 1785984654466
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615669,
+    "lastActiveAt": 1785984654466,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

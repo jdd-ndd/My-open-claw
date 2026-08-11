@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947382_a33c4490",
+  "userId": "load-user-kfa6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQWASPEM0A6XG5YFQ5YP",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785987948326
+    },
+    {
+      "id": "01KZAJX9TSV4PZ318KH1ST9S74",
+      "role": "assistant",
+      "content": "你好！你发送了\"conn_msg_6\"，我不确定你想做什么。请问有什么我可以帮助你的吗？如果需要特定服务，请详细说明。",
+      "timestamp": 1785988032345
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948348,
+    "lastActiveAt": 1785988032345,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

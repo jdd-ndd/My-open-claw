@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043350_019e5912",
+  "userId": "load-user-undu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23F3RZ0XJK471GC380KK",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985043845
+    },
+    {
+      "id": "01KZAG4C9BWJHJWBDA71KV51XY",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息，但似乎不是具体的任务请求。如果你需要帮助，可以告诉我你想做什么，比如查询信息、处理文件、执行命令等。随时等你进一步指示！😊",
+      "timestamp": 1785985118508
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043862,
+    "lastActiveAt": 1785985118508,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

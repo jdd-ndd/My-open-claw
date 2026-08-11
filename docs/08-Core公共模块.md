@@ -1,9 +1,9 @@
 # 08 - Core 公共模块
 
-> **版本**：v1.0.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.0.2  
+> **修订日期**：2026-07-23  
 > **修订人**：MyOpenClaw Core Team  
-> **文档状态**：正式发布
+> **文档状态**：正式发布（已同步代码实际状态）
 
 ---
 
@@ -67,6 +67,8 @@
 
 Core 模块不依赖任何业务模块（Channels、Gateway、Agent Runtime、Tools、Memory），是整个 Hub-Spoke 架构的"地基"，所有上层模块都依赖 Core，而 Core 不反向依赖任何上层模块。
 
+> **实现状态**：Core 模块已完整实现，包括类型系统（types/）、错误体系（errors/）、Schema 校验（schemas/）、配置加载（config/）、常量定义（constants/）和工具函数（utils/）。所有单元测试均已通过。
+
 ### 1.2 在六层架构中的定位
 
 ```
@@ -113,11 +115,13 @@ src/
 │   │   ├── channel.ts          # Channel 渠道接口
 │   │   ├── tool.ts             # Tool 工具接口
 │   │   ├── agent.ts            # Agent 运行时接口
+│   │   ├── llm.ts              # LLM 模型相关类型
 │   │   └── index.ts            # 统一导出
 │   ├── schemas/                # TypeBox / Zod 校验 Schema
 │   │   ├── message.schema.ts
 │   │   ├── session.schema.ts
-│   │   ├── task.schema.ts
+│   │   ├── validator.ts        # 统一校验器接口
+│   │   ├── extensions.ts       # 自定义校验规则
 │   │   └── index.ts
 │   ├── errors/                 # 错误体系
 │   │   ├── codes.ts            # 错误码常量
@@ -130,15 +134,17 @@ src/
 │   │   ├── retry.ts            # 重试机制
 │   │   ├── debounce.ts         # 防抖节流
 │   │   ├── deep-merge.ts       # 深合并
+│   │   ├── string.ts           # 字符串工具
 │   │   └── index.ts
 │   ├── constants/              # 全局常量
 │   │   ├── ports.ts            # 端口常量
 │   │   ├── timeouts.ts         # 超时常量
 │   │   ├── events.ts           # 事件名常量
 │   │   └── index.ts
-│   └── config/                 # 配置加载
-│       ├── loader.ts
-│       └── index.ts
+│   ├── config/                 # 配置加载
+│   │   ├── loader.ts
+│   │   └── index.ts
+│   └── index.ts                # Core 模块统一导出
 ├── hooks/                      # 生命周期钩子（跨层共享）
 │   ├── types.ts                # 钩子类型定义
 │   ├── registry.ts             # 钩子注册中心

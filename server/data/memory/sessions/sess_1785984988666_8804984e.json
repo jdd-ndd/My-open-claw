@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984988666_8804984e",
+  "userId": "user-voix5sg112e",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0DGWZWATMS58N409RSV1",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984988696
+    },
+    {
+      "id": "01KZAG4SB4T5TQDSMTH3TYYEN2",
+      "role": "assistant",
+      "content": "你好！我收到了你发送的两条相同的“concurrent message”（并发消息）。看来你正在测试并发消息的处理能力？👋\n\n系统一切正常，我已经准备好随时帮助你。如果你有任何任务需要处理，比如代码审查、项目搭建、网页分析，或者只是想聊聊天，尽管告诉我吧！",
+      "timestamp": 1785985131876
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984988696,
+    "lastActiveAt": 1785985131876,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

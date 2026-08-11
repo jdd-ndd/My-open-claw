@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984863574_9745a6e7",
+  "userId": "load-user-agib",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFWM5K1ER1V6WM8M1B0J8D",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785984864414
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984864417,
+    "lastActiveAt": 1785984864435,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

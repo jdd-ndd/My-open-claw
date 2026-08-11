@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021441_b5fe4a7f",
+  "userId": "load-user-qmxz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E1VYV9DY5ZW7F3BAKDF",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985021915
+    },
+    {
+      "id": "01KZAG53ZXZAG8B9WK8K4X02TR",
+      "role": "assistant",
+      "content": "你好！根据当前会话提供的长期记忆，我找到了一条相关性为 1.00 的记录，其内容正是“conn_msg_5”。这看起来像是一个内部连接消息的 ID 或标识符。不过由于缺少进一步的上下文，我暂时无法确定它的具体用途或所指的信息。\n\n如果你还有更多关于这个 ID 的背景（比如它来自哪里、你想查询什么），请告诉我，我可以帮你进一步分析或搜索相关记忆。",
+      "timestamp": 1785985142781
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021933,
+    "lastActiveAt": 1785985142781,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,10 +1,5 @@
 /**
- * TaskScheduler —— 定时任务调度器
- *
- * 支持 Cron 定时任务和 Delay 延迟任务两种类型，
- * 持久化到 MemoryStorage，通过 AgentInvoker 执行任务。
- *
- * @module @myopenclaw/server/gateway
+ * TaskScheduler - 定时任务调度器
  */
 
 import { EventEmitter } from 'node:events';
@@ -19,13 +14,7 @@ import {
 
 const log = createLogger('gateway:scheduler');
 
-/** Agent 调用器接口 */
 export interface AgentInvoker {
-  /**
-   * 调用 Agent 执行任务
-   * @param params - 调用参数
-   * @returns Agent 返回的响应字符串
-   */
   invoke(params: {
     agentId: string;
     message: string;
@@ -36,32 +25,29 @@ export interface AgentInvoker {
 }
 
 export class TaskScheduler extends EventEmitter {
-  /** 延迟任务定时器映射（taskId → timeout） */
   private timers = new Map<string, NodeJS.Timeout>();
-
-  /** Cron 表达式映射（taskId → cron 表达式字符串） */
   private cronExpressions = new Map<string, string>();
-
-  /** Cron 轮询检查定时器 */
   private cronCheckInterval?: ReturnType<typeof setInterval>;
+  private _agentInvoker: AgentInvoker;
 
-  /**
-   * 创建任务调度器实例
-   * @param storage - 内存存储适配器
-   * @param agentInvoker - Agent 调用器实例
-   */
   constructor(
     private storage: MemoryStorage,
-    private agentInvoker: AgentInvoker,
+    agentInvoker: AgentInvoker,
   ) {
     super();
+    this._agentInvoker = agentInvoker;
   }
 
-  // ==================== 数据库初始化 ====================
+  listTasks(): ScheduledTask[] {
+    const rows = this.storage.prepare('SELECT * FROM scheduled_tasks ORDER BY createdAt DESC').all() as StorageRow[];
+    return rows.map((row) => this.rowToTask(row));
+  }
 
-  /**
-   * 初始化数据库表结构
-   */
+  setAgentInvoker(invoker: AgentInvoker): void {
+    this._agentInvoker = invoker;
+    log.info('调度器 AgentInvoker 已更新');
+  }
+
   initDatabase(): void {
     this.storage.ensureTable('scheduled_tasks', `
       id TEXT PRIMARY KEY,
@@ -79,34 +65,24 @@ export class TaskScheduler extends EventEmitter {
       lastRunAt INTEGER,
       nextRunAt INTEGER,
       runCount INTEGER NOT NULL DEFAULT 0,
+      duration INTEGER,
       metadata TEXT
     `);
   }
 
-  // ==================== 生命周期 ====================
-
-  /**
-   * 启动调度器：从存储加载启用的 Cron 任务并开始轮询
-   */
   async start(): Promise<void> {
     log.info('定时任务调度器正在启动...');
 
-    // 加载所有已启用的 Cron 任务
-    const rows = this.storage
-      .prepare('SELECT * FROM scheduled_tasks')
-      .all() as StorageRow[];
-
+    const rows = this.storage.prepare('SELECT * FROM scheduled_tasks').all() as StorageRow[];
     for (const row of rows) {
       if (row.enabled === 1 && row.type === 'cron') {
         const task = this.rowToTask(row);
         if (task.cron) {
           this.cronExpressions.set(task.id, task.cron);
-          log.debug({ taskId: task.id, cron: task.cron }, '已加载 Cron 任务');
         }
       }
     }
 
-    // 启动 60 秒轮询检查
     this.cronCheckInterval = setInterval(() => {
       this.checkCronTasks().catch((err) => {
         log.error({ err }, 'Cron 任务轮询出错');
@@ -116,10 +92,7 @@ export class TaskScheduler extends EventEmitter {
     log.info({ cronCount: this.cronExpressions.size }, '调度器已启动');
   }
 
-  /**
-   * 停止调度器：清除所有定时器和轮询
-   */
-  stop(): void {
+  async stop(): Promise<void> {
     if (this.cronCheckInterval) {
       clearInterval(this.cronCheckInterval);
       this.cronCheckInterval = undefined;
@@ -128,17 +101,12 @@ export class TaskScheduler extends EventEmitter {
     for (const timer of this.timers.values()) {
       clearTimeout(timer);
     }
+
     this.timers.clear();
     this.cronExpressions.clear();
-
     log.info('调度器已停止');
   }
 
-  // ==================== 任务管理 ====================
-
-  /**
-   * 创建并注册调度任务
-   */
   createTask(task: Omit<ScheduledTask, 'id' | 'status' | 'createdAt' | 'runCount' | 'enabled'> & { enabled?: boolean; status?: TaskStatus }): ScheduledTask {
     const id = `task_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
     const now = Date.now();
@@ -171,9 +139,6 @@ export class TaskScheduler extends EventEmitter {
     return fullTask;
   }
 
-  /**
-   * 删除指定任务
-   */
   deleteTask(taskId: string): void {
     const timer = this.timers.get(taskId);
     if (timer) {
@@ -183,143 +148,25 @@ export class TaskScheduler extends EventEmitter {
 
     this.cronExpressions.delete(taskId);
     this.storage.prepare('DELETE FROM scheduled_tasks WHERE id = ?').run(taskId);
-
     log.info({ taskId }, '任务已删除');
     this.emit('task:deleted', taskId);
   }
 
-  // ==================== 任务调度 ====================
-
-  private schedule(task: ScheduledTask): void {
-    if (task.type === TaskType.CRON) {
-      this.scheduleCronTask(task);
-    } else if (task.type === TaskType.DELAY) {
-      this.scheduleDelayTask(task);
-    }
-  }
-
-  scheduleCronTask(task: ScheduledTask): void {
-    if (task.cron) {
-      this.cronExpressions.set(task.id, task.cron);
-      log.debug({ taskId: task.id, cron: task.cron }, 'Cron 任务已注册');
-    }
-  }
-
-  scheduleDelayTask(task: ScheduledTask): void {
-    if (!task.delay || task.delay <= 0) {
-      log.debug({ taskId: task.id }, '延迟任务立即执行');
-      this.executeTask(task.id).catch((err) => {
-        log.error({ err, taskId: task.id }, '延迟任务执行失败');
-      });
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      this.timers.delete(task.id);
-      this.executeTask(task.id).catch((err) => {
-        log.error({ err, taskId: task.id }, '延迟任务执行失败');
-      });
-    }, task.delay);
-
-    this.timers.set(task.id, timer);
-    log.debug({ taskId: task.id, delay: task.delay }, '延迟任务已注册');
-  }
-
-  // ==================== Cron 轮询检查 ====================
-
-  /**
-   * 检查所有 Cron 任务是否到达执行时间
-   */
-  private async checkCronTasks(): Promise<void> {
-    const now = new Date();
-
-    for (const [taskId, cronExpr] of this.cronExpressions) {
-      if (this.matchesCron(now, cronExpr)) {
-        const taskRow = this.storage
-          .prepare('SELECT * FROM scheduled_tasks')
-          .get(taskId) as StorageRow | undefined;
-
-        if (taskRow) {
-          const lastRunAt = taskRow.lastRunAt as number | undefined;
-          const currentMinute = Math.floor(Date.now() / 60_000);
-          const lastMinute = lastRunAt ? Math.floor(lastRunAt / 60_000) : 0;
-
-          if (lastMinute < currentMinute) {
-            log.debug({ taskId, cron: cronExpr }, 'Cron 任务触发执行');
-            this.executeTask(taskId).catch((err) => {
-              log.error({ err, taskId }, 'Cron 任务执行失败');
-            });
-          }
-        }
-      }
-    }
-  }
-
-  /**
-   * 简单 Cron 表达式匹配（支持五位格式：分 时 日 月 周）
-   */
-  private matchesCron(date: Date, cronExpr: string): boolean {
-    const parts = cronExpr.trim().split(/\s+/);
-    if (parts.length !== 5) return false;
-
-    const current = [
-      date.getMinutes(),
-      date.getHours(),
-      date.getDate(),
-      date.getMonth() + 1,
-      date.getDay(),
-    ];
-
-    for (let i = 0; i < 5; i++) {
-      if (!this.matchesCronField(parts[i], current[i])) {
-        return false;
-      }
-    }
-
-    return true;
-  }
-
-  /**
-   * 检查单个 Cron 字段是否匹配当前值
-   */
-  private matchesCronField(field: string, current: number): boolean {
-    if (field === '*') return true;
-
-    const values = field.split(',');
-    for (const val of values) {
-      const num = parseInt(val, 10);
-      if (!isNaN(num) && num === current) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  // ==================== 任务执行 ====================
-
-  /**
-   * 执行指定任务
-   */
   async executeTask(taskId: string): Promise<TaskExecutionResult> {
     const startTime = Date.now();
-
-    const row = this.storage
-      .prepare('SELECT * FROM scheduled_tasks')
-      .get(taskId) as StorageRow | undefined;
+    const row = this.storage.prepare('SELECT * FROM scheduled_tasks WHERE id = ?').get(taskId) as StorageRow | undefined;
 
     if (!row) {
       throw new Error(`任务 ${taskId} 不存在`);
     }
 
     const task = this.rowToTask(row);
-
     this.updateTaskStatus(taskId, TaskStatus.RUNNING);
 
     try {
       log.info({ taskId, agentId: task.agentId }, '开始执行任务');
 
-      const response = await this.agentInvoker.invoke({
+      const response = await this._agentInvoker.invoke({
         agentId: task.agentId,
         message: task.message,
         channelId: task.channelId,
@@ -328,7 +175,6 @@ export class TaskScheduler extends EventEmitter {
       });
 
       const duration = Date.now() - startTime;
-
       this.updateTaskStatus(taskId, TaskStatus.COMPLETED);
       this.updateTaskRunInfo(taskId, duration);
 
@@ -348,7 +194,6 @@ export class TaskScheduler extends EventEmitter {
 
       this.updateTaskStatus(taskId, TaskStatus.FAILED);
       this.updateTaskRunInfo(taskId, duration);
-
       log.error({ err, taskId, duration }, '任务执行失败');
 
       const result: TaskExecutionResult = {
@@ -364,57 +209,135 @@ export class TaskScheduler extends EventEmitter {
     }
   }
 
-  // ==================== 内部辅助 ====================
+  private schedule(task: ScheduledTask): void {
+    if (task.type === TaskType.CRON) {
+      this.scheduleCronTask(task);
+      return;
+    }
 
-  /**
-   * 更新任务状态
-   */
-  private updateTaskStatus(taskId: string, status: TaskStatus): void {
-    this.storage
-      .prepare('UPDATE scheduled_tasks SET status = ? WHERE id = ?')
-      .run(status, taskId);
+    if (task.type === TaskType.DELAY) {
+      this.scheduleDelayTask(task);
+    }
   }
 
-  /**
-   * 更新任务运行信息
-   */
+  private scheduleCronTask(task: ScheduledTask): void {
+    if (task.cron) {
+      this.cronExpressions.set(task.id, task.cron);
+      log.debug({ taskId: task.id, cron: task.cron }, 'Cron 任务已注册');
+    }
+  }
+
+  private scheduleDelayTask(task: ScheduledTask): void {
+    if (!task.delay || task.delay <= 0) {
+      void this.executeTask(task.id);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      this.timers.delete(task.id);
+      void this.executeTask(task.id);
+    }, task.delay);
+
+    this.timers.set(task.id, timer);
+    log.debug({ taskId: task.id, delay: task.delay }, '延迟任务已注册');
+  }
+
+  private async checkCronTasks(): Promise<void> {
+    const now = new Date();
+
+    for (const [taskId, cronExpr] of this.cronExpressions) {
+      if (!this.matchesCron(now, cronExpr)) {
+        continue;
+      }
+
+      const taskRow = this.storage.prepare('SELECT * FROM scheduled_tasks WHERE id = ?').get(taskId) as StorageRow | undefined;
+      if (!taskRow) {
+        continue;
+      }
+
+      const lastRunAt = taskRow.lastRunAt as number | undefined;
+      const currentMinute = Math.floor(Date.now() / 60_000);
+      const lastMinute = lastRunAt ? Math.floor(lastRunAt / 60_000) : 0;
+
+      if (lastMinute < currentMinute) {
+        await this.executeTask(taskId);
+      }
+    }
+  }
+
+  private matchesCron(now: Date, cronExpr: string): boolean {
+    const parts = cronExpr.trim().split(/\s+/);
+    if (parts.length !== 5) {
+      return false;
+    }
+
+    const [minute, hour, day, month, weekDay] = parts;
+    return this.matchesCronField(now.getMinutes(), minute)
+      && this.matchesCronField(now.getHours(), hour)
+      && this.matchesCronField(now.getDate(), day)
+      && this.matchesCronField(now.getMonth() + 1, month)
+      && this.matchesCronField(now.getDay(), weekDay);
+  }
+
+  private matchesCronField(value: number, expr: string): boolean {
+    if (expr === '*') {
+      return true;
+    }
+
+    if (expr.includes(',')) {
+      return expr.split(',').some((part) => this.matchesCronField(value, part));
+    }
+
+    if (expr.startsWith('*/')) {
+      const step = Number(expr.slice(2));
+      return step > 0 && value % step === 0;
+    }
+
+    const parsed = Number(expr);
+    return Number.isFinite(parsed) && parsed === value;
+  }
+
+  private updateTaskStatus(taskId: string, status: TaskStatus): void {
+    this.storage.prepare('UPDATE scheduled_tasks SET status = ? WHERE id = ?').run(status, taskId);
+  }
+
   private updateTaskRunInfo(taskId: string, duration: number): void {
     const now = Date.now();
     this.storage
-      .prepare(
-        'UPDATE scheduled_tasks SET lastRunAt = ?, runCount = runCount + 1, duration = ? WHERE id = ?',
-      )
+      .prepare('UPDATE scheduled_tasks SET lastRunAt = ?, runCount = runCount + 1, duration = ? WHERE id = ?')
       .run(now, duration, taskId);
   }
 
-  /**
-   * 持久化任务到存储
-   */
   private persistTask(task: ScheduledTask): void {
     this.storage
-      .prepare(
-        `INSERT INTO scheduled_tasks (id, name, type, cron, delay, agentId, message, channelId, userId, status, enabled, createdAt, metadata)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      )
+      .prepare(`INSERT INTO scheduled_tasks (id, name, type, cron, delay, agentId, message, channelId, userId, status, enabled, createdAt, metadata)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
       .run(
-        task.id, task.name, task.type,
-        task.cron ?? null, task.delay ?? null,
-        task.agentId, task.message,
-        task.channelId ?? null, task.userId ?? null,
-        task.status, task.enabled ? 1 : 0,
+        task.id,
+        task.name,
+        task.type,
+        task.cron ?? null,
+        task.delay ?? null,
+        task.agentId,
+        task.message,
+        task.channelId ?? null,
+        task.userId ?? null,
+        task.status,
+        task.enabled ? 1 : 0,
         task.createdAt,
         task.metadata ? JSON.stringify(task.metadata) : null,
       );
   }
 
-  /**
-   * 将存储行转换为 ScheduledTask 对象（使用语义化列名）
-   */
   private rowToTask(row: StorageRow): ScheduledTask {
     let metadata: Record<string, unknown> | undefined;
     const metadataRaw = row.metadata;
     if (typeof metadataRaw === 'string') {
-      try { metadata = JSON.parse(metadataRaw); } catch { metadata = undefined; }
+      try {
+        metadata = JSON.parse(metadataRaw);
+      } catch {
+        metadata = undefined;
+      }
     }
 
     return {

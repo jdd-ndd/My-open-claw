@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604111_81fb8252",
+  "userId": "load-user-qyxh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPHE9HG94QQPEXG73QB9",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984604643
+    },
+    {
+      "id": "01KZAFNRHYDMJ3X9W5DR1YYR89",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息。看起来你可能在测试连接，或者不小心发送了重复内容。有什么我可以帮你的吗？无论是回答问题、处理文件、执行命令、查询天气还是其他任务，我都很乐意协助你。",
+      "timestamp": 1785984639550
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604653,
+    "lastActiveAt": 1785984639550,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

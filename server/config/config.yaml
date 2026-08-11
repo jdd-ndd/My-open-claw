@@ -4,17 +4,20 @@
 include:
   - agents/default.yaml
   - channels/webchat.yaml
-  - channels/telegram.yaml
-  - channels/discord.yaml
   - channels/feishu.yaml
+  - channels/qqbot.yaml
+  - channels/wechat.yaml
 
-# ── Gateway 网关配置 ──
-gateway:
-  host: 127.0.0.1
-  port: 18780
-  heartbeatInterval: 30000
-  maxConnections: 1000
-  requestTimeout: 30000
+# ── 网络通信配置 ──
+network:
+  ws:
+    host: 127.0.0.1
+    port: 18780
+    path: /ws
+  http:
+    host: 127.0.0.1
+    port: 18780
+    basePath: ''
 
 # ── 日志 ──
 logging:
@@ -22,9 +25,45 @@ logging:
 
 # ── 安全 ──
 security:
-  rateLimit:
-    max: 100
-    windowMs: 60000
+  # API 鉴权 Token（留空则跳过鉴权，仅本地开发使用）
+  apiToken: ""
+  # 频率限制（每分钟最大请求数）
+  rateLimit: 100
+  # 是否启用命令沙箱
+  sandboxEnabled: false
+  # 允许执行的命令白名单
+  allowedCommands:
+    - ls
+    - cat
+    - node
+    - python3
+    - git
+  # JWT Token 签名密钥
+  secret: myopenclaw-default-secret-change-me
+  # Token 默认过期天数
+  tokenExpiryDays: 30
+  # 危险操作拦截规则
+  dangerPatterns:
+    - id: rm_rf
+      description: 禁止递归强制删除根目录
+      pattern: "rm\\s+-rf\\s+/"
+      action: block
+    - id: drop_table
+      description: 禁止删除数据库表
+      pattern: "DROP\\s+TABLE"
+      action: block
+    - id: shutdown
+      description: 禁止关闭系统
+      pattern: "shutdown\\s+-h\\s+now"
+      action: block
+
+# ── 审计日志 ──
+audit:
+  logFilePath: ./data/audit.jsonl
+
+# ── 调度器 ──
+scheduler:
+  loadSavedTasks: true
 
 # ── 存储路径 ──
 storage:

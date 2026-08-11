@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069807_b9ae2542",
+  "userId": "load-user-h2tj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X8Y4BT14YYPV8B675YY",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985070248
+    },
+    {
+      "id": "01KZAG3QDVKEZ4726BTYZCJ1XH",
+      "role": "assistant",
+      "content": "我不太理解“conn_msg_9”的具体含义，这看起来像是一个连接消息的标记或测试消息。  \n请问您有什么实际任务需要我帮忙处理吗？",
+      "timestamp": 1785985097147
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070280,
+    "lastActiveAt": 1785985097147,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

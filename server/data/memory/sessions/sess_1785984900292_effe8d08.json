@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984900292_effe8d08",
+  "userId": "load-user-ktuo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFXQZ4C5FTXBG0PK4GTQQ0",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984901073
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984901077,
+    "lastActiveAt": 1785984901092,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

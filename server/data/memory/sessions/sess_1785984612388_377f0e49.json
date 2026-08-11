@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612388_377f0e49",
+  "userId": "load-user-r38n",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYJQ833WKQK0K59VPZ2X",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984612868
+    },
+    {
+      "id": "01KZAFNP1HXT9SJWCNVBS8DXVD",
+      "role": "assistant",
+      "content": "消息记录: 你好，请问从广州南站打车到白云机场T2航站楼，需要多久？预计费用大概是多少？",
+      "timestamp": 1785984636977
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612884,
+    "lastActiveAt": 1785984636977,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

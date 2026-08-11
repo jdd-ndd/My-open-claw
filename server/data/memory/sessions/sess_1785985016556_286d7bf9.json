@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985016556_286d7bf9",
+  "userId": "load-user-qsi7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG196CVK53AK0CE66FQSCH",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985016920
+    },
+    {
+      "id": "01KZAG4BV1736XZK30B5A78GSP",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985118049
+    },
+    {
+      "id": "01KZAG5FCQ4B6T8Q7XKF0TDAJF",
+      "role": "assistant",
+      "content": "文件读取失败，我先看看工作目录下实际有哪些文件，确认 README.md 是否存在或路径是否正确。\n\n<action name=\"fs/list_dir\" args='{\"path\": \"/home/ubuntu/workspace\"}' />",
+      "timestamp": 1785985154455
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016950,
+    "lastActiveAt": 1785985154455,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

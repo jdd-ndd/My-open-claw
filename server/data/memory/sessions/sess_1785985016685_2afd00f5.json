@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985016685_2afd00f5",
+  "userId": "load-user-kbvt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1971KS2Z3EWSMR3075PY",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985016921
+    },
+    {
+      "id": "01KZAG38Z0250V1RR55J3ZGSB9",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985082336
+    },
+    {
+      "id": "01KZAG4GY99PHB13R5WEMFQBG2",
+      "role": "assistant",
+      "content": "<thought>\n工具返回了空字符串，这不太正常。让我再试一次，加上时区参数，用户可能是中国用户，使用 Asia/Shanghai 时区。\n</thought>\n<action name=\"system/time\" args='{\"timezone\":\"Asia/Shanghai\",\"locale\":\"zh-CN\"}' />",
+      "timestamp": 1785985123273
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016964,
+    "lastActiveAt": 1785985123273,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987974733_a3573bd1",
+  "userId": "load-user-6hp0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJVJZ103R633GKD98CGTX2",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785987976076
+    },
+    {
+      "id": "01KZAJXMEW2M33VRXEE2370R98",
+      "role": "assistant",
+      "content": "这是系统连接消息。用户消息是\"conn_msg_2\"，表示连接已建立。我会回复确认就绪。这是连接消息确认，我们可以开始对话了。需要我做什么？",
+      "timestamp": 1785988043228
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987976085,
+    "lastActiveAt": 1785988043228,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,6 +1,40 @@
 # 飞书渠道配置
+# 通过飞书开放平台 (https://open.feishu.cn) 创建企业自建应用获取凭证
+
 feishu:
-  enabled: false
-  name: "飞书"
+  channelId: "feishu"
+  enabled: true
+
+  # 事件接收模式：
+  #   long_connection - 长连接模式（推荐，无需公网 IP，通过 WebSocket 接收事件）
+  #   webhook - Webhook 模式（需要公网 IP 和端口映射）
+  eventMode: "long_connection"
+
+  # 飞书应用凭证
   appId: "${FEISHU_APP_ID}"
   appSecret: "${FEISHU_APP_SECRET}"
+
+  # 事件订阅加密与校验（仅 webhook 模式需要）
+  encryptKey: "${FEISHU_ENCRYPT_KEY}"
+  verificationToken: "${FEISHU_VERIFY_TOKEN}"
+
+  # HTTP 回调服务器配置（仅 webhook 模式需要）
+  port: 9876
+  path: "/webhook/feishu"
+
+  # 长连接心跳间隔（毫秒），默认 30 秒
+  heartbeatInterval: 30000
+
+  # 消息处理配置
+  requireMentionInGroup: true        # 群聊中需要 @机器人 才响应
+
+  # Token 自动刷新间隔（毫秒），飞书 tenant_access_token 默认有效期 2 小时
+  tokenRefreshInterval: 7200000
+
+  # 重连配置
+  reconnect:
+    enabled: true
+    maxAttempts: 10
+    initialInterval: 1000
+    maxInterval: 30000
+    backoffFactor: 2

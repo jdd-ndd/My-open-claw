@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984582053_320b696c",
+  "userId": "user-yfos9opcczq",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFM0EWKPZMDGHR1M26S3DF",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984582102
+    },
+    {
+      "id": "01KZAFN73JE60XQAM20P12B212",
+      "role": "assistant",
+      "content": "您好！您提到了\"concurrent message\"（并发消息）。\n\n这个词通常出现在以下几种场景中：\n\n1. **分布式系统/消息队列**：多个消息生产者同时发送消息，消费者需要处理并发消息流（如 Kafka、RabbitMQ 等）\n2. **并发编程**：多线程或多协程环境下，多个消息同时到达需要处理的场景\n3. **网络通信**：WebSocket 或实时通信中，多条消息并发推送的处理\n\n请问您具体想了解哪方面的内容？或者需要我帮您完成什么任务？例如：\n- 📝 审查涉及并发消息处理的代码\n- 🔧 搭建一个消息队列相关的项目\n- 📖 解释并发消息处理的原理\n\n请告诉我更多细节，我好更好地帮助您！",
+      "timestamp": 1785984621682
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984582102,
+    "lastActiveAt": 1785984621682,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

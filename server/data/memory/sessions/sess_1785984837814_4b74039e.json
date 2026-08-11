@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984837814_4b74039e",
+  "userId": "user-53pda6x3o5r",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVT6SBNS4E2NTFN7D7839",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984837848
+    },
+    {
+      "id": "01KZAFWJVSHEXGEF2TF7T2VQ3Q",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息。看起来这是一条测试消息或者并发消息的测试。\n\n如果你需要我帮忙处理任何任务，请随时告诉我！我可以帮助你：\n\n- 📂 **文件操作**：读取、写入、删除文件\n- 🌐 **网页分析**：打开网页、抓取内容、分析页面\n- 💻 **代码审查**：审查代码质量、安全性和可维护性\n- 🚀 **快速搭建项目**：初始化项目结构\n- 🔍 **信息查询**：天气、汇率、新闻、IP定位等\n- 📐 **计算工具**：数学表达式、单位转换、进制转换\n- 🗺️ **路线规划**：地理编码、路径规划\n\n请告诉我你需要什么帮助，我会尽力协助你！",
+      "timestamp": 1785984863097
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984837848,
+    "lastActiveAt": 1785984863097,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618456_3ef1830c",
+  "userId": "load-user-zez8",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN4892EG6MMTCP7H9JBW4",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984618634
+    },
+    {
+      "id": "01KZAFPFJWF7WF1VZPM4QHZNVC",
+      "role": "assistant",
+      "content": "你好！我收到了你的输入，看起来包含了一个十六进制字符串：\n\n> `a75f24e8b4ba6c6a375ec4a431858b3d`\n\n以及一个标识符：`conn_msg_15`。\n\n不过我不太确定你想要我做什么——是想让我分析这个字符串、解码它，还是它有特定的用途？请告诉我更多信息或你的具体需求，我好帮你处理。",
+      "timestamp": 1785984663132
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618678,
+    "lastActiveAt": 1785984663132,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

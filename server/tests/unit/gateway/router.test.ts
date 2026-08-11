@@ -2,9 +2,11 @@
  * Gateway Router 单元测试
  */
 import { describe, it, expect, beforeEach } from 'vitest';
-import { MessageRouter } from '../../../src/gateway/router/index.js';
-import type { NormalizedMessage } from '../../../src/gateway/router/types.js';
-import type { AgentConfig } from '../../../src/gateway/router/index.js';
+import { MessageRouter } from '../../../src/gateway/routing/index.js';
+import { SessionManager } from '../../../src/gateway/sessions/index.js';
+import { MemoryStorage } from '../../../src/gateway/core/storage.js';
+import type { NormalizedMessage } from '../../../src/gateway/sessions/types.js';
+import type { AgentConfig } from '../../../src/gateway/routing/index.js';
 
 // ── 工具函数 ──────────────────────────────────────────────
 
@@ -35,7 +37,10 @@ describe('MessageRouter', () => {
   let router: MessageRouter;
 
   beforeEach(() => {
-    router = new MessageRouter();
+    const storage = new MemoryStorage();
+    const sessions = new SessionManager(storage);
+    sessions.initDatabase();
+    router = new MessageRouter(sessions);
   });
 
   // ── 初始化 ──────────────────────────────────────────
@@ -44,7 +49,7 @@ describe('MessageRouter', () => {
     it('初始化数据库应创建 sessions 和 messages 表', () => {
       router.initDatabase();
 
-      const tables = (router as any)['storage'].tables as Map<string, unknown>;
+      const tables = (router as any)['sessions']['storage']['tables'] as Map<string, unknown>;
       expect(tables.has('sessions')).toBe(true);
       expect(tables.has('messages')).toBe(true);
     });
@@ -91,7 +96,7 @@ describe('MessageRouter', () => {
           priority: 50,
           channels: [
             { channelId: 'webchat', userIds: ['*'] },
-            { channelId: 'telegram', userIds: ['*'] },
+            { channelId: 'feishu', userIds: ['*'] },
           ],
         },
       ];
@@ -101,7 +106,7 @@ describe('MessageRouter', () => {
 
       expect(rules).toHaveLength(2);
       expect(rules[0].channelId).toBe('webchat');
-      expect(rules[1].channelId).toBe('telegram');
+      expect(rules[1].channelId).toBe('feishu');
     });
   });
 

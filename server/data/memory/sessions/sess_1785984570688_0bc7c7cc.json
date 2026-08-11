@@ -1,0 +1,74 @@
+{
+  "sessionId": "sess_1785984570688_0bc7c7cc",
+  "userId": "user-s",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKNAW6DG88J3G7WNQMKXM",
+      "role": "user",
+      "content": "msg1",
+      "timestamp": 1785984570713
+    },
+    {
+      "id": "01KZAFKNERKYVTGXQTSWB4C9CP",
+      "role": "user",
+      "content": "msg2",
+      "timestamp": 1785984570835
+    },
+    {
+      "id": "01KZAFKRJRQ8BNSSBGA2CYG3KS",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，你的通用任务处理助手。有什么我可以帮你的吗？",
+      "timestamp": 1785984574040
+    },
+    {
+      "id": "01KZAFM1JFCPRBK3X6K6WB9H85",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984583247
+    },
+    {
+      "id": "01KZAFNQBE6KY63Q145G16JHHM",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了 \"msg1\" 和 \"msg2\"，看起来是在引用系统记忆中的两条记录。\n\n不过，我在记忆中只能看到这两个标签（[记忆 0.50] msg1 和 [记忆 1.00] msg2），但它们的实际内容为空，无法检索到具体的上下文信息。\n\n请问你希望我做什么呢？比如：\n- 你想基于这些记忆继续某个之前的任务？\n- 还是想测试记忆功能？\n- 或者你有其他需要我帮忙的事情？\n\n随时告诉我，我会尽力协助！😊",
+      "timestamp": 1785984638318
+    },
+    {
+      "id": "01KZAFVJAMM77V6PMXYSAXQKBJ",
+      "role": "user",
+      "content": "msg1",
+      "timestamp": 1785984829778
+    },
+    {
+      "id": "01KZAFVJHG62AKFD2BY2NR9845",
+      "role": "user",
+      "content": "msg2",
+      "timestamp": 1785984829998
+    },
+    {
+      "id": "01KZAFVQ51XC1WP16F45QHJYQD",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984834721
+    },
+    {
+      "id": "01KZAFW0A389PSK0NVBKJG4922",
+      "role": "assistant",
+      "content": "收到你的消息：**msg1** 和 **msg2**（两次）。\n\n我注意到这些内容在长期记忆中已经有记录了。请问你是想：\n\n- 🧪 **测试记忆功能**？——看起来记忆系统工作正常，这些消息已经被存储和检索。\n- 🔄 **继续之前的某个任务**？——如果之前有未完成的事情，我可以接着帮你。\n- 💬 **开始一个新的对话或任务**？——随时告诉我你需要什么帮助！\n\n我在这儿等你指令 😊",
+      "timestamp": 1785984844099
+    },
+    {
+      "id": "01KZAFW0F4AE3TEK5ZBR4XNTRR",
+      "role": "assistant",
+      "content": "你好！我注意到你多次发送了 \"msg1\" 和 \"msg2\"，这些看起来像是测试消息或某种标签。\n\n目前的情况是：\n- 系统记忆中的这些条目内容为空，无法检索到具体信息\n- 工作目录中也没有相关的上下文文件\n\n请问你的真实需求是什么呢？比如：\n- 想让我帮你处理某个具体任务？\n- 在测试系统消息功能？\n- 还是不小心发送了占位内容？\n\n随时告诉我你的实际需求，我会全力协助！😊",
+      "timestamp": 1785984844260
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984570713,
+    "lastActiveAt": 1785984844260,
+    "messageCount": 10,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985363602_79731530",
+  "userId": "load-user-cx7k",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWBVDDBPYQ3SET6QPFDT",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985364322
+    },
+    {
+      "id": "01KZAGD5FMAG0MEXPRAW541Q8N",
+      "role": "assistant",
+      "content": "这是个什么标识符/消息 ID 吗？我不太确定。能不能多给点上下文，比如你是在哪个系统里看到它的，或者具体想要我做什么？",
+      "timestamp": 1785985406452
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364327,
+    "lastActiveAt": 1785985406452,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

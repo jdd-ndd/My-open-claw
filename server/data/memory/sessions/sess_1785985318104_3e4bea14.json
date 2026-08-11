@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318104_3e4bea14",
+  "userId": "load-user-s242",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFVZ8W3X5SJPQY3EFRXP",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985318761
+    },
+    {
+      "id": "01KZAGEPHE4EG88WDBVHDJQ6RC",
+      "role": "assistant",
+      "content": "系统似乎发送了一个连接消息标识符，但没有提出任何具体请求。如果你想测试连接，一切正常；如果有具体问题，请告诉我。",
+      "timestamp": 1785985456686
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318765,
+    "lastActiveAt": 1785985456686,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324453_99a98e44",
+  "userId": "load-user-kr3b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP2YYBV2FVPF1WY4X1X3",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985325127
+    },
+    {
+      "id": "01KZAGCS1N9J94122Q7JPRTVWW",
+      "role": "assistant",
+      "content": "已连接！我是你的通用任务智能助手，有什么可以帮你的吗？",
+      "timestamp": 1785985393717
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325132,
+    "lastActiveAt": 1785985393717,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

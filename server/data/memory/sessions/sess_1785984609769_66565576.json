@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984609769_66565576",
+  "userId": "load-user-bjo1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVWFEGZ4BH98XKF363ER",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785984610088
+    },
+    {
+      "id": "01KZAFNP11AJS55GJ36MTVATGN",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785984636961
+    },
+    {
+      "id": "01KZAFP8B043N1K8B4TDENZ31B",
+      "role": "assistant",
+      "content": "你好！我注意到你分享了一段历史对话记忆，其中显示之前有一个读取文件的操作（`fs/read_file` 尝试读取 `/path/to/file.md`）失败了。\n\n不过这段记忆里的路径 `/path/to/file.md` 看起来是一个示例占位路径，不是真实的文件路径，所以当时读取失败也是正常的。\n\n请问你现在需要我做什么呢？比如：\n\n- 📂 **读取或操作某个文件** — 给我正确的文件路径即可\n- 🔍 **继续之前未完成的任务** — 告诉我你之前想做什么\n- 🆕 **开始一个新任务** — 直接描述你的需求就好\n\n我随时准备帮助你！😊",
+      "timestamp": 1785984655712
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610117,
+    "lastActiveAt": 1785984655712,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

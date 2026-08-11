@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344444_e906dcf3",
+  "userId": "load-user-l8o5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94SVF8GZ2B9C65V8FNV",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985344631
+    },
+    {
+      "id": "01KZAGDC2HM12CTQXWWSD86SZS",
+      "role": "assistant",
+      "content": "你一直在重复发送“conn_msg_16”，请问有什么具体问题需要我帮忙吗？",
+      "timestamp": 1785985413201
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344644,
+    "lastActiveAt": 1785985413201,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

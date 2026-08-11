@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377653_17efc0d4",
+  "userId": "load-user-z9yi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PNPHK9N3Z7D3Y59FR4",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985377971
+    },
+    {
+      "id": "01KZAGD5SYT01F17YZFW1ZQ37W",
+      "role": "assistant",
+      "content": "抱歉，我没太明白你的意思 😅。你输入的「conn_msg_14」看起来像是一个内部消息标识符，我没法从这串字符里推断出你想做什么。\n\n你可以直接告诉我你的需求，比如：\n- 查天气、查快递\n- 写代码、改文档\n- 打开网页、搜索信息\n- 管理文件、执行命令\n- 或者其他任何需要帮忙的事情\n\n我会尽力帮你处理！",
+      "timestamp": 1785985406782
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377984,
+    "lastActiveAt": 1785985406782,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

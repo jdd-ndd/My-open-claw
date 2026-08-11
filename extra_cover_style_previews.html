@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My OpenClaw - Extra Cover Style Previews</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #0b0d10; font-family: "Inter", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    body { padding: 28px; display: grid; gap: 38px; }
+    .title { color: #f3f4f6; font-size: 20px; font-weight: 800; }
+    .note { color: #9ca3af; font-size: 13px; margin-top: 6px; }
+    .label { width: min(100%, 1440px); margin: 0 auto 10px; color: #e5e7eb; font-size: 14px; font-weight: 700; }
+    .slide { position: relative; width: min(100%, 1440px); aspect-ratio: 16 / 9; margin: 0 auto; overflow: hidden; border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,0.35); }
+
+    .brutal { background: #f6f7f2; color: #111; }
+    .brutal .block-a { position: absolute; left: 70px; top: 70px; width: 320px; height: 150px; background: #111; }
+    .brutal .block-b { position: absolute; right: 74px; top: 86px; width: 230px; height: 230px; border: 16px solid #c6ff00; }
+    .brutal .block-c { position: absolute; left: 120px; bottom: 80px; width: 920px; height: 18px; background: #111; }
+    .brutal .block-d { position: absolute; right: 90px; bottom: 100px; width: 260px; height: 260px; border-radius: 50%; background: #c6ff00; }
+    .brutal h1 { position: absolute; left: 92px; top: 180px; margin: 0; font-size: 96px; line-height: .9; font-weight: 900; letter-spacing: -0.05em; text-transform: uppercase; }
+    .brutal .sub { position: absolute; left: 96px; top: 398px; max-width: 570px; font-size: 24px; line-height: 1.45; }
+    .brutal .meta { position: absolute; left: 94px; bottom: 78px; font-size: 17px; font-weight: 800; letter-spacing: .08em; }
+
+    .editorial { background: #f4f1ea; color: #111; }
+    .editorial .rule { position: absolute; left: 72px; right: 72px; top: 82px; height: 2px; background: #111; }
+    .editorial .col { position: absolute; top: 112px; bottom: 80px; width: 1px; background: rgba(17,17,17,.2); }
+    .editorial .c1 { left: 50%; }
+    .editorial .c2 { left: 72px; width: calc(50% - 72px); background: linear-gradient(90deg, rgba(17,17,17,.1), rgba(17,17,17,.02)); }
+    .editorial .c3 { right: 72px; width: calc(50% - 72px); background: linear-gradient(90deg, rgba(17,17,17,.02), rgba(17,17,17,.1)); }
+    .editorial h1 { position: absolute; left: 72px; top: 140px; margin: 0; font-size: 90px; line-height: .92; font-weight: 900; letter-spacing: -0.045em; max-width: 620px; }
+    .editorial .sub { position: absolute; left: 74px; top: 378px; max-width: 500px; font-size: 24px; line-height: 1.55; color: #2c2c2c; }
+    .editorial .side { position: absolute; right: 72px; top: 140px; width: 360px; font-size: 15px; line-height: 1.8; color: #3b3b3b; }
+    .editorial .tag { display: inline-block; margin-bottom: 14px; padding: 8px 12px; border: 1px solid #111; font-size: 12px; letter-spacing: .12em; font-weight: 800; }
+
+    .blueprint { background: #071b36; color: #eef6ff; }
+    .blueprint .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(174,214,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(174,214,255,.08) 1px, transparent 1px); background-size: 56px 56px; }
+    .blueprint .frame { position: absolute; inset: 56px; border: 1px solid rgba(201,226,255,.35); }
+    .blueprint .line { position: absolute; background: rgba(201,226,255,.65); }
+    .blueprint .l1 { left: 180px; top: 176px; width: 420px; height: 1px; }
+    .blueprint .l2 { left: 180px; top: 176px; width: 1px; height: 280px; }
+    .blueprint .l3 { right: 170px; top: 176px; width: 1px; height: 330px; }
+    .blueprint .node { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: #8bd3ff; box-shadow: 0 0 18px rgba(139,211,255,.65); }
+    .blueprint .n1 { left: 174px; top: 170px; }
+    .blueprint .n2 { left: 596px; top: 170px; }
+    .blueprint .n3 { left: 174px; top: 454px; }
+    .blueprint h1 { position: absolute; left: 96px; top: 92px; margin: 0; font-size: 88px; line-height: .94; font-weight: 900; letter-spacing: -0.04em; max-width: 560px; }
+    .blueprint .sub { position: absolute; left: 96px; bottom: 92px; max-width: 540px; font-size: 22px; line-height: 1.55; color: #bed1e6; }
+    .blueprint .meta { position: absolute; right: 96px; bottom: 94px; width: 290px; font-size: 15px; line-height: 1.9; color: #cfe3f8; }
+
+    .terminal { background: #07110b; color: #dfffd7; }
+    .terminal .scan { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, rgba(180,255,180,.05), rgba(180,255,180,.05) 1px, transparent 1px, transparent 5px); pointer-events: none; }
+    .terminal .screen { position: absolute; left: 64px; right: 64px; top: 64px; bottom: 64px; border: 1px solid rgba(162,255,162,.35); background: rgba(10,20,12,.35); box-shadow: inset 0 0 40px rgba(102,255,102,.08); }
+    .terminal h1 { position: absolute; left: 92px; top: 132px; margin: 0; font-size: 92px; line-height: .92; font-weight: 800; letter-spacing: -0.03em; font-family: "Consolas", "Courier New", monospace; }
+    .terminal .sub { position: absolute; left: 96px; top: 364px; max-width: 620px; font-size: 22px; line-height: 1.7; color: #b7eab0; font-family: "Consolas", "Courier New", monospace; }
+    .terminal .cursor { display: inline-block; width: 12px; height: 22px; background: #dfffd7; vertical-align: -4px; margin-left: 4px; }
+    .terminal .meta { position: absolute; right: 92px; top: 120px; width: 250px; font-size: 14px; line-height: 1.9; color: #9ddc95; font-family: "Consolas", "Courier New", monospace; }
+
+    .sculpture { background: radial-gradient(circle at 50% 35%, rgba(111,231,255,.12), transparent 25%), linear-gradient(135deg, #090f18 0%, #0c1320 55%, #060b12 100%); color: #eff9ff; }
+    .sculpture .sphere { position: absolute; width: 360px; height: 360px; border-radius: 50%; right: 120px; top: 92px; background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.2), rgba(88,199,255,.08) 30%, rgba(8,14,22,.2) 70%); border: 1px solid rgba(127,216,255,.24); box-shadow: 0 0 50px rgba(93,196,255,.08); }
+    .sculpture .arc { position: absolute; left: 110px; top: 130px; width: 560px; height: 300px; border: 1px solid rgba(140,219,255,.22); border-radius: 50%; transform: rotate(-10deg); }
+    .sculpture .arc2 { position: absolute; left: 190px; top: 190px; width: 420px; height: 220px; border: 1px solid rgba(140,219,255,.12); border-radius: 50%; transform: rotate(12deg); }
+    .sculpture .bar { position: absolute; left: 96px; bottom: 120px; width: 860px; height: 2px; background: linear-gradient(90deg, rgba(140,219,255,.06), rgba(140,219,255,.75), rgba(140,219,255,.06)); }
+    .sculpture h1 { position: absolute; left: 96px; top: 152px; margin: 0; font-size: 88px; line-height: .94; font-weight: 900; letter-spacing: -0.04em; max-width: 650px; }
+    .sculpture .sub { position: absolute; left: 100px; top: 374px; max-width: 560px; font-size: 22px; line-height: 1.6; color: #bfdbeb; }
+    .sculpture .meta { position: absolute; left: 100px; bottom: 78px; font-size: 15px; line-height: 1.8; color: #88c7df; }
+
+    .mono { background: #f5f6f8; color: #101316; }
+    .mono .frame { position: absolute; inset: 54px; border: 2px solid #101316; }
+    .mono .accent { position: absolute; right: 92px; top: 92px; width: 18px; height: 240px; background: #ff4d4d; }
+    .mono .block { position: absolute; left: 92px; top: 114px; width: 180px; height: 24px; background: #101316; }
+    .mono h1 { position: absolute; left: 92px; top: 168px; margin: 0; font-size: 92px; line-height: .94; font-weight: 900; letter-spacing: -0.045em; max-width: 660px; }
+    .mono .sub { position: absolute; left: 96px; top: 388px; max-width: 580px; font-size: 23px; line-height: 1.55; color: #30343a; }
+    .mono .meta { position: absolute; right: 96px; bottom: 88px; font-size: 14px; line-height: 1.9; color: #5a6069; text-align: right; }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="title">My OpenClaw 额外封面风格预览</div>
+    <div class="note">以下每张都是第一页封面草图，只看气质、排版、色彩和图形语言，不代表最终正式版。</div>
+  </div>
+
+  <div>
+    <div class="label">06 Brutalism 数字粗野主义</div>
+    <section class="slide brutal">
+      <div class="block-a"></div><div class="block-b"></div><div class="block-c"></div><div class="block-d"></div>
+      <h1>My<br/>OpenClaw</h1>
+      <div class="sub">把项目做成一份强冲击力的系统答辩封面，强调工程结构、模块边界和技术态度。</div>
+      <div class="meta">AI AGENT / MODULE SYSTEM / DEFENSE</div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">07 Editorial Tech 编辑刊物科技风</div>
+    <section class="slide editorial">
+      <div class="rule"></div><div class="col c1"></div><div class="col c2"></div><div class="col c3"></div>
+      <h1>My<br/>OpenClaw</h1>
+      <div class="sub">像系统研究刊物的封面，把架构、协作、工具链与完成度做成一页高密度但克制的视觉摘要。</div>
+      <div class="side">
+        <div class="tag">PROJECT NOTES</div><br/>
+        Local-first AI Agent framework<br/>
+        Gateway / Channels / Agents<br/>
+        Tools / Memory / Web / TUI
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">08 Blueprint 蓝图工程制图风</div>
+    <section class="slide blueprint">
+      <div class="grid"></div><div class="frame"></div>
+      <div class="line l1"></div><div class="line l2"></div><div class="line l3"></div>
+      <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div>
+      <h1>My<br/>OpenClaw</h1>
+      <div class="sub">把整套项目当成一张系统蓝图来展示：结构分层清晰，适合讲模块、接口和职责边界。</div>
+      <div class="meta">ARCHITECTURE / STRUCTURE / FLOW / COLLABORATION</div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">09 Terminal Retro 终端复古计算机风</div>
+    <section class="slide terminal">
+      <div class="scan"></div><div class="screen"></div>
+      <h1>My OpenClaw_<span class="cursor"></span></h1>
+      <div class="sub">$ local-first agent system\n$ web + tui + gateway\n$ tools / memory / skills / hooks</div>
+      <div class="meta">root@openclaw:~$ defense --overview</div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">10 Data Sculpture 数据雕塑风</div>
+    <section class="slide sculpture">
+      <div class="sphere"></div><div class="arc"></div><div class="arc2"></div><div class="bar"></div>
+      <h1>My<br/>OpenClaw</h1>
+      <div class="sub">把模块、链路和协作关系抽象成一件“系统雕塑”，更适合做封面、目录和架构总览页。</div>
+      <div class="meta">NODE / LINK / MEMORY / AGENT / CHANNEL</div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">11 Monochrome Accent 单色强调风</div>
+    <section class="slide mono">
+      <div class="frame"></div><div class="accent"></div><div class="block"></div>
+      <h1>My<br/>OpenClaw</h1>
+      <div class="sub">用极简底色配一个强强调色，让项目的标题、架构和协作信息更干净、更稳、更像成体系的技术作品。</div>
+      <div class="meta">2026 / PROJECT DEFENSE / OPENCLAW</div>
+    </section>
+  </div>
+</body>
+</html>

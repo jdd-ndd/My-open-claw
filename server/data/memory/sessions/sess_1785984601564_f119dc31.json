@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601564_f119dc31",
+  "userId": "load-user-z115",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM04CG5QK10C463WMFA6",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984602035
+    },
+    {
+      "id": "01KZAFNV7C9B7RKFQ6MGB9YRR2",
+      "role": "assistant",
+      "content": "看起来您的消息“conn_msg_5”只是一个简短的短语。我没有完全明白您的意思，请问我能帮您做些什么呢？",
+      "timestamp": 1785984642284
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602051,
+    "lastActiveAt": 1785984642284,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

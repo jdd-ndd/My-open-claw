@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984607173_aeedbdca",
+  "userId": "load-user-npfe",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS6M0V68ZGCQPBF3YS32",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984607312
+    },
+    {
+      "id": "01KZAFPC9YM5QSFTX3JV0WPBN3",
+      "role": "assistant",
+      "content": "好的！我可以帮你审查脚本的质量、安全性和可维护性。\n\n请提供以下任一信息：\n1. **脚本文件路径** — 我可以直接读取本地文件进行审查\n2. **直接粘贴代码** — 你可以直接把脚本内容发给我\n3. **网页链接** — 如果脚本在某个网页上，我可以抓取下来分析\n\n请问你用哪种方式提供脚本？",
+      "timestamp": 1785984659774
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607358,
+    "lastActiveAt": 1785984659774,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919998_94f20a2f",
+  "userId": "load-user-ozqu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWHFSYJTVGHGRXZ8YJBA",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785987920280
+    },
+    {
+      "id": "01KZAJYF2XTGZ6JDY8EQXYM7H7",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988070493
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920336,
+    "lastActiveAt": 1785988070493,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

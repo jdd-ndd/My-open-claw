@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069770_87e4d5dc",
+  "userId": "load-user-a6jo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X8SVTVXQ8CQ5E0BXVGG",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985070248
+    },
+    {
+      "id": "01KZAG4QSF2ZAWZHRX3TJ6EXV7",
+      "role": "assistant",
+      "content": "你好！你输入的 \"conn_msg_8\" 看起来像是一个连接消息标识符（Connection Message 8），但我不太确定你具体想做什么。\n\n能告诉我更多细节吗？比如：\n\n- 这是某个协议或框架中的消息类型吗？（如 WebSocket、MQTT、gRPC 等）\n- 你想实现一个连接消息处理功能？\n- 你遇到了与 \"conn_msg_8\" 相关的错误需要排查？\n- 还是想让我帮你做其他事情？\n\n请补充一些上下文，我会全力帮你解决问题！😊",
+      "timestamp": 1785985130287
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070276,
+    "lastActiveAt": 1785985130287,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

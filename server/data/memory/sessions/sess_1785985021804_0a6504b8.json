@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021804_0a6504b8",
+  "userId": "load-user-06nf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E3SSEBHZXJ17EKDWRD4",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985021917
+    },
+    {
+      "id": "01KZAG4EBJFH168QVGREK65G85",
+      "role": "assistant",
+      "content": "您好，我收到了您的消息 \"conn_msg_17\"，但它看起来像是一条内部标识符，我不太明白您的具体需求。请问您需要什么帮助呢？您可以让我执行某个任务（比如文件操作、网页分析等），或者直接问我一个问题。我随时为您服务。",
+      "timestamp": 1785985120626
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021975,
+    "lastActiveAt": 1785985120626,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

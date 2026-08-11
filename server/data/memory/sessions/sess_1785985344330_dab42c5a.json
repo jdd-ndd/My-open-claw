@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344330_dab42c5a",
+  "userId": "load-user-ry21",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94PSBBKSJJ8Z5FXBKHG",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985344631
+    },
+    {
+      "id": "01KZAGD4RQF6BBNAHN1J8TCEPV",
+      "role": "assistant",
+      "content": "我不知道 \"conn_msg_13\" 是什么意思。如果你是想测试连接或发送特定指令，请说明具体需求，我会马上处理。",
+      "timestamp": 1785985405719
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344641,
+    "lastActiveAt": 1785985405719,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

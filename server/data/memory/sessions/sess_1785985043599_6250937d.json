@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043599_6250937d",
+  "userId": "load-user-laf3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23GD80T57C3PAV56ZRRS",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985043846
+    },
+    {
+      "id": "01KZAG537FGEDBZST20FFY72BQ",
+      "role": "assistant",
+      "content": "您好，您输入了 `conn_msg_13`。这看起来像是一个会话消息的标识符或连接测试指令。\n\n请问您需要我具体做些什么呢？例如：\n- 是否想查询与这个 ID 相关的历史记忆或对话记录？\n- 或者这只是一个连接测试？\n\n请告诉我您的需求，我会尽力协助！",
+      "timestamp": 1785985141999
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043890,
+    "lastActiveAt": 1785985141999,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

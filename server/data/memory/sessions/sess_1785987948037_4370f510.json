@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987948037_4370f510",
+  "userId": "load-user-b4ei",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQXYKDRQSTYZBPDR8KH8",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785987948327
+    },
+    {
+      "id": "01KZAJW3XMA9KJ99GQ8QNCAH1E",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785987993525
+    },
+    {
+      "id": "01KZAJY9T5BD9M6M0JXJBP9RJZ",
+      "role": "assistant",
+      "content": "<thought>\nsystem/time 工具返回了空结果，这不正常。让我重新调用，这次指定时区和语言环境，确保获得有效的时间信息。\n</thought>\n\n<action name=\"system/time\" args='{\"timezone\":\"Asia/Shanghai\",\"locale\":\"zh-CN\"}' />",
+      "timestamp": 1785988065093
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948381,
+    "lastActiveAt": 1785988065093,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

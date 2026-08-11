@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051570_e6e5e613",
+  "userId": "load-user-iwdh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BCQDPD2F7S4VDAP4Q1V",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985051905
+    },
+    {
+      "id": "01KZAG4TNFDCZNV70Y4M98VPST",
+      "role": "assistant",
+      "content": "这个字符串 `conn_msg_12` 不是合法的 JSON——它只是一个普通字符串，缺少键值对、大括号或方括号等 JSON 结构。\n\n如果你愿意，把需要解析的 JSON 原文发给我，我可以帮你格式化、检查结构或者提取其中的字段。",
+      "timestamp": 1785985133231
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051955,
+    "lastActiveAt": 1785985133231,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

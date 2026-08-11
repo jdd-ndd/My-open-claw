@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987966088_d11262b6",
+  "userId": "load-user-okv6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJVA023456CQ408J7XHM7P",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785987966864
+    },
+    {
+      "id": "01KZAJWJBXH9CG9FT9TTSKS050",
+      "role": "assistant",
+      "content": "<thought>\n用户消息仅包含 \"conn_msg_9\"，这看起来像是一个连接测试消息或内部标识符，而非有意义的用户请求。我需要先确认连接状态，然后询问用户有什么实际需求。\n\n由于这只是一个连接确认消息，不需要调用任何工具，直接回复即可。\n</thought>\n\n<final_answer>\n✅ 连接正常！我是 MyOpenClaw Assistant，通用任务处理智能助手。\n\n我可以帮您处理各种任务，包括但不限于：\n- 📂 文件操作（读取、写入、管理文件）\n- 🌐 网页浏览与分析\n- 💻 Shell 命令执行\n- 🔍 信息检索与记忆\n- 🌤️ 天气查询\n- 💱 货币汇率转换\n- 🗺️ 路线规划\n- 📰 新闻获取\n- 🧮 数学计算\n\n请问有什么可以帮您的？",
+      "timestamp": 1785988008317
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966895,
+    "lastActiveAt": 1785988008317,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

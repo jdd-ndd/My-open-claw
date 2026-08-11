@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988271279_9be533b6",
+  "userId": "load-user-vysl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4KCJ0B7P6N09P7Z98AMZ",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785988271477
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988271488,
+    "lastActiveAt": 1785988271506,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

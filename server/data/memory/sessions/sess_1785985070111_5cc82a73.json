@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985070111_5cc82a73",
+  "userId": "load-user-lrog",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2XA7JA7J56QF5DCQTQAP",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985070249
+    },
+    {
+      "id": "01KZAG4Z7P2K53KTKTTYHEYCGQ",
+      "role": "assistant",
+      "content": "您好！我是 MyOpenClaw Assistant，您的通用任务处理智能助手。看起来您刚刚建立了连接（conn_msg_17），我这边已经准备就绪。如果您有任何任务需要处理，例如文件操作、网页分析、命令执行、天气查询、货币转换等，请直接告诉我，我会尽力帮您完成。",
+      "timestamp": 1785985137910
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070308,
+    "lastActiveAt": 1785985137910,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

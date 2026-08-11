@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984601593_2bee075c",
+  "userId": "load-user-64ok",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM08T56AM1QB4AVCS020",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984602035
+    },
+    {
+      "id": "01KZAFNY6Y71K6T2CBV4CF51C5",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984645342
+    },
+    {
+      "id": "01KZAFPN8BEMX52M6QM0693X3V",
+      "role": "assistant",
+      "content": "你好！你输入了 \"conn_msg_6\"，但目前没有任何上下文可以让我理解你想做什么。\n\n你能多告诉我一些吗？例如：\n- 这是某条之前的消息引用吗？\n- 你想让我分析某个网页或内容？\n- 还是有其他具体的任务？\n\n请补充说明，我好帮你处理。",
+      "timestamp": 1785984668939
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602054,
+    "lastActiveAt": 1785984668939,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

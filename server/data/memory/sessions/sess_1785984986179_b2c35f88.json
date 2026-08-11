@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984986179_b2c35f88",
+  "userId": "user-b4qhkjwtrif",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0B357HWVTCKDH6EEQJ0V",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984986209
+    },
+    {
+      "id": "01KZAG4YZZWWCKHPKD32FBCRAC",
+      "role": "assistant",
+      "content": "关于 **concurrent message**（并发消息）：\n\n在计算机科学中，\"concurrent message\" 通常与**并发编程**和**消息传递系统**相关。以下是几个常见的上下文：\n\n1. **并发编程中的消息传递**：多个进程或线程通过发送消息进行通信，而不共享内存。这常见于 Actor 模型（如 Erlang、Akka）和 CSP 模型（如 Go 的 channel）。\n\n2. **Actor 模型**：每个 Actor 是独立的计算单元，通过异步消息进行交互。Actor 处理消息时是\"一个接一个\"的，但多个 Actor 之间是并发的。\n\n3. **消息队列系统**：如 Kafka、RabbitMQ，支持并发的生产者/消费者模式，多条消息可同时被处理。\n\n4. **Go 的 goroutine + channel**：典型示例：\n   ```go\n   ch := make(chan string)\n   go func() { ch <- \"hello\" }()\n   go func() { ch <- \"world\" }()\n   msg1, msg2 := <-ch, <-ch  // 并发接收消息\n   ```\n\n如果你有具体想了解的某个方向，或者想测试其他的并发场景，请告诉我！",
+      "timestamp": 1785985137663
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984986210,
+    "lastActiveAt": 1785985137663,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

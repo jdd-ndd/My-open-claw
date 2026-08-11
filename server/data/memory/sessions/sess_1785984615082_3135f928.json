@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615082_3135f928",
+  "userId": "load-user-t8ga",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN19CDJ7PM2Y3199Y9189",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984615648
+    },
+    {
+      "id": "01KZAFNJBSR1P6MV09BSZ6NN5Y",
+      "role": "assistant",
+      "content": "Hey! 有什么可以帮你的？😊",
+      "timestamp": 1785984633209
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615657,
+    "lastActiveAt": 1785984633209,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

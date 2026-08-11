@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987947583_8ea5014f",
+  "userId": "load-user-urh0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQWTK2W845HDSWPJ93GZ",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785987948326
+    },
+    {
+      "id": "01KZAJX5CD3G0YDB8H236YPXVM",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988027789
+    },
+    {
+      "id": "01KZAJYCF6MP43VEW4PM79A8PS",
+      "role": "assistant",
+      "content": "<thought>\nsystem/time 返回了空字符串，这不太正常。用户要求\"2025年12月14日 到现在的总结\"，但没有明确总结什么。可能是对话历史的总结、新闻事件的总结，或是某个项目的进展总结。我需要先确认当前时间，然后结合上下文判断。让我尝试用备用方式获取时间，并同时搜索记忆中的相关内容。\n</thought>\n<action name=\"memory_search/search\" args='{\"query\":\"2025年12月14日 总结\",\"topK\":5}' />",
+      "timestamp": 1785988067814
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948358,
+    "lastActiveAt": 1785988067814,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

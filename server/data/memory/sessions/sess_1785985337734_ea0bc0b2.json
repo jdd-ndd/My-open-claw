@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985337734_ea0bc0b2",
+  "userId": "load-user-jc5q",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2S7CC805EV858YC5WBQ",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985338117
+    },
+    {
+      "id": "01KZAGCZR7G7A24FCTWJGYV02K",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985400583
+    },
+    {
+      "id": "01KZAGENJ7SXMFSPVJD4E7X1A5",
+      "role": "assistant",
+      "content": "<thought>用户要求查询北京天气。我需要先通过 weather/lookup 查找北京的位置，然后获取天气信息。</thought>\n\n<action name=\"weather/lookup\" args='{\"query\":\"北京\",\"count\":1}' />",
+      "timestamp": 1785985455687
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338129,
+    "lastActiveAt": 1785985455687,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

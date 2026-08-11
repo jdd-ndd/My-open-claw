@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615535_cfadbae2",
+  "userId": "load-user-39bs",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1BRE22BCT6PT37JGKNG",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984615650
+    },
+    {
+      "id": "01KZAFPEG2KNMK3VZZ0C9XMTD5",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"conn_msg_17\"，但我不太理解你想表达什么。😊\n\n这看起来像是一个连接消息标识符或协议消息的引用。请问你是想：\n\n- 测试连接是否正常？\n- 询问某个特定的功能？\n- 还是有其他的任务需要我帮忙？\n\n请告诉我更多细节，我会尽力协助你！",
+      "timestamp": 1785984662018
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615705,
+    "lastActiveAt": 1785984662018,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

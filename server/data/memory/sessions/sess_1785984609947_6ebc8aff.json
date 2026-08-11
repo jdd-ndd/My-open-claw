@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609947_6ebc8aff",
+  "userId": "load-user-cdme",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVXAQXHA7TADMCQY0RE7",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984610089
+    },
+    {
+      "id": "01KZAFQ2X9V3XKM6NSMNV1521H",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984682921
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610134,
+    "lastActiveAt": 1785984682921,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

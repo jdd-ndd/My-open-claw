@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984617975_9f333d75",
+  "userId": "load-user-idia",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN466GN9520EMCAZ0X2SA",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785984618632
+    },
+    {
+      "id": "01KZAFP3WRXKKV2N0KF30ETWN2",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，你的通用任务智能助手。\n\n看起来你发送了 \"conn_msg_0\"，这似乎是一个连接消息或测试标识。如果你有任何任务需要我帮忙，请尽管告诉我！例如：\n\n- 文件操作（读取、写入、删除）\n- 代码审查\n- 项目初始化搭建\n- 网页内容分析\n- 系统命令执行\n- 天气查询、货币换算等实用工具\n\n请问有什么可以帮你的？",
+      "timestamp": 1785984651160
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618635,
+    "lastActiveAt": 1785984651160,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

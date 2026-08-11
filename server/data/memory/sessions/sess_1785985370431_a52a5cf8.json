@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370431_a52a5cf8",
+  "userId": "load-user-3vre",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC2ZN39RZ89TQ37GZ9A3B",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985371097
+    },
+    {
+      "id": "01KZAGE2TTJA0PKB0VW5SCH90B",
+      "role": "assistant",
+      "content": "这个看起来像是一个内部标识符或变量名，但没有足够的上下文让我确定它的具体含义。能请你提供更多信息吗？比如它是在什么环境或代码里出现的？",
+      "timestamp": 1785985436506
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371103,
+    "lastActiveAt": 1785985436506,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

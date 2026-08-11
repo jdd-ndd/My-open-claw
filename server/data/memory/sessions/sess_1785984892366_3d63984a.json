@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984892366_3d63984a",
+  "userId": "load-user-jexe",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFXG0MSKSJSFR13VPC32VD",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984892923
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984892931,
+    "lastActiveAt": 1785984892949,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

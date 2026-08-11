@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985050895_4761b8e6",
+  "userId": "load-user-eevi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BAJPATVHP69J6HGBH4B",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985051902
+    },
+    {
+      "id": "01KZAG4W9ZGQ8YXDM8T89DWYYP",
+      "role": "assistant",
+      "content": "已收到连接消息（conn_msg_0）。连接正常，会话已建立。  \n\n请问有什么可以帮您的？如果需要特定任务或帮助，请随时告诉我。",
+      "timestamp": 1785985134911
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051906,
+    "lastActiveAt": 1785985134911,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

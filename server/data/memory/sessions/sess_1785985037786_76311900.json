@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985037786_76311900",
+  "userId": "load-user-zuv5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XY0EM0RJTBHKH7PHXJY",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985038159
+    },
+    {
+      "id": "01KZAG4S3CN8FY9HQQJ6A88S94",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985131628
+    },
+    {
+      "id": "01KZAG5NESFFXHS06BCJ7E35VV",
+      "role": "assistant",
+      "content": "<thought>\n用户之前让我用 ssci-hub.com 搜索论文，但上次浏览器打开失败。让我再试一次，看看这次能否成功加载。\n</thought>\n\n<action name=\"browser/open\" args='{\"url\":\"https://ssci-hub.com/\",\"timeout\":30000}' />",
+      "timestamp": 1785985160665
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038190,
+    "lastActiveAt": 1785985160665,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

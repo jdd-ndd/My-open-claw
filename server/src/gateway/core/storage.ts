@@ -1,12 +1,19 @@
 /**
- * In-Memory 存储适配器
+ * 内存 + 文件持久化存储适配器
  *
- * 基于 Map 的轻量级内存存储，替代 SQLite/better-sqlite3。
+ * 基于 Map 的轻量级存储，替代 SQLite/better-sqlite3。
  * 提供 INSERT / SELECT / UPDATE 的 SQL 子集解析，
  * 支持按列名（而非数字索引）访问行数据。
+ * 支持 JSON 文件持久化，服务器重启后可恢复会话数据。
  *
  * @module @myopenclaw/server/gateway/core
  */
+
+import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { dirname } from 'node:path';
+import { createLogger } from '../../core/utils/logger.js';
+
+const log = createLogger('gateway:storage');
 
 export interface StorageRow {
   [columnName: string]: unknown;
@@ -15,20 +22,24 @@ export interface StorageRow {
 /**
  * SQL 语句封装
  *
- * 解析 INSERT INTO、SELECT ... FROM、UPDATE ... SET 等简单 SQL，
+ * 解析 INSERT INTO、SELECT ... FROM、UPDATE ... SET、DELETE 等简单 SQL，
  * 返回按语义列名索引的行数据。
+ * 支持写操作后触发持久化回调。
  */
 class Stmt {
   constructor(
     private tables: Map<string, Map<string, StorageRow>>,
     private sql: string,
+    private onWrite?: () => void,
   ) {}
 
   /**
-   * 执行 INSERT 或 UPDATE 操作
+   * 执行 INSERT / UPDATE / DELETE 操作
+   * 写操作完成后自动触发持久化回调
    */
   run(...params: unknown[]): void {
     const normalised = this.sql.trim();
+    let modified = false;
 
     // ── INSERT ──
     const insMatch = normalised.match(/INSERT\s+INTO\s+(\w+)\s*\(([^)]+)\)/i);
@@ -44,10 +55,9 @@ class Stmt {
         row[col] = params[i] ?? null;
       });
 
-      // 主键取第一个参数（id 列）
       const pk = String(params[0] ?? Date.now().toString(36));
       rows.set(pk, row);
-      return;
+      modified = true;
     }
 
     // ── UPDATE ──
@@ -57,36 +67,32 @@ class Stmt {
     if (updMatch) {
       const [, table, setClause] = updMatch;
       const rows = this.tables.get(table);
-      if (!rows) return;
+      if (rows) {
+        const idValue = String(params[params.length - 1]);
+        const row = rows.get(idValue);
+        if (row) {
+          const assignments = setClause.split(',').map((s) => s.trim());
+          let paramIdx = 0;
 
-      // WHERE 参数是最后一个
-      const idValue = String(params[params.length - 1]);
-      const row = rows.get(idValue);
-      if (!row) return;
+          for (const assignment of assignments) {
+            const eqIdx = assignment.indexOf('=');
+            if (eqIdx === -1) continue;
 
-      // 解析 SET 子句中各赋值项
-      const assignments = setClause.split(',').map((s) => s.trim());
-      let paramIdx = 0;
+            const colName = assignment.slice(0, eqIdx).trim();
+            const expr = assignment.slice(eqIdx + 1).trim();
 
-      for (const assignment of assignments) {
-        const eqIdx = assignment.indexOf('=');
-        if (eqIdx === -1) continue;
-
-        const colName = assignment.slice(0, eqIdx).trim();
-        const expr = assignment.slice(eqIdx + 1).trim();
-
-        if (expr === '?') {
-          // 简单占位符
-          row[colName] = params[paramIdx];
-          paramIdx++;
-        } else {
-          // 表达式求值（如 "runCount + 1"）
-          const current = Number(row[colName] ?? 0);
-          const evalResult = this.evalExpression(expr, current);
-          row[colName] = evalResult;
+            if (expr === '?') {
+              row[colName] = params[paramIdx];
+              paramIdx++;
+            } else {
+              const current = Number(row[colName] ?? 0);
+              const evalResult = this.evalExpression(expr, current);
+              row[colName] = evalResult;
+            }
+          }
+          modified = true;
         }
       }
-      return;
     }
 
     // ── DELETE ──
@@ -96,7 +102,13 @@ class Stmt {
       const rows = this.tables.get(table);
       if (rows) {
         rows.delete(String(params[0]));
+        modified = true;
       }
+    }
+
+    // 写操作完成后触发持久化
+    if (modified && this.onWrite) {
+      this.onWrite();
     }
   }
 
@@ -143,13 +155,26 @@ class Stmt {
 }
 
 /**
- * 内存存储适配器
+ * 内存 + 文件持久化存储适配器
  *
  * 提供与 SQLite 兼容的 prepare() / transaction() 接口，
  * 底层使用 Map 存储，支持简单 SQL 解析。
+ * 支持 JSON 文件持久化，确保服务器重启后数据不丢失。
  */
 export class MemoryStorage {
   private tables = new Map<string, Map<string, StorageRow>>();
+  private readonly filePath?: string;
+
+  /**
+   * 创建存储适配器
+   * @param filePath 可选的持久化文件路径，指定后数据将自动保存到 JSON 文件
+   */
+  constructor(filePath?: string) {
+    this.filePath = filePath;
+    if (filePath) {
+      this.load();
+    }
+  }
 
   /** 确保表存在 */
   ensureTable(name: string, _schema: string): void {
@@ -158,9 +183,9 @@ export class MemoryStorage {
     }
   }
 
-  /** 创建 SQL 语句对象 */
+  /** 创建 SQL 语句对象，写操作自动触发持久化 */
   prepare(sql: string): Stmt {
-    return new Stmt(this.tables, sql);
+    return new Stmt(this.tables, sql, () => this.save());
   }
 
   /** 事务包装（内存存储中退化为普通函数调用） */
@@ -171,5 +196,61 @@ export class MemoryStorage {
   /** 清空所有表（用于测试或重置） */
   clear(): void {
     this.tables.clear();
+    if (this.filePath) {
+      this.save();
+    }
+  }
+
+  /**
+   * 将内存中的所有表数据保存到 JSON 文件
+   * 每次写操作后自动调用
+   */
+  private save(): void {
+    if (!this.filePath) return;
+    try {
+      const data: Record<string, Record<string, StorageRow>> = {};
+      for (const [tableName, rows] of this.tables) {
+        data[tableName] = {};
+        for (const [pk, row] of rows) {
+          data[tableName][pk] = row;
+        }
+      }
+      const dir = dirname(this.filePath);
+      if (!existsSync(dir)) {
+        mkdirSync(dir, { recursive: true });
+      }
+      writeFileSync(this.filePath, JSON.stringify(data, null, 2), 'utf-8');
+      log.debug({ filePath: this.filePath, tables: Object.keys(data) }, 'Storage persisted');
+    } catch (error) {
+      log.error({ error: String(error), filePath: this.filePath }, 'Failed to persist storage');
+    }
+  }
+
+  /**
+   * 从 JSON 文件加载数据到内存
+   * 构造函数中自动调用
+   */
+  private load(): void {
+    if (!this.filePath || !existsSync(this.filePath)) {
+      log.info('No storage file found, starting with empty tables');
+      return;
+    }
+    try {
+      const raw = readFileSync(this.filePath, 'utf-8');
+      const data = JSON.parse(raw) as Record<string, Record<string, StorageRow>>;
+      for (const [tableName, rows] of Object.entries(data)) {
+        const map = new Map<string, StorageRow>();
+        for (const [pk, row] of Object.entries(rows)) {
+          map.set(pk, row);
+        }
+        this.tables.set(tableName, map);
+      }
+      const tableCounts = Object.fromEntries(
+        Array.from(this.tables.entries()).map(([k, v]) => [k, v.size]),
+      );
+      log.info({ filePath: this.filePath, tables: tableCounts }, 'Storage loaded from file');
+    } catch (error) {
+      log.error({ error: String(error), filePath: this.filePath }, 'Failed to load storage file');
+    }
   }
 }

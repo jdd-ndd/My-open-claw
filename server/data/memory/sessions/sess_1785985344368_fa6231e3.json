@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344368_fa6231e3",
+  "userId": "load-user-7cox",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94QMTCP4K1KY0FZZCZS",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985344631
+    },
+    {
+      "id": "01KZAGDWK8X85FG9JN3YN4RDH4",
+      "role": "assistant",
+      "content": "以下是 10 个“纯偶数”QQ（每一位都是偶数，位数也是偶数），密码统一为 `Mozilla/4.0`。\n\n```text\n2020----Mozilla/4.0\n4680----Mozilla/4.0\n2604----Mozilla/4.0\n8026----Mozilla/4.0\n20004886----Mozilla/4.0\n62408846----Mozilla/4.0\n20468204----Mozilla/4.0\n26842068----Mozilla/4.0\n2486026680----Mozilla/4.0\n6024802684----Mozilla/4.0\n```",
+      "timestamp": 1785985430120
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344642,
+    "lastActiveAt": 1785985430120,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

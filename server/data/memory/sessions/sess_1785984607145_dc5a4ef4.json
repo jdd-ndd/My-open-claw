@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984607145_dc5a4ef4",
+  "userId": "load-user-48ch",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS6FEY6E59QFX6MCSZ11",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984607312
+    },
+    {
+      "id": "01KZAFNM28B7EAGGCTV9CZSESH",
+      "role": "assistant",
+      "content": "我不太理解 “conn_msg_15” 是什么意思，可能是系统标识符或误发的消息。你可以说明一下具体的问题或需要我帮忙做什么吗？我会尽力协助你。",
+      "timestamp": 1785984634952
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607355,
+    "lastActiveAt": 1785984634952,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984601860_a711439e",
+  "userId": "load-user-r2df",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM1G4YJR9QVHAFSRPS09",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984602037
+    },
+    {
+      "id": "01KZAFPZ15EP625EBX2DGJ2KV0",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"\n\n【工具执行结果】#2 失败\n\"\"",
+      "timestamp": 1785984678949
+    },
+    {
+      "id": "01KZAFQ3QVPG5V4DC52DN3KT27",
+      "role": "assistant",
+      "content": "<thought>文件读取失败，可能路径不正确或文件不存在。下一步需要列出 /home/user/ 目录，确认文件是否存在，并获取正确的文件名。</thought>\n<action name=\"fs/list_dir\" args='{\"path\":\"/home/user/\"}' />",
+      "timestamp": 1785984683771
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602080,
+    "lastActiveAt": 1785984683771,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

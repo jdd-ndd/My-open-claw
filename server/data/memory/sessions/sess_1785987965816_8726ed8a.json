@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987965816_8726ed8a",
+  "userId": "load-user-mpvy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV9ZFTE5QYPWBQW7N79YT",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785987966863
+    },
+    {
+      "id": "01KZAJWK38Q94GXH8DBSQAZ5AB",
+      "role": "assistant",
+      "content": "我收到了 `conn_msg_5`，这看起来像是内部连接或测试信息。请问有什么我可以帮你的吗？如果你需要查询新闻、天气、文件操作或代码相关帮助，请随时告诉我。",
+      "timestamp": 1785988009064
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966882,
+    "lastActiveAt": 1785988009064,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

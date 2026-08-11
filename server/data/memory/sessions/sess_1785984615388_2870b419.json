@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615388_2870b419",
+  "userId": "load-user-8dsh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1B0NB5C31SHFKNCXTC3",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785984615649
+    },
+    {
+      "id": "01KZAFNKFMX6HS3N2PZD0V1RBP",
+      "role": "assistant",
+      "content": "这个看起来是连接消息12（connection message 12）的缩写，但我需要更多上下文才能准确理解你的意思。能再说明一下吗？",
+      "timestamp": 1785984634356
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615689,
+    "lastActiveAt": 1785984634356,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

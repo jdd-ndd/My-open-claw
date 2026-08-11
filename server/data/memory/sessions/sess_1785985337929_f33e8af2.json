@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985337929_f33e8af2",
+  "userId": "load-user-8tg0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2SESX5PMPESA1PP2ZBB",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985338118
+    },
+    {
+      "id": "01KZAGCYE9VE0KMP5ZWW2E6YBG",
+      "role": "assistant",
+      "content": "这是对代码审查请求的思考，已按规则处理。\n\n[用户消息]\nconn_msg_11",
+      "timestamp": 1785985399241
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338133,
+    "lastActiveAt": 1785985399241,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985364165_88174f67",
+  "userId": "load-user-2aga",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWCC0S8YG7XHVWKY5R71",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985364324
+    },
+    {
+      "id": "01KZAGD9X30KMGK38TXR3G97KW",
+      "role": "assistant",
+      "content": "系统连接正常，会话已成功建立。目前没有任何待处理的任务或错误信息。\n\n你可以直接告诉我需要完成什么——比如整理文件、分析数据、生成报告等等，我现在随时可以开工。",
+      "timestamp": 1785985410979
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364340,
+    "lastActiveAt": 1785985410979,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

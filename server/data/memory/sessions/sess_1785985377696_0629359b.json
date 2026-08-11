@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377696_0629359b",
+  "userId": "load-user-mtdg",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PPRQ7RE6FNNPKC0H2P",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985377971
+    },
+    {
+      "id": "01KZAGCZ3VSSN7VW8Q82D9B0TX",
+      "role": "assistant",
+      "content": "你好！我已收到你的连接消息（conn_msg_15）。请问有什么可以帮助你的？你可以让我执行命令、读取文件、查询信息、搜索记忆等。",
+      "timestamp": 1785985399931
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377985,
+    "lastActiveAt": 1785985399931,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

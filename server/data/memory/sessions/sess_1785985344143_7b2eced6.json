@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785985344143_7b2eced6",
+  "userId": "load-user-vaju",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94G90JD6RNVD4C28F4M",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985344630
+    },
+    {
+      "id": "01KZAGDQA0J598R4YHMAMEBD3G",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985424704
+    },
+    {
+      "id": "01KZAGF369JWZM9RM1W7ZWRZRQ",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985469641
+    },
+    {
+      "id": "01KZAGFHG9PJKWXQ9T0N46TGBH",
+      "role": "assistant",
+      "content": "<thought>\n之前的工具调用 system/time 和 exec/shell date 都返回了空字符串，没有获取到有效的时间信息。让我再尝试一次 system/time 工具，这次指定时区参数，看看能否成功获取时间。\n</thought>\n<action name=\"system/time\" args='{\"timezone\":\"Asia/Shanghai\"}' />",
+      "timestamp": 1785985484297
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344637,
+    "lastActiveAt": 1785985484297,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

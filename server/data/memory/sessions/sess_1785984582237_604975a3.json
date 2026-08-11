@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984582237_604975a3",
+  "userId": "user-s19s234plzq",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFM0ME1N9PARKC6J19K7XC",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984582281
+    },
+    {
+      "id": "01KZAFN8Z8SK8B1HC4K0G6P35T",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了\"concurrent message\"。\n\n如果你想了解我如何处理并发消息：我可以按顺序处理多条消息，每条消息都会独立分析并给出回复。无论你是连续发送多条指令，还是在不同会话中提问，我都会尽力逐一响应。\n\n请问有什么我可以帮你的？如果你想测试某个功能，或者有具体的任务需要处理，随时告诉我！我可以帮你：\n\n- 📁 管理文件（读取、写入、删除）\n- 🌐 浏览和分析网页\n- 💻 执行 Shell 命令\n- 🔍 搜索记忆和历史对话\n- 📊 代码审查、项目搭建等技能服务\n\n期待你的具体需求！",
+      "timestamp": 1785984623592
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984582281,
+    "lastActiveAt": 1785984623592,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

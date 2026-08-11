@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057841_189b3ca5",
+  "userId": "load-user-mi9b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H9MFZB9JKTQNHJAG9HV",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985057932
+    },
+    {
+      "id": "01KZAG45YAVSPD0YG8402DB0C2",
+      "role": "assistant",
+      "content": "conn_msg_18 这是用户列表中的一条消息，但内容不完整。用户只需在终端测试环境中交互，确保数据已落地为普通格式即可，无需特殊处理。最后使用 <final_answer> 完成整体回复。",
+      "timestamp": 1785985112010
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057998,
+    "lastActiveAt": 1785985112010,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

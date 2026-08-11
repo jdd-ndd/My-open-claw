@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594257_47dbe6fe",
+  "userId": "load-user-6734",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCPGVJ0V2S0GNM7SK1BJ",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984594526
+    },
+    {
+      "id": "01KZAFP1ZHA3QFD10PATMYRARN",
+      "role": "assistant",
+      "content": "我现在无法直接访问 Google 控制台拉取表结构，但我可以尝试通过本地安装的 `gcloud` 命令行工具来查询 BigQuery 表信息。\n\n让我先确认一下系统环境。\n\n<action name=\"exec/shell\" args='{\"command\": \"which gcloud && gcloud version 2>&1 || echo ' NOT_FOUND'\", \"timeout\": 10000}'>",
+      "timestamp": 1785984649201
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594558,
+    "lastActiveAt": 1785984649201,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

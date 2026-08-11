@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984609830_51656690",
+  "userId": "load-user-8s53",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVWSZXTKWW9EKBKJKVR6",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785984610088
+    },
+    {
+      "id": "01KZAFP2YKJV39B8FXEW1GSACC",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984650195
+    },
+    {
+      "id": "01KZAFPSDCF00G8SSSDNH0A7CD",
+      "role": "assistant",
+      "content": "<thought>\n用户询问当前时间。根据长期记忆中有类似查询，但那是历史记录，不能直接使用。我需要重新调用 system/time 获取最新时间。上一轮工具执行结果显示为空，说明返回结果可能丢失了，让我再次调用试试。\n</thought>\n\n<action name=\"system/time\" args='{}' />",
+      "timestamp": 1785984673196
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610123,
+    "lastActiveAt": 1785984673196,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

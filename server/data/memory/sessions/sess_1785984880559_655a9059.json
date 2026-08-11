@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984880559_655a9059",
+  "userId": "load-user-begj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFX4JZ0X03VQ24E7Q9JF1E",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984881227
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984881232,
+    "lastActiveAt": 1785984881247,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

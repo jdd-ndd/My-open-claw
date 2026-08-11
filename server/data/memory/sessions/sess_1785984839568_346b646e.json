@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984839568_346b646e",
+  "userId": "user-ibvruk2sp1s",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVVXT65D3SWSFDX2CYKWW",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984839609
+    },
+    {
+      "id": "01KZAFY3X07RSR643KQ1FXF7RA",
+      "role": "assistant",
+      "content": "您好！我已经连续收到您的两次 \"concurrent message\" 消息。看起来您可能在测试消息发送或并发功能。请问有什么我可以帮助您的吗？",
+      "timestamp": 1785984913312
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984839609,
+    "lastActiveAt": 1785984913312,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

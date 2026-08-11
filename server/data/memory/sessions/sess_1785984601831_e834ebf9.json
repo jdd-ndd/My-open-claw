@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601831_e834ebf9",
+  "userId": "load-user-mdo0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM1C5A2B5NYX9JW782P1",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984602037
+    },
+    {
+      "id": "01KZAFP8SGV6VRQ0YMVNQM4QSR",
+      "role": "assistant",
+      "content": "我来帮您重新连接SFTP服务器。根据之前的记录，您的连接信息如下：\n\n- **主机**: 192.168.100.134\n- **用户**: root\n- **密码**: 123456\n\n让我先确认代理是否在线，然后列出SFTP根目录。代理已在线，现在帮您连接并列出SFTP服务器的根目录。SFTP连接成功！根目录内容如下：\n\n| 类型 | 名称 | 权限 | 最后修改 |\n|------|------|------|----------|\n| 📁 | `.config` | - | 2025-02-16 |\n| 📁 | `bin` | - | - |\n| 📁 | `tmp` | - | 2025-02-16 |\n| 📁 | `docker` | - | - |\n| 📁 | `home` | - | - |\n| 📁 | `config` | - | - |\n| 📁 | `media` | - | 2025-04-06 |\n| 📁 | `Downloads` | - | 2025-04-07 |\n| 📁 | `.ssh` | - | 2025-04-08 |\n| 📁 | `.cache` | - | - |\n| 📁 | `.java` | - | - |\n| 📁 | `data` | - | 2025-04-15 |\n| 📁 | `.myopenclaw` | - | 2025-04-26 |\n| 📁 | `.config.file..settings.json.swp` | - | 2025-04-26 |\n| 📁 | `myopenclaw` | - | 2025-05-23 |\n\nSFTP连接正常，您需要我进行什么操作？",
+      "timestamp": 1785984656176
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602077,
+    "lastActiveAt": 1785984656176,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

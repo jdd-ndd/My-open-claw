@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985331130_bfa97a31",
+  "userId": "load-user-xvw7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWCVXF0058YHKSTDABTZ",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985331582
+    },
+    {
+      "id": "01KZAGDFTNCB7HD2C66CVX6QH0",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息（conn_msg_9），但似乎没有附带具体的请求或任务。请问有什么我可以帮助你的吗？不论是文件操作、代码审查、网页分析、天气查询，还是其他问题，我都很乐意协助你。",
+      "timestamp": 1785985417045
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331591,
+    "lastActiveAt": 1785985417045,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988222164_5534a957",
+  "userId": "load-user-tkva",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK33PHCY2KNNTE2J9BPADQ",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785988222639
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988222651,
+    "lastActiveAt": 1785988222673,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

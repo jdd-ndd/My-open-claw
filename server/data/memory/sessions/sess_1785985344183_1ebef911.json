@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344183_1ebef911",
+  "userId": "load-user-ebip",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94J1T86WXED5239ETDK",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985344630
+    },
+    {
+      "id": "01KZAGCX3F12XRERKDSNH3YATJ",
+      "role": "assistant",
+      "content": "pong! 我在的，有什么可以帮你的？",
+      "timestamp": 1785985397871
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344638,
+    "lastActiveAt": 1785985397871,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

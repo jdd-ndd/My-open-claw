@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377403_9fb46617",
+  "userId": "load-user-2lqz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PD5H7083SBN4NW2DNX",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985377970
+    },
+    {
+      "id": "01KZAGD7MA82VKV3QSNHF5M5VD",
+      "role": "assistant",
+      "content": "已记住。conn_msg_8 这条消息我已收录进长期记忆。✅\n\n如果你还有更多想要我记住的关键信息，随时告诉我。",
+      "timestamp": 1785985408650
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377979,
+    "lastActiveAt": 1785985408650,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

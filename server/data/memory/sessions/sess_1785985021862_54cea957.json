@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021862_54cea957",
+  "userId": "load-user-bj3u",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E44VB1XEZAMVTB39CPY",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985021917
+    },
+    {
+      "id": "01KZAG3CS1JAK309MD365ATYHK",
+      "role": "assistant",
+      "content": "这是个连接消息标识符吗？我不太确定它的具体用途。如果你有任务需要我处理，可以直接告诉我，我会尽全力帮忙。",
+      "timestamp": 1785985086241
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021981,
+    "lastActiveAt": 1785985086241,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

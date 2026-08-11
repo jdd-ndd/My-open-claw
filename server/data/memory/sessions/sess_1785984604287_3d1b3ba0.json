@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604287_3d1b3ba0",
+  "userId": "load-user-x73h",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPJB3ZXV3E34R90JM73P",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFPRWJRVGR73WEA66648EK",
+      "role": "assistant",
+      "content": "这两个工具各司其职，一个专注于本地文件系统管理，另一个则服务于长期记忆的智能检索。\n\n---\n\n### 1. `fs/list_dir` — 文件系统目录遍历工具\n\n**用途**：扫描本地指定目录下的文件和子目录，支持递归遍历和通配符过滤，适合项目结构分析、文件索引、脚本自动化等场景。\n\n**参数详解**：\n| 参数 | 类型 | 必填 | 说明 |\n|------|------|------|------|\n| `path` | string | ✅ 是 | 要扫描的目录的绝对路径 |\n| `recursive` | boolean | 否 | 是否递归遍历所有子目录，默认 `false` |\n| `pattern` | string | 否 | 文件名过滤（glob 语法），如 `*.md` 只返回 Markdown 文件 |\n| `includeHidden` | boolean | 否 | 是否包含以 `.` 开头的隐藏文件，默认 `false` |\n\n**使用示例**：\n```\naction: fs/list_dir\nargs: {\n  \"path\": \"/home/user/projects\",\n  \"recursive\": true,\n  \"pattern\": \"*.py\",\n  \"includeHidden\": false\n}\n```\n> 此调用将递归扫描该目录树，仅返回扩展名为 `.py` 的 Python 文件，并排除隐藏文件。\n\n**典型应用场景**：\n- **项目结构概览**：快速了解一个代码仓库的顶层结构\n- **代码审查准备**：找出所有特定类型的文件（如 `*.java`、`*.yaml`）\n- **清理与审计**：结合 `pattern` 筛选临时文件或特定后缀的配置文件\n- **自动化脚本**：在批量处理文件前，先获取完整的文件清单\n\n---\n\n### 2. `memory_search/search` — 长期向量记忆语义检索工具\n\n**用途**：在系统的长期记忆库中，基于语义相似度检索与查询语句相关的历史对话、任务记录或用户偏好，帮助实现跨会话的上下文感知。\n\n**参数详解**：\n| 参数 | 类型 | 必填 | 说明 |\n|------|------|------|------|\n| `query` | string | ✅ 是 | 自然语言描述的检索查询，如 “上次讨论的 API 设计” |\n| `topK` | number | 否 | 返回最相关的 K 条记忆，默认 5 |\n| `sessionId` | string | 否 | 限定在指定会话 ID 内检索（不填则全局检索） |\n| `threshold` | number | 否 | 相似度阈值（0-1），仅返回分数高于此值的记忆，默认 0.3 |\n\n**使用示例**：\n```\naction: memory_search/search\nargs: {\n  \"query\": \"用户关于数据库连接的偏好设置\",\n  \"topK\": 5,\n  \"sessionId\": \"sess_1785984604287_3d1b3ba0\",\n  \"threshold\": 0.5\n}\n```\n> 此调用将在当前会话的记忆中搜索与“数据库连接偏好”语义相近的记忆，返回最多 5 条相似度大于 0.5 的结果。\n\n**典型应用场景**：\n- **上下文延续**：用户说“继续上次的任务”，可通过检索找回历史状态\n- **偏好学习**：调出用户之前明确表达过的偏好（如“我不喜欢用 JSON Schema”）\n- **跨会话协作**：在不同会话间共享关键信息，无需用户重复提供\n- **错误追溯**：搜索之前遇到的同类报错及解决方案\n\n---\n\n### 两者协同的潜在价值\n\n在一个真实的智能助手工作流中，这两个工具往往协同出现。例如：\n1. 用户要求分析一个项目 → 先用 `fs/list_dir` 获取项目文件树\n2. 需要告知用户“上次我们审查过 `api_handler.py`” → 用 `memory_search/search` 检索相关审查记忆\n3. 结合两者的结果，给出既基于文件现状、又带有历史上下文的分析建议\n\n如果你有具体的使用需求（比如分析某个目录、或检索某个历史话题），我可以为你实际演示这两个工具的效果。需要我执行哪个操作吗？",
+      "timestamp": 1785984672658
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604671,
+    "lastActiveAt": 1785984672658,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

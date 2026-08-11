@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987928690_0eb2f2d2",
+  "userId": "load-user-gvtb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5EN99B5JM53VK8C9YPT",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785987929430
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929465,
+    "lastActiveAt": 1785987929557,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

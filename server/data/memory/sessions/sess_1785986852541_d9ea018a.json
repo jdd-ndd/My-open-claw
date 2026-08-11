@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785986852541_d9ea018a",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAHSD5GEZV8ZZBVSGKYAV9N",
+      "role": "user",
+      "content": "帮我详细解释某个技术概念",
+      "timestamp": 1785986856111
+    },
+    {
+      "id": "01KZAHSQXM15MRBQC74V7AKMMS",
+      "role": "assistant",
+      "content": "你好！我很乐意帮你详细解释技术概念，不过你还没有告诉我具体想了解**哪个**技术概念呢 😊\n\n请告诉我你想了解的技术概念，比如：\n\n- **编程相关**：闭包、异步编程、面向对象编程、微服务架构、RESTful API 等\n- **计算机网络**：HTTP/HTTPS、DNS、TCP/IP、负载均衡等\n- **人工智能/机器学习**：神经网络、Transformer、注意力机制、强化学习等\n- **数据库**：索引原理、事务隔离级别、SQL 与 NoSQL 的区别等\n- **云计算/DevOps**：Docker、Kubernetes、CI/CD、无服务器架构等\n- **其他领域**：你感兴趣的任何技术概念！\n\n请告诉我你想深入了解的概念，我会为你提供清晰、详细的解释。有什么想问的尽管说！",
+      "timestamp": 1785986867124
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785986856111,
+    "lastActiveAt": 1785986867124,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

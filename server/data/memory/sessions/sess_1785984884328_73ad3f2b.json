@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984884328_73ad3f2b",
+  "userId": "load-user-hudb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFX8C9X0WNSMAG3Y4NKS3J",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984885110
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984885114,
+    "lastActiveAt": 1785984885129,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

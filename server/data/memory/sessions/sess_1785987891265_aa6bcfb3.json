@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987891265_aa6bcfb3",
+  "userId": "load-user-pbyc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJS0RCK34Y905AS5VZF964",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785987891836
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987891878,
+    "lastActiveAt": 1785987891981,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

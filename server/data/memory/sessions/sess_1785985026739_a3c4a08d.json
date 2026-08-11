@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985026739_a3c4a08d",
+  "userId": "load-user-0epi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K86GMCHW7SHE358GRPN",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985027249
+    },
+    {
+      "id": "01KZAG4MW66D3MEYJGT5Y1HCXB",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"conn_msg_4\"，但我不太确定你的具体意图。这看起来可能是一条连接测试消息、某个会话的引用，或是输入有误？😊\n\n请告诉我你需要什么帮助，例如：\n- 查询信息（天气、新闻、汇率等）\n- 文件操作或代码审查\n- 浏览器抓取网页\n- 执行系统命令\n- 数学计算或单位换算\n\n我很乐意协助你！",
+      "timestamp": 1785985127302
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027263,
+    "lastActiveAt": 1785985127302,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987956895_fdad657d",
+  "userId": "load-user-2tij",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0WTB95M33W1M5T5281B",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785987957523
+    },
+    {
+      "id": "01KZAJXS5Y2MN5W62CWKSRG837",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988048062
+    },
+    {
+      "id": "01KZAJYDEKNDTCVRGPQ8XS2MQD",
+      "role": "assistant",
+      "content": "<final_answer>\n我尝试在长期记忆中搜索了 `conn_msg_12`，但没有找到相关的历史对话或记忆记录，结果为空。\n\n这可能意味着：\n- 该会话标识在记忆库中没有对应的存储内容；\n- 或者之前没有保存过与此相关的信息。\n\n如果你需要我进一步查找其他内容，或者有其他任务需要处理，请随时告诉我！",
+      "timestamp": 1785988068819
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957563,
+    "lastActiveAt": 1785988068819,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

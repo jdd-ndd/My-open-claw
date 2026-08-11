@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985350914_002894e7",
+  "userId": "load-user-l3qv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDRY1H5JWH48G3HDQHD",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985351057
+    },
+    {
+      "id": "01KZAGDJ8PB8FBYFZB43T381QN",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985419542
+    },
+    {
+      "id": "01KZAGF51477AHA84084ZE50ER",
+      "role": "assistant",
+      "content": "我尝试搜索了与 \"conn_msg_17\" 相关的记忆，但没有找到任何记录。这个标识符看起来像是之前对话中的一条消息 ID，但目前记忆库中没有对应的内容。\n\n请问您希望我帮您做什么呢？如果您能提供更多上下文，比如这个 ID 是在什么情况下出现的，或者您期望我执行什么操作，我可以更好地为您服务。",
+      "timestamp": 1785985471524
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351071,
+    "lastActiveAt": 1785985471524,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

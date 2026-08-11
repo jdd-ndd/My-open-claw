@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984579119_546ac6b5",
+  "userId": "user-jmfsdi0wsi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKXJYA8RZ364A4ZFBK31V",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984579162
+    },
+    {
+      "id": "01KZAFN9HNY91RTZX6DM7DVKKB",
+      "role": "assistant",
+      "content": "我收到了你的消息，关于“concurrent message”～ 你是想了解并发消息的处理机制，还是有需要我帮忙并发执行的任务呢？请详细说说你的需求～",
+      "timestamp": 1785984624181
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984579162,
+    "lastActiveAt": 1785984624181,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

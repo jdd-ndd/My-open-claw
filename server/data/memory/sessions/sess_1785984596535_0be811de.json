@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596535_0be811de",
+  "userId": "load-user-juwo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF3WJ1RJGDPT9N8WW5S7",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFNWA68CTH2DV5HHSGPF82",
+      "role": "assistant",
+      "content": "你好！我已经收到你的消息（conn_msg_4），一切连接正常。请问有什么我可以帮你的吗？无论是问题解答、文件操作、信息查询，还是其他任务，随时告诉我。",
+      "timestamp": 1785984643398
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597054,
+    "lastActiveAt": 1785984643398,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

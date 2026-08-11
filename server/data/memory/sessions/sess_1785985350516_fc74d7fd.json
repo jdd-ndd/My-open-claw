@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985350516_fc74d7fd",
+  "userId": "load-user-0nu4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDA2YRXK1TD3RS6WBKF",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985351056
+    },
+    {
+      "id": "01KZAGDH1VX94A7BJS5WPFHQFV",
+      "role": "assistant",
+      "content": "我会为您生成一个 SQL 插入语句，将 `conn_msg_7` 作为 `pet_name` 插入到 `user_pets` 表中。\n\n```sql\nINSERT INTO user_pets (pet_name) VALUES ('conn_msg_7');\n```\n\n这条语句会将 `'conn_msg_7'` 这一字符串记录到 `user_pets` 表的 `pet_name` 字段中。如果您需要插入其他字段或一次性插入多条记录，请进一步说明。",
+      "timestamp": 1785985418299
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351063,
+    "lastActiveAt": 1785985418299,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

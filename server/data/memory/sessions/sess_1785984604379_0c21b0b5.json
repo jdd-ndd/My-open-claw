@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604379_0c21b0b5",
+  "userId": "load-user-ceyb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPJSGD5VH4X5RD73QJQY",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFP37PAWQ9DG8MRK373JAX",
+      "role": "assistant",
+      "content": "你好！我是 **MyOpenClaw Assistant**，一个通用任务处理智能助手。\n\n我可以帮你完成各种任务，包括但不限于：\n- 📁 **文件操作**：读取、写入、删除、列出目录中的文件\n- 💻 **执行命令**：在系统 Shell 中运行命令\n- 🌐 **网络请求**：发送 HTTP 请求，与 API 交互\n- 🌤️ **天气查询**：获取实时天气和预报\n- 🧮 **计算器**：数学计算、单位换算、汇率转换\n- 🗺️ **路线规划**：地理编码和路径规划\n- 📰 **新闻资讯**：获取最新头条新闻\n- 🧠 **记忆检索**：回忆之前的对话和任务\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785984650486
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604680,
+    "lastActiveAt": 1785984650486,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

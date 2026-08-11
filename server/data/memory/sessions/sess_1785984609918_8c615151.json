@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609918_8c615151",
+  "userId": "load-user-75fw",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVX60X8XXVCDA44GNG4T",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984610088
+    },
+    {
+      "id": "01KZAFPAFE7WZ7WQ9YZWF6B5C9",
+      "role": "assistant",
+      "content": "你好！我已准备就绪，可以帮你处理各种任务。请告诉我你需要什么帮助？例如：\n\n- 📂 文件操作（读取、写入、删除等）\n- 💻 执行 Shell 命令\n- 🌐 浏览网页或抓取内容\n- 🔍 搜索记忆或回忆之前的对话\n- ⏰ 查询时间、天气、汇率、新闻等\n- 🧮 数学计算、单位换算\n- 🗺️ 路径规划\n- 💰 加密货币价格查询\n\n请直接描述你的需求，我会尽力协助！",
+      "timestamp": 1785984657902
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610131,
+    "lastActiveAt": 1785984657902,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

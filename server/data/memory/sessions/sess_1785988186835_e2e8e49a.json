@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988186835_e2e8e49a",
+  "userId": "load-user-tap4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK217F71PW5KXJDHXKR62S",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785988187344
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988187355,
+    "lastActiveAt": 1785988187375,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

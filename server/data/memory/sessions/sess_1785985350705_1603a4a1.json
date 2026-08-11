@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985350705_1603a4a1",
+  "userId": "load-user-5yd2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDGVXAMRKHP0Z6D6F5D",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985351056
+    },
+    {
+      "id": "01KZAGDMEZ8T3J7E4CWB102CCA",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985421791
+    },
+    {
+      "id": "01KZAGEGF735ESMMK4WS33E63Q",
+      "role": "assistant",
+      "content": "你好！有什么可以帮你的吗？",
+      "timestamp": 1785985450471
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351067,
+    "lastActiveAt": 1785985450471,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

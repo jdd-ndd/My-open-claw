@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063783_a4c10df7",
+  "userId": "load-user-u7wh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q98ZYRFX9AC1PP0ZKFT",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985064099
+    },
+    {
+      "id": "01KZAG3D2V50HFGH75GTPJDVC5",
+      "role": "assistant",
+      "content": "正在读取文件，请稍等...",
+      "timestamp": 1785985086555
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064143,
+    "lastActiveAt": 1785985086555,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

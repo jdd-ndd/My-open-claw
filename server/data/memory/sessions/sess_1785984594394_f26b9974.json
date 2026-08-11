@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594394_f26b9974",
+  "userId": "load-user-mm7c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCQ8EKWTW4M0Q1DMPYXC",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984594526
+    },
+    {
+      "id": "01KZAFPGVJH0RBCZTTFKNJQTRC",
+      "role": "assistant",
+      "content": "在长期记忆中找到 **conn_msg_16** 的引用，但它目前构成了一个循环——记忆里只记录了你上一次输入 `conn_msg_16` 以及助手尝试搜索它的过程，**原始消息的实际内容已经无法恢复**。\n\n如果你能提供更多上下文（例如这条消息原本属于哪个会话、大概是什么主题），我可以尝试更精确地检索相关记忆。否则，仅凭这个 ID 无法还原出之前的消息。",
+      "timestamp": 1785984664434
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594573,
+    "lastActiveAt": 1785984664434,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

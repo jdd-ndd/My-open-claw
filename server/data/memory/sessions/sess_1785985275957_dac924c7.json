@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785985275957_dac924c7",
+  "userId": "user-gbtpg9cklu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG96318ZN6KH0AA4Y9NQH1",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785985275999
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985276000,
+    "lastActiveAt": 1785985276001,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

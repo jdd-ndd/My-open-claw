@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947448_9b62eb43",
+  "userId": "load-user-kfi3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQWFP10CZA96PPWGTJCC",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785987948326
+    },
+    {
+      "id": "01KZAJXF5957MM6FH3TCV932YM",
+      "role": "assistant",
+      "content": "抱歉，我没太理解你的意思。\"conn_msg_7\" 看起来像是一条系统连接消息或者一个内部标识符号。你能再详细说明一下你的需求吗？无论你想做什么，我都可以帮你处理。",
+      "timestamp": 1785988037801
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948351,
+    "lastActiveAt": 1785988037801,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

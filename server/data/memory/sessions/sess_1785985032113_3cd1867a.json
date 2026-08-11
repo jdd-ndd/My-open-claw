@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032113_3cd1867a",
+  "userId": "load-user-x4ha",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1REEDHH2P30M8QZ9VN3H",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG40Y93YTWFXSA0CB8W92S",
+      "role": "assistant",
+      "content": "好的，已经收到你的消息。连接顺畅，我随时在线。请问有什么任务或者问题需要我帮忙处理吗？",
+      "timestamp": 1785985106889
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032581,
+    "lastActiveAt": 1785985106889,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

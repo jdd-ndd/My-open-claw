@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032301_37c277ae",
+  "userId": "load-user-c6l7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RFCT2N8CBR0ZA82RPM9",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG4A54R769TP689DAYRX16",
+      "role": "assistant",
+      "content": "Connective Messaging 是一种将消息传递从传统请求-回复模式，转变为基于流式连接和上下文感知的智能交互范式。它强调持续连接、上下文感知和流式处理。在AI驱动的应用中，这能实现更自然的对话、主动式协助和降低交互延迟。",
+      "timestamp": 1785985116324
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032600,
+    "lastActiveAt": 1785985116324,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

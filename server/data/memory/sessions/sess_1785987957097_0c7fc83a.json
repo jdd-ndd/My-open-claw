@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987957097_0c7fc83a",
+  "userId": "load-user-sd6y",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0XAD5XTW480F2Y4BRBH",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785987957524
+    },
+    {
+      "id": "01KZAJX72T2FJJSFAEK6V1FSST",
+      "role": "assistant",
+      "content": "已收到您的连接消息 (conn_msg_15)！会话已建立，我随时准备为您提供帮助。\n\n请问有什么我可以帮您处理的吗？无论是文件操作、网页分析、系统命令执行，还是其他任何任务，尽管告诉我！",
+      "timestamp": 1785988029530
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957574,
+    "lastActiveAt": 1785988029530,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

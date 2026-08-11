@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985026867_b755fb03",
+  "userId": "load-user-94uv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K8TJRCTACSSYTA6F0FK",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985027249
+    },
+    {
+      "id": "01KZAG37WCWKDZZ5ECKSFZ81P4",
+      "role": "assistant",
+      "content": "好的，我会使用中文进行回复。有什么我可以帮您的吗？",
+      "timestamp": 1785985081228
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027275,
+    "lastActiveAt": 1785985081228,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

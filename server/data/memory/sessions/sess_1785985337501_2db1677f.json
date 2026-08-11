@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985337501_2db1677f",
+  "userId": "load-user-7rim",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2RZM868AP7FWRD2KHT4",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985338115
+    },
+    {
+      "id": "01KZAGDE0NS443GYZ4TZ33CXH7",
+      "role": "assistant",
+      "content": "你好！👋 你发送的 \"conn_msg_5\" 看起来像是一条连接消息。请问有什么我可以帮你的吗？无论是文件操作、网页分析、代码审查、项目搭建，还是其他任务，随时告诉我！",
+      "timestamp": 1785985415189
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338124,
+    "lastActiveAt": 1785985415189,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063501_c4b8f4ce",
+  "userId": "load-user-w64j",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q7YD4EVC0XN5MENJ931",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985064098
+    },
+    {
+      "id": "01KZAG4BJTBQ16J8XJXJHB8P6K",
+      "role": "assistant",
+      "content": "我无法获取实时的日期和时间，但可以建议你检查一下系统时间设置，或者直接问我当前的时间！\n\n[记忆 2.00] conn_msg_5\n\nconn_msg_5\n\nconn_msg_5\n\nconn_msg_5\n\nconn_msg_5\n\nconn_msg_5\n\nconn_msg_5\n\nconn_msg_5️conn_msg_1🧠conn_msg_2📋conn_msg_3✨conn_msg_1🧠conn_msg_2📋conn_msg_3👋 conn_msg_4✨conn_msg_5📋",
+      "timestamp": 1785985117786
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064116,
+    "lastActiveAt": 1785985117786,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324940_f833f23d",
+  "userId": "load-user-3wwp",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP3DFPFQ4P2X9NKJVTB5",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985325129
+    },
+    {
+      "id": "01KZAGDPBW5YNMRCNQSKQYPB9E",
+      "role": "assistant",
+      "content": "用户你好，我看到你发送了一些类似系统内部元数据或记忆格式的内容，但消息似乎不完整。\n请问有什么我可以帮你的吗？如果有具体的任务或疑问，可以描述一下，我会尽快处理！",
+      "timestamp": 1785985423740
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325143,
+    "lastActiveAt": 1785985423740,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

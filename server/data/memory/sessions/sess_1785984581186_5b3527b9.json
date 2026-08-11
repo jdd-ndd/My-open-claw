@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984581186_5b3527b9",
+  "userId": "user-cmlthx62rzm",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKZKTH8CEEQP522VQSTD3",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984581236
+    },
+    {
+      "id": "01KZAFN93PBNZ336037Q5F9C8V",
+      "role": "assistant",
+      "content": "你好！收到你的消息 \"concurrent message\"。我是 MyOpenClaw Assistant，可以帮你处理文件、执行命令、浏览网页、查询天气、计算等多种任务。请问有什么我可以帮你的吗？",
+      "timestamp": 1785984623734
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984581236,
+    "lastActiveAt": 1785984623734,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

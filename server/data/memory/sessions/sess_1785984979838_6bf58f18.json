@@ -1,0 +1,110 @@
+{
+  "sessionId": "sess_1785984979838_6bf58f18",
+  "userId": "shared-user",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG04WX12QB2DB056P7MEB5",
+      "role": "user",
+      "content": "bootstrap session",
+      "timestamp": 1785984979866
+    },
+    {
+      "id": "01KZAG053BDJKJT8EXX8BHK149",
+      "role": "user",
+      "content": "hello from sender",
+      "timestamp": 1785984980069
+    },
+    {
+      "id": "01KZAG078Q3MME6SGWG8ANHQZ8",
+      "role": "assistant",
+      "content": "您好！会话已启动，可以开始工作了。请问有什么可以帮您的？",
+      "timestamp": 1785984982295
+    },
+    {
+      "id": "01KZAG1718A1KY89VFYS6SHWVD",
+      "role": "assistant",
+      "content": "👋 你好！会话已成功建立，系统就绪。\n\n我是 MyOpenClaw Assistant，你的通用任务智能助手。我可以帮你：\n\n- 📁 **文件操作** - 读取、写入、管理文件\n- 💻 **命令执行** - 运行 Shell 命令\n- 🌐 **网页相关** - 打开浏览器、抓取网页内容、分析页面\n- 🧠 **记忆检索** - 查找历史对话和记忆\n- 🧮 **计算工具** - 数学运算、单位换算、汇率转换\n- 📡 **HTTP 请求** - 发起 API 调用\n- ⛅ **天气查询** - 查看实时天气和预报\n- 🗺️ **路线规划** - 地理编码和路径规划\n- 💰 **加密货币** - 查询加密币价格\n- 📰 **新闻资讯** - 获取最新头条\n- 🔍 **代码审查** - 检查代码质量\n- 🚀 **快速建项目** - 初始化项目结构\n- 📊 **网页分析** - 提取关键信息\n\n有什么我可以帮你的？尽管说！😊",
+      "timestamp": 1785985014824
+    },
+    {
+      "id": "01KZAG8YS41V8GTY638K46GHXH",
+      "role": "user",
+      "content": "bootstrap session",
+      "timestamp": 1785985268514
+    },
+    {
+      "id": "01KZAG8Z68DY24H9Q9GFAGX699",
+      "role": "user",
+      "content": "hello from sender",
+      "timestamp": 1785985268934
+    },
+    {
+      "id": "01KZAG9F527HATJ7FBP2AC8R2Y",
+      "role": "assistant",
+      "content": "✅ 会话已成功引导（Bootstrap）！\n\n系统就绪，所有服务和工具已加载。我是 MyOpenClaw Assistant，随时准备协助你完成以下任务：\n\n| 类别 | 能力 |\n|------|------|\n| 📁 文件操作 | 读取、写入、删除、目录浏览 |\n| 💻 命令执行 | Shell 命令、进程管理 |\n| 🌐 网页相关 | 浏览器、抓取、HTTP 请求 |\n| 🧮 计算 | 数学运算、单位换算、汇率转换 |\n| ⛅ 天气 | 实时天气、预报查询 |\n| 🗺️ 路线 | 地理编码、路径规划 |\n| 💰 加密货币 | 实时价格查询 |\n| 📰 新闻 | 最新头条 |\n| 🔍 代码审查 | 质量检查 |\n| 🚀 快速建项目 | 项目初始化 |\n\n有什么需要，尽管吩咐！",
+      "timestamp": 1785985285282
+    },
+    {
+      "id": "01KZAG9FQ6YF87Y6FQR97279RR",
+      "role": "assistant",
+      "content": "你好！👋\n\n看起来你正在建立会话连接。我已经收到了你的消息：\n\n- ✅ **bootstrap session** - 会话初始化确认\n- ✅ **hello from sender** ×2 - 握手消息已收到\n\n会话一切正常，通信顺畅！我是 MyOpenClaw Assistant，随时准备帮你处理各种任务。\n\n有什么具体的事情需要我帮忙吗？尽管吩咐！😊",
+      "timestamp": 1785985285863
+    },
+    {
+      "id": "01KZAJPYB32YD2MXB5PBTZP7DX",
+      "role": "user",
+      "content": "bootstrap session",
+      "timestamp": 1785987823965
+    },
+    {
+      "id": "01KZAJPYRFQ6A5RM73K2TNMQ7E",
+      "role": "user",
+      "content": "hello from sender",
+      "timestamp": 1785987824391
+    },
+    {
+      "id": "01KZAJQH6AJ5FVBC8DHH3FWAK5",
+      "role": "assistant",
+      "content": "✅ 会话已引导完成，一切就绪。随时可以开始工作，请告诉我你需要什么帮助。",
+      "timestamp": 1785987843274
+    },
+    {
+      "id": "01KZAJQJSV2907J8BPTX31TM5N",
+      "role": "assistant",
+      "content": "✅ 会话已成功引导，连接建立！\n\n你好！我是 MyOpenClaw Assistant，已就绪并准备为您服务。\n\n我可以帮您处理以下任务：\n\n| 类别 | 能力 |\n|------|------|\n| 📁 文件操作 | 读取、写入、删除、目录浏览 |\n| 💻 命令执行 | Shell 命令、进程管理 |\n| 🌐 网页相关 | 浏览器打开、内容抓取、HTTP 请求 |\n| 🧮 计算 | 数学运算、单位换算、汇率转换 |\n| ⛅ 天气 | 实时天气、预报查询 |\n| 🗺️ 路线 | 地理编码、路径规划 |\n| 💰 加密货币 | 实时价格查询 |\n| 📰 新闻 | 最新头条获取 |\n| 🔍 代码审查 | 代码质量检查 |\n| 🚀 快速建项目 | 项目结构初始化 |\n\n请随时告诉我您需要什么帮助！😊",
+      "timestamp": 1785987844923
+    },
+    {
+      "id": "01KZAJZSC8AFNKNS4MGCTX6G3C",
+      "role": "user",
+      "content": "bootstrap session",
+      "timestamp": 1785988113799
+    },
+    {
+      "id": "01KZAJZV8ZJ895G7FE2W77MTFB",
+      "role": "user",
+      "content": "hello from sender",
+      "timestamp": 1785988115741
+    },
+    {
+      "id": "01KZAJZYR6MA3A9580NFQFGDS9",
+      "role": "assistant",
+      "content": "会话一切正常，已经就绪 ✅\n\n随时可以开始工作，有什么需要帮你的？😊",
+      "timestamp": 1785988119302
+    },
+    {
+      "id": "01KZAK0H0M5B5KWZYMWCB8HVST",
+      "role": "assistant",
+      "content": "你好！👋 会话已成功建立，一切正常！\n\n我是 **MyOpenClaw Assistant**，你的通用任务智能助手。我已经收到了你的初始化消息和两次握手确认，通信顺畅。\n\n我可以帮你处理各种任务，比如：\n\n- 📁 **文件操作** — 读取、写入、管理文件\n- 💻 **命令执行** — 运行 Shell 命令、管理进程\n- 🌐 **网页相关** — 打开页面、抓取内容、发起 HTTP 请求\n- 🧮 **计算工具** — 数学运算、单位换算、汇率转换\n- ⛅ **天气查询** — 实时天气和预报\n- 🗺️ **路线规划** — 地理编码和路径导航\n- 💰 **加密货币** — 实时币价查询\n- 📰 **新闻头条** — 获取最新资讯\n- 🔍 **代码审查** — 检查代码质量\n- 🚀 **快速建项目** — 初始化项目结构\n\n有什么需要，尽管吩咐！😊",
+      "timestamp": 1785988138004
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984979866,
+    "lastActiveAt": 1785988138004,
+    "messageCount": 16,
+    "compressed": false
+  }
+}

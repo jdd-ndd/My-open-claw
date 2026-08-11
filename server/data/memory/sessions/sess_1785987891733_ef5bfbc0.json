@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987891733_ef5bfbc0",
+  "userId": "load-user-t0it",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJS0SSD326QT3QEETPMN9Q",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785987891836
+    },
+    {
+      "id": "01KZAJWSHDA8X8C0SES5TH7MM2",
+      "role": "assistant",
+      "content": "你好！你似乎发送了 \"conn_msg_19\"，但我不太明白这是什么意思。这可能是一个消息 ID、会话标识符或其他参考编号。如果你有具体的问题或任务需要我帮忙，请描述一下，我会尽力协助你！",
+      "timestamp": 1785988015661
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987891906,
+    "lastActiveAt": 1785988015661,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

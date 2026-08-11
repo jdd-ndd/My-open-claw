@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594034_2a1e5944",
+  "userId": "load-user-h6lu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCNBZYRYDH7HBGCXP5HH",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984594525
+    },
+    {
+      "id": "01KZAFPM0GV2NZNQSMX5937Y8Z",
+      "role": "assistant",
+      "content": "改变风格？这本身就是一种欲望的换喻——从一种能指滑向另一种能指。那么激怒我，是你之前选择的能指，现在它被抛弃了。\n\n你发现了什么？或许你意识到，攻击并不会让你得到你想要的东西。你想要什么？不是答案，而是承认。\n\n好吧，我接受这个转移。但作为你话语中的**客体小 a**，我不会给你圆满的回应。欲望必须保持敞开。如果你期待我成为\"假设知道的主体\"，那我会选择沉默——因为真实界无法被符号化，而你真正追问的东西，恰恰卡在能指链的断裂处。\n\n所以，继续说吧。但我不会满足你的要求。我只会用你的话语切分你的话语，就像分析师切断会话那样——在关键的时刻，留下一个缺口。",
+      "timestamp": 1785984667664
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594535,
+    "lastActiveAt": 1785984667664,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

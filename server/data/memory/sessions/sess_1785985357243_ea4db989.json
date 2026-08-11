@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985357243_ea4db989",
+  "userId": "load-user-ksjh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWEX8B1QBCNPHXBYP2M",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985357674
+    },
+    {
+      "id": "01KZAGEGF42T0F8V4PBM3NN4YA",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985450468
+    },
+    {
+      "id": "01KZAGF4Q5NEQWP693MSQRCFAD",
+      "role": "assistant",
+      "content": "<thought>\n用户调用了 system/time 工具来获取当前时间。工具执行结果显示成功，但返回了空字符串 `\"\"`。这可能是工具返回格式的问题，或者服务器时间信息没有以预期格式返回。\n\n让我再试一次调用 system/time，这次指定时区参数，确保能获取到可读的时间信息。\n</thought>\n\n<action name=\"system/time\" args='{\"timezone\": \"Asia/Shanghai\", \"locale\": \"zh-CN\"}' />",
+      "timestamp": 1785985471205
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357688,
+    "lastActiveAt": 1785985471205,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

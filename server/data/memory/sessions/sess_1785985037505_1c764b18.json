@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037505_1c764b18",
+  "userId": "load-user-e3cp",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XWH9XKE93S89VGS179G",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985038158
+    },
+    {
+      "id": "01KZAG43YDE25RJNDVF8XRK584",
+      "role": "assistant",
+      "content": "你好！我已连接并就绪。请问有什么可以帮您的？",
+      "timestamp": 1785985109965
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038160,
+    "lastActiveAt": 1785985109965,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

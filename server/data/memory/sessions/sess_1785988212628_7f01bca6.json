@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988212628_7f01bca6",
+  "userId": "load-user-ikwb",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK2TND0P58Z7VJ9SJCA3AK",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785988213393
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988213401,
+    "lastActiveAt": 1785988213421,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

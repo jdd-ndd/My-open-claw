@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985370521_543078c8",
+  "userId": "load-user-axcn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC2ZS3PEYSNTS6TZ649RA",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985371097
+    },
+    {
+      "id": "01KZAGEY67CMJ6TTMBYJEPQSQN",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985464519
+    },
+    {
+      "id": "01KZAGFB1CWN11TY8YBYZ0DCB6",
+      "role": "assistant",
+      "content": "您好！我看到了您的消息\"conn_msg_7\"，但这看起来像是一个内部连接消息标识符，我无法从中理解您的具体需求。\n\n能否请您提供更多信息？比如：\n- 您想要我帮您做什么？\n- 是否在引用之前的某个对话内容？\n- 是否有具体的任务需要我处理？\n\n我会很乐意帮助您处理任何问题，无论是代码审查、文件操作、网页分析还是其他任务。请告诉我您的具体需求！",
+      "timestamp": 1785985477676
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371105,
+    "lastActiveAt": 1785985477676,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

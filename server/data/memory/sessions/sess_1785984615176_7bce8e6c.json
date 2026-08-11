@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615176_7bce8e6c",
+  "userId": "load-user-cm0w",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN19V469DDP4XBXT9C1M1",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984615648
+    },
+    {
+      "id": "01KZAFP6XVQEKC6K85MCWB0M6J",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 (conn_msg_5)。这看起来像是一个连接消息或协议标识符。\n\n如果你是在测试系统连接，那么一切正常——MyOpenClaw Assistant 已就绪，可以处理你的任务。\n\n请问有什么我可以帮助你的吗？无论是文件操作、代码审查、网页分析、命令执行，还是其他任务，我都很乐意协助！",
+      "timestamp": 1785984654267
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615666,
+    "lastActiveAt": 1785984654267,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

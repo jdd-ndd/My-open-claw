@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985325065_bbbf6868",
+  "userId": "load-user-gvhm",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP3HV3ZWT5QX4RWX5DVR",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985325129
+    },
+    {
+      "id": "01KZAGDZBQ6ZN946XJF0K3C8R1",
+      "role": "assistant",
+      "content": "您好！我注意到了您发送的 \"conn_msg_19\"，不过我不太确定这具体代表什么含义。这看起来像是一个连接标识符或测试消息。\n\n如果您有任何具体的问题或任务需要我帮忙，比如文件操作、代码分析、信息查询等，请随时告诉我，我很乐意协助您！😊",
+      "timestamp": 1785985432951
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325145,
+    "lastActiveAt": 1785985432951,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

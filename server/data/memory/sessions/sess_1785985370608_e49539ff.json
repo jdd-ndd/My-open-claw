@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370608_e49539ff",
+  "userId": "load-user-afal",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC2ZWXQK5YMJE3K5XE81F",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985371097
+    },
+    {
+      "id": "01KZAGESB8WNTN5FVSKEXN8XME",
+      "role": "assistant",
+      "content": "已收到连接确认消息。系统就绪，请发送您的任务请求。",
+      "timestamp": 1785985459560
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371107,
+    "lastActiveAt": 1785985459560,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

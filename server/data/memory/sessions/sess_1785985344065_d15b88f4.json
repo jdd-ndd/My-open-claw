@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344065_d15b88f4",
+  "userId": "load-user-w8v8",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94E5H89JFHQW68HTW83",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785985344629
+    },
+    {
+      "id": "01KZAGCVD3S8K2MQ9ZE07FBEA1",
+      "role": "assistant",
+      "content": "User message appears to be a connection test or a simple identifier. I'll reply politely in Chinese.conn_msg_6 已收到。有什么可以帮你的？",
+      "timestamp": 1785985396131
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344635,
+    "lastActiveAt": 1785985396131,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985344103_8d5e5727",
+  "userId": "load-user-brq4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94FEGN4Q1B9C4Q5B2TY",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985344630
+    },
+    {
+      "id": "01KZAGE4Z2TAMRBBTK39Y5TWTJ",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985438690
+    },
+    {
+      "id": "01KZAGEEBDND0YMS9QW0YD5EPM",
+      "role": "assistant",
+      "content": "<final_answer>你好！我目前拥有以下 **3 项技能**：\n\n---\n\n### 🔍 1. **code-review（代码审查）**\n帮助审查代码质量、安全性和可维护性。\n> 触发词：代码审查、code review、审查代码、检查代码\n\n### 🚀 2. **quick-setup（快速项目搭建）**\n帮助你快速初始化项目结构，快速上手新项目。\n> 触发词：创建项目、初始化项目、搭建项目、新建项目\n\n### 🌐 3. **website-analyzer（网页分析）**\n分析网页内容，提取关键信息。\n> 触发词：分析网页、抓取网页、页面分析\n\n---\n\n除了这些技能，我还可以使用大量通用工具，例如文件操作、浏览器抓取、命令行执行、天气查询、汇率转换、路线规划、数学计算等等。需要我帮你做什么吗？😊",
+      "timestamp": 1785985448301
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344636,
+    "lastActiveAt": 1785985448301,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

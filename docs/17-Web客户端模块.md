@@ -1,9 +1,14 @@
-> **版本**：v1.1.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.2.0  
+> **修订日期**：2026-07-30  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布
 
 # 17. Web 客户端模块
+
+> **开发状态**：v1.0.0 已实现。本文档描述的 Web 客户端已在 `clients/web/` 完整实现并可运行。  
+> **运行方式**：`cd clients/web && pnpm dev`(Vite 5173 自动 proxy 到 Gateway 18780)。  
+> **实际完成度**:WebSocket 实时通信 + 流式响应 + 12 工具调用 + 主题切换 + Markdown 渲染 + 会话管理 全部就绪。  
+> **已知降级**:文件上传(走 base64 data URL 透传,server 端未实接 storage)、代码高亮(react-syntax-highlighter 已装但 MessageBubble 未启用)。
 
 ## 目录
 

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601920_279467a5",
+  "userId": "load-user-pegf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM1SAAPR7F27RKYRP35N",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984602037
+    },
+    {
+      "id": "01KZAFP1E02KAR7T36KDB3Z3AC",
+      "role": "assistant",
+      "content": "你好！我收到了 \"conn_msg_17\"，但不太确定你想表达什么。如果你需要帮助，可以直接告诉我你的需求，比如分析网页、创建项目、查询天气、汇率转换、代码审查等等。请问有什么可以帮你的？",
+      "timestamp": 1785984648640
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602085,
+    "lastActiveAt": 1785984648640,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

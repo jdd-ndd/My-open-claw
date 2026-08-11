@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021381_892dff82",
+  "userId": "load-user-8uek",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E1HWHBV5KT8V105R3M3",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985021915
+    },
+    {
+      "id": "01KZAG3HE222YFV7G844QHY3PQ",
+      "role": "assistant",
+      "content": "这是来自 OpenClaw 的自动回复。我已收到你的消息。有什么我可以帮忙的吗？",
+      "timestamp": 1785985091010
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021927,
+    "lastActiveAt": 1785985091010,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

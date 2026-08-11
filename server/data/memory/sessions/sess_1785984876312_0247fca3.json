@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984876312_0247fca3",
+  "userId": "load-user-gxlu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFX0G22RF6D20MN9XM6TMX",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984877038
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984877042,
+    "lastActiveAt": 1785984877058,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

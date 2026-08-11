@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599082_9f759d0d",
+  "userId": "load-user-9oac",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHGZA4EATMS223BDYDV9",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984599499
+    },
+    {
+      "id": "01KZAFPE6C6584JPKA8R9EF8KG",
+      "role": "assistant",
+      "content": "好的，我来帮你下载 B 站视频！请把要下载的视频链接发给我吧（比如 https://www.bilibili.com/video/...）。",
+      "timestamp": 1785984661709
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599517,
+    "lastActiveAt": 1785984661709,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

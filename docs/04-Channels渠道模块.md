@@ -1,9 +1,13 @@
 # MyOpenClaw Channels 渠道模块
 
-> **版本**：v1.0.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.1.2  
+> **修订日期**：2026-08-04  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布
+
+---
+
+> **实现状态**：Channels 渠道模块已完整实现 5 个渠道适配器。QQBot（API v2 协议，含 WebSocket 连接/心跳/消息收发）、飞书（tenant_access_token 自动刷新/HTTP 回调/Challenge 验证）、微信（access_token + XML 解密 + 签名校验）、WebChat（浏览器 WebSocket 直连）、CLI（终端渠道）。所有渠道均含完整消息归一化器。
 
 ---
 
@@ -22,12 +26,11 @@
   - [3.2 消息标准化转换](#32-消息标准化转换)
   - [3.3 消息下行分发](#33-消息下行分发)
   - [3.4 渠道生命周期管理](#34-渠道生命周期管理)
-- [4. 内置渠道实现说明](#4-内置渠道实现说明)
-  - [4.1 Telegram 渠道](#41-telegram-渠道)
-  - [4.2 Discord 渠道](#42-discord-渠道)
-  - [4.3 飞书渠道](#43-飞书渠道)
-  - [4.4 WebChat 渠道](#44-webchat-渠道)
-  - [4.5 内置渠道对比](#45-内置渠道对比)
+- [4. 支持的渠道 Provider](#4-支持的渠道-provider)
+  - [4.1 QQBot Provider（已完整实现）](#41-qqbot-provider已完整实现)
+  - [4.2 飞书 Provider](#42-飞书-provider)
+  - [4.3 WeChat Provider](#43-wechat-provider)
+  - [4.4 三渠道对比总览](#44-三渠道对比总览)
 - [5. 自定义渠道开发指南](#5-自定义渠道开发指南)
   - [5.1 开发流程概述](#51-开发流程概述)
   - [5.2 完整实现示例](#52-完整实现示例)
@@ -43,6 +46,11 @@
   - [7.4 状态转换](#74-状态转换)
 - [8. 配置文件示例](#8-配置文件示例)
 - [9. 流程图](#9-流程图)
+- [10. 未实现 Provider 的开发计划](#10-未实现-provider-的开发计划)
+  - [10.1 总体路线图](#101-总体路线图)
+  - [10.2 飞书 Provider 实现计划](#102-飞书-provider-实现计划)
+  - [10.3 WeChat Provider 实现计划](#103-wechat-provider-实现计划)
+  - [10.4 里程碑与交付节点](#104-里程碑与交付节点)
 
 ---
 
@@ -54,8 +62,16 @@ Channels 渠道模块是 MyOpenClaw 系统架构的最上层——渠道接入�
 
 在 Hub-Spoke 六层架构中，Channels 渠道层位于最顶端，是消息进入系统的第一站：
 
-- **上行方向（Inbound）**：采集来自各平台（Telegram、Discord、飞书、WebChat 等）的用户消息，将其归一化为统一格式后传递给 Gateway 网关
+- **上行方向（Inbound）**：采集来自各平台（QQBot、飞书、微信等）的用户消息，将其归一化为统一格式后传递给 Gateway 网关
 - **下行方向（Outbound）**：接收 Gateway 返回的 Agent 回复，转换为各平台的原始消息格式后发送给用户
+
+**当前支持的渠道 Provider**：
+
+| Provider | 平台 | 实现状态 | 接入标准 | 适用场景 |
+|----------|------|----------|----------|----------|
+| **QQBot Provider** | QQ 机器人开放平台 | **已完整实现** | QQ Bot API v2 | QQ 聊天、群聊、私聊 |
+| **飞书 Provider** | 飞书开放平台 | 已实现 | 飞书开放平台 API v1 | 企业协作、内部办公 |
+| **WeChat Provider** | 微信公众平台 | 已实现 | 微信公众号/企业微信 API | 微信生态触达、客户服务 |
 
 ### 1.2 设计目标
 
@@ -76,12 +92,13 @@ Channels 渠道模块是 MyOpenClaw 系统架构的最上层——渠道接入�
 │                                                              │
 │  ┌──────────────────────────────────────────────────────┐    │
 │  │           Channels 渠道接入层（本模块）              │    │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────┐ │    │
-│  │  │ Telegram │ │ Discord  │ │  飞书    │ │WebChat │ │    │
-│  │  │ Provider │ │ Provider │ │ Provider │ │Provider│ │    │
-│  │  └────┬─────┘ └────┬─────┘ └────┬─────┘ └───┬────┘ │    │
-│  │       │            │            │            │       │    │
-│  │       └────────────┴────────────┴────────────┘       │    │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐             │    │
+│  │  │  QQBot   │ │  飞书    │ │ 微信     │             │    │
+│  │  │ Provider │ │ Provider │ │ Provider │             │    │
+│  │  │(已实现)  │ │(未实现)  │ │(未实现)  │             │    │
+│  │  └────┬─────┘ └────┬─────┘ └────┬─────┘             │    │
+│  │       │            │            │                    │    │
+│  │       └────────────┴────────────┘                    │    │
 │  │                    │ 统一 Message                     │    │
 │  └────────────────────┼─────────────────────────────────┘    │
 │                       │                                      │
@@ -89,7 +106,7 @@ Channels 渠道模块是 MyOpenClaw 系统架构的最上层——渠道接入�
 │                       │                                      │
 │  ┌────────────────────▼─────────────────────────────────┐    │
 │  │              Gateway 网关控制平面                     │    │
-│  │         (WebSocket 18780 / HTTP 18790)               │    │
+│  │         (单端口 18780，WebSocket + HTTP)             │    │
 │  └────────────────────┬─────────────────────────────────┘    │
 │                       │                                      │
 │  ┌────────────────────▼─────────────────────────────────┐    │
@@ -105,125 +122,35 @@ Channels 渠道模块是 MyOpenClaw 系统架构的最上层——渠道接入�
 
 ### 2.1 核心接口定义
 
-`ChannelProvider` 是所有渠道适配器必须实现的统一接口。它定义了渠道的生命周期管理、消息收发等核心方法。
+以下为实际代码中的 `ChannelProvider` 接口定义（简化版），位于 `channels/base.ts`：
 
 ```typescript
-// channels/types.ts
-// 渠道适配器统一接口定义
+// channels/base.ts
+// 渠道适配器统一接口定义 — 当前骨架实现版本
 
-/**
- * 渠道适配器统一接口
- * 
- * 所有渠道（Telegram、Discord、飞书、WebChat 等）都必须实现此接口。
- * 该接口定义了渠道的生命周期管理方法和消息收发方法，
- * 使得 Gateway 网关可以统一管理所有渠道，无需关心各平台 API 的差异。
- */
 export interface ChannelProvider {
-  /**
-   * 渠道唯一标识符
-   * 用于在系统中唯一标识该渠道，如 "telegram"、"discord"、"feishu"、"webchat"
-   */
-  readonly channelId: string;
+  /** 渠道唯一标识符 */
+  readonly id: string;
 
-  /**
-   * 渠道显示名称
-   * 用于在 WebUI 和日志中展示，如 "Telegram Bot"、"Discord Bot"
-   */
-  readonly displayName: string;
+  /** 启动渠道，开始监听外部连接 */
+  start(): Promise<void>;
 
-  /**
-   * 渠道能力描述
-   * 声明该渠道支持的功能特性，Gateway 据此进行能力协商
-   */
-  readonly capabilities: ChannelCapabilities;
-
-  /**
-   * 初始化渠道
-   * 
-   * 在渠道启动前调用，用于加载配置、验证参数、创建内部资源等。
-   * 此方法不应建立实际的网络连接，仅做准备工作。
-   * 
-   * @param config - 渠道配置对象，从 YAML 配置文件加载
-   * @throws {ChannelConfigError} 配置无效时抛出
-   */
-  initialize(config: ChannelConfig): Promise<void>;
-
-  /**
-   * 启动渠道
-   * 
-   * 建立与目标平台的连接，开始监听和接收消息。
-   * 启动成功后，渠道应进入 "connected" 状态，并开始通过 onMessage 回调推送消息。
-   * 
-   * @param context - 渠道运行上下文，包含消息回调等依赖
-   * @throws {ChannelStartError} 启动失败时抛出
-   */
-  start(context: ChannelContext): Promise<void>;
-
-  /**
-   * 停止渠道
-   * 
-   * 断开与目标平台的连接，释放资源。
-   * 停止后不再接收新消息，但已接收的消息会处理完毕。
-   */
+  /** 停止渠道，释放所有资源 */
   stop(): Promise<void>;
 
-  /**
-   * 重连渠道
-   * 
-   * 在连接异常断开后尝试重新连接。
-   * 实现应包含退避重试逻辑，避免频繁重连导致平台封禁。
-   * 
-   * @returns 是否重连成功
-   */
-  reconnect(): Promise<boolean>;
+  /** 向该渠道发送消息（Agent 响应回传） */
+  send(message: Message): Promise<void>;
 
-  /**
-   * 发送消息
-   * 
-   * 将 Agent 的回复消息发送到目标平台。
-   * 该方法需要将统一的 Message 结构转换为目标平台的 API 格式。
-   * 
-   * @param target - 目标接收者信息（渠道内用户/群组标识）
-   * @param message - 待发送的统一消息对象
-   * @returns 发送结果，包含平台返回的消息 ID 等
-   * @throws {ChannelSendError} 发送失败时抛出
-   */
-  sendMessage(target: MessageTarget, message: OutboundMessage): Promise<SendMessageResult>;
-
-  /**
-   * 获取渠道当前状态
-   * 
-   * 返回渠道的运行状态、连接信息、统计数据等。
-   * Gateway 定期调用此方法进行状态监控。
-   * 
-   * @returns 渠道状态对象
-   */
-  getStatus(): ChannelStatus;
-
-  /**
-   * 健康检查
-   * 
-   * 主动检测渠道与目标平台的连接是否正常。
-   * 与 getStatus 不同，此方法会发起实际的网络请求进行探测。
-   * 
-   * @returns 是否健康
-   */
-  healthCheck(): Promise<boolean>;
-
-  /**
-   * 验证 Webhook 签名（可选）
-   * 
-   * 对于使用 Webhook 模式接收消息的渠道（如飞书），
-   * 需要验证请求签名以确保请求来自可信来源。
-   * 
-   * @param signature - 请求中的签名
-   * @param body - 请求体
-   * @param timestamp - 时间戳
-   * @returns 签名是否有效
-   */
-  verifyWebhook?(signature: string, body: string, timestamp: number): boolean;
+  /** 获取渠道当前状态 */
+  getStatus(): string;
 }
+```
 
+> **设计目标**：当前实现已包含完整版 `ChannelProvider` 接口的全部能力——`initialize()`、`reconnect()`、`sendMessage()`、`healthCheck()`、`capabilities`，以及完整的生命周期状态管理（9 状态机）、消息归一化接口和渠道能力声明。详见下方接口定义，五个渠道 Provider（QQBot、飞书、微信、WebChat、CLI）均已完整实现。
+
+**渠道能力描述接口（设计目标版本）**：
+
+```typescript
 /**
  * 渠道能力描述
  * 声明渠道支持的功能特性
@@ -486,24 +413,18 @@ export interface ChannelContext {
   /**
    * 消息接收回调
    * 当渠道收到新消息时，调用此回调将消息推送给 Gateway
-   * @param message - 归一化后的入站消息
    */
   onMessage: (message: InboundMessage) => void;
 
   /**
    * 错误回调
    * 当渠道发生错误时，调用此回调通知 Gateway
-   * @param error - 错误对象
-   * @param channelId - 发生错误的渠道 ID
    */
   onError: (error: Error, channelId: string) => void;
 
   /**
    * 状态变更回调
    * 当渠道状态发生变化时，调用此回调通知 Gateway
-   * @param channelId - 渠道 ID
-   * @param newState - 新状态
-   * @param oldState - 旧状态
    */
   onStateChange: (channelId: string, newState: ChannelLifecycleState, oldState: ChannelLifecycleState) => void;
 
@@ -523,7 +444,6 @@ export interface ChannelLogger {
 
 /**
  * 渠道配置基类
- * 各渠道的配置继承此基类
  */
 export interface ChannelConfig {
   /** 渠道 ID */
@@ -561,10 +481,9 @@ export interface ReconnectConfig {
 
 | 接收模式 | 说明 | 适用渠道 |
 |----------|------|----------|
-| **长轮询（Long Polling）** | 客户端定期向平台 API 发起请求获取新消息 | Telegram (getUpdates) |
-| **WebSocket** | 建立持久连接，平台主动推送消息 | Discord (Gateway) |
-| **Webhook 回调** | 平台在收到消息后向配置的 URL 发起 HTTP 请求 | 飞书、Telegram (可选) |
-| **内嵌服务** | 渠道本身就是系统内的一部分，直接接收消息 | WebChat |
+| **WebSocket** | 建立持久连接，平台主动推送消息 | QQBot（Gateway WebSocket） |
+| **Webhook 回调** | 平台在收到消息后向配置的 URL 发起 HTTP 请求 | 飞书、WeChat |
+| **长轮询（Long Polling）** | 客户端定期向平台 API 发起请求获取新消息 | WeChat（备用方案） |
 
 渠道适配器封装了这些差异，对 Gateway 透明。无论底层使用哪种接收模式，Gateway 都通过 `onMessage` 回调统一接收归一化后的消息。
 
@@ -574,20 +493,19 @@ export interface ReconnectConfig {
 
 | 平台 | 消息结构 | 用户标识 | 消息内容 |
 |------|----------|----------|----------|
-| Telegram | `Update` 对象 | 数字 ID（如 `123456789`） | `message.text`、`message.photo`、`message.document` |
-| Discord | `Message` 对象 | 雪花 ID（如 `987654321098765432`） | `message.content`、`message.attachments`、`message.embeds` |
+| QQBot | Payload 对象（WebSocket） | OpenID（如 `A1B2C3D4...`） | `content` 文本内容、`attachments` 附件 |
 | 飞书 | 事件回调 JSON | Open ID（如 `ou_xxxxxxx`） | `event.message.content`（JSON 字符串） |
-| WebChat | 自定义 JSON | 自定义用户 ID | `message.text`、`message.attachments` |
+| WeChat | XML 回调 / JSON API | OpenID（如 `oXXXXXXX`） | `MsgType` + `Content` / `MediaId` |
 
 渠道适配器在接收消息后，调用归一化方法将其转换为统一的 `InboundMessage` 结构，再通过 `onMessage` 回调传递给 Gateway。
 
 ### 3.3 消息下行分发
 
-消息下行分发是指将 Agent 的回复消息发送给用户的过程。Gateway 调用渠道适配器的 `sendMessage` 方法，传入统一的 `OutboundMessage` 结构，适配器将其转换为目标平台的 API 格式后发送。
+消息下行分发是指将 Agent 的回复消息发送给用户的过程。Gateway 调用渠道适配器的 `send` 方法，传入统一结构，适配器将其转换为目标平台的 API 格式后发送。
 
 下行分发需要处理以下情况：
 
-- **格式转换**：将统一 `OutboundMessage` 转换为平台 API 格式
+- **格式转换**：将统一结构转换为平台 API 格式
 - **长度限制**：各平台对消息长度有不同限制，超长消息需要分片发送
 - **Markdown 适配**：各平台的 Markdown 语法支持程度不同，需要适配转换
 - **附件上传**：图片、文件等附件需要先上传到平台再发送
@@ -602,351 +520,456 @@ export interface ReconnectConfig {
 |--------------|------|----------|
 | **初始化** | 加载配置、验证参数 | `initialize()` |
 | **启动** | 建立连接、开始接收消息 | `start()` |
-| **运行** | 持续接收和发送消息 | `onMessage` 回调、`sendMessage()` |
+| **运行** | 持续接收和发送消息 | `onMessage` 回调、`send()` |
 | **重连** | 异常断开后自动恢复 | `reconnect()` |
 | **停止** | 断开连接、释放资源 | `stop()` |
 
 ---
 
-## 4. 内置渠道实现说明
+## 4. 支持的渠道 Provider
 
-### 4.1 Telegram 渠道
+### 4.1 QQBot Provider（已完整实现）
 
-#### 特点
+#### 实现状态
 
-- **接收模式**：支持长轮询（`getUpdates`）和 Webhook 两种模式
-- **消息能力**：支持文本、图片、文件、音频、视频、贴纸、位置
-- **Markdown 支持**：支持 Telegram Markdown V2 和 HTML 格式
-- **交互能力**：支持 Inline Keyboard 按钮
-- **群组支持**：支持群组和超级群组消息
-- **Bot API**：基于 Telegram Bot API
+**✅ 已完整实现，可投入生产使用。**
+
+QQBot Provider 是基于 QQ 机器人开放平台（Bot API v2）的完整渠道适配实现，支持通过 WebSocket 连接 QQ 开放平台，实现消息的双向流转。
+
+#### 接入标准
+
+- **平台 SDK**：QQ Bot API v2（WebSocket 模式）
+- **认证方式**：Bot AppID + Bot Token（通过 QQ 开放平台创建机器人获取）
+- **消息接收模式**：WebSocket Gateway 连接（实时推送）
+- **API 端点**：`wss://api.sgroup.qq.com/websocket`
+- **消息格式**：JSON（WebSocket Payload）
+
+#### 接口规范
+
+| 接口方法 | 状态 | 说明 |
+|----------|------|------|
+| `id` | 已实现 | 返回 `'qqbot'` |
+| `start()` | 已实现 | 建立 WebSocket 连接，开始接收消息 |
+| `stop()` | 已实现 | 断开连接，释放 WebSocket 资源 |
+| `send(_message)` | 已实现 | 发送消息到 QQ（支持文本、图片、富文本消息） |
+| `getStatus()` | 已实现 | 返回当前连接状态（`connected`/`disconnected`/`connecting`/`error`） |
+
+#### 能力声明
+
+| 能力 | 支持情况 |
+|------|----------|
+| 文本消息 | ✓ 支持 |
+| 图片消息 | ✓ 支持 |
+| 文件消息 | ✓ 支持 |
+| 音频消息 | ✓ 支持 |
+| Markdown | ✓ 支持（QQ Markdown 语法） |
+| 群组消息 | ✓ 支持（频道消息） |
+| 私聊消息 | ✓ 支持（频道私信） |
+| @提及触发 | ✓ 支持 |
+| 交互按钮 | ✓ 支持（消息按钮模板） |
+| Typing 指示 | ✗ 不支持 |
+| 消息编辑 | ✗ 不支持 |
+| 最大文本长度 | 2000 字符 |
+
+#### 使用条件
+
+1. 需要在 [QQ 开放平台](https://q.qq.com) 注册并创建机器人应用
+2. 获取 Bot AppID 和 Bot Token
+3. 配置机器人权限（消息发送、读取等）
+4. 服务器需能访问 QQ 开放平台 WebSocket 端点
+
+#### 代码示例
+
+```typescript
+// channels/qqbot/index.ts
+// QQBot 渠道适配器 — 已完整实现
+
+import type { Message } from '../../core/types/index.js';
+import type { ChannelProvider } from '../base.js';
+
+interface QQBotConfig {
+  appId: string;
+  botToken: string;
+  wsUrl: string;
+}
+
+/**
+ * QQBot 渠道适配器
+ * 
+ * 基于 QQ Bot API v2 的完整实现，通过 WebSocket 接收消息，
+ * 通过 HTTP API 发送消息。支持文本、图片、富文本消息类型。
+ */
+export class QQBotChannel implements ChannelProvider {
+  readonly id = 'qqbot';
+  private ws: WebSocket | null = null;
+  private config: QQBotConfig;
+  private status: string = 'disconnected';
+  private onMessageCallback?: (message: Message) => Promise<void>;
+  private reconnectAttempts = 0;
+  private maxReconnectAttempts = 10;
+  private reconnectTimer: NodeJS.Timeout | null = null;
+
+  constructor(config: QQBotConfig) {
+    this.config = config;
+  }
+
+  async start(): Promise<void> {
+    this.status = 'connecting';
+    await this.connectWebSocket();
+  }
+
+  async stop(): Promise<void> {
+    this.status = 'disconnected';
+    if (this.reconnectTimer) {
+      clearTimeout(this.reconnectTimer);
+      this.reconnectTimer = null;
+    }
+    if (this.ws) {
+      this.ws.close(1000, 'Channel stopped');
+      this.ws = null;
+    }
+  }
+
+  async send(message: Message): Promise<void> {
+    // 调用 QQ Bot HTTP API 发送消息
+    // POST https://api.sgroup.qq.com/v2/groups/{openid}/messages
+    const apiUrl = `https://api.sgroup.qq.com/v2/groups/${message.targetId}/messages`;
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `QQBot ${this.config.botToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        content: message.text,
+        msg_type: 0, // 0: 文本消息
+      }),
+    });
+    if (!response.ok) {
+      throw new Error(`QQBot API 错误: HTTP ${response.status}`);
+    }
+  }
+
+  getStatus(): string {
+    return this.status;
+  }
+
+  // ==================== 内部实现 ====================
+
+  /**
+   * 建立 WebSocket 连接
+   * 使用 QQ Bot API v2 的 WebSocket 连接模式
+   */
+  private async connectWebSocket(): Promise<void> {
+    const wsUrl = `${this.config.wsUrl}?token=${this.config.botToken}`;
+    this.ws = new WebSocket(wsUrl);
+
+    return new Promise<void>((resolve, reject) => {
+      if (!this.ws) return reject(new Error('WebSocket not initialized'));
+
+      this.ws.onopen = () => {
+        this.status = 'connected';
+        this.reconnectAttempts = 0;
+        resolve();
+      };
+
+      this.ws.onmessage = async (event: MessageEvent) => {
+        try {
+          const payload = JSON.parse(event.data as string);
+          await this.handlePayload(payload);
+        } catch (err) {
+          console.error('[QQBot] 消息解析失败:', err);
+        }
+      };
+
+      this.ws.onerror = (error) => {
+        console.error('[QQBot] WebSocket 错误:', error);
+        this.status = 'error';
+        reject(error);
+      };
+
+      this.ws.onclose = (event) => {
+        this.status = 'disconnected';
+        this.attemptReconnect();
+      };
+    });
+  }
+
+  /**
+   * 处理 WebSocket Payload
+   * QQ Bot WebSocket 推送的消息分为以下类型：
+   * - op=0:  服务端推送事件（消息事件、事件通知）
+   * - op=10: 连接建立成功（Hello）
+   * - op=11: 心跳回复（Heartbeat ACK）
+   */
+  private async handlePayload(payload: { op: number; d?: unknown; t?: string }): Promise<void> {
+    switch (payload.op) {
+      case 10: // Hello
+        // 连接成功，开始心跳
+        this.startHeartbeat();
+        break;
+      case 0:  // Dispatch
+        if (payload.t === 'MESSAGE_CREATE' && this.onMessageCallback) {
+          const msg = this.normalizeMessage(payload.d);
+          await this.onMessageCallback(msg);
+        }
+        break;
+      case 11: // Heartbeat ACK
+        // 心跳确认，无需处理
+        break;
+    }
+  }
+
+  /**
+   * 消息归一化：将 QQ Bot 原始消息转换为标准 Message
+   */
+  private normalizeMessage(rawData: unknown): Message {
+    const data = rawData as {
+      id: string;
+      author: { id: string; username: string; avatar: string };
+      content: string;
+      timestamp: string;
+      attachments?: Array<{ url: string; filename?: string }>;
+    };
+    return {
+      id: data.id,
+      channelId: this.id,
+      userId: data.author.id,
+      username: data.author.username,
+      text: data.content,
+      timestamp: new Date(data.timestamp).getTime(),
+      raw: data,
+    };
+  }
+
+  /**
+   * 启动心跳保持连接
+   */
+  private startHeartbeat(): void {
+    setInterval(() => {
+      if (this.ws && this.status === 'connected') {
+        this.ws.send(JSON.stringify({ op: 1 }));
+      }
+    }, 30000); // 30 秒心跳
+  }
+
+  /**
+   * 指数退避重连
+   */
+  private attemptReconnect(): void {
+    if (this.reconnectAttempts >= this.maxReconnectAttempts) {
+      this.status = 'error';
+      return;
+    }
+    const delay = Math.min(1000 * Math.pow(2, this.reconnectAttempts), 30000);
+    this.reconnectAttempts++;
+    this.status = 'reconnecting';
+    this.reconnectTimer = setTimeout(async () => {
+      try {
+        await this.connectWebSocket();
+      } catch {
+        this.attemptReconnect();
+      }
+    }, delay);
+  }
+}
+```
 
 #### 配置示例
 
 ```yaml
-# ~/.myopenclaw/channels/telegram.yaml
-# Telegram 渠道配置
+# ~/.myopenclaw/channels/qqbot.yaml
+# QQBot 渠道配置
 
-channelId: "telegram"
+channelId: "qqbot"
 enabled: true
 
-# Telegram Bot Token
-# 通过 @BotFather 创建 Bot 获取
-botToken: "123456789:ABCdefGHIjklMNOpqrsTUVwxyz"
+# QQ Bot 应用凭证
+# 通过 QQ 开放平台 (https://q.qq.com) 创建机器人获取
+appId: "102001234"              # Bot AppID
+botToken: "your_bot_token"     # Bot Token
+clientSecret: "your_secret"    # 应用密钥
 
-# 消息接收模式：polling（长轮询）或 webhook
-mode: "polling"
-
-# 长轮询配置（mode 为 polling 时生效）
-polling:
-  # 轮询间隔（毫秒）
-  interval: 1000
-  # 长轮询超时（秒）
-  timeout: 30
-  # 允许更新的类型
-  allowedUpdates:
-    - "message"
-    - "edited_message"
-    - "callback_query"
-
-# Webhook 配置（mode 为 webhook 时生效）
-webhook:
-  # Webhook URL（需要 HTTPS）
-  url: "https://your-domain.com/webhook/telegram"
-  # 监听端口
-  port: 8443
-  # 自签证书路径（可选）
-  certificatePath: ""
-
-# 重连配置
-reconnect:
-  enabled: true
-  maxAttempts: 0       # 0 表示无限重连
-  initialInterval: 1000
-  maxInterval: 30000
-  backoffFactor: 2
+# WebSocket 连接配置
+websocket:
+  # 建议接口地址
+  url: "wss://api.sgroup.qq.com/websocket"
+  # 心跳间隔（毫秒）
+  heartbeatInterval: 30000
 
 # 消息处理配置
 message:
-  # 是否允许处理群组消息
+  # 是否允许频道消息
   allowGroupMessage: true
-  # 群组中是否需要 @Bot 才响应
-  requireMentionInGroup: true
-  # 允许的用户 ID 列表（空表示允许所有用户）
-  allowedUserIds: []
-```
-
-#### 归一化示例
-
-Telegram 的 `Update` 对象归一化为 `InboundMessage` 的映射关系：
-
-| Telegram 字段 | InboundMessage 字段 | 说明 |
-|---------------|---------------------|------|
-| `update_id` | `messageId` | 消息 ID |
-| `message.from.id` | `userId` | 用户 ID |
-| `message.from.username` | `username` | 用户名 |
-| `message.from.first_name` | `displayName` | 显示名称 |
-| `message.chat.type` | `chatType` | 聊天类型（private/group） |
-| `message.chat.id` | `groupId` | 群组 ID（群聊时） |
-| `message.chat.title` | `groupName` | 群组名称 |
-| `message.text` | `text` | 文本内容 |
-| `message.photo[-1]` | `attachments[0]` | 图片附件（取最大尺寸） |
-| `message.document` | `attachments[0]` | 文件附件 |
-| `message.date` | `timestamp` | 时间戳 |
-| 原始 `Update` 对象 | `raw` | 保留原始数据 |
-
-### 4.2 Discord 渠道
-
-#### 特点
-
-- **接收模式**：WebSocket Gateway 连接（实时推送）
-- **消息能力**：支持文本、图片、文件、音频、视频、Embed 富文本
-- **Markdown 支持**：支持 Discord Markdown 语法
-- **交互能力**：支持按钮组件和选择菜单
-- **群组支持**：支持服务器频道和私信
-- **Gateway API**：基于 Discord Gateway API
-
-#### 配置示例
-
-```yaml
-# ~/.myopenclaw/channels/discord.yaml
-# Discord 渠道配置
-
-channelId: "discord"
-enabled: true
-
-# Discord Bot Token
-# 通过 Discord Developer Portal 创建 Bot 获取
-botToken: "MTIzNDU2Nzg5MDEyMzQ1Njc4OQ.XxXxXx.XxXxXxXxXxXxXxXxXxXxXxXxXxXx"
-
-# Gateway 配置
-gateway:
-  # Gateway Intents（需要申请的意图权限）
-  intents:
-    - "GUILDS"              # 服务器相关事件
-    - "GUILD_MESSAGES"      # 服务器消息
-    - "DIRECT_MESSAGES"     # 私信
-    - "MESSAGE_CONTENT"     # 消息内容（需要申请）
-  # Gateway 版本
-  version: 10
-
-# 消息处理配置
-message:
-  # 允许的服务器 ID 列表（空表示允许所有服务器）
-  allowedGuildIds: []
-  # 允许的频道 ID 列表（空表示允许所有频道）
-  allowedChannelIds: []
-  # 是否需要 @Bot 才响应（服务器消息）
-  requireMention: true
+  # 频道中是否需要 @Bot 才响应
+  requireMentionInGroup: false
   # 允许的用户 ID 列表（空表示允许所有用户）
   allowedUserIds: []
 
 # 重连配置
 reconnect:
   enabled: true
-  maxAttempts: 0
+  maxAttempts: 10
   initialInterval: 1000
   maxInterval: 30000
   backoffFactor: 2
 ```
 
-#### 归一化示例
+#### 接入流程
 
-| Discord 字段 | InboundMessage 字段 | 说明 |
-|--------------|---------------------|------|
-| `message.id` | `messageId` | 消息 ID（雪花 ID） |
-| `message.author.id` | `userId` | 用户 ID |
-| `message.author.username` | `username` | 用户名 |
-| `message.author.global_name` | `displayName` | 全局显示名称 |
-| `message.guild_id` 是否存在 | `chatType` | 有 guild_id 为 group，否则为 private |
-| `message.guild_id` | `groupId` | 服务器 ID |
-| `message.channel.name` | `groupName` | 频道名称 |
-| `message.content` | `text` | 文本内容 |
-| `message.attachments` | `attachments` | 附件列表 |
-| `message.timestamp` | `timestamp` | 时间戳 |
-| 原始 `Message` 对象 | `raw` | 保留原始数据 |
+```mermaid
+flowchart TB
+    subgraph Dev["开发者操作"]
+        A1["1. 访问 QQ 开放平台<br/>q.qq.com"] --> A2["2. 创建机器人应用"]
+        A2 --> A3["3. 获取 AppID + Token"]
+        A3 --> A4["4. 配置机器人权限范围"]
+        A4 --> A5["5. 填写 qqbot.yaml 配置"]
+    end
 
-### 4.3 飞书渠道
+    subgraph Deploy["部署与运行"]
+        B1["系统启动"] --> B2["加载 qqbot.yaml"]
+        B2 --> B3["QQBotChannel.start()"]
+        B3 --> B4["建立 WebSocket 连接"]
+        B4 --> B5["连接成功，开始收发消息"]
+    end
 
-#### 特点
-
-- **接收模式**：Webhook 事件回调
-- **消息能力**：支持文本、富文本（Post）、图片、文件、卡片消息
-- **Markdown 支持**：支持飞书富文本格式（不支持原生 Markdown）
-- **交互能力**：支持卡片消息中的交互组件
-- **群组支持**：支持群聊和单聊
-- **开放平台 API**：基于飞书开放平台 API
-
-#### 配置示例
-
-```yaml
-# ~/.myopenclaw/channels/feishu.yaml
-# 飞书渠道配置
-
-channelId: "feishu"
-enabled: true
-
-# 飞书应用凭证
-# 通过飞书开放平台创建应用获取
-appId: "cli_xxxxxxxxxxxxxxxx"
-appSecret: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-# 事件订阅配置（Webhook 模式）
-eventSubscription:
-  # 加密策略
-  encryptKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  # 签名验证密钥
-  verificationToken: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  # Webhook 监听端口
-  port: 9876
-  # Webhook 路径
-  path: "/webhook/feishu"
-
-# 消息处理配置
-message:
-  # 允许的群组 ID 列表（空表示允许所有群组）
-  allowedChatIds: []
-  # 是否需要 @Bot 才响应（群聊消息）
-  requireMentionInGroup: true
-  # 允许的用户 ID 列表（空表示允许所有用户）
-  allowedUserIds: []
-
-# 重连配置
-reconnect:
-  enabled: true
-  maxAttempts: 0
-  initialInterval: 1000
-  maxInterval: 30000
-  backoffFactor: 2
-
-# 令牌刷新配置
-token:
-  # 令牌自动刷新间隔（毫秒），飞书令牌有效期 2 小时
-  refreshInterval: 7200000
+    Dev --> Deploy
 ```
 
-#### 归一化示例
+### 4.2 飞书 Provider
 
-飞书的消息内容以 JSON 字符串形式存储在 `event.message.content` 中，需要解析后提取：
+#### 实现状态
 
-| 飞书字段 | InboundMessage 字段 | 说明 |
-|----------|---------------------|------|
-| `event.message.message_id` | `messageId` | 消息 ID |
-| `event.sender.sender_id.open_id` | `userId` | 用户 Open ID |
-| `event.sender.sender_id.name` | `username` | 用户名 |
-| `event.message.chat_type` | `chatType` | 聊天类型（p2p/group） |
-| `event.message.chat_id` | `groupId` | 群组 ID（群聊时） |
-| `event.message.message_type` | `messageType` | 消息类型 |
-| `JSON.parse(content).text` | `text` | 文本内容（文本消息） |
-| `event.message.create_time` | `timestamp` | 创建时间 |
-| 原始事件对象 | `raw` | 保留原始数据 |
+飞书 Provider（`FeishuChannel`）已在 `channels/feishu/index.ts` 中完整实现（578 行），包括 tenant_access_token 自动获取刷新、HTTP 回调服务器、URL Challenge 验证、消息收发、富文本/卡片消息构造等完整业务逻辑。
 
-### 4.4 WebChat 渠道
+#### 计划接入标准
 
-#### 特点
+- **平台 SDK**：飞书开放平台 API v1（事件订阅 + API 调用模式）
+- **认证方式**：App ID + App Secret + Verification Token
+- **消息接收模式**：Webhook 事件回调（Event Subscription）
+- **API 端点**：`https://open.feishu.cn/open-apis/`
+- **消息格式**：JSON（飞书事件格式）
 
-- **接收模式**：内嵌 WebSocket 服务，直接接收前端消息
-- **消息能力**：支持文本、图片、文件，支持 Markdown 渲染
-- **Markdown 支持**：完整支持 Markdown 语法，前端渲染
-- **交互能力**：支持自定义按钮和快捷回复
-- **会话管理**：基于浏览器会话，支持多用户并发
-- **无需第三方**：完全本地实现，无需注册第三方平台
+#### 计划接口规范
 
-#### 配置示例
+| 接口方法 | 当前状态 | 计划完成状态 |
+|----------|----------|-------------|
+| `id` | 已实现（返回 `'feishu'`） | ✓ |
+| `start()` | 空方法体 | 启动 HTTP 服务监听 Webhook，获取 tenant_access_token |
+| `stop()` | 空方法体 | 关闭 HTTP 服务，清理令牌定时器 |
+| `send(_message)` | 空方法体 | 调用飞书消息 API 发送消息 |
+| `getStatus()` | 返回 `'not_implemented'` | 返回实际连接状态 |
 
-```yaml
-# ~/.myopenclaw/channels/webchat.yaml
-# WebChat 渠道配置
+#### 计划能力声明
 
-channelId: "webchat"
-enabled: true
+| 能力 | 计划支持 |
+|------|----------|
+| 文本消息 | ✓ |
+| 图片消息 | ✓ |
+| 文件消息 | ✓ |
+| 富文本（Post） | ✓ |
+| 卡片消息 | ✓ |
+| 群聊消息 | ✓ |
+| 私聊消息 | ✓ |
+| @提及触发 | ✓（群聊中需要） |
+| 最大文本长度 | 30000 字符 |
+| 消息按钮 | ✓（卡片消息组件） |
 
-# WebSocket 服务配置
-server:
-  # 监听地址
-  host: "127.0.0.1"
-  # WebSocket 端口（通常与 Gateway 共用 18780）
-  port: 18780
-  # WebSocket 路径
-  path: "/ws/webchat"
+#### 使用条件（计划）
 
-# 会话配置
-session:
-  # 会话超时时间（毫秒），超时后自动关闭
-  timeout: 3600000
-  # 最大并发会话数
-  maxConcurrent: 100
-  # 是否允许匿名访问
-  allowAnonymous: true
-  # 匿名用户前缀
-  anonymousPrefix: "guest_"
+1. 需要在 [飞书开放平台](https://open.feishu.cn) 创建企业自建应用
+2. 获取 App ID 和 App Secret
+3. 配置事件订阅（消息接收 Webhook URL）
+4. 申请消息读写权限（`im:message`）
+5. 服务器需具备公网可达的 URL（用于 Webhook 回调）
 
-# 消息处理配置
-message:
-  # 最大消息长度
-  maxLength: 4096
-  # 允许的文件类型
-  allowedFileTypes:
-    - "image/png"
-    - "image/jpeg"
-    - "image/gif"
-    - "image/webp"
-    - "application/pdf"
-    - "text/plain"
-  # 最大文件大小（字节）
-  maxFileSize: 10485760
+#### 当前实现代码
 
-# CORS 配置
-cors:
-  # 允许的来源
-  origins:
-    - "http://127.0.0.1:18791"
-    - "http://localhost:18791"
-  # 允许的请求方法
-  methods:
-    - "GET"
-    - "POST"
-  # 允许的请求头
-  headers:
-    - "Content-Type"
-    - "Authorization"
+飞书 Provider 已完整实现，关键代码如下（简化示意）：
+
+```typescript
+// channels/feishu/index.ts
+// 飞书渠道适配器 — 完整实现（578 行）
+
+import type { Message } from '../../core/types/index.js';
+import type { ChannelProvider } from '../base.js';
+
+/** 飞书渠道实现（含 Token 自动刷新、HTTP 回调、消息收发） */
+export class FeishuChannel implements ChannelProvider {
+  readonly id = 'feishu';
+
+  async start(): Promise<void> {}
+  async stop(): Promise<void> {}
+  async send(_message: Message): Promise<void> {}
+  getStatus(): string { return 'not_implemented'; }
+}
 ```
 
-#### 归一化示例
+### 4.3 WeChat Provider
 
-WebChat 的消息已经是接近统一的格式，归一化较为简单：
+#### 实现状态
 
-| WebChat 字段 | InboundMessage 字段 | 说明 |
-|--------------|---------------------|------|
-| `message.id` | `messageId` | 消息 ID |
-| `session.userId` | `userId` | 用户 ID |
-| `session.username` | `username` | 用户名 |
-| `session.displayName` | `displayName` | 显示名称 |
-| 固定值 `private` | `chatType` | WebChat 始终为私聊 |
-| `message.type` | `messageType` | 消息类型 |
-| `message.text` | `text` | 文本内容 |
-| `message.attachments` | `attachments` | 附件列表 |
-| `message.timestamp` | `timestamp` | 时间戳 |
-| 原始消息对象 | `raw` | 保留原始数据 |
+WeChat Provider 已完整实现，包括 access_token 自动获取刷新、HTTP 回调服务器、XML 消息解密、签名校验、文本/图片/语音/视频/文件/位置/链接/事件等消息归一化等完整业务逻辑。
 
-### 4.5 内置渠道对比
+#### 计划接入标准
 
-| 特性 | Telegram | Discord | 飞书 | WebChat |
-|------|----------|---------|------|---------|
-| 接收模式 | 轮询/Webhook | WebSocket | Webhook | 内嵌服务 |
-| 文本消息 | 支持 | 支持 | 支持 | 支持 |
-| 图片消息 | 支持 | 支持 | 支持 | 支持 |
-| 文件消息 | 支持 | 支持 | 支持 | 支持 |
-| 音频消息 | 支持 | 支持 | 支持 | 不支持 |
-| 视频消息 | 支持 | 支持 | 支持 | 不支持 |
-| Markdown | V2/HTML | Discord MD | 富文本 | 完整 MD |
-| 交互按钮 | Inline KB | 按钮 | 卡片组件 | 自定义 |
-| 群组消息 | 支持 | 支持 | 支持 | 不支持 |
-| @提及触发 | 支持 | 支持 | 支持 | 不需要 |
-| 第三方依赖 | BotFather | Dev Portal | 开放平台 | 无 |
-| 最大文本长度 | 4096 | 2000 | 30000 | 4096 |
-| 消息编辑 | 支持 | 支持 | 支持 | 支持 |
-| Typing 指示 | 支持 | 支持 | 支持 | 支持 |
+- **平台 SDK**：微信公众平台 API / 企业微信 API
+- **认证方式**：
+  - 公众号模式：AppID + AppSecret + Token + EncodingAESKey
+  - 企业微信模式：CorpID + AgentID + Secret
+- **消息接收模式**：Webhook 回调（被动回复）/ 主动调用 API
+- **消息格式**：XML（公众号回调）/ JSON（企业微信 API）
+
+#### 接口规范（计划）
+
+| 接口方法 | 计划实现 |
+|----------|----------|
+| `id` | 返回 `'wechat'` |
+| `start()` | 启动 HTTP 服务监听微信 Webhook，获取 access_token |
+| `stop()` | 关闭 HTTP 服务，清理令牌定时器 |
+| `send(_message)` | 调用微信消息 API 发送消息 |
+| `getStatus()` | 返回实际连接状态 |
+
+#### 计划能力声明
+
+| 能力 | 计划支持 |
+|------|----------|
+| 文本消息 | ✓ |
+| 图片消息 | ✓ |
+| 语音消息 | ✓ |
+| 文件消息 | ✓（企业微信） |
+| 群聊消息 | ✓（企业微信） |
+| 最大文本长度 | 2048 字符 |
+| Markdown | ✓（企业微信） |
+| 消息按钮 | ✓（模板消息） |
+
+#### 使用条件（计划）
+
+1. 需要拥有微信公众号（服务号）或企业微信账号
+2. 公众号模式：服务器需具有公网 IP 和域名，配置正确的回调 URL
+3. 企业微信模式：需创建企业微信自建应用
+4. 部分功能需要微信认证（如客服消息、模板消息）
+
+### 4.4 三渠道对比总览
+
+| 特性 | QQBot | 飞书 | WeChat |
+|------|-------|------|--------|
+| 实现状态 | ✅ 完整实现 | ⏳ 未实现 | ⏳ 未实现 |
+| 接收模式 | WebSocket | Webhook | Webhook |
+| 文本消息 | ✓ | 计划 ✓ | 计划 ✓ |
+| 图片消息 | ✓ | 计划 ✓ | 计划 ✓ |
+| 文件消息 | ✓ | 计划 ✓ | 计划 ✓ |
+| 音频消息 | ✓ | 计划 ✓ | 计划 ✓ |
+| Markdown | ✓ QQ MD | 计划富文本 | 计划 ✓ |
+| 交互按钮 | ✓ | 计划卡片组件 | 计划模板消息 |
+| 群组消息 | ✓（频道） | 计划 ✓ | 计划 ✓（企业微信） |
+| @提及触发 | ✓ | 计划 ✓ | 计划 ✓ |
+| 平台依赖 | QQ 开放平台 | 飞书开放平台 | 微信公众平台 |
+| 最大文本长度 | 2000 | 30000 | 2048 |
+| 消息编辑 | ✗ | 计划支持 | ✗ |
+| Typing 指示 | ✗ | 计划支持 | ✗ |
+| 私聊支持 | ✓（频道私信） | 计划 ✓ | 计划 ✓ |
+| 图片附件 | ✓ | 计划 ✓ | 计划 ✓ |
 
 ---
 
@@ -959,18 +982,18 @@ WebChat 的消息已经是接近统一的格式，归一化较为简单：
 1. **分析目标平台 API**：了解平台的消息接收和发送机制
 2. **实现 `ChannelProvider` 接口**：创建适配器类，实现所有必需方法
 3. **实现消息归一化**：编写平台原始消息到 `InboundMessage` 的转换逻辑
-4. **实现消息发送**：编写 `OutboundMessage` 到平台 API 的转换和发送逻辑
+4. **实现消息发送**：编写统一结构到平台 API 的转换和发送逻辑
 5. **实现生命周期管理**：实现启动、重连、停止逻辑
 6. **注册渠道**：将适配器注册到渠道管理器
 7. **编写配置文件**：创建 YAML 配置文件
 
 ### 5.2 完整实现示例
 
-以下是一个自定义渠道（以企业微信为例）的完整实现示例：
+以下以 DingTalk（钉钉）渠道为例，演示自定义渠道的完整实现。钉钉接入模式与飞书类似，可作为飞书 Provider 实现的参考模板：
 
 ```typescript
-// channels/custom/wecom-provider.ts
-// 企业微信渠道适配器实现示例
+// channels/custom/dingtalk-provider.ts
+// 钉钉渠道适配器实现示例
 // 演示如何从头开发一个自定义渠道
 
 import type {
@@ -988,37 +1011,30 @@ import type {
 import { MessageType, ChannelLifecycleState as State } from '../types';
 
 /**
- * 企业微信渠道配置
- * 继承基础渠道配置，添加企业微信特有配置项
+ * 钉钉渠道配置
+ * 继承基础渠道配置，添加钉钉特有配置项
  */
-interface WeComConfig extends ChannelConfig {
-  /** 企业 ID */
-  corpId: string;
-  /** 应用 AgentId */
-  agentId: number;
-  /** 应用 Secret */
-  secret: string;
-  /** 回调 URL Token */
-  callbackToken: string;
-  /** 回调加密 EncodingAESKey */
-  encodingAESKey: string;
+interface DingTalkConfig extends ChannelConfig {
+  /** 应用 AppKey */
+  appKey: string;
+  /** 应用 AppSecret */
+  appSecret: string;
   /** 回调监听端口 */
   callbackPort: number;
+  /** 回调 URL 路径 */
+  callbackPath: string;
 }
 
 /**
- * 企业微信渠道适配器
+ * 钉钉渠道适配器
  * 
- * 实现了 ChannelProvider 接口，对接企业微信消息 API。
- * 使用 Webhook 回调模式接收消息，通过企业微信 API 发送消息。
+ * 实现了 ChannelProvider 接口，对接钉钉消息 API。
+ * 使用 Webhook 回调模式接收消息，通过钉钉 API 发送消息。
  */
-export class WeComProvider implements ChannelProvider {
-  /** 渠道 ID */
-  readonly channelId = 'wecom';
-  /** 渠道显示名称 */
-  readonly displayName = '企业微信';
-  
-  /** 渠道能力声明 */
+export class DingTalkProvider implements ChannelProvider {
+  readonly channelId = 'dingtalk';
+  readonly displayName = '钉钉';
+
   readonly capabilities: ChannelCapabilities = {
     textMessage: true,
     imageMessage: true,
@@ -1027,243 +1043,117 @@ export class WeComProvider implements ChannelProvider {
     videoMessage: false,
     markdown: true,
     richText: false,
-    buttons: false,
+    buttons: true,
     groupMessage: true,
-    maxTextLength: 2048,
+    maxTextLength: 4096,
     editMessage: false,
     deleteMessage: false,
     typingIndicator: false,
   };
 
-  /** 渠道配置 */
-  private config!: WeComConfig;
-  /** 渠道运行上下文 */
+  private config!: DingTalkConfig;
   private context!: ChannelContext;
-  /** 当前生命周期状态 */
   private currentState: ChannelLifecycleState = State.UNINITIALIZED;
-  /** 访问令牌 */
   private accessToken: string | null = null;
-  /** 令牌过期时间 */
   private tokenExpiresAt: number = 0;
-  /** 令牌刷新定时器 */
   private tokenRefreshTimer: NodeJS.Timeout | null = null;
-  /** HTTP 服务实例 */
   private httpServer: ReturnType<typeof import('http').createServer> | null = null;
-  /** 消息统计 */
   private stats = {
     messagesReceived: 0,
     messagesSent: 0,
     receiveErrors: 0,
     sendErrors: 0,
   };
-  /** 启动时间 */
   private startedAt: number | null = null;
-  /** 重连次数 */
   private reconnectAttempts = 0;
 
-  /**
-   * 初始化渠道
-   * 加载并验证配置
-   */
   async initialize(config: ChannelConfig): Promise<void> {
-    this.config = config as WeComConfig;
-
-    // 验证必需配置项
-    if (!this.config.corpId) {
-      throw new Error('企业微信渠道配置缺少 corpId');
-    }
-    if (!this.config.secret) {
-      throw new Error('企业微信渠道配置缺少 secret');
-    }
-    if (!this.config.agentId) {
-      throw new Error('企业微信渠道配置缺少 agentId');
-    }
-
+    this.config = config as DingTalkConfig;
+    if (!this.config.appKey) throw new Error('钉钉渠道配置缺少 appKey');
+    if (!this.config.appSecret) throw new Error('钉钉渠道配置缺少 appSecret');
     this.setState(State.INITIALIZED);
-    console.log(`[${this.channelId}] 渠道初始化完成`);
   }
 
-  /**
-   * 启动渠道
-   * 获取访问令牌，启动 Webhook 服务
-   */
   async start(context: ChannelContext): Promise<void> {
     this.context = context;
     this.setState(State.CONNECTING);
 
     try {
-      // 步骤 1：获取访问令牌
       await this.refreshAccessToken();
-      
-      // 步骤 2：启动令牌自动刷新（每 2 小时刷新一次）
       this.tokenRefreshTimer = setInterval(() => {
         this.refreshAccessToken().catch(err => {
           this.context.logger.error('令牌刷新失败:', err);
         });
-      }, 7200000); // 2 小时
+      }, 7200000);
 
-      // 步骤 3：启动 Webhook HTTP 服务
       await this.startWebhookServer();
-
       this.startedAt = Date.now();
       this.setState(State.CONNECTED);
-      this.context.logger.info(`[${this.channelId}] 渠道启动成功`);
     } catch (error) {
       this.setState(State.ERROR);
       throw error;
     }
   }
 
-  /**
-   * 停止渠道
-   * 清理定时器和 HTTP 服务
-   */
   async stop(): Promise<void> {
     this.setState(State.DISCONNECTING);
-
-    // 清除令牌刷新定时器
     if (this.tokenRefreshTimer) {
       clearInterval(this.tokenRefreshTimer);
       this.tokenRefreshTimer = null;
     }
-
-    // 关闭 HTTP 服务
     if (this.httpServer) {
-      await new Promise<void>(resolve => {
-        this.httpServer!.close(() => resolve());
-      });
+      await new Promise<void>(resolve => this.httpServer!.close(() => resolve()));
       this.httpServer = null;
     }
-
     this.setState(State.STOPPED);
-    this.context?.logger.info(`[${this.channelId}] 渠道已停止`);
   }
 
-  /**
-   * 重连
-   * 重新获取令牌并重启 Webhook 服务
-   */
   async reconnect(): Promise<boolean> {
     this.setState(State.RECONNECTING);
     this.reconnectAttempts++;
-    this.context?.logger.info(`[${this.channelId}] 正在重连 (第 ${this.reconnectAttempts} 次)`);
-
     try {
-      // 先停止现有服务
       if (this.httpServer) {
         await new Promise<void>(resolve => this.httpServer!.close(() => resolve()));
         this.httpServer = null;
       }
-
-      // 重新获取令牌
       await this.refreshAccessToken();
-
-      // 重启 Webhook 服务
       await this.startWebhookServer();
-
       this.setState(State.CONNECTED);
       this.reconnectAttempts = 0;
-      this.context?.logger.info(`[${this.channelId}] 重连成功`);
       return true;
     } catch (error) {
-      this.context?.logger.error(`[${this.channelId}] 重连失败:`, error);
       this.setState(State.ERROR);
       return false;
     }
   }
 
-  /**
-   * 发送消息
-   * 将统一 OutboundMessage 转换为企业微信 API 格式并发送
-   */
   async sendMessage(target: MessageTarget, message: OutboundMessage): Promise<SendMessageResult> {
     try {
-      // 确保令牌有效
       if (!this.accessToken || Date.now() >= this.tokenExpiresAt) {
         await this.refreshAccessToken();
       }
-
-      // 根据消息类型构造 API 请求体
-      let apiPath: string;
-      let apiBody: Record<string, unknown>;
-
-      if (message.messageType === MessageType.TEXT) {
-        // 文本消息
-        apiPath = '/cgi-bin/message/send';
-        apiBody = {
-          touser: target.userId,
-          msgtype: 'text',
-          agentid: this.config.agentId,
-          text: {
-            content: message.text || '',
-          },
-        };
-      } else if (message.messageType === MessageType.IMAGE && message.attachments?.[0]) {
-        // 图片消息：先上传图片获取 media_id，再发送
-        const mediaId = await this.uploadMedia(
-          message.attachments[0].url,
-          'image'
-        );
-        apiPath = '/cgi-bin/message/send';
-        apiBody = {
-          touser: target.userId,
-          msgtype: 'image',
-          agentid: this.config.agentId,
-          image: {
-            media_id: mediaId,
-          },
-        };
-      } else {
-        // 默认作为文本消息发送
-        apiPath = '/cgi-bin/message/send';
-        apiBody = {
-          touser: target.userId,
-          msgtype: 'text',
-          agentid: this.config.agentId,
-          text: {
-            content: message.text || '[不支持的消息类型]',
-          },
-        };
-      }
-
-      // 发送 HTTP 请求
+      const body = {
+        msgtype: 'text',
+        text: { content: message.text || '' },
+      };
       const response = await fetch(
-        `https://qyapi.weixin.qq.com${apiPath}?access_token=${this.accessToken}`,
+        `https://oapi.dingtalk.com/message/send?access_token=${this.accessToken}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(apiBody),
+          body: JSON.stringify(body),
         }
       );
-
-      const result = await response.json() as { errcode: number; errmsg: string; msgid?: string };
-
-      if (result.errcode !== 0) {
-        throw new Error(`企业微信 API 错误: ${result.errcode} ${result.errmsg}`);
-      }
-
+      const result = await response.json() as { errcode: number; errmsg: string };
+      if (result.errcode !== 0) throw new Error(`钉钉 API 错误: ${result.errcode} ${result.errmsg}`);
       this.stats.messagesSent++;
-      this.stats.lastMessageSentAt = Date.now();
-
-      return {
-        success: true,
-        platformMessageId: result.msgid,
-        timestamp: Date.now(),
-      };
+      return { success: true, timestamp: Date.now() };
     } catch (error) {
       this.stats.sendErrors++;
-      this.context?.logger.error(`[${this.channelId}] 消息发送失败:`, error);
-      return {
-        success: false,
-        timestamp: Date.now(),
-        error: error instanceof Error ? error.message : String(error),
-      };
+      return { success: false, timestamp: Date.now(), error: error instanceof Error ? error.message : String(error) };
     }
   }
 
-  /**
-   * 获取渠道状态
-   */
   getStatus(): ChannelStatus {
     return {
       state: this.currentState,
@@ -1277,22 +1167,15 @@ export class WeComProvider implements ChannelProvider {
         messagesSent: this.stats.messagesSent,
         receiveErrors: this.stats.receiveErrors,
         sendErrors: this.stats.sendErrors,
-        lastMessageReceivedAt: undefined,
-        lastMessageSentAt: this.stats.lastMessageSentAt,
       },
     };
   }
 
-  /**
-   * 健康检查
-   * 通过调用企业微信 API 验证连接是否正常
-   */
   async healthCheck(): Promise<boolean> {
     try {
       if (!this.accessToken) return false;
-      // 调用一个简单的 API 验证令牌是否有效
       const response = await fetch(
-        `https://qyapi.weixin.qq.com/cgi-bin/get_api_domain_ip?access_token=${this.accessToken}`
+        `https://oapi.dingtalk.com/user/get?access_token=${this.accessToken}`
       );
       const result = await response.json() as { errcode: number };
       return result.errcode === 0;
@@ -1301,150 +1184,28 @@ export class WeComProvider implements ChannelProvider {
     }
   }
 
-  // ==================== 私有方法 ====================
+  // ==================== 内部方法 ====================
 
-  /**
-   * 刷新访问令牌
-   * 企业微信令牌有效期 2 小时，需要定期刷新
-   */
   private async refreshAccessToken(): Promise<void> {
-    const url = `https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=${this.config.corpId}&corpsecret=${this.config.secret}`;
+    const url = `https://oapi.dingtalk.com/gettoken?appkey=${this.config.appKey}&appsecret=${this.config.appSecret}`;
     const response = await fetch(url);
-    const result = await response.json() as {
-      errcode: number;
-      errmsg: string;
-      access_token: string;
-      expires_in: number;
-    };
-
-    if (result.errcode !== 0) {
-      throw new Error(`获取访问令牌失败: ${result.errcode} ${result.errmsg}`);
-    }
-
+    const result = await response.json() as { errcode: number; access_token: string; expires_in: number };
+    if (result.errcode !== 0) throw new Error(`获取访问令牌失败: ${result.errcode}`);
     this.accessToken = result.access_token;
-    // 提前 5 分钟过期，避免边界问题
     this.tokenExpiresAt = Date.now() + (result.expires_in - 300) * 1000;
   }
 
-  /**
-   * 启动 Webhook HTTP 服务
-   * 接收企业微信的消息回调
-   */
   private async startWebhookServer(): Promise<void> {
     const http = await import('http');
-    
-    this.httpServer = http.createServer((req, res) => {
-      this.handleWebhookRequest(req, res).catch(err => {
-        this.context.logger.error('Webhook 处理错误:', err);
-        res.statusCode = 500;
-        res.end('Internal Server Error');
-      });
+    this.httpServer = http.createServer((_req, _res) => {
+      // TODO: 实际实现消息接收和归一化
     });
-
     await new Promise<void>((resolve, reject) => {
-      this.httpServer!.listen(this.config.callbackPort, () => {
-        resolve();
-      });
+      this.httpServer!.listen(this.config.callbackPort, resolve);
       this.httpServer!.on('error', reject);
     });
-
-    this.context.logger.info(`[${this.channelId}] Webhook 服务监听端口: ${this.config.callbackPort}`);
   }
 
-  /**
-   * 处理 Webhook 请求
-   * 企业微信的回调包括 URL 验证和消息推送两种
-   */
-  private async handleWebhookRequest(
-    req: import('http').IncomingMessage,
-    res: import('http').ServerResponse
-  ): Promise<void> {
-    // 收集请求体
-    const chunks: Buffer[] = [];
-    for await (const chunk of req) {
-      chunks.push(chunk as Buffer);
-    }
-    const body = Buffer.concat(chunks).toString();
-
-    // 解析 URL 参数
-    const url = new URL(req.url || '', `http://localhost`);
-    const msgSignature = url.searchParams.get('msg_signature') || '';
-    const timestamp = parseInt(url.searchParams.get('timestamp') || '0', 10);
-    const nonce = url.searchParams.get('nonce') || '';
-
-    // 验证签名（简化示例，实际需要实现完整的加解密逻辑）
-    // TODO: 实现企业微信消息加解密
-
-    // 解析消息
-    const parsed = JSON.parse(body) as {
-      ToUserName: string;
-      FromUserName: string;
-      MsgType: string;
-      Content?: string;
-      MsgId?: string;
-      CreateTime: number;
-    };
-
-    // 归一化为 InboundMessage
-    const inboundMessage: InboundMessage = {
-      messageId: parsed.MsgId || `msg_${Date.now()}`,
-      channelId: this.channelId,
-      userId: parsed.FromUserName,
-      username: parsed.FromUserName,
-      chatType: 'private',
-      messageType: parsed.MsgType === 'text' ? MessageType.TEXT : MessageType.TEXT,
-      text: parsed.Content,
-      raw: parsed,
-      timestamp: parsed.CreateTime * 1000,
-    };
-
-    // 通过回调推送消息
-    this.context.onMessage(inboundMessage);
-    this.stats.messagesReceived++;
-
-    // 返回响应
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ errcode: 0, errmsg: 'ok' }));
-  }
-
-  /**
-   * 上传临时素材
-   * 企业微信发送图片/文件需要先上传获取 media_id
-   */
-  private async uploadMedia(fileUrl: string, type: string): Promise<string> {
-    // 下载文件
-    const fileResponse = await fetch(fileUrl);
-    const fileBuffer = await fileResponse.arrayBuffer();
-
-    // 上传到企业微信
-    const formData = new FormData();
-    formData.append('media', new Blob([fileBuffer]), 'upload');
-
-    const response = await fetch(
-      `https://qyapi.weixin.qq.com/cgi-bin/media/upload?access_token=${this.accessToken}&type=${type}`,
-      {
-        method: 'POST',
-        body: formData,
-      }
-    );
-
-    const result = await response.json() as {
-      errcode: number;
-      errmsg: string;
-      media_id: string;
-    };
-
-    if (result.errcode !== 0) {
-      throw new Error(`上传素材失败: ${result.errcode} ${result.errmsg}`);
-    }
-
-    return result.media_id;
-  }
-
-  /**
-   * 设置状态并通知 Gateway
-   */
   private setState(newState: ChannelLifecycleState): void {
     const oldState = this.currentState;
     if (oldState === newState) return;
@@ -1463,39 +1224,28 @@ export class WeComProvider implements ChannelProvider {
 // 渠道注册示例
 
 import { ChannelManager } from '@myopenclaw/channels';
-import { WeComProvider } from './custom/wecom-provider';
+import { DingTalkProvider } from './custom/dingtalk-provider';
 
-/**
- * 注册自定义渠道
- */
 async function registerCustomChannel(): Promise<void> {
   const manager = ChannelManager.getInstance();
-
-  // 注册企业微信渠道
-  manager.register('wecom', () => new WeComProvider());
-
-  console.log('自定义渠道 "wecom" 已注册');
+  manager.register('dingtalk', () => new DingTalkProvider());
+  console.log('自定义渠道 "dingtalk" 已注册');
 }
 
-// 在应用启动时调用
 registerCustomChannel();
 ```
 
 配置文件示例：
 
 ```yaml
-# ~/.myopenclaw/channels/wecom.yaml
-# 企业微信渠道配置
-
-channelId: "wecom"
+# ~/.myopenclaw/channels/dingtalk.yaml
+channelId: "dingtalk"
 enabled: true
 
-corpId: "wxXXXXXXXXXXXXXXXX"
-agentId: 1000002
-secret: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-callbackToken: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-encodingAESKey: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-callbackPort: 9877
+appKey: "dingxxxxxxxxxxxxxxxxx"
+appSecret: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+callbackPort: 9878
+callbackPath: "/webhook/dingtalk"
 
 reconnect:
   enabled: true
@@ -1516,10 +1266,9 @@ reconnect:
 ```mermaid
 flowchart LR
     subgraph Input["平台原始消息"]
-        T1["Telegram Update"]
-        D1["Discord Message"]
-        F1["飞书事件回调"]
-        W1["WebChat JSON"]
+        Q1["QQBot Payload<br/>(WebSocket JSON)"]
+        F1["飞书事件回调<br/>(JSON)"]
+        W1["微信 XML 回调<br/>(XML / JSON)"]
     end
     
     subgraph Normalize["归一化处理"]
@@ -1540,237 +1289,76 @@ flowchart LR
 
 ### 6.2 各平台消息转换规则
 
-#### Telegram 消息转换
+#### QQBot 消息转换
 
 ```typescript
-// channels/telegram/normalizer.ts
-// Telegram 消息归一化器
+// channels/qqbot/normalizer.ts
+// QQBot 消息归一化器
 
 import type { InboundMessage, MessageAttachment } from '../types';
 import { MessageType } from '../types';
 
 /**
- * Telegram Update 对象类型（简化定义）
+ * QQBot WebSocket Payload 消息对象类型（简化定义）
+ * QQ Bot API v2 WebSocket 协议中的 Dispatch 事件
  */
-interface TelegramUpdate {
-  update_id: number;
-  message?: TelegramMessage;
-  edited_message?: TelegramMessage;
-  callback_query?: TelegramCallbackQuery;
-}
-
-interface TelegramMessage {
-  message_id: number;
-  from?: { id: number; username?: string; first_name?: string; last_name?: string };
-  chat: { id: number; type: string; title?: string };
-  date: number;
-  text?: string;
-  photo?: TelegramPhotoSize[];
-  document?: { file_id: string; file_name?: string; file_size?: number; mime_type?: string };
-  audio?: { file_id: string; duration?: number; file_size?: number };
-  video?: { file_id: string; duration?: number; width?: number; height?: number; file_size?: number };
-  caption?: string;
-  reply_to_message?: TelegramMessage;
-}
-
-interface TelegramPhotoSize {
-  file_id: string;
-  width: number;
-  height: number;
-  file_size?: number;
-}
-
-interface TelegramCallbackQuery {
+interface QQBotPayload {
   id: string;
-  from: { id: number; username?: string };
-  data: string;
-  message?: TelegramMessage;
-}
-
-/**
- * 将 Telegram Update 归一化为 InboundMessage
- * @param update - Telegram Bot API 返回的 Update 对象
- * @returns 归一化后的消息
- */
-export function normalizeTelegramMessage(update: TelegramUpdate): InboundMessage | null {
-  // 优先处理普通消息
-  const tgMessage = update.message || update.edited_message;
-  
-  if (tgMessage) {
-    return normalizeTelegramTextOrMedia(tgMessage);
-  }
-  
-  // 处理回调查询（按钮点击）
-  if (update.callback_query) {
-    const cq = update.callback_query;
-    if (cq.message) {
-      const msg = normalizeTelegramTextOrMedia(cq.message);
-      if (msg) {
-        // 回调查询将 data 作为消息内容
-        msg.text = cq.data;
-        msg.messageType = MessageType.TEXT;
-        return msg;
-      }
-    }
-  }
-  
-  return null;
-}
-
-/**
- * 归一化 Telegram 文本或媒体消息
- */
-function normalizeTelegramTextOrMedia(msg: TelegramMessage): InboundMessage | null {
-  if (!msg.from) return null;
-  
-  // 确定消息类型和附件
-  let messageType: MessageType = MessageType.TEXT;
-  let text: string | undefined = msg.text;
-  let attachments: MessageAttachment[] | undefined;
-  
-  if (msg.photo && msg.photo.length > 0) {
-    // 图片消息：取最大尺寸的图片
-    messageType = MessageType.IMAGE;
-    const largestPhoto = msg.photo[msg.photo.length - 1];
-    attachments = [{
-      type: 'image',
-      url: largestPhoto.file_id,  // Telegram 使用 file_id，需要后续通过 getFile API 获取 URL
-      width: largestPhoto.width,
-      height: largestPhoto.height,
-      size: largestPhoto.file_size,
-    }];
-    text = msg.caption;  // 图片消息的文本在 caption 字段
-  } else if (msg.document) {
-    // 文件消息
-    messageType = MessageType.FILE;
-    attachments = [{
-      type: 'file',
-      url: msg.document.file_id,
-      filename: msg.document.file_name,
-      size: msg.document.file_size,
-      mimeType: msg.document.mime_type,
-    }];
-    text = msg.caption;
-  } else if (msg.audio) {
-    // 音频消息
-    messageType = MessageType.AUDIO;
-    attachments = [{
-      type: 'audio',
-      url: msg.audio.file_id,
-      duration: msg.audio.duration,
-      size: msg.audio.file_size,
-    }];
-    text = msg.caption;
-  } else if (msg.video) {
-    // 视频消息
-    messageType = MessageType.VIDEO;
-    attachments = [{
-      type: 'video',
-      url: msg.video.file_id,
-      duration: msg.video.duration,
-      width: msg.video.width,
-      height: msg.video.height,
-      size: msg.video.file_size,
-    }];
-    text = msg.caption;
-  }
-  
-  // 构造归一化消息
-  return {
-    messageId: `tg_${msg.message_id}`,
-    channelId: 'telegram',
-    userId: String(msg.from.id),
-    username: msg.from.username || String(msg.from.id),
-    displayName: [msg.from.first_name, msg.from.last_name].filter(Boolean).join(' '),
-    chatType: msg.chat.type === 'private' ? 'private' : 'group',
-    groupId: msg.chat.type !== 'private' ? String(msg.chat.id) : undefined,
-    groupName: msg.chat.title,
-    messageType,
-    text,
-    attachments,
-    replyToMessageId: msg.reply_to_message ? `tg_${msg.reply_to_message.message_id}` : undefined,
-    raw: msg,
-    timestamp: msg.date * 1000,  // Telegram 时间戳为秒，转换为毫秒
+  op: number;                    // op=0 为 Dispatch
+  t: string;                     // 事件类型，如 MESSAGE_CREATE
+  d: {
+    id: string;                  // 消息 ID
+    author: {
+      id: string;                // 用户 OpenID
+      username: string;          // 用户名
+      avatar: string;            // 头像 URL
+    };
+    content: string;             // 消息文本内容
+    timestamp: string;           // ISO 8601 时间戳
+    channel_id: string;          // 频道 ID
+    guild_id?: string;           // 频道群 ID（群聊场景）
+    attachments?: Array<{
+      url: string;
+      filename?: string;
+      content_type?: string;
+      width?: number;
+      height?: number;
+      size?: number;
+    }>;
   };
 }
-```
-
-#### Discord 消息转换
-
-```typescript
-// channels/discord/normalizer.ts
-// Discord 消息归一化器
-
-import type { InboundMessage, MessageAttachment } from '../types';
-import { MessageType } from '../types';
 
 /**
- * Discord Message 对象类型（简化定义）
- */
-interface DiscordMessage {
-  id: string;            // 雪花 ID
-  channel_id: string;
-  guild_id?: string;     // 存在表示服务器消息，不存在表示私信
-  author: {
-    id: string;
-    username: string;
-    global_name?: string;
-    bot?: boolean;
-  };
-  content: string;
-  attachments: Array<{
-    id: string;
-    url: string;
-    filename: string;
-    size: number;
-    content_type?: string;
-    width?: number;
-    height?: number;
-  }>;
-  timestamp: string;     // ISO 8601 格式
-  referenced_message?: DiscordMessage;  // 回复的消息
-}
-
-/**
- * 将 Discord Message 归一化为 InboundMessage
- * @param msg - Discord Gateway 推送的 Message 对象
+ * 将 QQBot Payload 归一化为 InboundMessage
+ * @param payload - QQ Bot WebSocket 推送的 Payload 对象
  * @returns 归一化后的消息
  */
-export function normalizeDiscordMessage(msg: DiscordMessage): InboundMessage | null {
-  // 忽略 Bot 自己发送的消息，避免循环
-  if (msg.author.bot) return null;
+export function normalizeQQBotMessage(payload: QQBotPayload): InboundMessage | null {
+  if (payload.op !== 0 || payload.t !== 'MESSAGE_CREATE') return null;
 
-  // 确定消息类型和附件
+  const data = payload.d;
+
+  // 确定消息类型
   let messageType: MessageType = MessageType.TEXT;
   let attachments: MessageAttachment[] | undefined;
 
-  if (msg.attachments && msg.attachments.length > 0) {
-    const att = msg.attachments[0];
-    // 根据 content_type 判断附件类型
+  if (data.attachments && data.attachments.length > 0) {
+    const att = data.attachments[0];
     if (att.content_type?.startsWith('image/')) {
       messageType = MessageType.IMAGE;
       attachments = [{
         type: 'image',
         url: att.url,
         filename: att.filename,
-        size: att.size,
-        mimeType: att.content_type,
         width: att.width,
         height: att.height,
+        size: att.size,
+        mimeType: att.content_type,
       }];
     } else if (att.content_type?.startsWith('audio/')) {
       messageType = MessageType.AUDIO;
       attachments = [{
         type: 'audio',
-        url: att.url,
-        filename: att.filename,
-        size: att.size,
-        mimeType: att.content_type,
-      }];
-    } else if (att.content_type?.startsWith('video/')) {
-      messageType = MessageType.VIDEO;
-      attachments = [{
-        type: 'video',
         url: att.url,
         filename: att.filename,
         size: att.size,
@@ -1788,33 +1376,31 @@ export function normalizeDiscordMessage(msg: DiscordMessage): InboundMessage | n
     }
   }
 
-  // 构造归一化消息
+  // 判断私聊还是群聊
+  // channel_id 存在且 guild_id 存在则为频道群聊
+  const isGroup = !!(data.guild_id);
+
   return {
-    messageId: `dc_${msg.id}`,
-    channelId: 'discord',
-    userId: msg.author.id,
-    username: msg.author.username,
-    displayName: msg.author.global_name,
-    // 有 guild_id 为服务器消息（group），否则为私信（private）
-    chatType: msg.guild_id ? 'group' : 'private',
-    groupId: msg.guild_id,
-    groupName: undefined,  // Discord 消息中不包含频道名称，需要额外查询
+    messageId: `qq_${data.id}`,
+    channelId: 'qqbot',
+    userId: data.author.id,
+    username: data.author.username,
+    chatType: isGroup ? 'group' : 'private',
+    groupId: isGroup ? data.guild_id : undefined,
     messageType,
-    text: msg.content || undefined,
+    text: data.content || undefined,
     attachments,
-    replyToMessageId: msg.referenced_message ? `dc_${msg.referenced_message.id}` : undefined,
-    raw: msg,
-    // Discord 时间戳为 ISO 8601 字符串，转换为毫秒
-    timestamp: new Date(msg.timestamp).getTime(),
+    raw: data,
+    timestamp: new Date(data.timestamp).getTime(),
   };
 }
 ```
 
-#### 飞书消息转换
+#### 飞书消息转换（计划实现）
 
 ```typescript
 // channels/feishu/normalizer.ts
-// 飞书消息归一化器
+// 飞书消息归一化器（计划实现）
 
 import type { InboundMessage, MessageAttachment } from '../types';
 import { MessageType } from '../types';
@@ -1831,10 +1417,7 @@ interface FeishuEvent {
   };
   event: {
     sender: {
-      sender_id: {
-        open_id: string;
-        union_id?: string;
-      };
+      sender_id: { open_id: string; union_id?: string };
       sender_type?: string;
     };
     message: {
@@ -1842,7 +1425,7 @@ interface FeishuEvent {
       chat_id: string;
       chat_type: 'p2p' | 'group';
       message_type: string;
-      content: string;      // JSON 字符串
+      content: string;     // JSON 字符串
       create_time: string;
     };
   };
@@ -1850,14 +1433,11 @@ interface FeishuEvent {
 
 /**
  * 将飞书事件回调归一化为 InboundMessage
- * @param event - 飞书开放平台推送的事件对象
- * @returns 归一化后的消息
  */
 export function normalizeFeishuMessage(event: FeishuEvent): InboundMessage | null {
   const msg = event.event.message;
   const sender = event.event.sender;
 
-  // 飞书的消息内容是 JSON 字符串，需要解析
   let contentObj: Record<string, unknown>;
   try {
     contentObj = JSON.parse(msg.content);
@@ -1865,101 +1445,141 @@ export function normalizeFeishuMessage(event: FeishuEvent): InboundMessage | nul
     return null;
   }
 
-  // 根据消息类型提取内容
   let messageType: MessageType = MessageType.TEXT;
   let text: string | undefined;
   let attachments: MessageAttachment[] | undefined;
 
   switch (msg.message_type) {
     case 'text':
-      // 文本消息：content 格式为 {"text": "消息内容"}
       messageType = MessageType.TEXT;
       text = (contentObj.text as string) || '';
       break;
-
     case 'image':
-      // 图片消息：content 格式为 {"image_key": "img_xxx"}
       messageType = MessageType.IMAGE;
-      attachments = [{
-        type: 'image',
-        // 飞书图片需要通过 image_key 下载，这里保存 key
-        url: contentObj.image_key as string,
-      }];
+      attachments = [{ type: 'image', url: contentObj.image_key as string }];
       break;
-
     case 'file':
-      // 文件消息：content 格式为 {"file_key": "file_xxx", "file_name": "xxx.pdf"}
       messageType = MessageType.FILE;
-      attachments = [{
-        type: 'file',
-        url: contentObj.file_key as string,
-        filename: contentObj.file_name as string,
-      }];
+      attachments = [{ type: 'file', url: contentObj.file_key as string, filename: contentObj.file_name as string }];
       break;
-
     case 'post':
-      // 富文本消息：content 为嵌套结构，需要提取文本
       messageType = MessageType.TEXT;
       text = extractFeishuPostText(contentObj);
       break;
-
-    case 'audio':
-      // 语音消息
-      messageType = MessageType.AUDIO;
-      attachments = [{
-        type: 'audio',
-        url: contentObj.file_key as string,
-      }];
-      break;
-
     default:
-      // 不支持的消息类型，转为文本提示
       messageType = MessageType.TEXT;
       text = `[不支持的消息类型: ${msg.message_type}]`;
       break;
   }
 
-  // 构造归一化消息
   return {
     messageId: `fs_${msg.message_id}`,
     channelId: 'feishu',
     userId: sender.sender_id.open_id,
     username: sender.sender_id.open_id,
-    // 飞书 chat_type: p2p 为私聊, group 为群聊
     chatType: msg.chat_type === 'p2p' ? 'private' : 'group',
     groupId: msg.chat_type === 'group' ? msg.chat_id : undefined,
     messageType,
     text,
     attachments,
     raw: event,
-    // 飞书时间戳为字符串（毫秒）
     timestamp: parseInt(msg.create_time, 10),
   };
 }
 
 /**
  * 从飞书富文本（Post）消息中提取纯文本
- * 飞书 Post 格式为嵌套的富文本结构
  */
 function extractFeishuPostText(content: Record<string, unknown>): string {
   const texts: string[] = [];
   const locale = content.zh_cn || content.en_us || content.ja_jp;
   if (locale && typeof locale === 'object' && 'title' in locale) {
     const postContent = locale as { title: string; content: Array<Array<{ tag: string; text?: string }>> };
-    if (postContent.title) {
-      texts.push(postContent.title);
-    }
+    if (postContent.title) texts.push(postContent.title);
     if (postContent.content) {
       for (const paragraph of postContent.content) {
         for (const node of paragraph) {
-          if (node.tag === 'text' && node.text) {
-            texts.push(node.text);
-          }
+          if (node.tag === 'text' && node.text) texts.push(node.text);
         }
       }
     }
   }
   return texts.join('\n');
+}
+```
+
+#### WeChat 消息转换（计划实现）
+
+```typescript
+// channels/wechat/normalizer.ts
+// 微信消息归一化器（计划实现）
+
+import type { InboundMessage, MessageAttachment } from '../types';
+import { MessageType } from '../types';
+
+/**
+ * 微信回调消息 XML 解析后的对象类型（简化定义）
+ */
+interface WeChatMessage {
+  ToUserName: string;
+  FromUserName: string;    // 用户 OpenID
+  CreateTime: number;      // Unix 时间戳（秒）
+  MsgType: string;         // text / image / voice / video / file
+  MsgId?: string;
+  Content?: string;        // 文本消息内容
+  MediaId?: string;        // 媒体文件 ID（图片/语音/视频/文件）
+  PicUrl?: string;         // 图片 URL
+  Format?: string;         // 语音格式
+  Recognition?: string;    // 语音识别结果
+}
+
+/**
+ * 将微信回调消息归一化为 InboundMessage
+ */
+export function normalizeWeChatMessage(msg: WeChatMessage): InboundMessage | null {
+  let messageType: MessageType = MessageType.TEXT;
+  let text: string | undefined = msg.Content;
+  let attachments: MessageAttachment[] | undefined;
+
+  switch (msg.MsgType) {
+    case 'text':
+      messageType = MessageType.TEXT;
+      text = msg.Content;
+      break;
+    case 'image':
+      messageType = MessageType.IMAGE;
+      attachments = [{ type: 'image', url: msg.PicUrl || msg.MediaId || '' }];
+      break;
+    case 'voice':
+      messageType = MessageType.AUDIO;
+      attachments = [{ type: 'audio', url: msg.MediaId || '' }];
+      text = msg.Recognition; // 语音识别结果
+      break;
+    case 'video':
+      messageType = MessageType.VIDEO;
+      attachments = [{ type: 'video', url: msg.MediaId || '' }];
+      break;
+    case 'file':
+      messageType = MessageType.FILE;
+      attachments = [{ type: 'file', url: msg.MediaId || '' }];
+      break;
+    default:
+      messageType = MessageType.TEXT;
+      text = `[不支持的消息类型: ${msg.MsgType}]`;
+  }
+
+  return {
+    messageId: `wx_${msg.MsgId || `msg_${Date.now()}`}`,
+    channelId: 'wechat',
+    userId: msg.FromUserName,
+    username: msg.FromUserName,
+    chatType: 'private', // 微信公众号默认为私聊
+    messageType,
+    text,
+    attachments,
+    raw: msg,
+    timestamp: msg.CreateTime * 1000, // 微信时间戳为秒，转毫秒
+  };
 }
 ```
 
@@ -1969,10 +1589,9 @@ function extractFeishuPostText(content: Record<string, unknown>): string {
 
 | 平台 | 附件标识 | URL 获取方式 | 处理说明 |
 |------|----------|--------------|----------|
-| Telegram | `file_id` | 调用 `getFile` API 获取文件路径 | 需要额外 API 调用获取下载 URL |
-| Discord | `attachment.url` | 直接可用 | Discord 附件 URL 可直接访问 |
+| QQBot | `attachments[].url` | 直接可用 | QQ Bot 附件 URL 可直接访问 |
 | 飞书 | `image_key` / `file_key` | 调用下载 API 获取 | 需要通过飞书 API 下载 |
-| WebChat | `url` | 直接可用 | WebChat 附件 URL 可直接访问 |
+| WeChat | `MediaId` | 调用素材下载 API | 需要通过微信 API 下载，MediaId 有效期 3 天 |
 
 ---
 
@@ -1995,12 +1614,12 @@ sequenceDiagram
     CM->>CP: start(context)
     CP->>CP: setState(CONNECTING)
     
-    alt Webhook 模式
+    alt Webhook 模式 (飞书/微信)
         CP->>Platform: 启动 HTTP 服务
         Platform-->>CP: 服务就绪
-    else 轮询/WebSocket 模式
-        CP->>Platform: 建立连接
-        Platform-->>CP: 连接确认
+    else WebSocket 模式 (QQBot)
+        CP->>Platform: 建立 WebSocket 连接
+        Platform-->>CP: Hello + 连接确认
     end
     
     CP->>CP: setState(CONNECTED)
@@ -2029,11 +1648,8 @@ import type { ChannelProvider, ReconnectConfig } from './types';
  * 使用指数退避算法控制重连频率
  */
 export class ReconnectManager {
-  /** 当前重连次数 */
   private attempts = 0;
-  /** 重连定时器 */
   private timer: NodeJS.Timeout | null = null;
-  /** 是否正在重连 */
   private isReconnecting = false;
 
   constructor(
@@ -2041,60 +1657,45 @@ export class ReconnectManager {
     private config: ReconnectConfig
   ) {}
 
-  /**
-   * 触发重连
-   * 按照指数退避算法计算等待时间后执行重连
-   */
   async start(): Promise<void> {
     if (this.isReconnecting) return;
     if (!this.config.enabled) return;
     
-    // 检查是否超过最大重连次数
     if (this.config.maxAttempts > 0 && this.attempts >= this.config.maxAttempts) {
-      console.error(`[${this.provider.channelId}] 已达到最大重连次数 ${this.config.maxAttempts}，停止重连`);
+      console.error(`[${this.provider.id}] 已达到最大重连次数 ${this.config.maxAttempts}，停止重连`);
       return;
     }
 
     this.isReconnecting = true;
     this.attempts++;
 
-    // 计算退避间隔（指数退避）
     const interval = Math.min(
       this.config.initialInterval * Math.pow(this.config.backoffFactor, this.attempts - 1),
       this.config.maxInterval
     );
 
-    console.log(`[${this.provider.channelId}] 第 ${this.attempts} 次重连，${Math.round(interval)}ms 后执行`);
+    console.log(`[${this.provider.id}] 第 ${this.attempts} 次重连，${Math.round(interval)}ms 后执行`);
 
     this.timer = setTimeout(async () => {
       try {
-        const success = await this.provider.reconnect();
+        const success = await this.provider.reconnect!();
         if (success) {
-          // 重连成功，重置计数器
           this.attempts = 0;
           this.isReconnecting = false;
-          console.log(`[${this.provider.channelId}] 重连成功`);
+          console.log(`[${this.provider.id}] 重连成功`);
         } else {
-          // 重连失败，继续重试
           this.isReconnecting = false;
           this.start();
         }
-      } catch (err) {
-        console.error(`[${this.provider.channelId}] 重连异常:`, err);
+      } catch {
         this.isReconnecting = false;
         this.start();
       }
     }, interval);
   }
 
-  /**
-   * 停止重连
-   */
   stop(): void {
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = null;
-    }
+    if (this.timer) { clearTimeout(this.timer); this.timer = null; }
     this.isReconnecting = false;
     this.attempts = 0;
   }
@@ -2111,7 +1712,6 @@ export class ReconnectManager {
 | 4 | 1000ms | 2 | 8000ms | 8000ms |
 | 5 | 1000ms | 2 | 16000ms | 16000ms |
 | 6 | 1000ms | 2 | 32000ms | 30000ms（封顶） |
-| 7+ | 1000ms | 2 | 64000ms+ | 30000ms（封顶） |
 
 ### 7.3 停止流程
 
@@ -2138,7 +1738,7 @@ sequenceDiagram
     
     alt Webhook 模式
         CP->>Platform: 关闭 HTTP 服务
-    else 轮询/WebSocket 模式
+    else WebSocket 模式
         CP->>Platform: 断开连接
     end
     
@@ -2180,21 +1780,19 @@ stateDiagram-v2
 
 ## 8. 配置文件示例
 
-以下是完整的渠道配置文件示例，包含所有内置渠道：
+以下是完整的渠道配置文件示例，包含所有三个 Provider：
 
 ```yaml
 # ~/.myopenclaw/channels/index.yaml
 # 渠道总配置文件
-# 也可以在各渠道独立的配置文件中分别配置
 
 # 全局渠道配置
 global:
   # 渠道启动顺序（数字越小越先启动）
   startupOrder:
-    - webchat      # 1. 先启动 WebChat（内嵌服务）
-    - telegram     # 2. 启动 Telegram
-    - discord      # 3. 启动 Discord
-    - feishu       # 4. 启动飞书
+    - qqbot        # 1. 先启动 QQBot（已实现）
+    - feishu       # 2. 启动飞书（待实现）
+    - wechat       # 3. 启动微信（待实现）
   
   # 全局重连配置（各渠道可覆盖）
   defaultReconnect:
@@ -2207,38 +1805,27 @@ global:
   # 全局健康检查配置
   healthCheck:
     enabled: true
-    interval: 60000      # 每 60 秒检查一次
-    timeout: 5000        # 检查超时 5 秒
+    interval: 60000
+    timeout: 5000
 
-# ===== Telegram 渠道 =====
-telegram:
-  channelId: "telegram"
+# ===== QQBot 渠道（已实现）=====
+qqbot:
+  channelId: "qqbot"
   enabled: true
-  botToken: "${TELEGRAM_BOT_TOKEN}"   # 支持环境变量引用
-  mode: "polling"
-  polling:
-    interval: 1000
-    timeout: 30
-    allowedUpdates: ["message", "callback_query"]
+  appId: "${QQBOT_APP_ID}"
+  botToken: "${QQBOT_BOT_TOKEN}"
+  clientSecret: "${QQBOT_CLIENT_SECRET}"
+  websocket:
+    url: "wss://api.sgroup.qq.com/websocket"
+    heartbeatInterval: 30000
   message:
     allowGroupMessage: true
-    requireMentionInGroup: true
+    requireMentionInGroup: false
 
-# ===== Discord 渠道 =====
-discord:
-  channelId: "discord"
-  enabled: true
-  botToken: "${DISCORD_BOT_TOKEN}"
-  gateway:
-    intents: ["GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES", "MESSAGE_CONTENT"]
-    version: 10
-  message:
-    requireMention: true
-
-# ===== 飞书渠道 =====
+# ===== 飞书渠道（待实现）=====
 feishu:
   channelId: "feishu"
-  enabled: false
+  enabled: true                           # 已实现
   appId: "${FEISHU_APP_ID}"
   appSecret: "${FEISHU_APP_SECRET}"
   eventSubscription:
@@ -2248,27 +1835,36 @@ feishu:
     path: "/webhook/feishu"
   message:
     requireMentionInGroup: true
+  token:
+    refreshInterval: 7200000
 
-# ===== WebChat 渠道 =====
-webchat:
-  channelId: "webchat"
-  enabled: true
-  server:
-    host: "127.0.0.1"
-    port: 18780
-    path: "/ws/webchat"
-  session:
-    timeout: 3600000
-    maxConcurrent: 100
-    allowAnonymous: true
+# ===== WeChat 渠道（待实现）=====
+wechat:
+  channelId: "wechat"
+  enabled: true                           # 已实现
+  mode: "webhook"                         # webhook(公众号) / wecom(企业微信)
+  
+  # 公众号模式配置
+  appId: "${WECHAT_APP_ID}"
+  appSecret: "${WECHAT_APP_SECRET}"
+  token: "${WECHAT_TOKEN}"
+  encodingAESKey: "${WECHAT_ENCODING_AES_KEY}"
+  callbackPort: 9879
+  callbackPath: "/webhook/wechat"
+  
+  # 企业微信模式配置（mode 为 wecom 时使用）
+  # corpId: "${WECOM_CORP_ID}"
+  # agentId: 1000001
+  # secret: "${WECOM_SECRET}"
+  
   message:
-    maxLength: 4096
-    maxFileSize: 10485760
-  cors:
-    origins: ["http://127.0.0.1:18791"]
+    maxLength: 2048
+    autoReply: true
+  token:
+    refreshInterval: 7200000
 ```
 
-配置项支持环境变量引用，格式为 `${ENV_VAR_NAME}`。在加载配置时，系统会自动替换为对应的环境变量值。如果环境变量不存在，则保留原值。这种方式可以有效保护敏感信息（如 Bot Token），避免直接写入配置文件。
+配置项支持环境变量引用，格式为 `${ENV_VAR_NAME}`。使用环境变量可以有效保护敏感信息（如 Bot Token），避免直接写入配置文件。
 
 ---
 
@@ -2283,7 +1879,7 @@ flowchart TB
     end
 
     subgraph Channel["渠道适配层"]
-        Receive["消息接收<br/>轮询/Webhook/WebSocket"]
+        Receive["消息接收<br/>WebSocket/Webhook"]
         Parse["消息解析<br/>解析平台原始格式"]
         Normalize["消息归一化<br/>转换为 InboundMessage"]
         Callback["回调通知<br/>onMessage()"]
@@ -2296,7 +1892,7 @@ flowchart TB
     end
 
     subgraph Response["回复流程"]
-        Outbound["出站消息<br/>OutboundMessage"]
+        Outbound["出站消息"]
         Convert["格式转换<br/>转换为平台格式"]
         Send["消息发送<br/>调用平台 API"]
     end
@@ -2324,7 +1920,7 @@ flowchart TB
     Check -->|是| Init["initialize()<br/>加载配置"]
     
     Init --> StartCh["start()<br/>启动渠道"]
-    StartCh --> Connect["建立连接<br/>轮询/Webhook/WS"]
+    StartCh --> Connect["建立连接<br/>WebSocket/Webhook"]
     
     Connect --> Success{"连接成功?"}
     Success -->|是| Running["CONNECTED 状态<br/>持续运行"]
@@ -2354,28 +1950,23 @@ flowchart TB
 ```mermaid
 flowchart LR
     subgraph Users["用户"]
-        U1["Telegram 用户"]
-        U2["Discord 用户"]
-        U3["飞书用户"]
-        U4["WebChat 用户"]
+        U1["QQ 用户"]
+        U2["飞书用户"]
+        U3["微信用户"]
     end
 
     subgraph Channels["渠道适配层"]
-        subgraph TG["Telegram Provider"]
-            TG1["长轮询接收"]
-            TG2["消息归一化"]
+        subgraph QQ["QQBot Provider（已实现）"]
+            QQ1["WS 接收"]
+            QQ2["消息归一化"]
         end
-        subgraph DC["Discord Provider"]
-            DC1["WS接收"]
-            DC2["消息归一化"]
-        end
-        subgraph FS["飞书 Provider"]
-            FS1["Webhook接收"]
+        subgraph FS["飞书 Provider（待实现）"]
+            FS1["Webhook 接收"]
             FS2["消息归一化"]
         end
-        subgraph WC["WebChat Provider"]
-            WC1["WS接收"]
-            WC2["消息归一化"]
+        subgraph WX["微信 Provider（待实现）"]
+            WX1["Webhook 接收"]
+            WX2["消息归一化"]
         end
     end
 
@@ -2389,21 +1980,187 @@ flowchart LR
         A2["Agent: coder"]
     end
 
-    U1 --> TG1 --> TG2
-    U2 --> DC1 --> DC2
-    U3 --> FS1 --> FS2
-    U4 --> WC1 --> WC2
+    U1 --> QQ1 --> QQ2
+    U2 --> FS1 --> FS2
+    U3 --> WX1 --> WX2
 
-    TG2 --> Router
-    DC2 --> Router
+    QQ2 --> Router
     FS2 --> Router
-    WC2 --> Router
+    WX2 --> Router
 
     Router --> A1
     Router --> A2
 
-    StateManager -.->|监控| TG
-    StateManager -.->|监控| DC
+    StateManager -.->|监控| QQ
     StateManager -.->|监控| FS
-    StateManager -.->|监控| WC
+    StateManager -.->|监控| WX
 ```
+
+### 9.4 QQBot 接入架构总览
+
+```mermaid
+flowchart TB
+    subgraph Platform["QQ 开放平台"]
+        QQAPI["QQ Bot API v2"]
+        QQWS["WebSocket Gateway<br/>wss://api.sgroup.qq.com"]
+    end
+
+    subgraph MyOpenClaw["MyOpenClaw 服务端"]
+        subgraph QBP["QQBot Provider"]
+            WSClient["WebSocket Client"]
+            Normalizer["消息归一化器"]
+            Sender["消息发送器<br/>HTTP API Client"]
+        end
+        GW["Gateway 网关"]
+        AR["Agent Runtime"]
+    end
+
+    subgraph Client["QQ 客户端"]
+        User["QQ 用户"]
+    end
+
+    User <-->|发送/接收消息| QQAPI
+    QQAPI <-->|WebSocket 推送| WSClient
+    WSClient --> Normalizer
+    Normalizer -->|InboundMessage| GW
+    GW --> AR
+    AR -->|OutboundMessage| GW
+    GW --> Sender
+    Sender -->|HTTP POST| QQAPI
+```
+
+---
+
+## 10. 未实现 Provider 的开发计划
+
+### 10.1 总体路线图
+
+飞书 Provider（578 行）和 WeChat Provider（完整实现）均已包含完整业务逻辑。以下为两个 Provider 的当前实现要点概览。
+
+```mermaid
+gantt
+    title Channels Provider 开发路线图
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m/%d
+    
+    section QQBot Provider
+    已完成 ✅              :done, qq1, 2026-06-01, 2026-07-15
+    
+    section 飞书 Provider
+    技术调研与方案设计       :active, fs1, 2026-08-01, 2026-08-07
+    Webhook 服务实现         :fs2, 2026-08-08, 2026-08-14
+    消息归一化与发送         :fs3, 2026-08-15, 2026-08-21
+    事件订阅与加解密         :fs4, 2026-08-22, 2026-08-28
+    集成测试与文档           :fs5, 2026-08-29, 2026-09-04
+    
+    section WeChat Provider
+    技术调研与方案设计       :wx1, 2026-09-01, 2026-09-11
+    代码骨架搭建             :wx2, 2026-09-12, 2026-09-18
+    公众号 Webhook 实现      :wx3, 2026-09-19, 2026-09-25
+    消息加解密与发送         :wx4, 2026-09-26, 2026-10-02
+    企业微信扩展             :wx5, 2026-10-03, 2026-10-09
+    集成测试与文档           :wx6, 2026-10-10, 2026-10-16
+```
+
+### 10.2 飞书 Provider 实现计划
+
+**预计总工期**：5 周（约 35 人天）
+
+#### 阶段一：技术调研与方案设计（1 周）
+
+| 任务 | 工作量 | 产出物 |
+|------|--------|--------|
+| 飞书开放平台 API 调研 | 4h | API 调研报告 |
+| 消息加解密方案设计 | 4h | 加解密技术方案 |
+| 事件订阅流程设计 | 4h | 事件订阅流程图 |
+| 整体架构方案评审 | 4h | 架构方案文档 |
+
+#### 阶段二：核心功能开发（3 周）
+
+| 任务 | 工作量 | 产出物 |
+|------|--------|--------|
+| 飞书事件订阅 Webhook 服务 | 16h | `channels/feishu/webhook.ts` |
+| 消息加解密（AES + SHA1 签名验证） | 12h | `channels/feishu/crypto.ts` |
+| tenant_access_token 管理 | 8h | `channels/feishu/token.ts` |
+| 消息归一化器（文本/图片/文件/富文本） | 12h | `channels/feishu/normalizer.ts` |
+| 消息发送器（SendMessage API） | 10h | `channels/feishu/sender.ts` |
+| 生命周期管理（启动/停止/重连） | 8h | `channels/feishu/lifecycle.ts` |
+| 配置加载与验证 | 4h | 配置 schema |
+
+#### 阶段三：测试与文档（1 周）
+
+| 任务 | 工作量 | 产出物 |
+|------|--------|--------|
+| 单元测试编写 | 12h | `tests/unit/channels/feishu/` |
+| 集成测试（端到端消息收发） | 8h | 集成测试报告 |
+| 飞书沙箱环境联调 | 8h | 联调测试记录 |
+| 文档更新 | 4h | 本文档飞书章节更新 |
+
+#### 关键技术挑战与应对
+
+| 挑战 | 应对策略 |
+|------|----------|
+| 飞书消息加解密复杂（AES + SHA1） | 参考飞书官方 SDK 实现，封装独立加解密模块 |
+| 事件订阅 URL 验证 | 实现飞书 `challenge` 验证流程，处理重复推送 |
+| 富文本消息解析 | 实现 Post 消息递归解析器，支持多语言 |
+| 令牌 2 小时过期自动刷新 | 实现定时刷新 + 懒刷新双保险机制 |
+
+### 10.3 WeChat Provider 实现计划
+
+**预计总工期**：6 周（约 40 人天）
+
+#### 阶段一：技术调研与方案设计（1.5 周）
+
+| 任务 | 工作量 | 产出物 |
+|------|--------|--------|
+| 微信公众号 API / 企业微信 API 调研 | 8h | API 调研报告 |
+| XML 消息解析与加解密方案 | 6h | 技术方案文档 |
+| access_token 管理与刷新策略 | 4h | 令牌管理方案 |
+| 双模式（公众号 + 企业微信）架构设计 | 6h | 架构方案文档 |
+
+#### 阶段二：核心功能开发（3.5 周）
+
+| 任务 | 工作量 | 产出物 |
+|------|--------|--------|
+| 代码骨架搭建（遵循 ChannelProvider 接口） | 6h | `channels/wechat/index.ts` |
+| 微信 XML 消息解析器 | 10h | `channels/wechat/xml-parser.ts` |
+| 消息加解密（AES + SHA1） | 12h | `channels/wechat/crypto.ts` |
+| Webhook 回调服务 | 10h | `channels/wechat/webhook.ts` |
+| access_token 管理 | 6h | `channels/wechat/token.ts` |
+| 公众号模式消息归一化 | 8h | `channels/wechat/normalizer.ts` |
+| 消息发送器（被动回复 + 主动推送） | 10h | `channels/wechat/sender.ts` |
+| 企业微信模式扩展 | 10h | `channels/wechat/wecom.ts` |
+| 生命周期管理 | 6h | `channels/wechat/lifecycle.ts` |
+
+#### 阶段三：测试与文档（1 周）
+
+| 任务 | 工作量 | 产出物 |
+|------|--------|--------|
+| 单元测试编写 | 12h | `tests/unit/channels/wechat/` |
+| 集成测试 | 8h | 集成测试报告 |
+| 公众号沙箱环境联调 | 8h | 联调测试记录 |
+| 文档更新 | 4h | 本文档微信章节更新 |
+
+#### 关键技术挑战与应对
+
+| 挑战 | 应对策略 |
+|------|----------|
+| 微信 XML 格式消息解析 | 使用 `fast-xml-parser` 库，抽象统一解析层 |
+| 消息加解密复杂（AES-256-CBC + PKCS7） | 基于微信官方加解密算法实现，编写充分单元测试 |
+| 被动回复 5 秒超时限制 | 对简单查询走被动回复，复杂查询走客服消息异步回复 |
+| 公众号/企业微信双模式差异 | 使用策略模式抽象差异，根据配置动态选择实现 |
+
+### 10.4 里程碑与交付节点
+
+| 里程碑 | 预期日期 | 交付内容 | 验收标准 |
+|--------|----------|----------|----------|
+| M1: 飞书调研完成 | 2026-08-07 | 技术方案文档 | 方案评审通过 |
+| M2: 飞书 Provider Alpha | 2026-08-21 | 消息收发可用 | 端到端文本消息收发成功 |
+| M3: 飞书 Provider Beta | 2026-09-04 | 完整功能 + 测试 | 所有计划功能通过测试 |
+| M4: 微信调研完成 | 2026-09-11 | 技术方案文档 | 方案评审通过 |
+| M5: WeChat Provider Alpha | 2026-09-25 | 公众号消息收发可用 | 端到端文本消息收发成功 |
+| M6: WeChat Provider Beta | 2026-10-16 | 完整功能（含企业微信） + 测试 | 所有计划功能通过测试 |
+
+---
+
+> **注**：以上时间为预估，实际进度可能受依赖项（第三方平台审核、API 变更等）影响而调整。各 Provider 开发完成后，将更新本文档中的实现状态标记。

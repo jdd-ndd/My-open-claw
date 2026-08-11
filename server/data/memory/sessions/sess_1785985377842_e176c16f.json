@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377842_e176c16f",
+  "userId": "load-user-otsm",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PT0YN6P4GMNFRVZ0V2",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985377972
+    },
+    {
+      "id": "01KZAGD02PVB0XF76CR71YF7NX",
+      "role": "assistant",
+      "content": "抱歉，我没有收到有效的用户请求。你发送的似乎是一个内部连接 ID（`conn_msg_18`），而不是给我的具体消息或指令。\n\n如果你之前发送了内容但没显示出来，可以重新发送一下。有任何需要我帮忙的（比如查资料、写代码、分析网页等等），直接告诉我即可！",
+      "timestamp": 1785985400918
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377987,
+    "lastActiveAt": 1785985400918,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

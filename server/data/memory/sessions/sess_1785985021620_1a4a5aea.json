@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021620_1a4a5aea",
+  "userId": "load-user-hskf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E2TF0ACFE9B0RBMDN96",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985021916
+    },
+    {
+      "id": "01KZAG4HXHKFJ1BWKFMDGC3TJZ",
+      "role": "assistant",
+      "content": "当然可以！我拥有多种工具和技能，包括文件操作、命令执行、浏览器控制、记忆搜索、系统时间、天气查询、货币转换、IP定位、节假日查询、新闻获取、加密货币价格、路线规划、计算器、HTTP请求等。您需要我做什么？",
+      "timestamp": 1785985124273
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021953,
+    "lastActiveAt": 1785985124273,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -73,6 +73,13 @@ export class SecuritySandbox extends EventEmitter {
     this.config = config;
   }
 
+  /**
+   * 获取限流配置（供中间件读取）
+   */
+  getRateLimitConfig(): { rateLimit: number } {
+    return { rateLimit: this.config.rateLimit };
+  }
+
   // ==================== 鉴权 ====================
 
   /**

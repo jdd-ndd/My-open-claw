@@ -17,6 +17,7 @@ export interface ConnectionMetadata {
   channelId: string;
   /** 用户 ID */
   userId: string;
+  sessionId?: string;
 }
 
 /**
@@ -107,6 +108,35 @@ export class ConnectionStore {
     const list: Array<{ connectionId: string; channelId: string; userId: string }> = [];
     for (const [id, meta] of this.metadata) {
       list.push({ connectionId: id, channelId: meta.channelId, userId: meta.userId });
+    }
+    return list;
+  }
+
+  getConnectionIdsBySession(sessionId: string): string[] {
+    const list: string[] = [];
+    for (const [connectionId, meta] of this.metadata) {
+      if (meta.sessionId === sessionId) {
+        list.push(connectionId);
+      }
+    }
+    return list;
+  }
+
+  /**
+   * 获取指定渠道下的所有连接 ID（用于跨端会话变更广播）
+   *
+   * 跨端同步场景：同 channelId 下的所有连接都属于同一会话空间，
+   * 任何一端创建/修改/删除会话时，需要通知同 channel 下所有其他端。
+   *
+   * @param channelId 渠道 ID
+   * @param excludeConnectionIds 可选，需排除的连接 ID 集合（避免重复发送）
+   */
+  getConnectionIdsByChannel(channelId: string, excludeConnectionIds?: Set<string>): string[] {
+    const list: string[] = [];
+    for (const [connectionId, meta] of this.metadata) {
+      if (meta.channelId !== channelId) continue;
+      if (excludeConnectionIds && excludeConnectionIds.has(connectionId)) continue;
+      list.push(connectionId);
     }
     return list;
   }

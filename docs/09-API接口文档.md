@@ -1,14 +1,43 @@
 # 09 - API 接口文档
 
-> **版本**：v1.0.1  
+> **版本**：v1.0.2  
 > **修订日期**：2026-07-23  
 > **修订人**：MyOpenClaw Core Team  
-> **文档状态**：正式发布（已同步 Fastify 迁移）
+> **文档状态**：正式发布
+
+---
+
+## 实现状态
+
+> **当前实现状态**：Gateway 服务运行在单端口 **18780**，提供 **WebSocket**（`/ws`）和 **HTTP REST**（`/api/*`）两种接口。
+>
+> **已实现的 HTTP API 端点（20+）**：
+> - `GET /api/health` — 健康检查
+> - `GET /api/status` — 系统运行状态
+> - `GET /api/time` — 服务器时间
+> - `GET /api/weather/city` — 城市查询
+> - `GET /api/weather/current` — 当前天气
+> - `GET /api/weather/forecast` — 天气预报
+> - `GET /api/utility/*` — 公共工具（汇率/IP定位/节假日/新闻/加密货币）
+> - `GET /api/connections` — 当前连接列表
+> - `GET /api/sessions` — 会话列表
+> - `POST /api/sessions` — 创建会话
+> - `GET /api/sessions/:id` — 获取会话详情
+> - `DELETE /api/sessions/:id` — 删除会话
+> - `POST /api/tokens` — 创建 Token
+> - `GET /api/tokens` — Token 列表
+> - `DELETE /api/tokens/:id` — 撤销 Token
+> - `GET /api/agents` — Agent 状态
+> - `GET /api/audit` — 审计日志查询
+> - `GET /api/scheduler/tasks` — 定时任务列表
+>
+> **Swagger/OpenAPI 文档**可通过 `/docs` 路径访问。
 
 ---
 
 ## 目录
 
+- [实现状态](#实现状态)
 - [1. 概述](#1-概述)
 - [2. 通信协议说明](#2-通信协议说明)
   - [2.1 WebSocket 协议](#21-websocket-协议)
@@ -917,6 +946,8 @@ ws.onclose = () => console.log('连接已关闭');
 ## 4. HTTP REST 接口
 
 所有 HTTP 接口基础路径为 `/api`，共享 Gateway 统一端口 `18780`。
+
+> **说明**：以下为已实现的 HTTP API 端点。WebSocket 消息协议（会话管理、消息收发、工具调用、事件订阅等）也已完整实现并投入使用。
 
 ### 4.1 健康检查
 

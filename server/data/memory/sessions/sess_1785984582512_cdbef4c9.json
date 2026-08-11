@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984582512_cdbef4c9",
+  "userId": "user-xhqgclsq5po",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFM0WTVGGBA2YXNDRRFG5A",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984582550
+    },
+    {
+      "id": "01KZAFN783FEYX68SP7334J3V6",
+      "role": "assistant",
+      "content": "好的，你输入的是“concurrent message”，它可以理解成“并发消息”。这里有几个可能的处理维度，你可以看看哪个是你想要的：\n\n**1. 并发消息是什么**\n- 在多线程/多进程/分布式系统中，多个消息在同一时刻（或极短时间内）被发送、传递或处理。\n- 需要处理的问题包括：消息顺序、消息重复、数据竞争、死锁等。\n\n**2. 你想让我怎么处理并发消息**\n如果你有一个具体的消息并发需求（比如：多线程发消息、消息队列消费、并发请求处理），可以告诉我：\n- 用什么语言（Python/Go/Java 等）\n- 什么场景（聊天系统、任务队列、日志处理等）\n- 具体的问题（幂等、顺序消费、背压控制等）\n\n**3. 如果只是问我能不能同时处理**\n我可以同时处理多个任务，但这取决于你的客户端如何发起请求。请具体说明你希望我做什么。\n\n你可以直接告诉我：  \n“帮我写一个 Python 的并发消息消费者”，或“解释 Kafka 如何保证消息顺序”，或“在 Go 里怎么安全地并发写 map”等。",
+      "timestamp": 1785984621827
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984582550,
+    "lastActiveAt": 1785984621827,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

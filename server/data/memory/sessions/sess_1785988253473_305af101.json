@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988253473_305af101",
+  "userId": "load-user-o593",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK42PV4W7SWJDF99BXJE1Q",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785988254407
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988254413,
+    "lastActiveAt": 1785988254427,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

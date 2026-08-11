@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987965677_52f22ba7",
+  "userId": "load-user-d2td",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV9Z5KGRE0PGXMJ1X5AQC",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785987966863
+    },
+    {
+      "id": "01KZAJX5DVCXGWPKEB0FHK9TM5",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988027835
+    },
+    {
+      "id": "01KZAJY54WXBG752B0VTCKAQ95",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息 \"conn_msg_3\"，但似乎这只是一个内部标识符或误输入的文本，我无法从中理解您希望我做什么。\n\n请问您是需要我帮忙执行某个具体任务吗？比如：\n- 查看或处理某个文件？\n- 搜索信息、查询天气、汇率等？\n- 执行代码审查、项目搭建或网页分析？\n\n请详细说明您的需求，我会尽力协助您完成。",
+      "timestamp": 1785988060316
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966875,
+    "lastActiveAt": 1785988060316,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

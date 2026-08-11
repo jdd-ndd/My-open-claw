@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984615113_9df7674c",
+  "userId": "load-user-jyeu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN19HM19EBSPR5BE3SD30",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984615648
+    },
+    {
+      "id": "01KZAFNHRM2YD7H35HW5R2TD15",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984632596
+    },
+    {
+      "id": "01KZAFPNPB4JZ8B0RZ3QQGK7GH",
+      "role": "assistant",
+      "content": "当前工作目录为空，没有发现任何文件或子目录。如果你需要我帮忙创建文件或做其他操作，请告诉我！",
+      "timestamp": 1785984669388
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615660,
+    "lastActiveAt": 1785984669388,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

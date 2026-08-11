@@ -1,5 +1,5 @@
 /**
- * Skills — 技能模块聚合导出
+ * Skills — 技能模块聚合导出（v1.0.2 增强版）
  *
  * @module @myopenclaw/server/skills
  */

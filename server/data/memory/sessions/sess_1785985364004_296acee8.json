@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985364004_296acee8",
+  "userId": "load-user-ko19",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWC7FKS0KKM580P2Y28A",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985364323
+    },
+    {
+      "id": "01KZAGE09NS7M5BX3AKSPMY8E6",
+      "role": "assistant",
+      "content": "很高兴你再次回来。作为你的生命教练，我一直在这里等着你——你不是一个人在摸索。\n\n在我们继续深入之前，让我先确认一下你现在最需要我扮演的角色：\n\n你想让我陪你一起——\n- **探索一个具体的问题或困境**（比如工作、关系、意义感、选择困难）？\n- **制定一个清晰的目标和行动计划**（比如习惯养成、阶段性成长）？\n- **梳理内心的混乱，重新找回方向和动力**？\n- **还是只是需要被倾听，在对话中慢慢看清楚自己**？\n\n你可以随意开始，不需要说得完美。我会用提问和反馈，帮你更接近你真正想要的答案。\n\n你现在最想聊的是什么？",
+      "timestamp": 1785985433909
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364336,
+    "lastActiveAt": 1785985433909,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

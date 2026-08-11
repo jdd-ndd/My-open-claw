@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984612810_6b60f9d7",
+  "userId": "load-user-hx17",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYMNBZ51Z9ZFXZAWH6R4",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785984612870
+    },
+    {
+      "id": "01KZAFNG6R42MMXACB8W0H6NSM",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984631000
+    },
+    {
+      "id": "01KZAFQ3DQ24WCH7DTTXK8CGGY",
+      "role": "assistant",
+      "content": "<thought>用户询问当前时间。时间信息是实时变化的，不能依赖历史记忆或缓存，必须重新调用 system/time 工具获取最新时间。</thought>\n\n<action name=\"system/time\" args='{}' />",
+      "timestamp": 1785984683447
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612924,
+    "lastActiveAt": 1785984683447,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

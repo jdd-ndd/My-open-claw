@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069590_b7b814bb",
+  "userId": "load-user-owz2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X7YP4JM03R8SWYAFXY8",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985070247
+    },
+    {
+      "id": "01KZAG4J4RCMTWSB1K7TH77QZ9",
+      "role": "assistant",
+      "content": "这是一个连接确认消息，表示连接已建立。目前没有实际的用户请求需要处理。请发送您的具体需求或问题，我会立即为您处理。",
+      "timestamp": 1785985124504
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070260,
+    "lastActiveAt": 1785985124504,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

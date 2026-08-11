@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985370384_10fd2524",
+  "userId": "load-user-2j18",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC2ZMYQVHC92ERCFX1C03",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985371097
+    },
+    {
+      "id": "01KZAGD8KJ1BJ4MMW3KRYTZJ54",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985409650
+    },
+    {
+      "id": "01KZAGEQ60JK0J7V0B3XPJ2ZF0",
+      "role": "assistant",
+      "content": "<thought>文件读取返回空结果，文件可能不存在或为空。让我先检查该路径是否存在。</thought>\n<action name=\"fs/list_dir\" args='{\"path\":\"/home/ubuntu/project/scripts\"}' />",
+      "timestamp": 1785985457344
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371103,
+    "lastActiveAt": 1785985457344,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

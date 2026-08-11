@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987937823_db931882",
+  "userId": "load-user-au61",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEJTE70B08XRP12DXVX3",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785987938801
+    },
+    {
+      "id": "01KZAJWGAKK758P7XH4J3PTEMS",
+      "role": "assistant",
+      "content": "你好！看起来你只发了 \"conn_msg_6\"，这可能是一条测试消息。\n\n我是你的通用任务处理智能助手，可以帮你处理各种任务，比如：\n\n- 📁 文件操作（读取、写入、删除、列出目录）\n- 💻 执行命令\n- 🌐 网页浏览与分析\n- 📊 数据提取\n- 💱 货币汇率与加密货币查询\n- 🧮 数学计算\n- 🗺️ 路线规划\n- 🌤️ 天气查询\n- 等等...\n\n请问有什么我可以帮你的吗？请详细描述你的需求，我会尽力协助！",
+      "timestamp": 1785988006227
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938824,
+    "lastActiveAt": 1785988006227,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

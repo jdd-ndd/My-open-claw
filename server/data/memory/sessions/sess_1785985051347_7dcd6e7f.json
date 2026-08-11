@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985051347_7dcd6e7f",
+  "userId": "load-user-0u57",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BBWJ676HXKD1CAVQT2B",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985051904
+    },
+    {
+      "id": "01KZAG3YDT6RKMP5YH9H0KJB2R",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985104315
+    },
+    {
+      "id": "01KZAG5A6KZA0HEVG7W7M3YJY0",
+      "role": "assistant",
+      "content": "你好！你发送了 \"conn_msg_7\"，我没能理解你的具体意图。如果你是想测试连接，我已经收到了你的消息，一切正常。如果需要任何帮助，请告诉我你想做什么，比如查天气、处理文件、搜索信息等。😊",
+      "timestamp": 1785985149139
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051935,
+    "lastActiveAt": 1785985149139,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

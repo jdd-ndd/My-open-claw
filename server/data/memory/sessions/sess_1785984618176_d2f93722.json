@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984618176_d2f93722",
+  "userId": "load-user-surn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN471S1ZMTAK3BJTBXHC2",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984618633
+    },
+    {
+      "id": "01KZAFPK62ACZVD1N0D4HATDTT",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984666818
+    },
+    {
+      "id": "01KZAFQ0REKX0XSZXZ5Y7922XM",
+      "role": "assistant",
+      "content": "我查了一下长期记忆，没有找到与“conn_msg_6”相关的历史消息或对话内容。可能是这条记忆已经被清理，或者之前并未成功存储。\n\n如果你是想继续之前的某个话题，可以简单描述一下当时在聊什么，我会尽力帮你回忆或接续。或者如果你有新的任务，也请直接告诉我～",
+      "timestamp": 1785984680718
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618652,
+    "lastActiveAt": 1785984680718,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985330925_0515fca4",
+  "userId": "load-user-gnkv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWCNA9ERX3RCZ7HMWJZH",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985331581
+    },
+    {
+      "id": "01KZAGCWF7X0A5BD3MGHKRBTE8",
+      "role": "assistant",
+      "content": "是的，我在。你是想确认对话连接是否正常，还是有其他问题需要我帮忙？",
+      "timestamp": 1785985397223
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331587,
+    "lastActiveAt": 1785985397223,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

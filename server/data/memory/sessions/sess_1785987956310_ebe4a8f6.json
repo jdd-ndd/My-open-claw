@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987956310_ebe4a8f6",
+  "userId": "load-user-fcvv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0V8NKFTHXWXP55C1D5Q",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785987957519
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957534,
+    "lastActiveAt": 1785987957608,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

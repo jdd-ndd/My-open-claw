@@ -1,0 +1,116 @@
+{
+  "sessionId": "sess-ce75badb734c4022",
+  "userId": "shared-user",
+  "channelId": "tui",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZ7YN15YQWJXSTGFBWZA6K57",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785899680957
+    },
+    {
+      "id": "01KZ7YN8MSAHXBDEZSNJSMZSDS",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785899688601
+    },
+    {
+      "id": "01KZ7YNTQZMKQM98YJXHAFGB57",
+      "role": "assistant",
+      "content": "抱歉,我尝试多次但无法完成该任务(连续 2 轮相同操作)。",
+      "timestamp": 1785899707135
+    },
+    {
+      "id": "01KZ89S05BH1G16ATNXW2G3454",
+      "role": "user",
+      "content": "hlleo",
+      "timestamp": 1785911345322
+    },
+    {
+      "id": "01KZ89S6ZZ0A0JTTC4320B3CRP",
+      "role": "assistant",
+      "content": "👋 嗨！你好呀！\n\n看到你打了个招呼。我这边已经准备好了，有什么我可以帮你的吗？无论是想聊天、问问题、处理文件，还是需要其他任务协助，尽管说！",
+      "timestamp": 1785911352319
+    },
+    {
+      "id": "01KZ8A6A7R625YAB3RT36ACR9S",
+      "role": "user",
+      "content": "你好啊",
+      "timestamp": 1785911781622
+    },
+    {
+      "id": "01KZ8A6M26A4CZSP20TB5Q5WG5",
+      "role": "assistant",
+      "content": "<thought>\n用户看起来在回顾一些历史对话片段，包括之前的打招呼内容（\"hi\"、\"你好啊\"）和一条工具执行结果的记录。没有提出明确的新任务或问题。\n\n这些内容来自长期记忆检索的结果，展示的是之前交互的片段。用户可能是在测试记忆功能，或者只是想让我看看这些记录。我以友好的方式回应，并询问用户是否需要帮助。\n</thought>\n\n<final_answer>\n我看到你回顾了之前的一些对话片段——\"hi\" 和 \"你好啊\" 都是我们之前打招呼的记录。😄\n\n看起来你在浏览记忆中的历史消息。有什么具体的事情我可以帮你吗？无论是新的任务、问题，还是想继续之前的某个话题，我都在这里！",
+      "timestamp": 1785911791686
+    },
+    {
+      "id": "01KZ8ATXEGDS683Z16KKZVVXPV",
+      "role": "user",
+      "content": "你好啊",
+      "timestamp": 1785912456655
+    },
+    {
+      "id": "01KZ8AV30MDFPTCDG1ASR8QKR2",
+      "role": "assistant",
+      "content": "看起来你在回顾我们之前的一些对话片段——\"hi\"、\"你好啊\"、\"hlleo\"（估计是 hello 的小笔误 😄）。这些都是我们早期打招呼的记录，挺有意思的。\n\n有什么特别想聊的，或者需要我帮忙的事情吗？尽管说！",
+      "timestamp": 1785912462356
+    },
+    {
+      "id": "01KZ8BJXPJAHQ41EH8YNMJZZQX",
+      "role": "user",
+      "content": "你好啊",
+      "timestamp": 1785913243344
+    },
+    {
+      "id": "01KZ8BK20KYZ19MW676Z2FD07C",
+      "role": "assistant",
+      "content": "看起来你在回顾我们之前的一些对话片段——\"hi\"、\"你好啊\"、\"hlleo\"（估计是 hello 的小笔误 😄）。这些都是我们早期打招呼的记录，挺有意思的。\n\n有什么特别想聊的，或者需要我帮忙的事情吗？尽管说！",
+      "timestamp": 1785913247763
+    },
+    {
+      "id": "01KZ8BVFJVH0GERWZ6W3HQVJKF",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785913523801
+    },
+    {
+      "id": "01KZ8BVJ9R25HV6EYYRC3NTGY8",
+      "role": "assistant",
+      "content": "<thought>\n用户只是简单打了个招呼 \"hi\"，不需要调用任何工具。\n</thought>\n\n<final_answer>\n嗨！😊 你好呀。有什么我可以帮你的吗？",
+      "timestamp": 1785913526584
+    },
+    {
+      "id": "01KZ8CMR2N8M12627EY9QXV546",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785914351699
+    },
+    {
+      "id": "01KZ8CMVN8F3WZ16APP8B68JBE",
+      "role": "assistant",
+      "content": "看起来你发了一个 \"hlleo\"（应该是 \"hello\" 的小笔误吧 😄），然后回顾了之前的一些对话片段——\"hi\"、\"你好啊\"，以及一条工具执行结果的记录。\n\n这些是我们之前互动的记忆片段。有什么特别想聊的，或者需要我帮忙的事情吗？尽管说！",
+      "timestamp": 1785914355368
+    },
+    {
+      "id": "01KZ8K6400AS1FQ8P2555ZW716",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785921212411
+    },
+    {
+      "id": "01KZ8K65VY91B5MH13NPVVCV73",
+      "role": "assistant",
+      "content": "<thought>\n用户只是简单打了个招呼 \"hi\"，不需要调用任何工具。直接友好回复即可。\n</thought>\n\n<final_answer>\n嗨！😊 你好呀。有什么我可以帮你的吗？",
+      "timestamp": 1785921214334
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785899680957,
+    "lastActiveAt": 1785921214334,
+    "messageCount": 17,
+    "compressed": false
+  }
+}

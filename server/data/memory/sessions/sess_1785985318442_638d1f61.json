@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318442_638d1f61",
+  "userId": "load-user-aj7w",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFWA37F61QJ71ZCSYVF4",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985318762
+    },
+    {
+      "id": "01KZAGF1HJPFJJMV9EHRAXKVP9",
+      "role": "assistant",
+      "content": "Hello! 我收到你的消息了，连接正常。有什么需要我帮忙的吗？ (ID: 12033896)\n- [记忆 0.97] conn_msg_11 这个会话 ID 是 sess_1765764125892_deda7a5b (ID: 98005684)\n- [记忆 0.97] conn_msg_10 这个会话 ID 是 sess_1765764125892_deda7a5b (ID: 90096018)\n- [记忆 0.96] conn_msg_14 你想了解这个会话的历史和总结？没问题。\n\n目前我们只有这轮对话。起初你发送了 \"conn_msg_14\" 作为连接测试，我回应了问候。随后你表达了想了解会话历史和总结的需求。\n\n简单总结：这轮对话刚开始，前两条消息只是连接确认测试，第三条你表达了想了解会话的需求，我解释了当前只有连接测试和你的新请求，询问你是否想测试记忆系统，或者你有什么具体需求可以告诉我。\n\n当前状态：对话刚开始，无复杂历史。有什么想测试或需要帮忙的吗？ (ID: 15534480)",
+      "timestamp": 1785985467955
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318773,
+    "lastActiveAt": 1785985467955,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

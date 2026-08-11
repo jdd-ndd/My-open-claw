@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988244720_2928b1c5",
+  "userId": "load-user-hnia",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK3SM4RGSYGW8AHMHTDJWA",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785988245065
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988245089,
+    "lastActiveAt": 1785988245125,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

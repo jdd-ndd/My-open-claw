@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985363881_a2766741",
+  "userId": "load-user-1dmu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWC3M53M5Q875HY9D3Z0",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985364323
+    },
+    {
+      "id": "01KZAGDD2B2NAQHSFHQ1P5Y9N7",
+      "role": "assistant",
+      "content": "好的，那先不打扰你。后续有需要随时找我。",
+      "timestamp": 1785985414219
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364334,
+    "lastActiveAt": 1785985414219,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

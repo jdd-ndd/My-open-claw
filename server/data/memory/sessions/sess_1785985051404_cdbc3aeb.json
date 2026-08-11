@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051404_cdbc3aeb",
+  "userId": "load-user-bs5a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BC2A0848P60RZM9HR4M",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985051904
+    },
+    {
+      "id": "01KZAG5K3BZFWQXSKTWWTREARQ",
+      "role": "assistant",
+      "content": "收到你的测试消息：`conn_msg_8` ✅  \n系统连接正常，有什么可以帮你的？",
+      "timestamp": 1785985158251
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051940,
+    "lastActiveAt": 1785985158251,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

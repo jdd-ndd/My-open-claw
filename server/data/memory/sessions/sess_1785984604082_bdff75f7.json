@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604082_bdff75f7",
+  "userId": "load-user-ab40",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPH92HFJYNXMRZDAAC1B",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984604643
+    },
+    {
+      "id": "01KZAFP4Z6X639Z49Z49590GK1",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，通用任务处理智能助手。\n\n请告诉我你需要什么帮助？例如：\n- 文件操作（读取、写入、删除文件）\n- 执行系统命令\n- 浏览和分析网页\n- 天气查询\n- 路线规划\n- 货币转换\n- 数学计算\n- 新闻获取\n- 长期记忆检索\n\n请描述你的具体请求，我会立即处理。",
+      "timestamp": 1785984652262
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604651,
+    "lastActiveAt": 1785984652262,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

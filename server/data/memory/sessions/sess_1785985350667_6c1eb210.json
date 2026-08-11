@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985350667_6c1eb210",
+  "userId": "load-user-gpll",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDF4B771QNKDFSV38PB",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985351056
+    },
+    {
+      "id": "01KZAGDDQ36Q1M897NQC3X67HY",
+      "role": "assistant",
+      "content": "这条消息看起来像是测试连接或协议产生的随机字符串。我不太理解你的需求，请用自然语言再描述一次你想做什么，我会尽力帮忙。",
+      "timestamp": 1785985414883
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351066,
+    "lastActiveAt": 1785985414883,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

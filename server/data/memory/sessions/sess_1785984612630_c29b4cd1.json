@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612630_c29b4cd1",
+  "userId": "load-user-34bw",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYKV20ZNVV5HQ3YHK1PS",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785984612869
+    },
+    {
+      "id": "01KZAFNTGC3N32Y20NDNRNKJS1",
+      "role": "assistant",
+      "content": "这条消息看起来是一个内部消息 ID（`conn_msg_13`），我不太确定它是什么意思。你可以再说得详细一点吗？我好帮你处理。\n- [记忆 0.98] conn_msg_7, conn_msg_8, conn_msg_9",
+      "timestamp": 1785984641548
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612907,
+    "lastActiveAt": 1785984641548,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

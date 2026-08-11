@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618241_5e7f9a72",
+  "userId": "load-user-wr7d",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN47AB1X0K1SRFQ3B7PMX",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984618633
+    },
+    {
+      "id": "01KZAFNY2235E1ECX8MTB5V4Z2",
+      "role": "assistant",
+      "content": "这是否是某个内部系统标识符或测试指令？我无法从 \"conn_msg_8\" 推测出具体需求。请说明你需要什么帮助，我会尽快处理。",
+      "timestamp": 1785984645186
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618658,
+    "lastActiveAt": 1785984645186,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

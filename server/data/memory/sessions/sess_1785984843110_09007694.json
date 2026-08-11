@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984843110_09007694",
+  "userId": "user-ddmjo69bwp",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVZCCFMR0JK0XK115C6F1",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984843147
+    },
+    {
+      "id": "01KZAFY0AZQ1C1AABM0JV980BV",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息，但不太确定您具体需要什么帮助。\"concurrent message\" 是您想要我处理的任务吗？\n\n我可以帮您做的事情包括：\n- 📁 文件操作（读取、写入、删除）\n- 🌐 网页浏览与分析\n- 💻 执行 Shell 命令\n- 🔍 代码审查\n- 📊 数据查询（天气、汇率、新闻等）\n- 🧮 数学计算\n- 🗺️ 路线规划\n- 💰 加密货币价格查询\n\n请告诉我您具体需要什么帮助，我很乐意协助您！",
+      "timestamp": 1785984909663
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984843147,
+    "lastActiveAt": 1785984909663,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

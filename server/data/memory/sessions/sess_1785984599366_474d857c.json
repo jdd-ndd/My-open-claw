@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984599366_474d857c",
+  "userId": "load-user-a3hd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHJAW4XXD3XVJ121HK7P",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNM7HG0JQ1V7A88ZDQZ47",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984635121
+    },
+    {
+      "id": "01KZAFPTKCSM3G0RHZZ53DM6X0",
+      "role": "assistant",
+      "content": "【工具执行结果】#2 memory_search/search 成功\n\"\"你说了两次\"conn_msg_16\"，感觉像是一个连接消息的 ID 或者消息标识，但我现在看不到这条消息的实际内容。请问你能把完整的信息再发一遍吗？这样我就能准确地帮你处理了。",
+      "timestamp": 1785984674412
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599545,
+    "lastActiveAt": 1785984674412,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

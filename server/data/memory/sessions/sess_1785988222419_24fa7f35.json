@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988222419_24fa7f35",
+  "userId": "load-user-evmc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK33PQA2FF3H9P1YJFATSE",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785988222640
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988222655,
+    "lastActiveAt": 1785988222679,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

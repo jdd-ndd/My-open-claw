@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057459_d0670a0d",
+  "userId": "load-user-w2z0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H7P7F5AV19SW375A8A9",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785985057930
+    },
+    {
+      "id": "01KZAG4KEXZJ8T3RZZDDKWJHTM",
+      "role": "assistant",
+      "content": "收到信号 — `conn_msg_6` 已确认。  \n\n我是您的 MyOpenClaw Assistant，随时可以帮您：  \n- 操作文件（读、写、列目录）  \n- 执行命令  \n- 访问网页  \n- 分析数据  \n- 或只是聊天讨论  \n\n您接下来想让我做什么？",
+      "timestamp": 1785985125853
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057954,
+    "lastActiveAt": 1785985125853,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

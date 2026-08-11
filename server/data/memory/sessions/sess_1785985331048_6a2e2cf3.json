@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985331048_6a2e2cf3",
+  "userId": "load-user-sx0z",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWCSC2XSK3S8N24CEW92",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985331581
+    },
+    {
+      "id": "01KZAGDBEZ1B46CJPP4PBYFJEG",
+      "role": "assistant",
+      "content": "你好！我已经收到你的消息 \"conn_msg_7\"。不过我不太确定你具体需要什么帮助，这看起来像是一个连接消息或测试标识。请告诉我你的具体需求，我很乐意协助你！你可以问我任何问题，比如查询信息、执行任务、分析数据等等。",
+      "timestamp": 1785985412575
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331589,
+    "lastActiveAt": 1785985412575,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370897_7c2aaca2",
+  "userId": "load-user-c1f6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC305YZMTZZV4HHQMN8FJ",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985371098
+    },
+    {
+      "id": "01KZAGDVZ6BFKTEVWYXK93N0YV",
+      "role": "assistant",
+      "content": "根据您提供的信息，我查到香港（HKG）和大阪（JPOSA）之间有两条2026年新年的航次：\n\n1. **OOCL NEW YORK** (船名)\n   - 服务航线: KTX7\n   - 出发时间: 2026-01-02 12:00（香港时间）\n   - 到达时间: 2026-01-07 06:00（当地时间）\n\n2. **OOCL LONDON** (船名)\n   - 服务航线: KTX7\n   - 出发时间: 2026-01-05 12:00（香港时间）\n   - 到达时间: 2026-01-10 06:00（当地时间）\n\n这两条船都是从香港直达大阪，航程约5天。您还有其他需要查询的信息吗？",
+      "timestamp": 1785985429479
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371113,
+    "lastActiveAt": 1785985429479,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

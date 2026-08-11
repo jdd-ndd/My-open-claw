@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984839397_c80dc256",
+  "userId": "user-3ymgq3z7n1c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVVRAB2KAREDAZJN28BC2",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984839433
+    },
+    {
+      "id": "01KZAFY4E368S40EM0X6R4Z29T",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息。看起来像是测试消息，有什么我可以帮你的吗？如果需要执行特定任务，请告诉我详细需求。",
+      "timestamp": 1785984913859
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984839433,
+    "lastActiveAt": 1785984913859,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043661_047356eb",
+  "userId": "load-user-b001",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23GR6JA96MJZ9DRQFMVK",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985043846
+    },
+    {
+      "id": "01KZAG54YY4MK7S14K7YWNB1NE",
+      "role": "assistant",
+      "content": "连接已建立。我已接收到你的格式要求，并会根据指定的框架组织所有后续回复。  \n如果没有需要执行的具体行动（Action），我会直接给出最终答案（Final Answer）。请随时告诉我你需要什么帮助。",
+      "timestamp": 1785985143774
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043897,
+    "lastActiveAt": 1785985143774,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

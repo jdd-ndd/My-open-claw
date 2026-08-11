@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377449_af35bb4c",
+  "userId": "load-user-ki7t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PFFZQFKB9M5X3H8F31",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985377971
+    },
+    {
+      "id": "01KZAGDQ0642H5CZ2GV3YT9WQW",
+      "role": "assistant",
+      "content": "你好！我看到你提到了记忆中的 \"conn_msg_9\"。那条记忆的内容是 \"conn_msg_9\"，它可能是之前会话中的一个连接消息或测试记录。如果你是在测试记忆检索功能，那说明它已经正常工作了！有什么我可以帮你的吗？",
+      "timestamp": 1785985424390
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377980,
+    "lastActiveAt": 1785985424390,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

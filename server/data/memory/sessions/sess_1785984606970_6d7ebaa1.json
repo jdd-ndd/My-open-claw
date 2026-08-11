@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606970_6d7ebaa1",
+  "userId": "load-user-8xjj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS5JBQB5SK8JBTC186DR",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFPZ5W9EVF16JM1WDPZT7G",
+      "role": "assistant",
+      "content": "你好！看起来你发了一个空的 JSON，是手滑了还是在测试我是否在线？😄\n\n有什么我可以帮你的吗？比如：\n- 💬 聊天对话\n- 📁 文件管理\n- 🌐 网页抓取与分析\n- 🔍 代码审查\n- 📦 快速项目搭建\n- ⏰ 查询时间/天气/汇率\n- 🧮 数学计算\n\n尽管说吧，我很乐意帮忙！",
+      "timestamp": 1785984679100
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607339,
+    "lastActiveAt": 1785984679100,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,7 +1,7 @@
 # MyOpenClaw 技术文档体系
 
-> **版本**：v1.0.0  
-> **最后更新**：2026-07-21  
+> **版本**：v1.0.2  
+> **最后更新**：2026-07-23  
 > **维护团队**：MyOpenClaw Core Team  
 > **开源协议**：MIT
 
@@ -35,6 +35,7 @@ MyOpenClaw 是一个本地优先、自托管的开源 AI Agent 框架，基于 T
 | 06 | Tools 工具与技能模块 | `06-Tools工具与技能模块.md` | 工具注册中心、原子工具、Skill 业务技能 | 后端开发者 |
 | 07 | Memory 记忆模块 | `07-Memory记忆模块.md` | 短期会话记忆、长期向量记忆、持久化层 | 后端开发者 |
 | 08 | Core 公共模块 | `08-Core公共模块.md` | 消息结构体、类型定义、Schema 校验、工具函数 | 全部开发者 |
+| 20 | 配置管理模块 | `20-配置管理模块.md` | Zod schema、多源合并优先级链、启动期校验、env 映射 | 后端开发者、运维 |
 
 ### 三、接口与规范
 
@@ -134,11 +135,11 @@ MyOpenClaw 是一个本地优先、自托管的开源 AI Agent 框架，基于 T
 | 运行时 | Node.js 20 LTS |
 | 通信协议 | WebSocket / HTTP |
 | 数据校验 | TypeBox / Zod |
-| 向量存储 | 本地向量数据库 |
+| 向量存储 | 本地内存（余弦相似度/欧氏距离/点积三种检索方式） |
 | 持久化 | 本地 JSON / 轻量数据库 |
-| Web 前端 | React 18 / Vue 3 |
-| 终端 UI | Ink 4.x（React for Terminal） |
-| CLI 框架 | Commander 12.x |
+| Web 前端 | React 18 + Vite + TailwindCSS |
+| 终端 UI | Ink 4.x + Textual Python |
+| CLI 框架 | Commander 12.x + Inquirer |
 | 开源协议 | MIT |
 
 --

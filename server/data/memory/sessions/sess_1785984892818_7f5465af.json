@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984892818_7f5465af",
+  "userId": "load-user-dtbe",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFXG10E50V1SXJ615QBDQV",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785984892924
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984892939,
+    "lastActiveAt": 1785984892960,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

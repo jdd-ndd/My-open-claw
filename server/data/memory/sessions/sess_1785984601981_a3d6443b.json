@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601981_a3d6443b",
+  "userId": "load-user-0zjn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM2274EM1VWXZWC3DCHJ",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785984602037
+    },
+    {
+      "id": "01KZAFNYDKHJDCJPSZE92YF4X6",
+      "role": "assistant",
+      "content": "好的，我会用中文一个任务一个任务地处理。当前没有待执行的新任务，请问有什么新的想法或想处理的任务吗？我随时在这儿。",
+      "timestamp": 1785984645555
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602091,
+    "lastActiveAt": 1785984645555,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

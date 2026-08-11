@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604227_d8c9a0d0",
+  "userId": "load-user-98ir",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPJ28YDMY5Y46HZFYYJE",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFNVNEM3CZ8JN26A3D4S19",
+      "role": "assistant",
+      "content": "你好！我收到了 `conn_msg_7`，但这看起来像是一个变量名或占位符，我不太确定你想让我做什么。能否请你详细说明一下你的需求？比如：\n- 你想让我处理某条特定的消息内容吗？\n- 你有什么任务需要我帮忙完成吗？\n- 或者这是一个测试输入？\n\n请告诉我更多信息，我很乐意帮助你！",
+      "timestamp": 1785984642734
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604665,
+    "lastActiveAt": 1785984642734,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

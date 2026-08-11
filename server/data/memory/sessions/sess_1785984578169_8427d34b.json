@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984578169_8427d34b",
+  "userId": "user-c3d3l7zi04d",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKWMTV6CMDTYDGXR2M2B4",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984578198
+    },
+    {
+      "id": "01KZAFN9V0M57Q4NB0WRDMK3SE",
+      "role": "assistant",
+      "content": "您好！我注意到您连续发送了三次 \"concurrent message\"。请问有什么我可以帮您的吗？如果您在测试并发消息，我这边已经收到了。请随时告诉我您的需求。",
+      "timestamp": 1785984624480
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984578198,
+    "lastActiveAt": 1785984624480,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

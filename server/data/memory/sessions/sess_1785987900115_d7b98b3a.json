@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987900115_d7b98b3a",
+  "userId": "load-user-w80g",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJS9ZZSFJPHCDFYHS3B2XR",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785987901329
+    },
+    {
+      "id": "01KZAJWTBDYN393CRKH5NB64ZX",
+      "role": "assistant",
+      "content": "你好！我收到了 \"conn_msg_4\"，但这似乎不是一个完整的请求。能否请你详细说明需要什么帮助？我可以协助你进行文件操作、网页分析、代码审查、项目搭建等任务。请告诉我你的具体需求！",
+      "timestamp": 1785988016493
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987901349,
+    "lastActiveAt": 1785988016493,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

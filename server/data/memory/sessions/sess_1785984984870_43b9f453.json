@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984984870_43b9f453",
+  "userId": "user-2ywf70iwq0c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG09TA0HTN8ZAPHA5STZNR",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984984902
+    },
+    {
+      "id": "01KZAG4FYAMQQEJ2594VP5HXMC",
+      "role": "assistant",
+      "content": "我收到了三条 \"concurrent message\" 消息。看起来您可能在测试并发处理能力，或者这只是一个意外发送的多余内容。请问有什么我可以帮您的吗？",
+      "timestamp": 1785985122250
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984984903,
+    "lastActiveAt": 1785985122250,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

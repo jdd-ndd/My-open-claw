@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604141_55d1126e",
+  "userId": "load-user-zawp",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPHJV1MBHRJPMQBHGFE0",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785984604643
+    },
+    {
+      "id": "01KZAFP9YWZMWZ1YT5Z0K677X6",
+      "role": "assistant",
+      "content": "很高兴为您服务！您输入了 \"conn_msg_4\"，看起来像是一个连接 ID 或消息标识符。为了准确理解您的需求，请问您是想：\n\n- 查询这个连接或消息的相关信息？\n- 执行某个与该 ID 相关的操作？\n- 还是这只是测试消息？\n\n请提供更多上下文，我会全力协助您！",
+      "timestamp": 1785984657372
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604656,
+    "lastActiveAt": 1785984657372,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

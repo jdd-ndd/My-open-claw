@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984881087_0c343b30",
+  "userId": "load-user-pctc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFX4KC9P5D6TGYNEPKC6GH",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984881229
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984881241,
+    "lastActiveAt": 1785984881260,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

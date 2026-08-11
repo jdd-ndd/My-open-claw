@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984839223_059f0e7f",
+  "userId": "user-cyof4a9uo59",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVVJW3XJWC7T4H9HW5DY9",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984839259
+    },
+    {
+      "id": "01KZAFY7BER7PH4MEBMT0K554Z",
+      "role": "assistant",
+      "content": "嗨！👋 看起来你提到了“concurrent message”。如果你是在测试并发消息处理，这个助手可以按顺序处理接收到的每条消息，但需要注意，每个会话是独立处理的，通常在单线程环境中按顺序响应。如果你有具体的并发处理需求，比如同时处理多项任务，我可以帮你并行执行多个工具调用吗？或者你只是想聊聊天？有什么我可以帮你的，尽管告诉我！😊",
+      "timestamp": 1785984916846
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984839259,
+    "lastActiveAt": 1785984916846,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

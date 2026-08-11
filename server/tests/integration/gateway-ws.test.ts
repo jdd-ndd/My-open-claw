@@ -15,7 +15,8 @@ import type { AgentConfig } from '../../src/gateway/router/index.js';
 
 /** 获取可用端口（避免冲突） */
 function getPort(offset = 0): number {
-  return 18780 + offset;
+  const workerOffset = Number(process.env.VITEST_POOL_ID ?? '0') * 20;
+  return 18880 + workerOffset + offset;
 }
 
 /** 创建测试网关 */
@@ -24,6 +25,7 @@ function createGateway(portOffset = 0): GatewayServer {
     host: '127.0.0.1',
     port: getPort(portOffset),
     heartbeatInterval: 500,
+    security: { rateLimit: 10000 },
   });
 }
 
@@ -81,6 +83,79 @@ function sendAndWait(
   });
 }
 
+function sendRequestAndWait(
+  ws: WebSocket,
+  action: string,
+  payload: Record<string, unknown>,
+  timeoutMs = 3000,
+): Promise<Record<string, unknown>> {
+  return new Promise((resolve, reject) => {
+    const msg = {
+      type: 'request',
+      id: `test_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+      action,
+      payload,
+      timestamp: new Date().toISOString(),
+    };
+
+    const timer = setTimeout(() => reject(new Error('Response timeout')), timeoutMs);
+
+    const handler = (data: WebSocket.RawData) => {
+      try {
+        const resp = JSON.parse(data.toString());
+        if (resp.type === 'response' && resp.requestId === msg.id) {
+          clearTimeout(timer);
+          ws.off('message', handler);
+          resolve(resp);
+        }
+      } catch {
+        // ignore non-json and unrelated messages
+      }
+    };
+
+    ws.on('message', handler);
+    ws.send(JSON.stringify(msg));
+  });
+}
+
+function waitForSessionEvent(
+  ws: WebSocket,
+  sessionId: string,
+  eventName: string,
+  timeoutMs = 5000,
+): Promise<Record<string, unknown>> {
+  return new Promise((resolve, reject) => {
+    const handler = (data: WebSocket.RawData) => {
+      try {
+        const msg = JSON.parse(data.toString()) as {
+          type?: string;
+          event?: string;
+          payload?: { sessionId?: string };
+        };
+
+        if (
+          msg.type === 'event'
+          && msg.event === eventName
+          && msg.payload?.sessionId === sessionId
+        ) {
+          clearTimeout(timer);
+          ws.off('message', handler);
+          resolve(msg as Record<string, unknown>);
+        }
+      } catch {
+        // ignore non-json and unrelated messages
+      }
+    };
+
+    const timer = setTimeout(() => {
+      ws.off('message', handler);
+      reject(new Error(`Timed out waiting for ${eventName}`));
+    }, timeoutMs);
+
+    ws.on('message', handler);
+  });
+}
+
 /** 加载测试路由规则 */
 function loadTestRules(router: MessageRouter): void {
   const configs: AgentConfig[] = [
@@ -90,7 +165,7 @@ function loadTestRules(router: MessageRouter): void {
       channels: [
         { channelId: 'webchat', userIds: ['*'] },
         { channelId: 'cli', userIds: ['*'] },
-        { channelId: 'telegram', userIds: ['user-001'] },
+        { channelId: 'feishu', userIds: ['user-001'] },
       ],
     },
     {
@@ -257,6 +332,64 @@ describe('Gateway WebSocket 全链路集成测试', () => {
       // 心跳改为仅发送 ping 帧，此测试验证连接在心跳期间保持存活
       await new Promise((r) => setTimeout(r, 1500)); // 等待至少 2 次心跳
       expect(ws.readyState).toBe(WebSocket.OPEN); // 连接仍存活
+    });
+
+    it('2.8 bound observer should receive remote chat.done for the same session', async () => {
+      const sender = ws;
+      const observer = await connect(port);
+
+      try {
+        const bootstrapResp = await sendAndWait(sender, {
+          content: 'bootstrap session',
+          channelId: 'webchat',
+          userId: 'shared-user',
+        });
+
+        expect(bootstrapResp.status).toBe('success');
+        expect(bootstrapResp.payload).toHaveProperty('sessionId');
+
+        const sessionId = String((bootstrapResp.payload as { sessionId: string }).sessionId);
+
+        const bindResp = await sendRequestAndWait(observer, 'session.bind', {
+          sessionId,
+          channelId: 'webchat',
+          userId: 'shared-user',
+        });
+
+        expect(bindResp.status).toBe('success');
+        expect(bindResp.payload).toMatchObject({
+          sessionId,
+          bound: true,
+        });
+
+        const observerDonePromise = waitForSessionEvent(observer, sessionId, 'chat.done', 8000);
+        const senderDonePromise = waitForSessionEvent(sender, sessionId, 'chat.done', 8000);
+
+        const sendResp = await sendAndWait(sender, {
+          content: 'hello from sender',
+          channelId: 'webchat',
+          userId: 'shared-user',
+          sessionId,
+        });
+
+        expect(sendResp.status).toBe('success');
+        expect(String((sendResp.payload as { sessionId: string }).sessionId)).toBe(sessionId);
+
+        const [senderDone, observerDone] = await Promise.all([senderDonePromise, observerDonePromise]);
+
+        expect(senderDone).toMatchObject({
+          type: 'event',
+          event: 'chat.done',
+          payload: expect.objectContaining({ sessionId }),
+        });
+        expect(observerDone).toMatchObject({
+          type: 'event',
+          event: 'chat.done',
+          payload: expect.objectContaining({ sessionId }),
+        });
+      } finally {
+        observer.close();
+      }
     });
   });
 

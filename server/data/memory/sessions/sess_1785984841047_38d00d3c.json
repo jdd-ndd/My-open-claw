@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984841047_38d00d3c",
+  "userId": "user-soukw0vsv4t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVXC04W6SEW74R4YQGQB7",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984841087
+    },
+    {
+      "id": "01KZAFY3DGKPJ8Q32AWNWQG8N4",
+      "role": "assistant",
+      "content": "收到你的并发消息！我是 MyOpenClaw 助手，可以处理各种任务，包括代码审查、项目搭建、网页分析、文件操作、网络请求、天气查询、计算等等。请问有什么可以帮到你？",
+      "timestamp": 1785984912816
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984841087,
+    "lastActiveAt": 1785984912816,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

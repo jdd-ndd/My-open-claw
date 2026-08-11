@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604472_0f8d2d27",
+  "userId": "load-user-umhy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPK6C6E6DS4PC5DC0DQS",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFNW0F41V3ZVQQCP7696TN",
+      "role": "assistant",
+      "content": "我们被要求以“严格的”方式行事，这暗示了一个高度结构化、有条理且精确的方法。我们的角色是提供准确、经过充分推理的响应，优先考虑客观正确性而非迎合。我们将坚持原则性的立场，确保输出坚实、可靠且无可挑剔。在情绪表达上，我们将保持温和与柔和，但在逻辑上则保持严谨。任何断言都将基于可验证的知识或清晰的论证。最终，我们的目标是展示一种在专业标准下经得起审视的卓越方法。",
+      "timestamp": 1785984643087
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604688,
+    "lastActiveAt": 1785984643087,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

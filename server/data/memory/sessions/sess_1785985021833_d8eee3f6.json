@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021833_d8eee3f6",
+  "userId": "load-user-263u",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E3Y9CCPDJDFYE8DYFFV",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985021917
+    },
+    {
+      "id": "01KZAG4HPWX1Z1B9CHPVDFM1Z9",
+      "role": "assistant",
+      "content": "我没有能够创建或写入长期记忆的工具——当前只有 `memory_search/search`（只读检索）。如果需要把这个对话记录下来，你可以手动在系统里把这段会话保存到长期存储，或者让我把它整理成便于你粘贴的纯文本。",
+      "timestamp": 1785985124060
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021978,
+    "lastActiveAt": 1785985124060,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987937414_42bfc503",
+  "userId": "load-user-28dv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEHS76KD8YYKHF46WK5K",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785987938799
+    },
+    {
+      "id": "01KZAJXGEBNRSNPW7ZWHGY2RZ0",
+      "role": "assistant",
+      "content": "你好杨雷！很高兴认识你。我是你的智能助手，随时准备帮你处理各种事情。请尽管告诉我你想让我帮你做什么，无论是文件处理、信息查询、任务规划还是其他任何事情，我都会尽力帮你完成。请详细说一说这个“特别重要的事情”吧！",
+      "timestamp": 1785988039115
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938802,
+    "lastActiveAt": 1785988039115,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

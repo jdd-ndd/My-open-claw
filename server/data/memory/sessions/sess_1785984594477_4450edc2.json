@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594477_4450edc2",
+  "userId": "load-user-sv9c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCQPJ3CZ46CW18W7VGKT",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785984594527
+    },
+    {
+      "id": "01KZAFNY75ENHGAEWT9BKCF2PN",
+      "role": "assistant",
+      "content": "这似乎是一条连接消息，没有实际内容。请问有什么我可以帮助你的吗？",
+      "timestamp": 1785984645349
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594583,
+    "lastActiveAt": 1785984645349,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

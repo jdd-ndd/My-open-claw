@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069922_357c470e",
+  "userId": "load-user-z2w5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X9EKAWF9S5C7Z7N7254",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985070248
+    },
+    {
+      "id": "01KZAG4FPA4TS6WW5Q4RXAPFX5",
+      "role": "assistant",
+      "content": "你好！我已收到你的消息。看起来 \"conn_msg_12\" 可能是一条测试消息或会话标记。\n\n如果你有任何任务或问题需要我帮忙，请随时告诉我！例如：\n- 文件操作（读取、写入、创建项目）\n- 浏览器分析网页\n- 代码审查\n- 天气查询、汇率换算、数学计算\n- 或任何其他问题\n\n我随时准备为你服务！😊",
+      "timestamp": 1785985121994
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070290,
+    "lastActiveAt": 1785985121994,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

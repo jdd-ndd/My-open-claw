@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>Model Display Name 修复对比</title>
+<style>
+  body { background: #0d1117; color: #d8e1e8; font-family: 'Segoe UI', -apple-system, system-ui, sans-serif; padding: 24px; margin: 0; }
+  h1 { font-size: 22px; margin: 0 0 4px; color: #3b9ddd; }
+  h2 { font-size: 16px; color: #d8e1e8; margin-top: 32px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  .sub { color: #8b95a1; font-size: 13px; margin-bottom: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; }
+  .label { color: #3b9ddd; font-size: 13px; font-weight: bold; margin-bottom: 6px; font-family: 'Cascadia Code', 'Fira Code', monospace; }
+  .label .meta { color: #8b95a1; font-weight: normal; font-size: 11px; margin-left: 8px; }
+  .frame { background: #07090b; border: 1px solid #21262d; border-radius: 6px; overflow: hidden; line-height: 0; }
+  .frame object { width: 100%; display: block; }
+  .legend { margin-top: 6px; font-size: 11px; color: #8b95a1; line-height: 1.5; }
+  .before { color: #ef4444; text-decoration: line-through; }
+  .after { color: #22c55e; font-weight: bold; }
+  code { background: #21262d; padding: 1px 6px; border-radius: 3px; font-size: 12px; color: #ffa62b; }
+</style>
+</head>
+<body>
+<h1>Model Display Name 修复</h1>
+<p class="sub">
+  之前用 <code>model.replace("-", " ").title()</code> 默认格式化, 把 <code>gpt-4o</code> 变成 <code>Gpt 4 O</code>、<code>deepseek-v4-pro</code> 变成 <code>Deepseek V4 Pro</code> (小写 s)。
+  现在改成查映射表, 查不到再走 fallback. 显示名更专业。
+</p>
+
+<h2>3 个 model 的 StatusPane 渲染</h2>
+<div class="grid-3">
+  <div class="card">
+    <div class="label">deepseek-v4-pro<span class="meta">映射: "DeepSeek V4 Pro"</span></div>
+    <div class="frame"><object data="model_deepseek-v4-pro.svg" type="image/svg+xml"></object></div>
+    <div class="legend">
+      <span class="before">之前: Deepseek V4 Pro</span> → <span class="after">现在: DeepSeek V4 Pro</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="label">deepseek-v4-flash<span class="meta">映射: "DeepSeek V4 Flash"</span></div>
+    <div class="frame"><object data="model_deepseek-v4-flash.svg" type="image/svg+xml"></object></div>
+    <div class="legend">
+      <span class="before">之前: Deepseek V4 Flash</span> → <span class="after">现在: DeepSeek V4 Flash</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="label">gpt-4o<span class="meta">映射: "GPT-4o"</span></div>
+    <div class="frame"><object data="model_gpt-4o.svg" type="image/svg+xml"></object></div>
+    <div class="legend">
+      <span class="before">之前: Gpt 4 O</span> → <span class="after">现在: GPT-4o</span>
+    </div>
+  </div>
+</div>
+
+<h2>映射表内容</h2>
+<table style="border-collapse:collapse;font-size:13px;margin-top:8px;">
+  <tr style="text-align:left;border-bottom:1px solid #30363d;">
+    <th style="padding:6px 16px;color:#8b95a1;">model id</th>
+    <th style="padding:6px 16px;color:#8b95a1;">display name</th>
+  </tr>
+  <tr><td style="padding:4px 16px;font-family:monospace;">deepseek-v4-pro</td><td style="padding:4px 16px;">DeepSeek V4 Pro</td></tr>
+  <tr><td style="padding:4px 16px;font-family:monospace;">deepseek-v4-flash</td><td style="padding:4px 16px;">DeepSeek V4 Flash</td></tr>
+  <tr><td style="padding:4px 16px;font-family:monospace;">gpt-4o</td><td style="padding:4px 16px;">GPT-4o</td></tr>
+  <tr><td style="padding:4px 16px;font-family:monospace;">gpt-4o-mini</td><td style="padding:4px 16px;">GPT-4o mini</td></tr>
+  <tr><td style="padding:4px 16px;font-family:monospace;">claude-3-5-sonnet</td><td style="padding:4px 16px;">Claude 3.5 Sonnet</td></tr>
+  <tr><td style="padding:4px 16px;font-family:monospace;">claude-3-5-haiku</td><td style="padding:4px 16px;">Claude 3.5 Haiku</td></tr>
+  <tr style="color:#8b95a1;"><td style="padding:4px 16px;font-family:monospace;">其他 (fallback)</td><td style="padding:4px 16px;"><code>model.replace("-", " ").title()</code> 比如 <code>foo-bar-baz</code> → "Foo Bar Baz"</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988221318_21699859",
+  "userId": "load-user-afaz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK33P314CANWBE1MGEF22N",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785988222637
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988222642,
+    "lastActiveAt": 1785988222659,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

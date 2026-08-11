@@ -1,0 +1,8 @@
+{
+  "watch": ["dist"],
+  "ext": "js,json",
+  "ignore": ["dist/**/*.map", "src/**/*", "node_modules/**/*"],
+  "exec": "node dist/main.js",
+  "delay": 500,
+  "verbose": true
+}

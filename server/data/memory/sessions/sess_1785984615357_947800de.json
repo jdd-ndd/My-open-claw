@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984615357_947800de",
+  "userId": "load-user-ekpj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1AV1Y18AP39Y94G1VWH",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984615649
+    },
+    {
+      "id": "01KZAFNVC3666PRHRR7C1KEBZN",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984642435
+    },
+    {
+      "id": "01KZAFPJ0W8MAMDYDC1B5H787E",
+      "role": "assistant",
+      "content": "我刚刚检索了咱们这个会话的历史记录，但结果显示之前没有存储任何对话记忆。这通常意味着这是咱们对话的开始阶段，之前还没有产生实质性的内容被存入长期记忆中。\n\n如果你有之前在其他会话中聊过的内容需要回顾，或者需要我帮你做点什么，随时告诉我！😊",
+      "timestamp": 1785984665628
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615686,
+    "lastActiveAt": 1785984665628,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785988121217_558f0080",
+  "userId": "user-qdnomkwavki",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK00PW0V9MBP1MYJSBE939",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785988121305
+    },
+    {
+      "id": "01KZAK0GJFY9DSW1TXNK6402VQ",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息\"concurrent message\"，但不太确定你具体想表达什么。\n\n请问你是想：\n\n1. **测试并发消息** — 同时发送多条消息看我的处理能力？\n2. **了解并发概念** — 想学习关于并发编程/并发处理的知识？\n3. **其他需求** — 还是有别的任务需要我帮忙？\n\n请详细说明一下你的需求，我会尽力帮助你！😊",
+      "timestamp": 1785988137551
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988121306,
+    "lastActiveAt": 1785988137551,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

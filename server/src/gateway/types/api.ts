@@ -4,7 +4,7 @@
  * @module @myopenclaw/server/gateway/types
  */
 
-import type { NormalizedMessage } from '../router/types.js';
+import type { NormalizedMessage } from '../sessions/types.js';
 
 /** Gateway 运行状态 */
 export interface GatewayStatus {
@@ -45,6 +45,19 @@ export interface AgentInvokeResult {
   tokensUsed: number;
   duration: number;
   toolsCalled?: string[];
+  /**
+   * 思考过程(reasoning_content)汇总
+   * 来自 Orchestrator 多轮 Think 阶段 LLM 输出的 reasoning_content 拼接
+   * — 若模型(如 DeepSeek V3)不输出 reasoning,此字段为空字符串
+   * — 若模型(如 DeepSeek R1)输出 reasoning,这里会聚合多轮思考并以 "\n\n---\n\n" 分隔
+   * — 供 Gateway 层转 chat.reasoning_delta + chat.done.totalReasoning
+   */
+  reasoningContent?: string;
+  /**
+   * 思考过程累计耗时(毫秒)
+   * 第一次 Think 开始到最后一次 Think 结束的时长
+   */
+  reasoningDurationMs?: number;
 }
 
 /** 消息接收接口 */

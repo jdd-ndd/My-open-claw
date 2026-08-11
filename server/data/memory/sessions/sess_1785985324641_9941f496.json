@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324641_9941f496",
+  "userId": "load-user-cfh1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP34VVNQMBC0CFE6FYS9",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985325128
+    },
+    {
+      "id": "01KZAGCR39TKXG86BCY7WFHD86",
+      "role": "assistant",
+      "content": "连接正常，我已收到你的测试消息 (conn_msg_8)。我是你的智能助手，有什么我可以帮你的吗？",
+      "timestamp": 1785985392745
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325136,
+    "lastActiveAt": 1785985392745,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987956763_6c55280b",
+  "userId": "load-user-ik4z",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0WE1MXYDN35Y68G9S07",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785987957521
+    },
+    {
+      "id": "01KZAJWF6S8MTX56Q2BA9J37A6",
+      "role": "assistant",
+      "content": "已收到连接测试消息 conn_msg_10。我在这里，有什么可以帮你的吗？",
+      "timestamp": 1785988005081
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957556,
+    "lastActiveAt": 1785988005081,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

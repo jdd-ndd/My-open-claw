@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984989364_31b9ef9e",
+  "userId": "user-jiykbuqcrvh",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0E6RHK5E1B6GY9J17GZM",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984989396
+    },
+    {
+      "id": "01KZAG4977BSZHWQ9KAZ8ZSA2Q",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，通用任务处理智能助手。\n\n我注意到你可能发送了一条并发消息，但我没有收到具体的任务请求。有什么我可以帮你的吗？无论是文件操作、网页分析、代码审查、项目搭建，还是信息查询（天气、汇率、时间、路线规划等），我都可以帮到你！请随时告诉我你的需求 😊",
+      "timestamp": 1785985115367
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984989396,
+    "lastActiveAt": 1785985115367,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987937546_33c6f2b9",
+  "userId": "load-user-ehnf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEJ4J5QSHXXS8WWE4E7X",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785987938800
+    },
+    {
+      "id": "01KZAJWPTP8P2QR79TSDZHPH9R",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息。当前看起来是一个简单的问候或连接确认，没有需要我处理的明确任务。\n\n我可以帮你做很多事情，例如：\n\n-   📖 **文件操作**：读取、写入、删除文件\n-   💻 **执行命令**：在终端中运行 Shell 命令\n-   🌐 **网页浏览**：打开网页、抓取内容、分析页面\n-   📊 **信息查询**：天气、新闻、汇率、IP 定位等\n-   🔧 **项目搭建**：快速初始化项目结构\n-   🔍 **代码审查**：检查代码质量、安全性和可维护性\n\n请告诉我你需要什么帮助，我随时准备为你服务！",
+      "timestamp": 1785988012886
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938810,
+    "lastActiveAt": 1785988012886,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618487_19d4c1cd",
+  "userId": "load-user-lbqp",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN48D6Z3RPZEZRRPTDAET",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984618634
+    },
+    {
+      "id": "01KZAFNKXKGMTXZ8H5Z0JAGR6G",
+      "role": "assistant",
+      "content": "你好！我在这里，随时准备为你服务。\n\n请告诉我你需要什么帮助？",
+      "timestamp": 1785984634804
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618681,
+    "lastActiveAt": 1785984634804,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

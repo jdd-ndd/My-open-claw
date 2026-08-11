@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985363642_0a9e1921",
+  "userId": "load-user-95u7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWBWV0BTEF2FTPT94ZN9",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985364322
+    },
+    {
+      "id": "01KZAGD6ZWGFE17SVPFCM3T4CM",
+      "role": "assistant",
+      "content": "这看起来像是连接消息的标签，不是一个具体的请求。你可以直接告诉我你的任务或问题，我会尽力协助你。",
+      "timestamp": 1785985407996
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364328,
+    "lastActiveAt": 1785985407996,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

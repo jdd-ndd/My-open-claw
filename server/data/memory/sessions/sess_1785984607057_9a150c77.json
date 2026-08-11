@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984607057_9a150c77",
+  "userId": "load-user-vgb7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS5ZHQRPA263XJMCQX86",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785984607312
+    },
+    {
+      "id": "01KZAFP3QHKCQT2H5W25M5PNWG",
+      "role": "assistant",
+      "content": ": 收到！我是 MyOpenClaw，您的智能助手。我已就绪，随时准备处理您的各种需求——无论是文件操作、信息查询、代码处理还是日常问答，尽管吩咐。当前连接状态稳定，请随意开始。",
+      "timestamp": 1785984650993
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607347,
+    "lastActiveAt": 1785984650993,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

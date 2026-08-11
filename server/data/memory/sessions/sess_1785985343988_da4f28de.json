@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985343988_da4f28de",
+  "userId": "load-user-69so",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94CHPSCCW47SVNHGT9K",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985344629
+    },
+    {
+      "id": "01KZAGDBS25WN1QR9AC4S49Q6H",
+      "role": "assistant",
+      "content": "我懂你的节奏了——又来一个暗号。  \n那就再送你一条：  \n  \n**为什么程序员分不清万圣节和圣诞节？**  \n因为 Oct 31 == Dec 25。",
+      "timestamp": 1785985412898
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344634,
+    "lastActiveAt": 1785985412898,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

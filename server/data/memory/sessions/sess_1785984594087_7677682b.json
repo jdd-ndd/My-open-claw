@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984594087_7677682b",
+  "userId": "load-user-inc5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCNMA8VTSQ4865XA2PYZ",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984594525
+    },
+    {
+      "id": "01KZAFNRD2EWT5N6SWTTZ600GQ",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了 \"conn_msg_5\"。如果你在测试连接，我已经收到了你的消息。有什么我可以帮助你的吗？",
+      "timestamp": 1785984639394
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594541,
+    "lastActiveAt": 1785984639394,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

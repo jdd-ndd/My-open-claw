@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606796_e2579578",
+  "userId": "load-user-xzhe",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS4QS2MV6F3ZX7BQ9VJC",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFNWKF4JAT229JH43B7EB9",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了\"conn_msg_3\"，看起来像是一个连接测试消息。我是你的智能助手，随时准备帮你处理各种任务，比如：\n\n- 📝 文件读写与管理\n- 🌐 网页分析\n- 💻 代码审查\n- 🚀 项目搭建\n- 🔍 信息检索\n- ⚙️ Shell 命令执行\n- 🌤️ 天气查询、货币换算等实用工具\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785984643695
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607321,
+    "lastActiveAt": 1785984643695,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

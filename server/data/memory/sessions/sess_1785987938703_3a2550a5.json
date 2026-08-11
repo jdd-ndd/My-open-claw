@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987938703_3a2550a5",
+  "userId": "load-user-2jjn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEN5QRZN0G57ZPW38X7N",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785987938802
+    },
+    {
+      "id": "01KZAJW2Z78CZA8VD1WYW2KYHK",
+      "role": "assistant",
+      "content": "<thought>用户要求执行 conn_msg_19，我需要先读取该文件查看其内容，然后根据内容执行相应操作。</thought>\n\n<action name=\"fs/read_file\" args='{\"path\":\"/Users/liuyusheng/Desktop/myopenclaw/conn_msg_19\"}'>",
+      "timestamp": 1785987992551
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938869,
+    "lastActiveAt": 1785987992551,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

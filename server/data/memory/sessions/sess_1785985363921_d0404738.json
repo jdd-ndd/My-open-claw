@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985363921_d0404738",
+  "userId": "load-user-hkbx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWC5CKM5PEY6CF1GBCQR",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985364323
+    },
+    {
+      "id": "01KZAGD0G8718VDBBK4F9B6M5B",
+      "role": "assistant",
+      "content": "Conn_msg_11 已收到。请发送您需要处理的具体任务或问题,我将为您提供帮助。",
+      "timestamp": 1785985401353
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364334,
+    "lastActiveAt": 1785985401353,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984985496_66b41189",
+  "userId": "user-aez1htot5jo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0ADXFC3W933KWHH45XHJ",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984985529
+    },
+    {
+      "id": "01KZAG4E43KDE7XJVF66YZ5J3V",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息，但不确定你想做什么。你是想：\n\n- 测试我处理并发消息的能力？\n- 还是有其他具体任务需要帮助？\n\n请告诉我你的具体需求，我会尽力帮你完成！😊",
+      "timestamp": 1785985120387
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984985529,
+    "lastActiveAt": 1785985120387,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

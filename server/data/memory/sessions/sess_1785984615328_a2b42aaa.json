@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615328_a2b42aaa",
+  "userId": "load-user-btb8",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1APCNHWGQ0M6Y1GBGM3",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785984615649
+    },
+    {
+      "id": "01KZAFNRVF7RAKRDFFYHTAATRB",
+      "role": "assistant",
+      "content": "你好！我已收到你的连接消息。请问有什么我可以帮助你的吗？如果你有任何任务或问题，随时告诉我。",
+      "timestamp": 1785984639855
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615682,
+    "lastActiveAt": 1785984639855,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

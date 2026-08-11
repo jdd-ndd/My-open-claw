@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988262598_43a4c7f4",
+  "userId": "load-user-eugo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK4B4G7A9NFSQMQS83G1CB",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785988263026
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988263036,
+    "lastActiveAt": 1785988263056,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

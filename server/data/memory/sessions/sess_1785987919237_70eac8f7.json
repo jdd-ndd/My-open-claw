@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919237_70eac8f7",
+  "userId": "load-user-vv0q",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWFH3K8Q07AQAQS7STG5",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785987920278
+    },
+    {
+      "id": "01KZAJXKJ6HQY8K5ENB5ZS1ZH5",
+      "role": "assistant",
+      "content": "这似乎不完整——我没有看到可以执行的具体任务。请描述您想做些什么？例如：\n\n- 快速搭建一个新项目\n- 审查一段代码\n- 读取或写入文件\n- 执行一条命令\n- 查阅天气、汇率、头条新闻等\n\n直接告诉我需求，我马上处理。",
+      "timestamp": 1785988042310
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920295,
+    "lastActiveAt": 1785988042310,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

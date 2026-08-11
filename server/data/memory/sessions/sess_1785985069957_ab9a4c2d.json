@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069957_ab9a4c2d",
+  "userId": "load-user-9el3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X9K6YJ1FXX8C5HFKW4B",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985070248
+    },
+    {
+      "id": "01KZAG4HE7JBM0M8VNH1WZF9Z8",
+      "role": "assistant",
+      "content": "用户打开了我们的记忆片段，回顾了之前的对话内容。我能看到这些历史记录，知道您之前问过时间、本周日期以及您的姓名等问题。\n\n现在需要我继续帮您处理什么新的任务吗？",
+      "timestamp": 1785985123783
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070293,
+    "lastActiveAt": 1785985123783,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

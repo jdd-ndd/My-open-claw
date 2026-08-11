@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370982_9ca55235",
+  "userId": "load-user-n2xs",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC30985796WM6MAJE89NM",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985371099
+    },
+    {
+      "id": "01KZAGF5MP65ZJYX4H64W9B2QT",
+      "role": "assistant",
+      "content": "JSON 和 JSONB 是 PostgreSQL 中两种用于存储 JSON 数据的字段类型，它们之间有几个关键区别：\n\n---\n\n## 主要区别\n\n| 特性 | JSON | JSONB |\n|------|------|-------|\n| **存储格式** | 纯文本，保持原始 JSON 格式 | 二进制格式，解析后存储 |\n| **查询性能** | 每次查询需要重新解析 | 已解析存储，查询更快 |\n| **索引支持** | ❌ 不支持直接索引 | ✅ 支持多种索引 |\n| **数据保真度** | 保留原始空格、重复键、顺序 | 不保留空格和键顺序，重复键只保留最后一个 |\n| **写入性能** | 写入稍快 | 写入稍慢（需要解析转换） |\n\n---\n\n## 图解对比\n\n```\nJSON (存储原始文本)\n\"{\\\"a\\\":1,  \\\"b\\\":2}\"  →  原样保存在硬盘上\n每次读取都要解析一遍\n\nJSONB (存储优化后的二进制)\n\"{\\\"a\\\":1,  \\\"b\\\":2}\"  →  解析 → 去空格 → 去重键 → 排序 → 存二进制\n读取时直接可用，不需要再次解析\n```\n\n## 适用场景\n\n| 场景 | 推荐 |\n|------|------|\n| 需要频繁查询 JSON 内部字段 | **JSONB** |\n| 需要对 JSON 字段建索引 | **JSONB** |\n| 只做整体存取，不查询内部 | JSON 或 JSONB 均可 |\n| 必须保留原始 JSON 格式 | **JSON** |\n| 日志存储、审计日志 | **JSON** |\n\n---\n\n## 代码示例\n\n```sql\n-- JSONB 可以使用 @>、->、->> 等操作符，且支持索引\nSELECT * FROM users WHERE info @> '{\"role\": \"admin\"}';\n\n-- JSONB 可以创建 GIN 索引加速查询\nCREATE INDEX idx_users_info ON users USING GIN (info jsonb_path_ops);\n```\n\n---\n\n## 总结\n\n> 绝大多数场景下，**优先选择 JSONB**，只有在必须保留原始 JSON 格式时才使用 JSON。",
+      "timestamp": 1785985472150
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371115,
+    "lastActiveAt": 1785985472150,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

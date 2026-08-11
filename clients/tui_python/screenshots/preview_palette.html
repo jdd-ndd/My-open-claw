@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>Command Palette 截图</title>
+<style>
+  body { background: #0d1117; color: #d8e1e8; font-family: 'Segoe UI', -apple-system, system-ui, sans-serif; padding: 24px; margin: 0; }
+  h1 { font-size: 22px; margin: 0 0 4px; color: #3b9ddd; }
+  h2 { font-size: 16px; color: #d8e1e8; margin-top: 32px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  .sub { color: #8b95a1; font-size: 13px; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px; }
+  .label { color: #3b9ddd; font-size: 13px; font-weight: bold; margin-bottom: 6px; font-family: 'Cascadia Code', 'Fira Code', monospace; }
+  .label .meta { color: #8b95a1; font-weight: normal; font-size: 11px; margin-left: 8px; }
+  .frame { background: #07090b; border: 1px solid #21262d; border-radius: 6px; overflow: hidden; line-height: 0; }
+  .frame object { width: 100%; display: block; }
+  .legend { margin-top: 6px; font-size: 11px; color: #8b95a1; line-height: 1.5; }
+  code { background: #21262d; padding: 1px 6px; border-radius: 3px; font-size: 12px; color: #ffa62b; }
+</style>
+</head>
+<body>
+<h1>Command Palette 截图</h1>
+<p class="sub">
+  按 <code>Ctrl+P</code> 打开命令面板 (VSCode 风格)。<code>↑↓</code> 选命令，<code>Enter</code> 执行，<code>Esc</code> 关闭。搜索对 title / keybinding / group 做不区分大小写子串匹配。
+</p>
+
+<h2>A. 空查询 (全部命令, 按 group 分组)</h2>
+<div class="card">
+  <div class="label">empty query<span class="meta">展示所有命令 + group headers</span></div>
+  <div class="frame"><object data="palette_empty.svg" type="image/svg+xml"></object></div>
+  <div class="legend">11 个命令 + 4 个 group header (Mode / Window / Chat / App)</div>
+</div>
+
+<h2>B. 搜索 "intensity" (过滤后)</h2>
+<div class="card">
+  <div class="label">query = "intensity"<span class="meta">只剩 intensity_cycle 命令</span></div>
+  <div class="frame"><object data="palette_intensity.svg" type="image/svg+xml"></object></div>
+  <div class="legend">group header 保留, 只显示匹配的 command (第一个非 disabled 自动 highlight)</div>
+</div>
+
+<h2>C. 搜索 "quit" (按 keybinding 匹配)</h2>
+<div class="card">
+  <div class="label">query = "quit"<span class="meta">按 keybinding "q / Ctrl+C" 匹配也能命中</span></div>
+  <div class="frame"><object data="palette_quit.svg" type="image/svg+xml"></object></div>
+  <div class="legend">title / keybinding / group / name 四个字段都参与子串匹配</div>
+</div>
+
+<h2>D. 无匹配</h2>
+<div class="card">
+  <div class="label">query = "xyz_nomatch"<span class="meta">没匹配时显示 [No matches]</span></div>
+  <div class="frame"><object data="palette_nomatch.svg" type="image/svg+xml"></object></div>
+  <div class="legend">空状态优雅处理, Enter 不会崩</div>
+</div>
+
+</body>
+</html>

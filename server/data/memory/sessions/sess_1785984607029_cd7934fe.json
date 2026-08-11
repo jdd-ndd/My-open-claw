@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984607029_cd7934fe",
+  "userId": "load-user-1kl1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS5T5QX7DK5RD1DJ8QXB",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984607312
+    },
+    {
+      "id": "01KZAFPSK6JNX1GTX997SEGC6C",
+      "role": "assistant",
+      "content": "我注意到你发送了 `conn_msg_11`，但这看起来像是一个内部消息 ID，而没有附带具体的任务描述。\n\n请问你需要我做什么呢？例如：\n- 是希望我回顾或处理之前某条特定的消息？\n- 需要我分析某段文本或执行某个操作？\n- 还是误触发了消息？\n\n请告诉我具体的需求，我会立刻帮你处理。",
+      "timestamp": 1785984673382
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607345,
+    "lastActiveAt": 1785984673382,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

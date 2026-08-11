@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987920194_381cbb7a",
+  "userId": "load-user-hqzs",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWHY426B70JHNDRKCJZE",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785987920281
+    },
+    {
+      "id": "01KZAJWXCA4MZVD84ZSWNC8HE4",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988019594
+    },
+    {
+      "id": "01KZAJY8APX6D3JQXVTCX2DA53",
+      "role": "assistant",
+      "content": "您好，您发送的\"1\"我需要更多上下文才能理解。请问\"1\"是指：\n\n- 之前某个选项列表中的第 1 项？\n- 某个任务的第 1 步？\n- 还是有其他含义？\n\n请补充说明一下，我好继续为您处理。😊",
+      "timestamp": 1785988063574
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920345,
+    "lastActiveAt": 1785988063574,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

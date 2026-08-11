@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985318555_dd6248ff",
+  "userId": "load-user-5c4y",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFWEV228JGEVD1E5718M",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985318762
+    },
+    {
+      "id": "01KZAGDM4VPN28S55055NZ39TJ",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985421467
+    },
+    {
+      "id": "01KZAGEZG4RVV8K9MQ1AS7JDKM",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息\"conn_msg_15\"，但不太确定你具体想要我做什么。\n\n这看起来像是一个内部连接消息的标识符，可能是在测试连接状态。如果你想让我帮你处理某个任务，请直接告诉我你的需求，比如：\n\n- 📁 文件操作（读取、写入、删除文件）\n- 🌐 网页浏览或抓取\n- 🔍 信息查询（天气、汇率、新闻等）\n- 📐 计算或单位转换\n- 💻 执行命令或代码审查\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785985465860
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318776,
+    "lastActiveAt": 1785985465860,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

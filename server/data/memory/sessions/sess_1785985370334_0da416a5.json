@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370334_0da416a5",
+  "userId": "load-user-ydca",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC2ZJ9EXEY2YGX8ZYWRSS",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985371097
+    },
+    {
+      "id": "01KZAGE3551D1TMDGHNHQKZ6F0",
+      "role": "assistant",
+      "content": "你好！你发送的内容 \"conn_msg_3\" 似乎是一条系统内部消息或测试文本，我没能从中读取到明确的任务或问题。请问有什么我可以帮你的吗？比如：\n\n- 需要我帮你处理某个文件或执行某个任务？\n- 查询天气、新闻、汇率等信息？\n- 进行数学计算或网页分析？\n\n请再描述一下你的需求，我很乐意帮忙！",
+      "timestamp": 1785985436837
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371102,
+    "lastActiveAt": 1785985436837,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

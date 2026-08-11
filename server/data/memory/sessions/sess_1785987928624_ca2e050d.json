@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928624_ca2e050d",
+  "userId": "load-user-2v5z",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5EFFE03T2J9VBKNN21F",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785987929430
+    },
+    {
+      "id": "01KZAJW7EGC40B0M0QEEKR8PP2",
+      "role": "assistant",
+      "content": "想帮用户快速搭建项目，但用户说得太简略了，我还需要知道：\n\n- **项目类型**：Web 前端、后端 API、CLI 工具、全栈应用还是其他？\n- **技术栈**：有偏好吗（如 React、Vue、Node.js、Python、Rust、Go 等）？\n- **项目名称**：希望叫什么？\n- **其他需求**：包管理、测试框架、代码风格等有没有要求？\n\n补充这些信息后，我就能一键把脚手架搭好。",
+      "timestamp": 1785987997136
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929462,
+    "lastActiveAt": 1785987997136,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985032271_a2d6c80b",
+  "userId": "load-user-85jj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RF8Q1PVDG29GC31SC1P",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG3A2KGRR10XR1RJ192CXR",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985083475
+    },
+    {
+      "id": "01KZAG3TMMFVS4FSXF3MA5K7ED",
+      "role": "assistant",
+      "content": "<thought>用户之前的请求是查询时间，但工具返回结果为空。我需要重新获取当前时间来帮助用户。</thought>\n<action name=\"system/time\" args='{\"timezone\":\"Asia/Shanghai\"}' />",
+      "timestamp": 1785985100436
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032597,
+    "lastActiveAt": 1785985100436,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604562_e384fa46",
+  "userId": "load-user-q01q",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPKMQ9PGG8SGT2SPVA9G",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785984604645
+    },
+    {
+      "id": "01KZAFP8Z58YP23A8HM147XRM9",
+      "role": "assistant",
+      "content": "您好！我是 MyOpenClaw Assistant，您的通用任务处理智能助手。看起来您发送了一个连接消息标识，如果您有任何问题或需要帮助，请随时告诉我！我能帮您处理文件、执行命令、查询天气、分析网页、进行数学计算，还有许多其他任务。请问有什么可以帮您的吗？",
+      "timestamp": 1785984656357
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604696,
+    "lastActiveAt": 1785984656357,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

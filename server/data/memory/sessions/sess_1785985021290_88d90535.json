@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021290_88d90535",
+  "userId": "load-user-gbss",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E107K5KA4E77KDGHEGJ",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985021914
+    },
+    {
+      "id": "01KZAG3F10ZK4AFXHXY418RF9Q",
+      "role": "assistant",
+      "content": "你好！你发送了 \"conn_msg_0\"，这看起来像是一条测试信息。请问有什么我可以帮助你的吗？无论是回答问题、处理文件、查询信息还是其他任务，我都乐意协助你！",
+      "timestamp": 1785985088544
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021917,
+    "lastActiveAt": 1785985088544,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

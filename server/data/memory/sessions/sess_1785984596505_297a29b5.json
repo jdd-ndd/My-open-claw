@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596505_297a29b5",
+  "userId": "load-user-x1fo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF3RVN4KFB2Y3P1XJD1S",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFNHXAS7PKE07TZZNKEX36",
+      "role": "assistant",
+      "content": "你好！你发送了 \"conn_msg_3\"，看起来像是一条测试消息。请问有什么我可以帮助你的吗？",
+      "timestamp": 1785984632746
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597051,
+    "lastActiveAt": 1785984632746,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

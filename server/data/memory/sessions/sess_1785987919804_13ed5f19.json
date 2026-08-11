@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919804_13ed5f19",
+  "userId": "load-user-fv22",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWH0ZGARFA300E12WKAD",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785987920280
+    },
+    {
+      "id": "01KZAJW3YQE50M5K7RP6MQA3J1",
+      "role": "assistant",
+      "content": "您好！我已准备就绪，可以为您处理各种任务。请告诉我您需要什么帮助？",
+      "timestamp": 1785987993559
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920326,
+    "lastActiveAt": 1785987993559,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947650_41b4d474",
+  "userId": "load-user-xvyo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQWZ22Q3ZA616RHTM902",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785987948326
+    },
+    {
+      "id": "01KZAJXV680TDR326EDGEEHS38",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"\n\n【工具执行结果】#2 失败\n\"\"\n\n【工具执行结果】#3 失败\n\"\"\n\n【工具执行结果】#4 失败\n\"\"\n\n【工具执行结果】#5 失败\n\"\"\n\n【工具执行结果】#6 失败\n\"\"\n\n【工具执行结果】#7 失败\n\"\"",
+      "timestamp": 1785988050120
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948362,
+    "lastActiveAt": 1785988050120,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

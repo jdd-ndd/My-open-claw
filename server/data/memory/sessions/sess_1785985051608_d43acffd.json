@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051608_d43acffd",
+  "userId": "load-user-jm62",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BCYAE7HFPMZP9BAR4BB",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985051905
+    },
+    {
+      "id": "01KZAG48H02397N4964VWN3ZBN",
+      "role": "assistant",
+      "content": "我不太确定“conn_msg_13”具体指的是什么。这看起来像一个内部标识符，可能来自聊天工具或某个系统日志。\n\n你可以提供更多背景信息吗？例如：\n- 这是你在某个应用中看到的错误代码？\n- 还是来自某个系统消息的编号？\n\n告诉我更多细节，我就能更准确地帮你。",
+      "timestamp": 1785985114656
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051959,
+    "lastActiveAt": 1785985114656,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

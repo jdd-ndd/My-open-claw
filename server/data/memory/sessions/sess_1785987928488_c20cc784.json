@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928488_c20cc784",
+  "userId": "load-user-gdt1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5E349X2N51514X1F13Y",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785987929430
+    },
+    {
+      "id": "01KZAJWKRF3NAP4RNW106D4AH1",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988009743
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929455,
+    "lastActiveAt": 1785988009743,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

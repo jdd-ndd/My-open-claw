@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785984571054_a7fc9c5a",
+  "userId": "system",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKNPAJEP2BDWVA8FQZ5EJ",
+      "role": "user",
+      "content": "system ping",
+      "timestamp": 1785984571078
+    },
+    {
+      "id": "01KZAFKRDZGRYXYM9XHT7MGWK7",
+      "role": "assistant",
+      "content": "pong ✅ 系统正常运行，有什么可以帮你的？",
+      "timestamp": 1785984573887
+    },
+    {
+      "id": "01KZAFVJZ1DMF3KD88Q02PTCTQ",
+      "role": "user",
+      "content": "system ping",
+      "timestamp": 1785984830431
+    },
+    {
+      "id": "01KZAFVPNQM0C0VS4CX408PYM7",
+      "role": "assistant",
+      "content": "pong ✅ 系统正常运行，有什么可以帮你的？",
+      "timestamp": 1785984834231
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984571078,
+    "lastActiveAt": 1785984834231,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

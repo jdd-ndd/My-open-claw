@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919551_59804df1",
+  "userId": "load-user-9osw",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWGC2KTNWFH93RJM8R3Z",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785987920279
+    },
+    {
+      "id": "01KZAJWDWS68Q8CXTST38RH7BR",
+      "role": "assistant",
+      "content": "用户似乎只发送了一个标识符 `conn_msg_9`。\n\n请问您具体想做什么？您是想：\n- 连接某个设备或服务器？\n- 建立数据库连接？\n- 还是这个编号对应着某个特定的任务或上下文？\n\n请提供更多细节，我好帮您处理。",
+      "timestamp": 1785988003737
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920313,
+    "lastActiveAt": 1785988003737,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

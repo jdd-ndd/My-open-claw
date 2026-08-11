@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984988436_08170285",
+  "userId": "user-rmal2du108",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0D9RE89G013PHW8NX0ME",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984988469
+    },
+    {
+      "id": "01KZAG4NYATTP78D9Y8QWW4C8C",
+      "role": "assistant",
+      "content": "你好！我收到了你的并发消息测试。看起来你在验证我的并发消息处理能力。\n\n我是 MyOpenClaw Assistant，可以帮你处理各种任务，包括：\n- 📁 文件操作\n- 🌐 网页分析\n- 🔍 代码审查\n- 🛠️ 项目初始化\n- 📊 数据计算\n- 🌤️ 天气查询\n- 💱 货币转换\n- 以及更多...\n\n有什么我可以帮你的吗？",
+      "timestamp": 1785985128394
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984988469,
+    "lastActiveAt": 1785985128394,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

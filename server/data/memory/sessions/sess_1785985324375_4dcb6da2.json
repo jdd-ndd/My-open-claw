@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324375_4dcb6da2",
+  "userId": "load-user-c2ip",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP2V542573Q4Y5596JX1",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985325127
+    },
+    {
+      "id": "01KZAGDG4V5RP8RM8NNBXQX8ZS",
+      "role": "assistant",
+      "content": "你好！会话已成功建立 (ID: sess_1785985324375_4dcb6da2)。我是 MyOpenClaw Assistant，通用任务处理智能助手。\n\n我可以帮你完成各种任务，包括：\n- 📂 文件读写与管理\n- 💻 执行 Shell 命令\n- 🌐 网页浏览与抓取\n- 🔍 记忆搜索与检索\n- 📰 新闻、天气、汇率查询\n- 🧮 数学计算与单位转换\n- 🗺️ 路线规划\n- 📝 代码审查与项目搭建\n- 以及其他多种实用功能\n\n请问有什么可以帮你的？",
+      "timestamp": 1785985417371
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325131,
+    "lastActiveAt": 1785985417371,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

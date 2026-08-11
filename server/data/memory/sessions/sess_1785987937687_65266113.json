@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987937687_65266113",
+  "userId": "load-user-5kju",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEJFFVCMCDP3FQ9PWATC",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785987938800
+    },
+    {
+      "id": "01KZAJWVVDFQ85C5XWMEA778Z8",
+      "role": "assistant",
+      "content": "用户只输入了 \"conn_msg_4\"，没有更多上下文。能否提供完整的代码片段或告诉我更多关于它的信息？这样我才能继续帮你处理。",
+      "timestamp": 1785988018029
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938817,
+    "lastActiveAt": 1785988018029,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

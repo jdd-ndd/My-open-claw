@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988232443_175908cb",
+  "userId": "load-user-uh2o",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK3DJ2S83Q1G4KTSBH0WZ3",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785988232726
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988232741,
+    "lastActiveAt": 1785988232771,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

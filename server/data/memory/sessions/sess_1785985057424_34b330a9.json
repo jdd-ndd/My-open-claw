@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057424_34b330a9",
+  "userId": "load-user-uoov",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H7H5KQDPC40XZVVMERT",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985057930
+    },
+    {
+      "id": "01KZAG3SY7WS2HHHK3NKGETNE8",
+      "role": "assistant",
+      "content": "要开始处理你的请求了——请问你需要什么帮助？可以发文字说明任务内容。",
+      "timestamp": 1785985099719
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057950,
+    "lastActiveAt": 1785985099719,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

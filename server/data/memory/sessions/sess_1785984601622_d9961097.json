@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984601622_d9961097",
+  "userId": "load-user-l5gu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM0CVX3AQP1TEA1TE5DC",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984602036
+    },
+    {
+      "id": "01KZAFNQ13DHJAPWPG7XDXCAV9",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984637987
+    },
+    {
+      "id": "01KZAFPBR0TYN8JG8EQBXC92NB",
+      "role": "assistant",
+      "content": "👋 你好！已收到你的连接消息 (conn_msg_7)。我这边连接正常，随时可以为你服务。\n\n请问有什么我可以帮你的？无论是文件操作、代码审查、网页分析、天气查询，还是其他任何任务，尽管告诉我！",
+      "timestamp": 1785984659200
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602056,
+    "lastActiveAt": 1785984659200,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

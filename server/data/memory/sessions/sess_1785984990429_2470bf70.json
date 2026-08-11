@@ -1,0 +1,229 @@
+{
+  "sessionId": "sess_1785984990429_2470bf70",
+  "userId": "stress-user",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK0QBPFEXX0764P29DTCN9",
+      "role": "system",
+      "content": "[历史摘要] system ×4, user ×5, assistant ×1 | 内容: \"[历史摘要] system ×10 | 内容: \"[历史摘要\"; \"[历史摘要] system ×3, user ×7 | 内容\"; \"[历史摘要] user ×10 | 内容: \"msg_87\"\"",
+      "timestamp": 1785987983959,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK0QBT61VN8408Y5PGJCF6",
+      "role": "system",
+      "content": "[历史摘要] assistant ×6, user ×4 | 内容: \"我注意到你发送了一系列消息 ID（从 msg_63 到 ms\"; \"【工具执行结果】#1 成功\n\"\"\"; \"您发送了许多消息 ID（如 msg_5, msg_63, m\"",
+      "timestamp": 1785988055126,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK0QC1EZMYWSPK96VV9Y6P",
+      "role": "system",
+      "content": "[历史摘要] assistant ×5, user ×5 | 内容: \"<thought>用户发送了一大堆消息 ID（msg_47 \"; \"【工具执行结果】#1 成功\n\"\"\"; \"<final_answer>我注意到你发送了一长串消息 ID\"",
+      "timestamp": 1785988144158,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK10YVFB48SPDXQG04X35K",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_10\"; \"msg_11\"; \"msg_12\"",
+      "timestamp": 1785988144170,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK10ZK3JG552JJGJJSA4DY",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_14\"; \"msg_15\"; \"msg_16\"",
+      "timestamp": 1785988144185,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK110AF83CXF4KT1W21H0A",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_24\"; \"msg_25\"; \"msg_26\"",
+      "timestamp": 1785988144201,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK113JQ2K7HVQ8GBAVX6TZ",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_34\"; \"msg_35\"; \"msg_36\"",
+      "timestamp": 1785988144216,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK114H3BV450199XYV9EZ1",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_44\"; \"msg_45\"; \"msg_46\"",
+      "timestamp": 1785988144231,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK115FR4D21PCKY10E0PRJ",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_54\"; \"msg_55\"; \"msg_56\"",
+      "timestamp": 1785988144243,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK116FQWQ69VFVM1KYJYWQ",
+      "role": "system",
+      "content": "[历史摘要] user ×10 | 内容: \"msg_64\"; \"msg_65\"; \"msg_66\"",
+      "timestamp": 1785988144258,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK1543JWZZTR0JM3GQSSDB",
+      "role": "system",
+      "content": "[历史摘要] user ×6 | 内容: \"msg_74\"; \"msg_75\"; \"msg_76\"",
+      "timestamp": 1785988144269,
+      "compressed": true
+    },
+    {
+      "id": "01KZAK0QBHN36Y12JE7JRNXAVG",
+      "role": "user",
+      "content": "msg_80",
+      "timestamp": 1785988144271
+    },
+    {
+      "id": "01KZAK0QBH52822CHMBYGB0H7S",
+      "role": "user",
+      "content": "msg_81",
+      "timestamp": 1785988144272
+    },
+    {
+      "id": "01KZAK0QBHR41PHPJYCPA0AY0G",
+      "role": "user",
+      "content": "msg_82",
+      "timestamp": 1785988144274
+    },
+    {
+      "id": "01KZAK0QBH8KYK2B4ZQG7EN0MV",
+      "role": "user",
+      "content": "msg_83",
+      "timestamp": 1785988144275
+    },
+    {
+      "id": "01KZAK0QBHCP664GSMAJ4RFSH8",
+      "role": "user",
+      "content": "msg_84",
+      "timestamp": 1785988144277
+    },
+    {
+      "id": "01KZAK0QBHDCRS29YG31KDP123",
+      "role": "user",
+      "content": "msg_85",
+      "timestamp": 1785988144278
+    },
+    {
+      "id": "01KZAK0QBHSWEAD3QXGGXDQNF3",
+      "role": "user",
+      "content": "msg_86",
+      "timestamp": 1785988144279
+    },
+    {
+      "id": "01KZAK0QBHHV3KRQD79RSFAM82",
+      "role": "user",
+      "content": "msg_87",
+      "timestamp": 1785988144281
+    },
+    {
+      "id": "01KZAK0QBHSE5ZV15H08M0NS6A",
+      "role": "user",
+      "content": "msg_88",
+      "timestamp": 1785988144282
+    },
+    {
+      "id": "01KZAK0QBJF2RFKG2XZ234M74Z",
+      "role": "user",
+      "content": "msg_89",
+      "timestamp": 1785988144283
+    },
+    {
+      "id": "01KZAK0QBJE2M2BF6V7CCCTHNW",
+      "role": "user",
+      "content": "msg_90",
+      "timestamp": 1785988144284
+    },
+    {
+      "id": "01KZAK0QBJA2QYHY27VW869R91",
+      "role": "user",
+      "content": "msg_91",
+      "timestamp": 1785988144286
+    },
+    {
+      "id": "01KZAK0QBJEERRY908RHYV3MGG",
+      "role": "user",
+      "content": "msg_92",
+      "timestamp": 1785988144287
+    },
+    {
+      "id": "01KZAK0QBJ59S2BF2Z6970W3AM",
+      "role": "user",
+      "content": "msg_93",
+      "timestamp": 1785988144288
+    },
+    {
+      "id": "01KZAK0QBJ45TRZW5730D1QX1H",
+      "role": "user",
+      "content": "msg_94",
+      "timestamp": 1785988144289
+    },
+    {
+      "id": "01KZAK0QBJSP8MSQNWC02CD5N1",
+      "role": "user",
+      "content": "msg_95",
+      "timestamp": 1785988144291
+    },
+    {
+      "id": "01KZAK0QBJ1AHSQRB9T4Y7DGJ0",
+      "role": "user",
+      "content": "msg_96",
+      "timestamp": 1785988144292
+    },
+    {
+      "id": "01KZAK0QBJ1K20J9QBR8SC515A",
+      "role": "user",
+      "content": "msg_97",
+      "timestamp": 1785988144293
+    },
+    {
+      "id": "01KZAK0QBJJTPXNRRVDMMZCW8K",
+      "role": "user",
+      "content": "msg_98",
+      "timestamp": 1785988144294
+    },
+    {
+      "id": "01KZAK0QBJTTDJKD2Q0D8T2W7B",
+      "role": "user",
+      "content": "msg_99",
+      "timestamp": 1785988144295
+    },
+    {
+      "id": "01KZAK4TNDK1F386HQTSY0JJNR",
+      "role": "assistant",
+      "content": "你好！你发送了一串消息编号，但没有说明具体需要我做什么。请问有什么我可以帮你的吗？",
+      "timestamp": 1785988278957
+    },
+    {
+      "id": "01KZAK4V24M5V16FXXQZQK6PSY",
+      "role": "assistant",
+      "content": "你好！我看到你发送了一系列消息ID（从 msg_0 到 msg_99），但没有附带具体的问题或请求。\n\n请问你需要我帮你做什么呢？比如：\n- 是否想查找某个特定的历史消息？\n- 是否需要我帮你处理某些任务？\n- 或者这只是误操作？\n\n请直接告诉我你的需求，我会尽力帮助你！",
+      "timestamp": 1785988279364
+    },
+    {
+      "id": "01KZAK4VFRR31JNJMVV26R6DWG",
+      "role": "assistant",
+      "content": "您好！我看到您连续发送了许多以 \"msg_\" 为前缀的标识符（如 msg_60、msg_59 …）。这些看起来像是消息 ID，但很抱歉，我无法直接通过消息 ID 来检索或读取对应的消息内容。\n\n我可以帮您的是：\n- 使用自然语言描述来搜索历史记忆（例如 \"回忆一下我们之前关于项目计划的讨论\"）\n- 处理文件、执行命令、浏览网页、查询天气/汇率等各类任务\n\n如果您希望我查找这些消息对应的内容，请用几句话告诉我您想找的是什么主题、包含哪些关键词，或者希望我回忆什么信息。我会尽力从长期记忆中提取相关结果。\n\n请问有什么我可以帮您的吗？",
+      "timestamp": 1785988279800
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984992489,
+    "lastActiveAt": 1785988279800,
+    "messageCount": 34,
+    "compressed": true
+  }
+}

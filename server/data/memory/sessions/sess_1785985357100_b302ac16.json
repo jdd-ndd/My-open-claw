@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985357100_b302ac16",
+  "userId": "load-user-vh9w",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWAPKGWGWCMXBX3FEX3",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985357674
+    },
+    {
+      "id": "01KZAGENW573G7CQEV31VE8W0T",
+      "role": "assistant",
+      "content": "文件读取结果如下：\n\n```json\n{ \"path\": \"/mnt/speckit/conn_msg/conn_msg_8\", \"content\": \"conn_msg_8\" }\n```\n\n该文件内容为 `conn_msg_8`。如果需要进一步解析或分析，请告知。",
+      "timestamp": 1785985456005
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357685,
+    "lastActiveAt": 1785985456005,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

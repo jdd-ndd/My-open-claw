@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984615477_a16f4aa7",
+  "userId": "load-user-shni",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN1BFJQQF3PGT32VHWYPB",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785984615650
+    },
+    {
+      "id": "01KZAFP951WVJJ69SCV1NX0606",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息\"conn_msg_15\"，但我不太确定这是什么意思。😊\n\n这看起来像是一个系统内部标识符或连接消息。请问你需要我帮你做什么呢？无论是回答问题、处理文件、查询信息还是其他任务，我都很乐意协助你！",
+      "timestamp": 1785984656545
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984615699,
+    "lastActiveAt": 1785984656545,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

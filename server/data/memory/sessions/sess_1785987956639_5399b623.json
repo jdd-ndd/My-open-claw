@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987956639_5399b623",
+  "userId": "load-user-gio2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0W35N8E7VET18QRMDYN",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785987957521
+    },
+    {
+      "id": "01KZAJY3SBBBXT4MHDZ9PNPXQR",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw 通用任务处理助手。我已准备就绪，请问有什么可以帮你的？",
+      "timestamp": 1785988058923
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957550,
+    "lastActiveAt": 1785988058923,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

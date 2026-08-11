@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599168_29af2be3",
+  "userId": "load-user-vjhf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHHC8FTS1RRW62M0195A",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984599500
+    },
+    {
+      "id": "01KZAFNGCR0B13H29B75TC8MKZ",
+      "role": "assistant",
+      "content": "好的，我看到您提供了一些历史信息，但没有提出新的问题。请问有什么我可以帮您的吗？",
+      "timestamp": 1785984631192
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599525,
+    "lastActiveAt": 1785984631192,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

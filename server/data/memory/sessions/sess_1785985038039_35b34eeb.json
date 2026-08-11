@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985038039_35b34eeb",
+  "userId": "load-user-6fdi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XZ9Q5XK2X3DEC91EPMT",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985038160
+    },
+    {
+      "id": "01KZAG488X65DWZR8CE6YGEDJM",
+      "role": "assistant",
+      "content": "您好，您刚才发送了“conn_msg_17”，这是连接测试消息吗？我不太确定您的具体需求。请告诉我您需要什么帮助，比如文件操作、网页分析、代码审查，或者其他任务，我会尽力协助。",
+      "timestamp": 1785985114398
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038215,
+    "lastActiveAt": 1785985114398,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

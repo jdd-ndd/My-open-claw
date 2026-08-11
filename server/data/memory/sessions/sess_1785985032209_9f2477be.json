@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032209_9f2477be",
+  "userId": "load-user-9num",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1REX82GW71ZDSAJHYJY1",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG3C2ENP1S2S87S2FRR8SN",
+      "role": "assistant",
+      "content": "由于您发送的内容“conn_msg_9”看起来像是一个内部标识符或误发的消息，我没有理解您的具体需求。请问有什么可以帮您的吗？如果您有任务需要处理，请直接告诉我，我会尽力协助。",
+      "timestamp": 1785985085518
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032591,
+    "lastActiveAt": 1785985085518,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

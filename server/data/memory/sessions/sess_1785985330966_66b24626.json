@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985330966_66b24626",
+  "userId": "load-user-gls5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWCP1X0F8F00806EAJY7",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985331581
+    },
+    {
+      "id": "01KZAGCP27Z64SN5ZVS7AC7H4F",
+      "role": "assistant",
+      "content": "Hello! 👋 How can I help you today?",
+      "timestamp": 1785985390663
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331587,
+    "lastActiveAt": 1785985390663,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

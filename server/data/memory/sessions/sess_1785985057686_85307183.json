@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057686_85307183",
+  "userId": "load-user-4uk9",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H8VK31R68N5SEH8JAGE",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985057931
+    },
+    {
+      "id": "01KZAG445X64YMF1436JYSXH0J",
+      "role": "assistant",
+      "content": "好的，我已经记住了！小明，接下来有什么需要我帮忙的吗？我会一直记得你的名字的。😊",
+      "timestamp": 1785985110205
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057982,
+    "lastActiveAt": 1785985110205,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

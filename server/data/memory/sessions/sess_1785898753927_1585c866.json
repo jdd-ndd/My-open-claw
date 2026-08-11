@@ -1,0 +1,128 @@
+{
+  "sessionId": "sess_1785898753927_1585c866",
+  "userId": "ou_fe633df94adca0eb23b3465d70600a10",
+  "channelId": "feishu",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZ7XRQWKX7T4SBPNQJA1N2CG",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785898753937
+    },
+    {
+      "id": "01KZ7XRTHVJR3KPK0NJ91FE57D",
+      "role": "assistant",
+      "content": "Hi！我是 MyOpenClaw，你的通用任务智能助手。有什么可以帮你的吗？",
+      "timestamp": 1785898756667
+    },
+    {
+      "id": "01KZ7Y0YQ1705YBCFW053XE9AM",
+      "role": "user",
+      "content": "你好",
+      "timestamp": 1785899023069
+    },
+    {
+      "id": "01KZ7Y11B5E5EWMR0BJW33BKP1",
+      "role": "assistant",
+      "content": "你好！有什么可以帮你的吗？😊",
+      "timestamp": 1785899025765
+    },
+    {
+      "id": "01KZ7Y1GHPRJ5ABVBY35W58TC8",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785899041331
+    },
+    {
+      "id": "01KZ7Y1M4R2Q4F6W1YX8ZAF22W",
+      "role": "assistant",
+      "content": "Hi！有什么可以帮你的吗？😊",
+      "timestamp": 1785899045016
+    },
+    {
+      "id": "01KZ7Y3499YMJV6RX6GDWHHGV9",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785899094311
+    },
+    {
+      "id": "01KZ7Y38P2J42PB5K92PY9RBBF",
+      "role": "assistant",
+      "content": "Hi！有什么可以帮你的吗？😊",
+      "timestamp": 1785899098818
+    },
+    {
+      "id": "01KZ7YB2Q0T1SK44GFW7VBBWQP",
+      "role": "user",
+      "content": "你好",
+      "timestamp": 1785899354844
+    },
+    {
+      "id": "01KZ7YB5BRGWZ8AHDTQ3T90EDP",
+      "role": "assistant",
+      "content": "Hi！你好呀！😊 我是你的智能助手，有什么可以帮你的吗？无论是回答问题、处理文件、查询信息还是其他任务，我都在这里随时待命！",
+      "timestamp": 1785899357560
+    },
+    {
+      "id": "01KZ7YBMGJP3DVK43R3JVBK5BM",
+      "role": "user",
+      "content": "欧克",
+      "timestamp": 1785899373071
+    },
+    {
+      "id": "01KZ7YBTBFF6NBK8BXMR58D7PG",
+      "role": "assistant",
+      "content": "嘿！收到啦~ 有什么需要我帮忙的吗？随时可以跟我说哦 😊",
+      "timestamp": 1785899379055
+    },
+    {
+      "id": "01KZ8WFDXPA5BRSEK89KB78PJM",
+      "role": "user",
+      "content": "今天几号了",
+      "timestamp": 1785930954676
+    },
+    {
+      "id": "01KZ8WFFPBN5RZ543418AK40ZW",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785930956491
+    },
+    {
+      "id": "01KZ8WFRRA4674JBBCC23XJG6X",
+      "role": "assistant",
+      "content": "根据查询结果:\n\"\"\n\nsystem/time 两次返回了空结果，可能是工具暂时异常。备选方案是使用 exec/shell 运行 date 命令来获取当前日期。",
+      "timestamp": 1785930965770
+    },
+    {
+      "id": "01KZ8Z2JNZ2EQD0GG5N55PQ2YK",
+      "role": "user",
+      "content": "hi",
+      "timestamp": 1785933679293
+    },
+    {
+      "id": "01KZ8Z2RJ357YKAZXKJS0KB8Z8",
+      "role": "assistant",
+      "content": "Hi！有什么可以帮你的吗？😊",
+      "timestamp": 1785933685315
+    },
+    {
+      "id": "01KZAEPRWNDW8G323A3WFC9T2V",
+      "role": "user",
+      "content": "你会做些什么",
+      "timestamp": 1785983624083
+    },
+    {
+      "id": "01KZAEQ516DNYX46Q8FYJ8R6TD",
+      "role": "assistant",
+      "content": "嘿！我是一個全能的任務助手，這裡是你可以讓我幫忙做的事情：\n\n## 📁 文件管理\n讀取、寫入、刪除文件和資料夾，查看目錄結構\n\n## 💻 系統操作\n執行 Shell 命令、管理進程（查看/終止）\n\n## 🌐 網頁瀏覽\n打開網頁、抓取內容、填寫表單、點擊元素\n\n## 🔍 信息查詢\n天氣查詢、最新頭條新聞、加密貨幣價格、匯率轉換、IP 定位、節假日查詢\n\n## 📐 計算工具\n數學表達式計算、單位換算（長度/重量/溫度等）、貨幣換算、進制轉換\n\n## 🗺️ 路線規劃\n地理編碼（地址轉座標）、行車/步行/騎行路線規劃\n\n## 🌐 HTTP 請求\n發送 GET/POST 等 HTTP 請求\n\n## 🧠 長期記憶\n記住我們的對話內容和你的偏好，下次對話可以回憶起來\n\n## 🛠️ 專項技能\n程式碼審查、快速項目搭建、網頁分析\n\n---\n\n簡單來說，無論是查資料、處理文件、跑命令、算東西，還是查天氣看新聞，我都能幫上忙！有什麼想試試看的嗎？😊",
+      "timestamp": 1785983636518
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785898753937,
+    "lastActiveAt": 1785983636518,
+    "messageCount": 19,
+    "compressed": false
+  }
+}

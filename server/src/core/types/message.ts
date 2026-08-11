@@ -81,6 +81,8 @@ export interface Message {
   userId: string;
   /** 会话 ID */
   sessionId: string;
+  /** Agent ID（路由到的目标 Agent） */
+  agentId: string;
   /** 消息类型 */
   type: MessageType;
   /** 发送者角色 */

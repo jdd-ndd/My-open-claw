@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984842158_0d014dab",
+  "userId": "user-jpjn2d8inu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVYEM788W4CRWA67GNZQP",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984842195
+    },
+    {
+      "id": "01KZAFY332RTQB341K9P989KM7",
+      "role": "assistant",
+      "content": "好的，这是一个并发测试场景。我已理解你的测试意图，并准备好处理正常的请求。如果你有任何问题或需要帮助，请随时告知。",
+      "timestamp": 1785984912482
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984842195,
+    "lastActiveAt": 1785984912482,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

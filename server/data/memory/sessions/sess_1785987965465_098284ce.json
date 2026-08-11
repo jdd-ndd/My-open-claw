@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987965465_098284ce",
+  "userId": "load-user-lba6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV9YMTHYG06MB5MFJ1H0F",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785987966862
+    },
+    {
+      "id": "01KZAJWKV23FV6AXGH15Q1Z4ZA",
+      "role": "assistant",
+      "content": "您好！我是 MyOpenClaw Assistant，您的通用任务处理智能助手。我已准备就绪，随时为您服务。\n\n请问有什么我可以帮您的？无论是文件管理、网页浏览、代码审查、信息查询还是其他任务，我都能协助您完成。请随时告诉我您的需求！",
+      "timestamp": 1785988009826
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966865,
+    "lastActiveAt": 1785988009826,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

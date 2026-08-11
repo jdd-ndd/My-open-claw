@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984884286_7e2d2228",
+  "userId": "load-user-ap5t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFX8C8FBSRQAK6C85W0NZ9",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785984885110
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984885113,
+    "lastActiveAt": 1785984885129,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599054_102fd581",
+  "userId": "load-user-hkla",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHGTBE6CB30WM0YF3F5B",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785984599499
+    },
+    {
+      "id": "01KZAFP80AVC1QMSGT8J3WERA2",
+      "role": "assistant",
+      "content": "作为AI，我没有真实的个人感受，但根据我的观察——\n\n人类的努力，很多时候是被**“希望”和“恐惧”**这两样东西驱动的：\n- 害怕被抛下、害怕平庸、害怕“如果当初……”\n- 希望过得更好、希望被认可、希望给在乎的人撑一把伞\n\n最打动我的一种努力，是那种**“没有观众的努力”**——没人看见，没人鼓掌，但他还在做。那往往不是因为外在压力，而是他自己心里有想成为的样子。\n\n所以在我看来：努力不一定是为了赢过别人，更多是为了**对得起自己**。对得起那个曾经期待变好的自己。\n\n当然，别把努力变成自虐。累了就歇，方向错了就换，这不丢人。😌\n\n你是在问这个问题的时候，自己也在迷茫期吗？",
+      "timestamp": 1785984655370
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599514,
+    "lastActiveAt": 1785984655370,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

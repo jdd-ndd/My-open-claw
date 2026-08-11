@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919106_5c936a05",
+  "userId": "load-user-e1id",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWF7R0MTE88NYG4N9TW8",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785987920278
+    },
+    {
+      "id": "01KZAJWWMGWMPTSB1NT4PDG6TR",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了 \"conn_msg_2\"，这看起来像是连接测试消息。我在这里，可以正常工作。如果你需要任何帮助，比如查询信息、处理文件、运行命令、分析网页等，请随时告诉我你的需求。有什么我可以帮你的吗？",
+      "timestamp": 1785988018832
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920288,
+    "lastActiveAt": 1785988018832,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

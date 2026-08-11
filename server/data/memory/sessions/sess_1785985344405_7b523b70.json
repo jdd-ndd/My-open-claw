@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985344405_7b523b70",
+  "userId": "load-user-ekai",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB94RRPKV4PCXWKCKBAXQ",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985344631
+    },
+    {
+      "id": "01KZAGCSQ9SSH3E89DS1GA2GS1",
+      "role": "assistant",
+      "content": "这是一个空的连接消息。如果你需要测试连接，我已经收到你的请求了。有什么我可以帮助你的吗？",
+      "timestamp": 1785985394409
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985344643,
+    "lastActiveAt": 1785985394409,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

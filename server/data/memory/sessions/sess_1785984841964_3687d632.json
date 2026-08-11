@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984841964_3687d632",
+  "userId": "user-qjjpaufpc1s",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVY8K17KVJDAF3ZS15N02",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984842002
+    },
+    {
+      "id": "01KZAFY2Q7M8222SSYNZ31HH2S",
+      "role": "assistant",
+      "content": "收到你的消息！这看起来是一条并发测试消息。如果你有具体的任务或问题，请告诉我，我可以帮你处理各种事务，比如文件操作、代码审查、网页分析、天气查询等。",
+      "timestamp": 1785984912103
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984842002,
+    "lastActiveAt": 1785984912103,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

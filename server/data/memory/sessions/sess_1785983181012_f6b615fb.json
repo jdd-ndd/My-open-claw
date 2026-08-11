@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785983181012_f6b615fb",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAE9DANDXY5EQ4N32XG0K7E",
+      "role": "user",
+      "content": "我叫什么",
+      "timestamp": 1785983186260
+    },
+    {
+      "id": "01KZAE9GR4MZENFBGQGESQTTD6",
+      "role": "assistant",
+      "content": "根据我的记忆，您叫**小明**。有什么我可以帮您的吗？",
+      "timestamp": 1785983189764
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785983186260,
+    "lastActiveAt": 1785983189764,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

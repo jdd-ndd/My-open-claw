@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377220_72fe0839",
+  "userId": "load-user-6gaq",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9P98WEWA3C0NBZXY6W7",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985377970
+    },
+    {
+      "id": "01KZAGDXFZ589M54Y3NNVGT2Q7",
+      "role": "assistant",
+      "content": "<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Not by AI — 你是一个有思想的真人，不是一个AI机器人</title>\n    <meta content=\"notbyai.fyi\" property=\"og:title\">\n    <meta name=\"description\" content=\"如果你也是凭借自己的努力进行创作的人类，请在这股 AI 浪潮中加入我们。\">\n    <meta content=\"如果你也是凭借自己的努力进行创作的人类，请在这股 AI 浪潮中加入我们。\" property=\"og:description\">\n    <meta content=\"https://notbyai.fyi/cn/\" property=\"og:url\">\n  </head>\n  <body>\n    <span>CN</span>\n    <br class=\"hide-desktop\">\n    <span>你的内容将不会被用来训练AI</span>\n    <h1>你是有思想的真人<br>而不是<span>一个AI机器人</span></h1>\n    <p>AI 正在迅速改变世界，现在大部分网络内容已经是由 AI 生成的。因此，辨别内容是否由人类创作已经变得非常困难。这就是为什么我们创造了这些 Badge，用来证明内容是由人类精心创作而非 AI 生成。如果你也是凭借自己的努力进行创作的人类，请在这股 AI 浪潮中加入我们。</p>\n    <a href=\"mailto:human@notbyai.fyi\">human@notbyai.fyi</a>\n    <a>Not by AI</a>\n    <a>使用条款</a>\n    <a>隐私政策</a>\n    <a>常见问题</a>\n    <a href=\"https://notbyai.fyi\">EN</a>\n    <a href=\"https://notbyai.fyi/cn\">CN</a>\n    <a href=\"https://notbyai.fyi/es\">ES</a>\n    <a href=\"https://notbyai.fyi/ko\">KO</a>\n    <a href=\"https://notbyai.fyi/de\">DE</a>\n    <a href=\"https://notbyai.fyi/jp\">JP</a>\n  </body>\n</html>",
+      "timestamp": 1785985431039
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377976,
+    "lastActiveAt": 1785985431039,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

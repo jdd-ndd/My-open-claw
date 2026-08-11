@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985032083_e7f51c34",
+  "userId": "load-user-d3a7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RE87DTJP5G4NWNQHEVW",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG3AZ3BRPJ87C8AW36D71V",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985084387
+    },
+    {
+      "id": "01KZAG436ATCT08HGNQ7H501Z9",
+      "role": "assistant",
+      "content": "<thought>\n搜索\"修改配置文件\"返回了空结果。让我尝试用不同的查询词来检索历史记忆，比如用更宽泛的查询来获取之前的对话内容。\n</thought>\n\n<action name=\"memory_search/search\" args='{\"query\": \"配置文件 修改 历史对话\", \"topK\": 10, \"threshold\": 0.1}' />",
+      "timestamp": 1785985109194
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032578,
+    "lastActiveAt": 1785985109194,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324828_7bf74c84",
+  "userId": "load-user-bpd3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP3AA71QCSDZKQHT03D5",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985325128
+    },
+    {
+      "id": "01KZAGCPCVTX89TXEX3DKMKMST",
+      "role": "assistant",
+      "content": "抱歉，我没太明白你的意思。你是否有具体的问题或任务需要我帮忙处理？",
+      "timestamp": 1785985391003
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325140,
+    "lastActiveAt": 1785985391003,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

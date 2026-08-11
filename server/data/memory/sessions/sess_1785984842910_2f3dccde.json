@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984842910_2f3dccde",
+  "userId": "user-puqff910dss",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVZ6325H3RH033PGBW9CW",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984842946
+    },
+    {
+      "id": "01KZAFXZT0TMMFC5TM718G0W3W",
+      "role": "assistant",
+      "content": "您好！我注意到您提到了\"concurrent message\"。如果您想要进行代码审查，请提供相关的代码片段，我会帮您分析其质量、安全性和可维护性。如果是对并发消息机制有具体问题，也欢迎详细说明，我会尽力解答。",
+      "timestamp": 1785984909120
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984842947,
+    "lastActiveAt": 1785984909120,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

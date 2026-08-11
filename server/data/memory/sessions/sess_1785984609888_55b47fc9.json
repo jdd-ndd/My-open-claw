@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984609888_55b47fc9",
+  "userId": "load-user-zrd0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMVX1N4H4GYANPVNAJ52Y",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984610088
+    },
+    {
+      "id": "01KZAFPFRHS8NPVY39M5RD9EP6",
+      "role": "assistant",
+      "content": "👋 你好！我是 **MyOpenClaw Assistant**，你的通用任务处理智能助手。\n\n我可以帮你完成以下事情：\n\n**🧠 核心能力：**\n- 📁 **文件操作** — 读取、写入、删除、列出目录\n- 💻 **命令执行** — 运行 Shell 命令、管理进程\n- 🌐 **网页与 HTTP** — 打开网页、抓取内容、发起 API 请求\n- 📊 **计算器** — 数学运算、单位换算、货币转换、进制转换\n- 📈 **实用工具** — 天气查询、汇率、加密货币价格、IP 定位、节假日、新闻\n- 🗺️ **路线规划** — 地理编码、路线规划\n- 🔍 **记忆检索** — 回忆历史对话和偏好\n- 🛠️ **技能模块** — 代码审查、项目搭建、网页分析\n\n**有什么我可以帮你的？** 直接告诉我你的需求，我会立即开始处理！",
+      "timestamp": 1785984663313
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984610129,
+    "lastActiveAt": 1785984663313,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

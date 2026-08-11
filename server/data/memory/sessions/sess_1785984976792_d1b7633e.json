@@ -1,0 +1,62 @@
+{
+  "sessionId": "sess_1785984976792_d1b7633e",
+  "userId": "user-a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG01XQZ93RZDMVE94DRN3B",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785984976818
+    },
+    {
+      "id": "01KZAG04NB98SB5BS68W3CM9VY",
+      "role": "assistant",
+      "content": "Hello! 👋 有什么我可以帮你的吗？",
+      "timestamp": 1785984979627
+    },
+    {
+      "id": "01KZAG8TNTK8KN7Z0DM33TX44X",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785985264313
+    },
+    {
+      "id": "01KZAG8ZX1M39F91MQWY3QGHX2",
+      "role": "assistant",
+      "content": "Hello! 😊 又见面了！有什么需要我帮忙的吗？不管是查资料、写代码、处理文件还是其他任务，尽管说～",
+      "timestamp": 1785985269665
+    },
+    {
+      "id": "01KZAJPSX8K8GKY8ZCD1EYX8FQ",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785987819428
+    },
+    {
+      "id": "01KZAJQ02MTWHJ95D8PVKJXP4Y",
+      "role": "assistant",
+      "content": "Hello! 👋 很高兴又见到你！有什么需要我帮忙的吗？",
+      "timestamp": 1785987825748
+    },
+    {
+      "id": "01KZAJZKHZY4QBD8F83DCBCVW2",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785988107838
+    },
+    {
+      "id": "01KZAJZRDZSJVN15Z9N5JSVW1J",
+      "role": "assistant",
+      "content": "Hello! 😊 你好呀~ 有什么可以帮你的吗？",
+      "timestamp": 1785988112831
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984976819,
+    "lastActiveAt": 1785988112831,
+    "messageCount": 8,
+    "compressed": false
+  }
+}

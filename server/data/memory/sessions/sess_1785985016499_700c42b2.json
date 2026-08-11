@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985016499_700c42b2",
+  "userId": "load-user-g64k",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1961A6XJJMQPYYQAC4P6",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985016920
+    },
+    {
+      "id": "01KZAG3HXTAHEK5K6TGQ6DFZTJ",
+      "role": "assistant",
+      "content": "收到连接测试消息 \"conn_msg_7\"，连接正常。我是 MyOpenClaw Assistant，可以帮你处理各种任务，比如文件操作、浏览器控制、执行命令、记忆检索、查询天气和新闻等。请问有什么需要帮助的？",
+      "timestamp": 1785985091514
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016944,
+    "lastActiveAt": 1785985091514,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

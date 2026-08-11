@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987966377_89e98ce1",
+  "userId": "load-user-trpl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJVA0NE736C51XCJRAH1SS",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785987966864
+    },
+    {
+      "id": "01KZAJY3S3CKX0H1G120P4EDPE",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785988058915
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966908,
+    "lastActiveAt": 1785988058915,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

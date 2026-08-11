@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985016383_05645280",
+  "userId": "load-user-9tmj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG195A0DGWEZQGVZ7W46PW",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785985016920
+    },
+    {
+      "id": "01KZAG3DAX6P8TNNJQKD9G43ZK",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985086813
+    },
+    {
+      "id": "01KZAG4JCN2WB2F9P0PH1VM6ZE",
+      "role": "assistant",
+      "content": "<thought>\n用户要求分析网页 https://copilot.tencent.com/docs/plugins/overview，但 browser/open 返回了空结果。这可能是因为页面需要 JavaScript 渲染，或是工具返回格式问题。我需要尝试其他方式获取页面内容，先用 browser/scrape 抓取文本内容试试。\n</thought>\n\n<action name=\"browser/scrape\" args='{\"url\": \"https://copilot.tencent.com/docs/plugins/overview\", \"format\": \"text\"}' />",
+      "timestamp": 1785985124757
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016931,
+    "lastActiveAt": 1785985124757,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

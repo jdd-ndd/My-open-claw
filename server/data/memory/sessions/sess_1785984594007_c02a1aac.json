@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984594007_c02a1aac",
+  "userId": "load-user-esm0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCN6788H8C56TR6BHJWC",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984594525
+    },
+    {
+      "id": "01KZAFP3CPFH16NKZQCEY5XD53",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984650646
+    },
+    {
+      "id": "01KZAFPSRVQGNMXMBZNS638DQ4",
+      "role": "assistant",
+      "content": "之前的对话任务已经完成。对于您的连接消息 `conn_msg_2`，我已确认收到并给出了回复。\n\n如果您有新的任务需求，请随时告诉我！",
+      "timestamp": 1785984673563
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594532,
+    "lastActiveAt": 1785984673563,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

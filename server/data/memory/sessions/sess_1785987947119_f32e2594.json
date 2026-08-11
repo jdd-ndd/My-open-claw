@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947119_f32e2594",
+  "userId": "load-user-ww2v",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQVNYQ7BWNH7KSWEWEJS",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785987948325
+    },
+    {
+      "id": "01KZAJXHR890K7T4MVZPR3EZ4S",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"conn_msg_2\"，不过它看起来像是一个连接测试消息。😊\n\n请问有什么我可以帮助你的吗？你可以随时向我提问，比如：\n\n- 📁 文件管理操作\n- 🌐 网页搜索与分析\n- 💻 代码审查与项目搭建\n- 📊 数据计算与转换\n- 🗺️ 路线规划与天气查询\n- 💱 货币/加密货币汇率查询\n\n随时告诉我你的需求！",
+      "timestamp": 1785988040456
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948334,
+    "lastActiveAt": 1785988040456,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,3 +1,22 @@
+---
+name: web-search
+description: 网络搜索技能，使用搜索引擎查询网络信息并获取实时数据
+version: 1.0.0
+author: MyOpenClaw Team
+triggers:
+  - 网络搜索
+  - 搜索一下
+  - 查一下
+  - web search
+  - 搜索互联网
+  - 在线搜索
+tools:
+  - http/request
+  - browser/open
+  - browser/scrape
+priority: normal
+---
+
 # 网络搜索技能
 
 ## 用途

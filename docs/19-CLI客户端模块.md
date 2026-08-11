@@ -1,9 +1,11 @@
-> **版本**：v1.1.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.1.2  
+> **修订日期**：2026-08-04  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布
 
 # 19. CLI 客户端模块
+
+> **开发状态**：已完整实现。CLI 客户端位于 `clients/cli/`，基于 Commander 12.x，提供 8 个子命令（chat/send/sessions/tools/skills/config/status/logs），支持 Shell 补全（Bash/Zsh/Fish）、交互式对话、管道输入和 JSON 输出模式。
 
 ## 目录
 
@@ -551,7 +553,8 @@ Memory 存储
 Channels
   default:   🟢 正常
   slack:     🟢 正常
-  discord:   ⚪ 未配置
+  qqbot:     ⚪ 未配置
+  wechat:    ⚪ 未配置
 ```
 
 ---

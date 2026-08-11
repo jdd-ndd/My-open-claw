@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785927417125_7b6341a8",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZ8S5DMHKYHRJ48WG4ZENKCD",
+      "role": "user",
+      "content": "你都可以走些什么",
+      "timestamp": 1785927480976
+    },
+    {
+      "id": "01KZ8S5PD3NRP6YNEV5VJGNQJS",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785927489955
+    },
+    {
+      "id": "01KZ8S65NC738FFZ6RTZ4CHQCH",
+      "role": "assistant",
+      "content": "我可以帮你走（规划）以下几种路线：\n\n1. **🚶 步行路线** — 适合城市漫步、短距离导航，会提供步行专属的路径和步道\n2. **🚴 骑行路线** — 适合骑行出行，避开高速和机动车道\n3. **🚗 驾车路线** — 适合自驾出行，提供详细的里程、预计时间和逐段转弯指引\n\n你只需要告诉我**起点**和**目的地**，我就能帮你规划。比如：\n\n> \"帮我查一下从北京天安门到颐和园的驾车路线\"\n> \"从我家到公司骑自行车怎么走\"\n\n想试试吗？😊",
+      "timestamp": 1785927505580
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785927480976,
+    "lastActiveAt": 1785927505580,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

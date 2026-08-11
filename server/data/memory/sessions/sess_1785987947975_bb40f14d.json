@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947975_bb40f14d",
+  "userId": "load-user-wmpa",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQXSWF22T5GY74NP383D",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785987948327
+    },
+    {
+      "id": "01KZAJXA7FKXY9C15RJEX5EETR",
+      "role": "assistant",
+      "content": "你好！你发来了 \"conn_msg_15\"，这看起来像是一个连接消息 ID 或测试消息。\n\n请问有什么我可以帮你的？以下是一些我能做的事情：\n\n- 🔍 **网页分析** — 抓取和分析网页内容\n- 📂 **文件操作** — 读取、写入、管理本地文件\n- 💻 **代码审查** — 检查代码质量和安全性\n- 🚀 **快速项目搭建** — 初始化项目结构\n- ⚙️ **执行命令** — 运行 Shell 命令\n- 🌤️ **天气查询** — 查看城市天气\n- 💱 **汇率/加密货币** — 实时汇率和币价\n- 🗺️ **路径规划** — 规划出行路线\n- 🧮 **计算器** — 数学运算和单位换算\n\n请告诉我你的具体需求！",
+      "timestamp": 1785988032751
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948377,
+    "lastActiveAt": 1785988032751,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

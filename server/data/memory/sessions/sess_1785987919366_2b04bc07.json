@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919366_2b04bc07",
+  "userId": "load-user-toba",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWFVQVM1HC2R2BPEJTCD",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785987920279
+    },
+    {
+      "id": "01KZAJX83BFW7Q8JY19HNQ0JW5",
+      "role": "assistant",
+      "content": "你好！你发送了「conn_msg_6」，这看起来像是一个消息 ID 或测试文本。请问有什么我可以帮你的吗？如果你有具体的任务或问题，请详细描述一下，我来帮你处理。",
+      "timestamp": 1785988030571
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920302,
+    "lastActiveAt": 1785988030571,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

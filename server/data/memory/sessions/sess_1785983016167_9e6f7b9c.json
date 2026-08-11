@@ -1,0 +1,50 @@
+{
+  "sessionId": "sess_1785983016167_9e6f7b9c",
+  "userId": "shared-user",
+  "channelId": "myopenclaw",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAE4DPJ3ZMADHWHPSJ18TVF",
+      "role": "user",
+      "content": "我叫什么",
+      "timestamp": 1785983022801
+    },
+    {
+      "id": "01KZAE4SG094D14XRJ9P17TQ3N",
+      "role": "assistant",
+      "content": "根据我的长期记忆，您之前问过“我叫什么”，但记忆中没有记录您的名字。可能是您还没有告诉过我您的称呼，或者那段记忆还没有被保存下来。要不，您现在告诉我您叫什么？我可以帮您记住。😊",
+      "timestamp": 1785983034881
+    },
+    {
+      "id": "01KZAE5DPA807ER8428MEM113Q",
+      "role": "user",
+      "content": "我叫什么",
+      "timestamp": 1785983055561
+    },
+    {
+      "id": "01KZAE5GG8QFKK7FGGJ57E7YPG",
+      "role": "assistant",
+      "content": "根据我的长期记忆，您之前问过“我叫什么”，但记忆中没有记录您的名字。可能是您还没有告诉过我您的称呼，或者那段记忆还没有被保存下来。要不，您现在告诉我您叫什么？我可以帮您记住。😊",
+      "timestamp": 1785983058440
+    },
+    {
+      "id": "01KZAE87B8Z81G4T7MSDM2H47W",
+      "role": "user",
+      "content": "我叫张三，记住了吗",
+      "timestamp": 1785983147367
+    },
+    {
+      "id": "01KZAE8GSDTZC3GDPB3T38GBTS",
+      "role": "assistant",
+      "content": "根据我的长期记忆，您叫**张三**！我已经记住了，放心吧 😄 有什么需要帮忙的吗？",
+      "timestamp": 1785983157037
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785983022801,
+    "lastActiveAt": 1785983157037,
+    "messageCount": 6,
+    "compressed": false
+  }
+}

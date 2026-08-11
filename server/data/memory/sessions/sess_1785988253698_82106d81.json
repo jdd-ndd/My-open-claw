@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988253698_82106d81",
+  "userId": "load-user-vhqk",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK42PZZSQQ54VKSRMJM0Z1",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785988254408
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988254416,
+    "lastActiveAt": 1785988254432,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

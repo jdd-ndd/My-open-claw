@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057716_86b8133a",
+  "userId": "load-user-gluo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H90JXQYTP8YPHW6CMP8",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985057931
+    },
+    {
+      "id": "01KZAG39RN0SKRYZVM1XXWW1QW",
+      "role": "assistant",
+      "content": "收到，连接规则已确认。",
+      "timestamp": 1785985083157
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057985,
+    "lastActiveAt": 1785985083157,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

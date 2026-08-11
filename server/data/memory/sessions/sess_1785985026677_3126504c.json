@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985026677_3126504c",
+  "userId": "load-user-4xcd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K7W0X3P2CJ2F8EQS5NM",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985027249
+    },
+    {
+      "id": "01KZAG3R2CCQ244SJPNVZKANA0",
+      "role": "assistant",
+      "content": "用户发来两个相同的 \"conn_msg_2\"，这看起来像是测试消息或者误发送。请问有什么具体任务需要我协助吗？",
+      "timestamp": 1785985097804
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027257,
+    "lastActiveAt": 1785985097804,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

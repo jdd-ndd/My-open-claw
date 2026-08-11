@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057522_877df9db",
+  "userId": "load-user-5bra",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H80QD1N6VXS8RHCDECN",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985057931
+    },
+    {
+      "id": "01KZAG4DKMD9PRJWR0JXQNQD0Y",
+      "role": "assistant",
+      "content": "Hello! 测试收到 ✅ \n\n我是 MyOpenClaw 通用任务处理助手，状态正常，随时准备帮助你。\n\n你可以让我：\n- 📁 管理文件（读写、目录操作等）\n- 💻 执行 Shell 命令\n- 🌐 浏览网页或调用 API\n- 🤖 使用内置技能（代码审查、项目搭建、网页分析等）\n- 🧮 计算、查天气、查汇率等实用工具\n\n想测试什么功能？或者有什么任务需要我处理？",
+      "timestamp": 1785985119860
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057962,
+    "lastActiveAt": 1785985119860,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

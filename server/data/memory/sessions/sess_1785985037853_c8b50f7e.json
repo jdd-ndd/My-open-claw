@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037853_c8b50f7e",
+  "userId": "load-user-jv0f",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XY9237BY39AK8NY8TW6",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985038159
+    },
+    {
+      "id": "01KZAG44M1J5TZ04X85WVY99VV",
+      "role": "assistant",
+      "content": "conn_msg_11\n\n收到您的连接消息。我注意到您发送的是协议标识 \"conn_msg_11\"，而非具体指令。\n\n我目前已通过 \"conn_msg_11\" 的方式与您连接在此长期会话中。如有任何任务需要我处理，请直接告诉我您的需求。\n\n例如，您可以尝试让我：\n- 打开网页分析内容\n- 执行命令或操作文件\n- 审查代码\n- 快速项目搭建\n- 查询天气、时间等等\n\n请问有什么可以帮您的？",
+      "timestamp": 1785985110657
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038196,
+    "lastActiveAt": 1785985110657,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

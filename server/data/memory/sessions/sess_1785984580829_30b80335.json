@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984580829_30b80335",
+  "userId": "user-pqlgo4qqlt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKZ8DJG3SGM2DDEFGEP6H",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984580872
+    },
+    {
+      "id": "01KZAFN7NT3TCH6X48WC6CSYWD",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984622266
+    },
+    {
+      "id": "01KZAFNR7Z6N54NDKWW07T06MH",
+      "role": "assistant",
+      "content": "你好！我收到了你发送的两条相同消息\"concurrent message\"。看起来可能是网络延迟或误操作导致的重复发送。\n\n如果你是在测试我的并发处理能力，我确认已经收到了两条消息。有什么我可以帮助你的吗？无论是代码审查、项目搭建、网页分析，还是其他任何任务，我都很乐意协助！😊",
+      "timestamp": 1785984639231
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984580872,
+    "lastActiveAt": 1785984639231,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

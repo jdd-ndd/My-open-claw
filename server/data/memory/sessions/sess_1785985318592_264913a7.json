@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318592_264913a7",
+  "userId": "load-user-hlo2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFWFY6F3QJSR8M18CK79",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985318763
+    },
+    {
+      "id": "01KZAGF2639KC9SWDQZTFXKATF",
+      "role": "assistant",
+      "content": "从长期记忆里只看到一条片段：用户消息和助手回复都是 `conn_msg_16`，没有附加的实际内容或指令。它看起来像是一个连接消息或消息标识符，而不是完整的任务描述。\n\n我目前能做的是：\n- 帮你进一步检索这段记忆的上下文（比如用语义关键词搜相关的历史对话）\n- 如果你记得之前的任务主题或关键信息，可以告诉我，我来继续处理\n\n请问你希望我做什么？",
+      "timestamp": 1785985468611
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318776,
+    "lastActiveAt": 1785985468611,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

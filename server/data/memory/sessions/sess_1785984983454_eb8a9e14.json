@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984983454_eb8a9e14",
+  "userId": "user-r7n0wuofau9",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG08DW85MKD1752J7YDX6N",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984983481
+    },
+    {
+      "id": "01KZAG17HHG643JZYT7G3JV7Y3",
+      "role": "assistant",
+      "content": "您好！您提到了“并发消息”（concurrent message）。在分布式系统或聊天应用中，并发消息通常指同时发送或处理多条消息。如果您是在测试我的多轮对话能力，我已收到您的消息。请问有什么我可以帮您的吗？",
+      "timestamp": 1785985015345
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984983481,
+    "lastActiveAt": 1785985015345,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

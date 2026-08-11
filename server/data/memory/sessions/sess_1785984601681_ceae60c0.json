@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601681_ceae60c0",
+  "userId": "load-user-uu8a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM0PM7CQ8EY00VCGX48J",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984602036
+    },
+    {
+      "id": "01KZAFPM5GT83ME76TK7KARQ3V",
+      "role": "assistant",
+      "content": "你好！我注意到你似乎没有发送具体的问题。请问有什么我可以帮你的吗？",
+      "timestamp": 1785984667824
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602062,
+    "lastActiveAt": 1785984667824,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

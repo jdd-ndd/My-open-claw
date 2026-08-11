@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928819_74803e19",
+  "userId": "load-user-qm37",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5F0VCC5X3N15KGHJEM3",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785987929430
+    },
+    {
+      "id": "01KZAJWR3HJ76GY6BTDQCAZTC3",
+      "role": "assistant",
+      "content": "已执行当前目录下的 Python 文件。",
+      "timestamp": 1785988014193
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929473,
+    "lastActiveAt": 1785988014193,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

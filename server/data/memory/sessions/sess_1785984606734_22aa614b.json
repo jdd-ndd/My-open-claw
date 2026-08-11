@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606734_22aa614b",
+  "userId": "load-user-jorx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS4DBRD7EFFAG3CG84NM",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785984607310
+    },
+    {
+      "id": "01KZAFPC48MMVWN3TKQESC1SHM",
+      "role": "assistant",
+      "content": "收到你的连接测试消息 conn_msg_1，一切正常！有什么我可以帮你的吗？",
+      "timestamp": 1785984659592
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607316,
+    "lastActiveAt": 1785984659592,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

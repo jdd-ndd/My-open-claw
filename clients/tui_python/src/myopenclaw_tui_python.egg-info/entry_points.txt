@@ -1,0 +1,2 @@
+[console_scripts]
+myopenclaw-tui = tui_python.__main__:main

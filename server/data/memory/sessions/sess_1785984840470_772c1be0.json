@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984840470_772c1be0",
+  "userId": "user-3kmb9lij23q",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVWSXXPSBE39JJJMHZQJ0",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984840507
+    },
+    {
+      "id": "01KZAFY55YXPNFSWT7H1XJA2GP",
+      "role": "assistant",
+      "content": "你好，我收到了你的消息，但似乎是一条重复的测试内容。请问你需要什么帮助？我可以协助你完成文件操作、网页分析、代码审查、项目搭建等各种任务。",
+      "timestamp": 1785984914622
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984840508,
+    "lastActiveAt": 1785984914622,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

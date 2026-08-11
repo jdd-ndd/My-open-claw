@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032478_b12fd099",
+  "userId": "load-user-qbea",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RGAM8M5BARYCTVS7MWS",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785985032560
+    },
+    {
+      "id": "01KZAG49X4RDY7PJFJXA7WNX77",
+      "role": "assistant",
+      "content": "收到您的消息 \"conn_msg_18\"。不过这看起来像是一个连接标识或测试消息。请问我能为您做些什么呢？如果您有任何问题或需要帮助，随时告诉我。",
+      "timestamp": 1785985116068
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032618,
+    "lastActiveAt": 1785985116068,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

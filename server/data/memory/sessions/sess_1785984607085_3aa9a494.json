@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984607085_3aa9a494",
+  "userId": "load-user-3nmu",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS64F1DMEQPJ283S8TRH",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785984607312
+    },
+    {
+      "id": "01KZAFPHG9V0HR1GFWAP2M9CZR",
+      "role": "assistant",
+      "content": "这个 ID 看起来像是来自外部渠道的连接消息标识符，没有附带实际消息内容。  \n\n**请直接发送你的问题或任务，我会立刻处理。** 例如你想聊天、查信息、操作文件、运行命令、分析网页等，都可以直接告诉我。",
+      "timestamp": 1785984665097
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607350,
+    "lastActiveAt": 1785984665097,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

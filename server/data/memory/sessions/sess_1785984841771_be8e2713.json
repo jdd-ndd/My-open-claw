@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984841771_be8e2713",
+  "userId": "user-bj0ikiq8i9v",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVY2JBMRP9CEGSG707MB9",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984841808
+    },
+    {
+      "id": "01KZAFY5N7NC82PWE2VZQCYAK9",
+      "role": "assistant",
+      "content": "您好！看起来您发送了一条测试消息（\"concurrent message\"）。我是 MyOpenClaw Assistant，一个通用任务处理智能助手。请问有什么可以帮您的吗？",
+      "timestamp": 1785984915111
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984841808,
+    "lastActiveAt": 1785984915111,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

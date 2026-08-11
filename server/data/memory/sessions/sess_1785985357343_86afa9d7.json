@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985357343_86afa9d7",
+  "userId": "load-user-vcjy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWG1WDM4N3YY1QNMPNY",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985357675
+    },
+    {
+      "id": "01KZAGD7ZY2FG7TNGWB22TA7KA",
+      "role": "assistant",
+      "content": "你好！我已收到你的连接消息（conn_msg_13）。有什么我可以帮你的吗？",
+      "timestamp": 1785985409022
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357689,
+    "lastActiveAt": 1785985409022,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985069474_8d042975",
+  "userId": "load-user-jlb2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2X7E6AA9RJE1EF6W9T6Y",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985070245
+    },
+    {
+      "id": "01KZAG4D2TJB79DR5Y5XRCJ44N",
+      "role": "assistant",
+      "content": "我需要知道您想审查哪些文件。请提供文件路径或目录，例如：\n\n- `src/main.py`\n- `src/`\n- 当前目录\n\n您想让我审查哪个文件或目录？",
+      "timestamp": 1785985119322
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985070249,
+    "lastActiveAt": 1785985119322,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

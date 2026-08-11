@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985363762_96893f1d",
+  "userId": "load-user-8wpi",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWC0STYEC0MTQ4SXZB1A",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985364322
+    },
+    {
+      "id": "01KZAGDWWV8J06Z5MPN6Q72KCN",
+      "role": "assistant",
+      "content": "已收到连接测试消息，系统运行正常，初始化完毕。请问有什么可以帮助您的？",
+      "timestamp": 1785985430427
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364330,
+    "lastActiveAt": 1785985430427,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

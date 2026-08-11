@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984892326_243e9b69",
+  "userId": "load-user-dnpn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFXG0KH7VSNWSX23RP456C",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984892923
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984892930,
+    "lastActiveAt": 1785984892948,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

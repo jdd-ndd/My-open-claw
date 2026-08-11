@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928153_5fcbe33f",
+  "userId": "load-user-uhw1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5D7MFJRH2KFQQFDCR7Q",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785987929428
+    },
+    {
+      "id": "01KZAJW3FC3MA1KWKHACHZ8J6W",
+      "role": "assistant",
+      "content": "你好！我是 MyOpenClaw Assistant，通用任务处理智能助手，主要支持：\n- 文件系统操作\n- Shell 命令执行与进程管理\n- 浏览器自动化\n- 记忆检索\n- 系统工具（时间、天气、汇率、节假日、新闻、加密货币、路由规划等）\n- 计算器（表达式、单位换算、货币换算、进制转换）\n- HTTP 请求\n\n有什么我可以帮您的吗？",
+      "timestamp": 1785987993068
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929435,
+    "lastActiveAt": 1785987993068,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

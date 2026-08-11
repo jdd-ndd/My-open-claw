@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987965884_0ddcca9f",
+  "userId": "load-user-m8kz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV9ZMR6YHQ0TEPJHR7XB0",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785987966863
+    },
+    {
+      "id": "01KZAJWA4XCTYE9D6NKD94WD5S",
+      "role": "assistant",
+      "content": "你好！你发送的内容看起来像是一条连接消息（conn_msg_6）。如果你是在测试连接，我已经收到你的消息了。请问有什么我可以帮你的吗？",
+      "timestamp": 1785987999901
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966885,
+    "lastActiveAt": 1785987999901,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985363562_a6ed3b1e",
+  "userId": "load-user-l44i",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBWBT2SBE6RSE848NPBHE",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985364322
+    },
+    {
+      "id": "01KZAGD79891R9ACXBF0N9F503",
+      "role": "assistant",
+      "content": "conn_msg_2",
+      "timestamp": 1785985408297
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985364326,
+    "lastActiveAt": 1785985408297,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

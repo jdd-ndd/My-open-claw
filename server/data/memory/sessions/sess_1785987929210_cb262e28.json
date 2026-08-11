@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987929210_cb262e28",
+  "userId": "load-user-bq14",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5G95B909EFRG3P850XS",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785987929431
+    },
+    {
+      "id": "01KZAJXFK7H37RWPYE5YC6PRYX",
+      "role": "assistant",
+      "content": "您好，看起来您发送的消息是“conn_msg_17”。这似乎是一条连接或测试消息。请问您需要什么帮助？我可以帮您回答问题、提供信息或执行各种任务。",
+      "timestamp": 1785988038247
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929495,
+    "lastActiveAt": 1785988038247,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985337774_ff3de898",
+  "userId": "load-user-jpkg",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2S9ZV2GZS069RYQPHH2",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985338118
+    },
+    {
+      "id": "01KZAGDYR1Q7TFPTHCNWJG0JD0",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985432321
+    },
+    {
+      "id": "01KZAGEYGARQG5C8MAMP7BQ9MQ",
+      "role": "assistant",
+      "content": "<thought>\n当前工作目录是 /home/ubuntu/my_open_claw，不是 IM 项目目录。需要用 find 来定位项目位置。让我搜索常见位置。\n</thought>\n\n<action name=\"exec/shell\" args='{\"command\": \"find /home /workspace /opt /var -maxdepth 4 -type d \\\\( -name \\\"IM\\\" -o -name \\\"im\\\" -o -name \\\"imsystem\\\" -o -name \\\"go-chat\\\" -o -name \\\"chat\\\" \\\\) 2>/dev/null | head -20\", \"timeout\": 15000}' />",
+      "timestamp": 1785985464842
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338130,
+    "lastActiveAt": 1785985464842,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

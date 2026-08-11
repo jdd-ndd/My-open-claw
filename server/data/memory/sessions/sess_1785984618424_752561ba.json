@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618424_752561ba",
+  "userId": "load-user-58uf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN485AN3J8QNYRERRNNR5",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984618634
+    },
+    {
+      "id": "01KZAFNQ6877G5KZMVEGC8EC81",
+      "role": "assistant",
+      "content": "收到你的消息了，但这个 `conn_msg_14` 看起来像是一个连接标识。我不太确定你想表达什么，能再具体描述一下你的需求吗？我很乐意帮忙。",
+      "timestamp": 1785984638152
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618674,
+    "lastActiveAt": 1785984638152,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

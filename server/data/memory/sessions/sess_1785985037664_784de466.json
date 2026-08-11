@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985037664_784de466",
+  "userId": "load-user-pxu6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XXB21H3FEGQGX9RBFHK",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985038158
+    },
+    {
+      "id": "01KZAG47BNPPEDTM3BAH6DT860",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985113461
+    },
+    {
+      "id": "01KZAG5D726F13T5H0DJF5T83Q",
+      "role": "assistant",
+      "content": "我注意到 system/time 工具返回了一个空结果。这看起来不太正常——可能是系统时间暂时无法获取，或者这是一条内部连接测试消息（\"conn_msg_5\"）。\n\n如果你确实想查询当前时间，我可以尝试其他方式帮你。或者，如果你有其他需求，请直接告诉我，我很乐意提供帮助！😊",
+      "timestamp": 1785985152226
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038176,
+    "lastActiveAt": 1785985152226,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

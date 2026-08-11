@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596721_140417da",
+  "userId": "load-user-sfye",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF4P67STRBXEABWYM4ME",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFNXDP7DXXVQJMKRP05WJE",
+      "role": "assistant",
+      "content": "我是你的智能助手，具备以下能力：\n\n**文件与系统操作**\n- 读写文件、管理目录、执行Shell命令\n- 进程管理\n\n**网页与网络**\n- 浏览器控制：打开网页、点击元素、填写表单\n- 网页内容抓取与分析\n- HTTP请求\n\n**信息查询**\n- 天气查询（当前天气、天气预报、城市搜索）\n- 汇率转换\n- IP归属地查询\n- 节假日查询\n- 加密货币行情\n- 最新新闻头条\n\n**计算与转换**\n- 数学表达式计算\n- 单位换算（长度、重量、温度、面积、体积、速度）\n- 进制转换\n- 货币换算\n\n**路由规划**\n- 地理编码（地名转坐标）\n- 路径规划（驾车、步行、骑行）\n\n**长期记忆**\n- 语义记忆检索\n\n说说你想做什么？我来帮你搞定。",
+      "timestamp": 1785984644534
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597071,
+    "lastActiveAt": 1785984644534,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

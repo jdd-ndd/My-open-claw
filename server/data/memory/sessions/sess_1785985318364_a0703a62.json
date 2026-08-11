@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318364_a0703a62",
+  "userId": "load-user-tg14",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFW8P3TJND93JGBAETV1",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985318762
+    },
+    {
+      "id": "01KZAGERAHXXGV0KT9176DYDE0",
+      "role": "assistant",
+      "content": "我收到了你的消息，但没太看懂\"conn_msg_10\"是什么意思。你是想测试连接，还是不小心发错了？告诉我你想做什么，我可以帮你处理。😊",
+      "timestamp": 1785985458514
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318771,
+    "lastActiveAt": 1785985458514,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596595_43e93963",
+  "userId": "load-user-wamt",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF45D5J8562SMT55XM8A",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFNJQ94N9X92ZQJ1EKX3V0",
+      "role": "assistant",
+      "content": "这是一个会话消息。\n\n[用户消息]\nconn_msg_7",
+      "timestamp": 1785984633577
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597060,
+    "lastActiveAt": 1785984633577,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

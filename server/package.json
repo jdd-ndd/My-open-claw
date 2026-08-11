@@ -42,6 +42,10 @@
     "./hooks": {
       "types": "./dist/hooks/index.d.ts",
       "import": "./dist/hooks/index.js"
+    },
+    "./modules/ppt": {
+      "types": "./dist/modules/ppt/entry.d.ts",
+      "import": "./dist/modules/ppt/entry.js"
     }
   },
   "scripts": {
@@ -60,6 +64,8 @@
   "dependencies": {
     "@fastify/compress": "^9.1.0",
     "@fastify/cors": "^11.3.0",
+    "@fastify/swagger": "^9.8.1",
+    "@fastify/swagger-ui": "^6.1.0",
     "@fastify/websocket": "^11.3.0",
     "@sinclair/typebox": "^0.32.0",
     "cron-parser": "^5.6.2",
@@ -70,12 +76,14 @@
     "p-limit": "^5.0.0",
     "pino": "^9.0.0",
     "pino-pretty": "^11.0.0",
+    "pptxgenjs": "^4.0.1",
     "ulid": "^2.3.0",
     "ws": "^8.16.0",
     "yaml": "^2.4.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@larksuiteoapi/node-sdk": "1.36.0",
     "@testcontainers/postgresql": "^10.0.0",
     "@types/node": "^20.11.0",
     "@types/node-cron": "^3.0.0",

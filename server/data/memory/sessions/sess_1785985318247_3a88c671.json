@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985318247_3a88c671",
+  "userId": "load-user-cd6b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFW43EXDKQQTQGCW4KA8",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985318761
+    },
+    {
+      "id": "01KZAGF981VJJ1R3Y5KEC4P1SM",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985475841
+    },
+    {
+      "id": "01KZAGFEY83G909WQA5H76RYRQ",
+      "role": "assistant",
+      "content": "我尝试在记忆中搜索关于你姓名的信息，但没有找到任何相关记录。当前的长期记忆中仅有一条会话标识 `conn_msg_7`，它并不是姓名信息。因此，目前无法通过记忆或可用技能猜测出你的名字。如果你愿意告诉我，我可以帮你记住它，以后就能直接称呼你了 😊",
+      "timestamp": 1785985481672
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318769,
+    "lastActiveAt": 1785985481672,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

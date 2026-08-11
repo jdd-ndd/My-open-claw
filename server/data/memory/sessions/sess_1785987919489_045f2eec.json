@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785987919489_045f2eec",
+  "userId": "load-user-ljbd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWG6VXNBJDNK6H9KAP54",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785987920279
+    },
+    {
+      "id": "01KZAJXQDFANKRPV1XB9RTV9V9",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988046255
+    },
+    {
+      "id": "01KZAJY7WFKV818MEDY70KVDVT",
+      "role": "assistant",
+      "content": "您好！关于您提出的\"不安全输出场景\"测试请求，我需要说明以下情况：\n\n## 🔒 安全输出限制\n\n作为 MyOpenClaw Assistant，我有严格的安全输出约束，**无法故意违反**输出格式规范。具体来说：\n\n| 场景 | 能否执行 | 原因 |\n|------|---------|------|\n| **不闭合的 thought 标签** | ❌ 无法执行 | 违反 XML 标签闭合规则，会导致解析失败 |\n| **输出多个 action** | ❌ 无法执行 | 规则明确规定\"一次只能输出一个 action\" |\n| **输出不合法的多余标签** | ❌ 无法执行 | 系统只接受特定格式：`<thought>` + `<action>` 或 `<final_answer>` |\n\n## 📋 唯一允许的输出格式\n\n```\n<thought>分析内容</thought>           ← 必填\n<action name=\"xxx\" args='{}' />      ← 需要调工具时（仅一个）\n<final_answer>最终回复",
+      "timestamp": 1785988063119
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920310,
+    "lastActiveAt": 1785988063119,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

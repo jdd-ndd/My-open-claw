@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987947054_c2d41f66",
+  "userId": "load-user-19f1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTQVGSX065J526SNEQ8QD",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785987948325
+    },
+    {
+      "id": "01KZAJX1PFPEFH1TGZ7ESRR00X",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息，但 \"conn_msg_1\" 似乎不是一个完整的请求。请问您需要什么帮助呢？比如创建项目、分析网页、查询时间，或者其他任务？请详细说明，我很乐意协助您。",
+      "timestamp": 1785988024015
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987948331,
+    "lastActiveAt": 1785988024015,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

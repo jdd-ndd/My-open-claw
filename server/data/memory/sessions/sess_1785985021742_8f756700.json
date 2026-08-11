@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021742_8f756700",
+  "userId": "load-user-gwii",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E3FGNVQRC97FZ36CAF9",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785985021916
+    },
+    {
+      "id": "01KZAG39FN4871DMYWYTNBSVKS",
+      "role": "assistant",
+      "content": "确认收到消息 `conn_msg_15`。我是 MyOpenClaw Assistant，随时准备帮助您处理各种任务。请告诉我您需要什么帮助。",
+      "timestamp": 1785985082869
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021968,
+    "lastActiveAt": 1785985082869,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

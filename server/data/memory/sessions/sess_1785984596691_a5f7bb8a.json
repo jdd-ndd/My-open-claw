@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596691_a5f7bb8a",
+  "userId": "load-user-9a0r",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF4JSC3A64JKK0AMSQYA",
+      "role": "user",
+      "content": "conn_msg_9",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFP19476YYZD9RDCQYJCH9",
+      "role": "assistant",
+      "content": "收到你的消息了！我是 MyOpenClaw Assistant，通用任务处理智能助手，可以帮你处理文件、执行命令、浏览网页、查询天气/汇率/新闻、数学计算、路线规划等各种任务。\n\n请问有什么可以帮你的吗？😊",
+      "timestamp": 1785984648484
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597068,
+    "lastActiveAt": 1785984648484,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985331280_bbe8ccf5",
+  "userId": "load-user-apgl",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAWD1FT63NZTP9BMZTDV9",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985331582
+    },
+    {
+      "id": "01KZAGCMY6YN5NB6VRCRCQNCB4",
+      "role": "assistant",
+      "content": "测试完成！系统运行正常，随时可以为您服务。",
+      "timestamp": 1785985389510
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985331593,
+    "lastActiveAt": 1785985389510,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -39,22 +39,22 @@ describe('Gateway - StateManager', () => {
 
   describe('渠道状态管理', () => {
     it('updateChannelState 应创建新渠道并使用默认值', () => {
-      manager.updateChannelState('discord', { status: 'connected' });
+      manager.updateChannelState('qqbot', { status: 'connected' });
 
-      const state = manager.getChannelState('discord');
+      const state = manager.getChannelState('qqbot');
       expect(state).toBeDefined();
-      expect(state!.channelId).toBe('discord');
+      expect(state!.channelId).toBe('qqbot');
       expect(state!.status).toBe('connected');
       expect(state!.stats.messagesReceived).toBe(0);
       expect(state!.stats.messagesSent).toBe(0);
     });
 
     it('getChannelState 应返回已创建渠道的状态', () => {
-      manager.updateChannelState('telegram', { status: 'connecting' });
+      manager.updateChannelState('feishu', { status: 'connecting' });
 
-      const state = manager.getChannelState('telegram');
+      const state = manager.getChannelState('feishu');
       expect(state).toBeDefined();
-      expect(state!.channelId).toBe('telegram');
+      expect(state!.channelId).toBe('feishu');
       expect(state!.status).toBe('connecting');
     });
 
@@ -64,12 +64,12 @@ describe('Gateway - StateManager', () => {
     });
 
     it('getAllChannelStates 应返回所有渠道的数组', () => {
-      manager.updateChannelState('discord', { status: 'connected' });
-      manager.updateChannelState('telegram', { status: 'disconnected' });
+      manager.updateChannelState('qqbot', { status: 'connected' });
+      manager.updateChannelState('feishu', { status: 'disconnected' });
 
       const all = manager.getAllChannelStates();
       expect(all).toHaveLength(2);
-      expect(all.map((c) => c.channelId).sort()).toEqual(['discord', 'telegram']);
+      expect(all.map((c) => c.channelId).sort()).toEqual(['feishu', 'qqbot']);
     });
 
     it('getAllChannelStates 无渠道时应返回空数组', () => {
@@ -203,7 +203,7 @@ describe('Gateway - StateManager', () => {
 
   describe('getSnapshot', () => {
     it('应返回完整系统状态', () => {
-      manager.updateChannelState('discord', { status: 'connected' });
+      manager.updateChannelState('qqbot', { status: 'connected' });
       manager.updateAgentState('agent-1', { status: 'idle' });
       manager.addTask(makeTask({ taskId: 't1' }));
       manager.setConfig('key', 'value');
@@ -212,7 +212,7 @@ describe('Gateway - StateManager', () => {
 
       expect(snapshot.version).toBe('1.0.0');
       expect(snapshot.startedAt).toBeGreaterThan(0);
-      expect(snapshot.channels.get('discord')).toBeDefined();
+      expect(snapshot.channels.get('qqbot')).toBeDefined();
       expect(snapshot.agents.get('agent-1')).toBeDefined();
       expect(snapshot.taskQueue.tasks).toHaveLength(1);
       expect(snapshot.configCache.get('key')).toBe('value');

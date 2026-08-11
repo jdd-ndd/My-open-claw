@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985063540_89b41378",
+  "userId": "load-user-84i2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2Q84Z2676J9QG50C208H",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985064098
+    },
+    {
+      "id": "01KZAG4BV88TV5WVF1Q5XQTXSD",
+      "role": "assistant",
+      "content": "你好！连接已建立，我是你的通用任务处理智能助手，随时准备帮你处理各种任务。\n\n目前看起来你只发送了 \"conn_msg_5\"，是测试连接或突然掉线吗？你可以开始告诉我你的需求，比如：\n\n- 查天气、时间、汇率\n- 分析网页内容\n- 管理文件、执行命令\n- 数学计算、单位换算\n- 路由规划、新闻浏览\n\n尽管告诉我你想要做什么吧！🎯",
+      "timestamp": 1785985118056
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064119,
+    "lastActiveAt": 1785985118056,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

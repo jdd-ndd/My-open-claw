@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985377264_c37266cb",
+  "userId": "load-user-38g3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC9PAYR0SWW7EYC8RK8PZ",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985377970
+    },
+    {
+      "id": "01KZAGDQXP6SPS7QN8XW2AQPT8",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息，但 \"conn_msg_5\" 看起来像是一个内部标识符或测试标签，我不确定您希望我完成什么任务。请告诉我您需要什么帮助，比如查找信息、处理文件、代码审查或其他操作，我会尽力协助您。",
+      "timestamp": 1785985425334
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985377977,
+    "lastActiveAt": 1785985425334,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

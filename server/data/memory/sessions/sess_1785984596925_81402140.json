@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596925_81402140",
+  "userId": "load-user-c6gy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF5NP0F71WTYMDKYF6Z6",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984597042
+    },
+    {
+      "id": "01KZAFNV2S3Q25G2GF34WCKN6W",
+      "role": "assistant",
+      "content": "我需要先了解项目根目录下的结构，才能为用户提供准确的系统结构说明。\n\n<action name=\"fs/list_dir\" args='{\"path\":\"/Users/liuying/CodeBuddy/20250901163613\"}'>",
+      "timestamp": 1785984642137
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597091,
+    "lastActiveAt": 1785984642137,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

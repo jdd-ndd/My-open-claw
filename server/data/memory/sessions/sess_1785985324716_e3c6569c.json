@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985324716_e3c6569c",
+  "userId": "load-user-5xyc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP36HGMNCZTDK8108XGP",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785985325128
+    },
+    {
+      "id": "01KZAGE4Z41YC796V3KA4P3VJZ",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985438692
+    },
+    {
+      "id": "01KZAGEE0SKSXWHDPPSZ9NWC0X",
+      "role": "assistant",
+      "content": "关于响应协议的说明已经给出，无需进一步操作。如果您对 MyOpenClaw 的工作方式还有其他疑问，欢迎随时提出。",
+      "timestamp": 1785985447961
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325138,
+    "lastActiveAt": 1785985447961,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

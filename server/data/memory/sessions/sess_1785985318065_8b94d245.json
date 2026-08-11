@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318065_8b94d245",
+  "userId": "load-user-9g5r",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFVY69BJQ8NAHFHTCF0B",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985318761
+    },
+    {
+      "id": "01KZAGERNZZX69H63MPCK3Q2WS",
+      "role": "assistant",
+      "content": "连接成功！我在这里随时为您服务。\n\n请告诉我您需要什么帮助？我可以协助您处理文件操作、执行命令、网页分析、数据查询等多种任务。",
+      "timestamp": 1785985458879
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318765,
+    "lastActiveAt": 1785985458879,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

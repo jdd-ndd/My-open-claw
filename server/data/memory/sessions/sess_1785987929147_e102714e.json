@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987929147_e102714e",
+  "userId": "load-user-gr7s",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5G2T5BVFQ6P241XZETY",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785987929431
+    },
+    {
+      "id": "01KZAJWXC3Z9EDDZG3KYVGM6W2",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988019588
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929492,
+    "lastActiveAt": 1785988019588,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

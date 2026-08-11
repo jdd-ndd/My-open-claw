@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596476_bd9148f3",
+  "userId": "load-user-952t",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF3KYHTD7KKNC2WNXQ8W",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984597041
+    },
+    {
+      "id": "01KZAFP85CTQZ1RHCPQ1H81RVH",
+      "role": "assistant",
+      "content": "你好，你发送了\"conn_msg_2\"。请问有什么我可以帮助你的吗？如果你需要代码审查、项目搭建或网页分析，请提供具体的信息。",
+      "timestamp": 1785984655532
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597048,
+    "lastActiveAt": 1785984655532,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

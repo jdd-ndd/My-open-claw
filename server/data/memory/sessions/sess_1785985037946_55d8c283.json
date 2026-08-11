@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037946_55d8c283",
+  "userId": "load-user-ch47",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XYSRREN2S0ADE6DTYAJ",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985038159
+    },
+    {
+      "id": "01KZAG46ND3WWS6S4BT183YGA0",
+      "role": "assistant",
+      "content": "你好！我注意到你的消息似乎是空的，或者只包含一些消息标记。请问有什么我可以帮助你的吗？无论是回答疑问、处理任务还是其他事情，我都很乐意协助！😊",
+      "timestamp": 1785985112749
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038206,
+    "lastActiveAt": 1785985112749,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

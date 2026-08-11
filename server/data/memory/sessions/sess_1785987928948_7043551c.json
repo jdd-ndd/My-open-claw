@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928948_7043551c",
+  "userId": "load-user-ownv",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5FD74724R84XSGQSDW7",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785987929431
+    },
+    {
+      "id": "01KZAJWN5QMVMSSYWZ6XZ5H2AN",
+      "role": "assistant",
+      "content": "你好！有什么可以帮你的吗？😊",
+      "timestamp": 1785988011191
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929480,
+    "lastActiveAt": 1785988011191,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

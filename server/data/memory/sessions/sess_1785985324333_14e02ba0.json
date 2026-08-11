@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324333_14e02ba0",
+  "userId": "load-user-ufru",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP2T5JFYSWVBNCBYHBBX",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985325126
+    },
+    {
+      "id": "01KZAGCQAMH775W7BQAZHC3C0Y",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息连接，但消息内容似乎是空的或是一个占位符。\n\n请问有什么我可以帮你的吗？无论是问问题、处理文件、查天气、写代码，还是其他任务，我都很乐意协助！",
+      "timestamp": 1785985391956
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325129,
+    "lastActiveAt": 1785985391956,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

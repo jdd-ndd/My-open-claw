@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043411_aadd8656",
+  "userId": "load-user-9ohc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23FD9890K0G42BCBPTXC",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985043845
+    },
+    {
+      "id": "01KZAG3AZA5AV93KSMQD09DDWM",
+      "role": "assistant",
+      "content": "conn_msg_7 是一个测试消息，目前没有实质内容。请问你有什么需要帮助的吗？",
+      "timestamp": 1785985084394
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043868,
+    "lastActiveAt": 1785985084394,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

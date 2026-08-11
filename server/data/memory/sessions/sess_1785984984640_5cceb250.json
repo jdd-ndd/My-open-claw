@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984984640_5cceb250",
+  "userId": "user-x0kess9de8r",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG09K81WB7GGA9WRJ9BZD4",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984984676
+    },
+    {
+      "id": "01KZAG44DJSQYPKVNR0V2DDXPA",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息\"concurrent message\"。请问您是需要测试并发消息处理，还是有其他具体任务需要我协助？请告诉我更多细节，我会尽力帮助您。",
+      "timestamp": 1785985110450
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984984677,
+    "lastActiveAt": 1785985110450,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

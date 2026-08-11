@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037756_9862f9e4",
+  "userId": "load-user-2soy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XXTRPTSRC6MH3T7FXR4",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985038159
+    },
+    {
+      "id": "01KZAG3EEFBSZSFTCVXZG6F0JF",
+      "role": "assistant",
+      "content": "这看起来像是一个内部消息 ID，不是一个有效的任务指令。请告诉我你需要处理的具体任务，比如文件操作、数据分析、代码审查或其他需要我帮助的事情。",
+      "timestamp": 1785985087952
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038186,
+    "lastActiveAt": 1785985087952,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984841595_0330ced9",
+  "userId": "user-ub6ey75kd1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVXWZ8113X9GYBQ1EBSMH",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984841630
+    },
+    {
+      "id": "01KZAFY48A6H0EP43N9ZFMFM5K",
+      "role": "assistant",
+      "content": "你好！你发送了 \"concurrent message\"。这看起来像是一个测试消息。我是 MyOpenClaw Assistant，一个通用任务处理智能助手。我可以帮助你处理文件、执行命令、浏览网页、检索记忆、查询天气、计算数学等。\n\n如果你有任何问题或需要帮助，请告诉我！",
+      "timestamp": 1785984913674
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984841630,
+    "lastActiveAt": 1785984913674,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

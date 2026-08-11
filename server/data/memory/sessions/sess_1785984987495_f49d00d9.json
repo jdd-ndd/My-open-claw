@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984987495_f49d00d9",
+  "userId": "user-q0s2eejuzim",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0CCG2D1GNN78XFZ65378",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984987532
+    },
+    {
+      "id": "01KZAG4AMJJ6VSVX7T21B3H1GN",
+      "role": "assistant",
+      "content": "你好！我注意到你发送了\"concurrent message\"。看起来你可能是在测试消息处理能力。\n\n我一切都正常，可以随时为你服务。请问有什么我可以帮你的吗？比如代码审查、项目初始化、网页分析，或者其他任何问题都可以问我！😊",
+      "timestamp": 1785985116818
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984987532,
+    "lastActiveAt": 1785985116818,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

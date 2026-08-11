@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021529_4e52b544",
+  "userId": "load-user-32bo",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E2AEWRJG3KW4XQD96KY",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985021916
+    },
+    {
+      "id": "01KZAG3CHF9N3RPH2HYKH6N2XA",
+      "role": "assistant",
+      "content": "这是一个连接测试消息，无需处理。如果你有具体任务，请直接告诉我。",
+      "timestamp": 1785985085999
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021943,
+    "lastActiveAt": 1785985085999,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

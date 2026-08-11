@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984988889_39253cb4",
+  "userId": "user-1wp42gvq3uij",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG0DQVP5Z4WQ788M668R4F",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984988919
+    },
+    {
+      "id": "01KZAG4T074VF8GS4YF6KJB1EQ",
+      "role": "assistant",
+      "content": "你好！你提到了“concurrent message”（并发消息）。请问你是想了解并发消息的概念，还是需要我帮你处理某些并发任务？请告诉我更多细节，我可以为你提供帮助。",
+      "timestamp": 1785985132551
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984988919,
+    "lastActiveAt": 1785985132551,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

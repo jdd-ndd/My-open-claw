@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987937484_101f39a6",
+  "userId": "load-user-zzh2",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEHZNKRPZNN4KS2WRXG2",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785987938799
+    },
+    {
+      "id": "01KZAJWCK32K4H7KHCH021RJ73",
+      "role": "assistant",
+      "content": "连接已建立，我是您的智能助手。请问有什么可以帮您的？",
+      "timestamp": 1785988002403
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938806,
+    "lastActiveAt": 1785988002403,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

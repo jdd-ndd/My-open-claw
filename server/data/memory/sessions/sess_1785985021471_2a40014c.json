@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985021471_2a40014c",
+  "userId": "load-user-ap9v",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1E207YXXHPM11T1EDFHJ",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785985021915
+    },
+    {
+      "id": "01KZAG3CA5P0NQHB9KEAVPFWSD",
+      "role": "assistant",
+      "content": "收到了一条测试消息 `conn_msg_6`。请问有什么我可以帮您处理的正式任务吗？",
+      "timestamp": 1785985085765
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985021936,
+    "lastActiveAt": 1785985085765,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

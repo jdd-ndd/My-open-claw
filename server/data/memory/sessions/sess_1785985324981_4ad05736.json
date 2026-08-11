@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324981_4ad05736",
+  "userId": "load-user-rlz5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP3EHVJHWPDHFQZB2CVM",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985325129
+    },
+    {
+      "id": "01KZAGDYR3N3361N7056BTFZ0A",
+      "role": "assistant",
+      "content": "我是 MyOpenClaw Assistant，一个通用任务处理智能助手，可以帮你完成文件操作、网页抓取、系统命令执行、天气查询、汇率换算、数学计算等各种任务。\n\n回顾我们当前会话的历史，我注意到我们之前只有一条系统连接记录，并没有实质性的对话或任务交互。如果你能告诉我之前我们在其他会话中做过什么，或者你想继续之前未完成的任务，我可以尝试搜索长期记忆来帮你回忆。你想让我帮你查找之前的对话内容吗？",
+      "timestamp": 1785985432323
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325144,
+    "lastActiveAt": 1785985432323,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

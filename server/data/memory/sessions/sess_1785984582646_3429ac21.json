@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984582646_3429ac21",
+  "userId": "user-bmjccz9yze5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFM111KJJACJNG7NGQX3MN",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984582684
+    },
+    {
+      "id": "01KZAFN6NPBY1QYCXHNEKXXB1N",
+      "role": "assistant",
+      "content": "您好！我已收到您的消息。看起来这可能是一个并发测试或占位符消息。请问有什么我可以帮助您的吗？请随时告诉我您的需求。",
+      "timestamp": 1785984621238
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984582685,
+    "lastActiveAt": 1785984621238,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

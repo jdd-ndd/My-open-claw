@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987928753_6159283f",
+  "userId": "load-user-dhw4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJT5ETNP976WQ0130W6EZV",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785987929430
+    },
+    {
+      "id": "01KZAJW6F84XJV0R6YPCC5FS5T",
+      "role": "assistant",
+      "content": "你好！你发送了“conn_msg_10”，看起来可能是测试消息或者连接检查？如果你有具体任务需要我处理，请告诉我，我很乐意帮忙！",
+      "timestamp": 1785987996136
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987929469,
+    "lastActiveAt": 1785987996136,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

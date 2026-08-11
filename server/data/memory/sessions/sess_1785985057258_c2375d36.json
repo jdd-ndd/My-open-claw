@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057258_c2375d36",
+  "userId": "load-user-z3mk",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H6NZ4G782Q2NJ7HKDJN",
+      "role": "user",
+      "content": "conn_msg_0",
+      "timestamp": 1785985057929
+    },
+    {
+      "id": "01KZAG47TQGA7W4SH2W6EKQDMD",
+      "role": "assistant",
+      "content": "你好！你发来的“conn_msg_0”看起来像是一个随机的标识符或测试消息。请问你有什么具体需要帮助的吗？比如文件操作、网页分析、代码审查、数据查询等，我都很乐意协助！",
+      "timestamp": 1785985113943
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057932,
+    "lastActiveAt": 1785985113943,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

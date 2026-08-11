@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984579860_55c62a63",
+  "userId": "user-jtx9q0v8esj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKYA2N796M71D21JEHE3Y",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984579901
+    },
+    {
+      "id": "01KZAFN6YF91XFR1FEDB5T3V7N",
+      "role": "assistant",
+      "content": "您好！我注意到您发送了一条\"concurrent message\"的消息，但没有附带具体任务或代码。请问您是想：\n\n1. 让我审查某段涉及并发消息的代码？\n2. 了解并发消息相关的概念或最佳实践？\n3. 还是有其他需求？\n\n请提供更多细节，我会尽力帮助您。",
+      "timestamp": 1785984621519
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984579902,
+    "lastActiveAt": 1785984621519,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

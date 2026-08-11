@@ -1,3 +1,18 @@
+---
+name: text-translation
+description: 文本翻译技能，支持多语言互译与本地化适配
+version: 1.0.0
+author: MyOpenClaw Team
+triggers:
+  - 翻译
+  - 文本翻译
+  - 翻译成
+  - translate
+  - 本地化
+  - 多语言
+priority: low
+---
+
 # 文本翻译技能
 
 ## 用途

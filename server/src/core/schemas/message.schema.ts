@@ -11,6 +11,7 @@ export const MessageSchema = Type.Object({
   channelId: Type.String({ minLength: 1, description: '来源渠道 ID' }),
   userId: Type.String({ minLength: 1, description: '用户 ID' }),
   sessionId: Type.String({ minLength: 1, description: '会话 ID' }),
+  agentId: Type.String({ minLength: 1, description: 'Agent ID' }),
   type: Type.Union(
     [
       Type.Literal('text'),

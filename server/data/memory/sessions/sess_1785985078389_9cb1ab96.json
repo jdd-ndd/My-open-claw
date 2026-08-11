@@ -1,0 +1,242 @@
+{
+  "sessionId": "sess_1785985078389_9cb1ab96",
+  "userId": "perf-user",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGCJ4K5BH4ARHQ8ZE5ZQ6B",
+      "role": "user",
+      "content": "perf_0",
+      "timestamp": 1785985386642
+    },
+    {
+      "id": "01KZAGCJMYDD5MQ77F3P1VDM47",
+      "role": "user",
+      "content": "perf_1",
+      "timestamp": 1785985387165
+    },
+    {
+      "id": "01KZAGCK3EEXQTPQEVAW69E5XF",
+      "role": "user",
+      "content": "perf_2",
+      "timestamp": 1785985387629
+    },
+    {
+      "id": "01KZAGCKJFSEVHK40WC158644Q",
+      "role": "user",
+      "content": "perf_3",
+      "timestamp": 1785985388110
+    },
+    {
+      "id": "01KZAGCM1CBDNMT2WJGK6NMP20",
+      "role": "user",
+      "content": "perf_4",
+      "timestamp": 1785985388586
+    },
+    {
+      "id": "01KZAGCMDEED9DSXT219E6W0GP",
+      "role": "user",
+      "content": "perf_5",
+      "timestamp": 1785985388973
+    },
+    {
+      "id": "01KZAGCNQ66F6HXVHZ7FTXHDP0",
+      "role": "user",
+      "content": "perf_6",
+      "timestamp": 1785985390309
+    },
+    {
+      "id": "01KZAGCRK5ZR1X594QVQ14P8MY",
+      "role": "user",
+      "content": "perf_7",
+      "timestamp": 1785985393251
+    },
+    {
+      "id": "01KZAGCXENJVF3GDXVEKFJ7VZF",
+      "role": "assistant",
+      "content": "收到大量 perf 测试消息。我正常运行，随时准备处理实际任务。有什么我可以帮你的吗？",
+      "timestamp": 1785985398229
+    },
+    {
+      "id": "01KZAGD36CN2NE3G15HQPRS997",
+      "role": "assistant",
+      "content": "用户输入了\"perf_50 perf_0\"，这看起来像是一些性能测试相关的标记或命令，但含义不明确。回顾对话历史，用户之前发送了\"perf_0\"到\"perf_50\"的一系列标记，现在又重复了\"perf_50 perf_0\"。\n\n这可能是用户在测试系统性能或响应能力。我需要以友好的方式回应，表示我收到了用户的输入，并询问是否需要帮助。由于这些标记的含义不明确，我应该保持开放的态度，让用户说明他们的具体需求。",
+      "timestamp": 1785985404108
+    },
+    {
+      "id": "01KZAGDB5HADENC00KYD83PYTS",
+      "role": "assistant",
+      "content": "I received your series of input strings (perf_6 through perf_50, then perf_0 through perf_4, and a final perf_4). This looks like a stress or performance test. If you have a real task or question, please let me know — I'm here to help!",
+      "timestamp": 1785985412273
+    },
+    {
+      "id": "01KZAGDPPV4QQQ9Z90A26GD9KP",
+      "role": "assistant",
+      "content": "收到您发送的一系列 perf_ 消息（perf_0 到 perf_50）。不过这些消息似乎没有包含具体的问题或任务请求，如果您需要帮助，请告诉我详细的指令，我很乐意协助您。",
+      "timestamp": 1785985424091
+    },
+    {
+      "id": "01KZAGDQB1C1YZSFXG71VQ066Y",
+      "role": "user",
+      "content": "perf_8",
+      "timestamp": 1785985424736
+    },
+    {
+      "id": "01KZAGE3R0R9Q3XB94R0YA10EA",
+      "role": "assistant",
+      "content": "已收到所有 perf 标记（perf_8 ~ perf_6）。系统运行正常，可继续测试。",
+      "timestamp": 1785985437440
+    },
+    {
+      "id": "01KZAGE5MPJX2302AYMV4N3RTZ",
+      "role": "assistant",
+      "content": "已收到你发送的全部 perf_ 标记：perf_5 到 perf_50，以及重复的 perf_0 到 perf_3。目前我没有从中识别出具体的任务指令。如果你需要对这些数据进行统计、存储到文件、回显校验，或者有任何其他处理需求，请直接告诉我，我会立刻执行。",
+      "timestamp": 1785985439382
+    },
+    {
+      "id": "01KZAGEC6WGGFFFDBJAZB2FX27",
+      "role": "assistant",
+      "content": "收到 perf_8。如果您有具体任务或问题，请随时告诉我，我很乐意协助。",
+      "timestamp": 1785985446108
+    },
+    {
+      "id": "01KZAGET0GHV46XJ8VACMR0P8R",
+      "role": "assistant",
+      "content": "已收到所有 perf_0 到 perf_50 的消息（包含重复的 perf_0–7）。如果有实际任务，请告诉我。",
+      "timestamp": 1785985460240
+    },
+    {
+      "id": "01KZAGF0W9VF9MFH6YJ8512S0V",
+      "role": "assistant",
+      "content": "收到你的消息。你连续发送了大量 \"perf_N\" 标识，这看起来像是性能测试或标记符序列，没有附带具体的任务指示。如果这是压力测试的一部分，我系统运行正常。如果有任何实际任务需要处理（如文件操作、代码审查、网页分析等），请明确说明，我很乐意协助。",
+      "timestamp": 1785985467273
+    },
+    {
+      "id": "01KZAJVWCBJQR16GAGF8ZSX90Z",
+      "role": "user",
+      "content": "perf_0",
+      "timestamp": 1785987985797
+    },
+    {
+      "id": "01KZAJVX4Z7W558430VBFT8JRH",
+      "role": "user",
+      "content": "perf_1",
+      "timestamp": 1785987986585
+    },
+    {
+      "id": "01KZAJVXMYKXPR40DYZPDQAK9K",
+      "role": "user",
+      "content": "perf_2",
+      "timestamp": 1785987987096
+    },
+    {
+      "id": "01KZAJVY4YDHNVKQY0WY7FQ9W6",
+      "role": "user",
+      "content": "perf_3",
+      "timestamp": 1785987987609
+    },
+    {
+      "id": "01KZAJVYT18PS4F0YH38VPMCHD",
+      "role": "user",
+      "content": "perf_4",
+      "timestamp": 1785987988283
+    },
+    {
+      "id": "01KZAJVZH74EAG98XP1ATYXYMJ",
+      "role": "user",
+      "content": "perf_5",
+      "timestamp": 1785987989026
+    },
+    {
+      "id": "01KZAJW019W1XF16BZHSFCYGRC",
+      "role": "user",
+      "content": "perf_6",
+      "timestamp": 1785987989540
+    },
+    {
+      "id": "01KZAJW2KBJYRXACNCPEQVQGD3",
+      "role": "user",
+      "content": "perf_7",
+      "timestamp": 1785987992166
+    },
+    {
+      "id": "01KZAJW6X6ZWX58991XTYWAT2J",
+      "role": "assistant",
+      "content": "收到 perf_0、perf_1、perf_2、perf_2。系统响应正常。如有实际任务，请随时告知。",
+      "timestamp": 1785987996582
+    },
+    {
+      "id": "01KZAJX100Z07SMFY95T00RF1J",
+      "role": "assistant",
+      "content": "已收到 perf_0 至 perf_4（含重复 perf_4）。系统运行正常，如有实际任务需求，请随时告知。",
+      "timestamp": 1785988023296
+    },
+    {
+      "id": "01KZAJX2K1AD352JZFZEC26QDC",
+      "role": "assistant",
+      "content": "已收到 perf_0 到 perf_50（含重复标记）。系统响应正常，如有实际任务需要处理，请随时告知。",
+      "timestamp": 1785988024929
+    },
+    {
+      "id": "01KZAJY63J7P5ZCWY75ZG4KCMD",
+      "role": "assistant",
+      "content": "收到你的测试序列 perf_0 到 perf_7（perf_7 重复一次）。系统响应正常，如果有实际任务需要处理，随时告诉我。",
+      "timestamp": 1785988061299
+    },
+    {
+      "id": "01KZAJY6HZV9WQMPNFHDE8XNPN",
+      "role": "assistant",
+      "content": "已收到你发送的 perf_0 到 perf_6。如果这是性能测试的一部分，我运行正常。如果有实际任务需要处理，请告诉我，我随时为你效劳。",
+      "timestamp": 1785988061759
+    },
+    {
+      "id": "01KZAJYGMSZNXXYJW1VPWZMRK1",
+      "role": "assistant",
+      "content": "收到 perf_0 到 perf_5（perf_5 重复一次）。测试信号已接收。",
+      "timestamp": 1785988072089
+    },
+    {
+      "id": "01KZAK4W7AEV9A58SSAZENE2FX",
+      "role": "user",
+      "content": "perf_0",
+      "timestamp": 1785988280553
+    },
+    {
+      "id": "01KZAK4WVEVP48QYVBP0AXNWQ0",
+      "role": "user",
+      "content": "perf_1",
+      "timestamp": 1785988281197
+    },
+    {
+      "id": "01KZAK4XF6RYZZ1BZX7CP1Z68M",
+      "role": "user",
+      "content": "perf_2",
+      "timestamp": 1785988281828
+    },
+    {
+      "id": "01KZAK4Y0WA8MC8T6CNR24BFH0",
+      "role": "user",
+      "content": "perf_3",
+      "timestamp": 1785988282394
+    },
+    {
+      "id": "01KZAK4Z3E42RG5RNACC3HA71B",
+      "role": "user",
+      "content": "perf_4",
+      "timestamp": 1785988283501
+    },
+    {
+      "id": "01KZAK54SEC31NWX21YS9DF6AR",
+      "role": "user",
+      "content": "perf_5",
+      "timestamp": 1785988289325
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985386643,
+    "lastActiveAt": 1785988289326,
+    "messageCount": 38,
+    "compressed": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "sessionId": "sess_1785984977006_53b326d6",
+  "userId": "user-b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG024CTSB3B6GDF5XBA7ZB",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785984977033
+    },
+    {
+      "id": "01KZAG058V1WVVP5QF1J8KFP6M",
+      "role": "assistant",
+      "content": "Hello! 有什么我可以帮你的吗？",
+      "timestamp": 1785984980251
+    },
+    {
+      "id": "01KZAG8V1W5BB5X0FC22CSMRYP",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785985264698
+    },
+    {
+      "id": "01KZAG90GXB38J7G14WAEQRMVY",
+      "role": "assistant",
+      "content": "Hello! 👋 有什么我可以帮你的吗？",
+      "timestamp": 1785985270301
+    },
+    {
+      "id": "01KZAJPTAA9MJ4EAKWQ9SS7DVP",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785987819845
+    },
+    {
+      "id": "01KZAJPZ3VFKFHSYRABT4NA4PM",
+      "role": "assistant",
+      "content": "你好！👋 有什么我可以帮你的吗？",
+      "timestamp": 1785987824763
+    },
+    {
+      "id": "01KZAJZM59PZRTD819MVXQK8H4",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785988108456
+    },
+    {
+      "id": "01KZAJZRWKS26SE48KCKTZCCMT",
+      "role": "assistant",
+      "content": "Hello! 👋 有什么可以帮你的吗？",
+      "timestamp": 1785988113299
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984977033,
+    "lastActiveAt": 1785988113299,
+    "messageCount": 8,
+    "compressed": false
+  }
+}

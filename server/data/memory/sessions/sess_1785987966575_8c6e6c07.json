@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987966575_8c6e6c07",
+  "userId": "load-user-w2c4",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJVA145D8V57HWZCPY2391",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785987966865
+    },
+    {
+      "id": "01KZAJWBF0RYWAS5GRE1WD52KE",
+      "role": "assistant",
+      "content": "您好！我看到您发送了 \"conn_msg_16\"，这看起来像是一个会话消息标识符。请问有什么我可以帮您的吗？如果您有具体的任务或问题，请随时告诉我，我会尽力协助！😊",
+      "timestamp": 1785988001248
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987966918,
+    "lastActiveAt": 1785988001248,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

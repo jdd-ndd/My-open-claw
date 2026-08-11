@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785987910170_7b82781d",
+  "userId": "load-user-coja",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSKEN26QQTH51QDFHPP1Z",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785987911006
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987911034,
+    "lastActiveAt": 1785987911125,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604502_af718cd3",
+  "userId": "load-user-i6kf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPKBXBPTDHZB8T9D6WNN",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785984604645
+    },
+    {
+      "id": "01KZAFP6C2W2MJVZ2CR97GHSE4",
+      "role": "assistant",
+      "content": "我需要先了解项目结构和技能系统的当前状态，然后进行分析。\n\n<action name=\"exec/shell\" args='{\"command\": \"find /home/ubuntu/Projects/tsf -type f -name '*.ts' -o -name '*.js' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.md' | head -50\", \"cwd\": \"/home/ubuntu/Projects/tsf\"}'>",
+      "timestamp": 1785984653698
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604691,
+    "lastActiveAt": 1785984653698,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

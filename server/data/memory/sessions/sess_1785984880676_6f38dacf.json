@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785984880676_6f38dacf",
+  "userId": "load-user-kgo1",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFX4K20WVD6HDJQ83TMMC6",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984881227
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984881234,
+    "lastActiveAt": 1785984881250,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985350753_a8799254",
+  "userId": "load-user-smwa",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBFDH9Z6C5S83CW5QYT3A",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985351057
+    },
+    {
+      "id": "01KZAGDGRDBP45R4DR5DH73HXF",
+      "role": "assistant",
+      "content": "你好！我收到了 \"conn_msg_13\"，但这似乎是一条测试消息或无效输入。请问有什么可以帮助你的？",
+      "timestamp": 1785985417997
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985351068,
+    "lastActiveAt": 1785985417997,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

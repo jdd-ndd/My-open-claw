@@ -1,0 +1,6 @@
+# WebChat 渠道配置
+webchat:
+  enabled: true
+  name: "WebChat"
+  port: 18780
+  path: "/ws"

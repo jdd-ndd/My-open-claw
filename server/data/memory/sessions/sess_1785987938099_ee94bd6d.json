@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987938099_ee94bd6d",
+  "userId": "load-user-6p31",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJTEKK705S4JV3X6N3AFCS",
+      "role": "user",
+      "content": "conn_msg_10",
+      "timestamp": 1785987938801
+    },
+    {
+      "id": "01KZAJW603M6GYNCX78ZZ75C7B",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息“conn_msg_10”，不过我不太明白这是什么意思。请问有什么可以帮你的吗？无论是写代码、查资料还是处理文件，我都很乐意协助。",
+      "timestamp": 1785987995651
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987938837,
+    "lastActiveAt": 1785987995651,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

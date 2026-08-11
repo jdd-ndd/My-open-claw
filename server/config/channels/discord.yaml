@@ -1,5 +1,0 @@
-# Discord 渠道配置
-discord:
-  enabled: false
-  name: "Discord"
-  token: "${DISCORD_BOT_TOKEN}"

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612660_8e4942cb",
+  "userId": "load-user-84gj",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYKZN1G7YTNRT8E93KQM",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785984612869
+    },
+    {
+      "id": "01KZAFPP83EMY0QQM9185CQ5W6",
+      "role": "assistant",
+      "content": "收到，我已在线并准备就绪。看起来你发送了一条测试消息（conn_msg_14）。请告诉我有什么可以帮助你的，无论是代码审查、项目搭建、网页分析，还是其他任何任务，都可以直接交给我。",
+      "timestamp": 1785984669955
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612909,
+    "lastActiveAt": 1785984669955,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

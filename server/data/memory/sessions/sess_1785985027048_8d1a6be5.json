@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785985027048_8d1a6be5",
+  "userId": "load-user-pmr7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K9QKCJZCN0WEY6TR2M3",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985027250
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027295,
+    "lastActiveAt": 1785985027383,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

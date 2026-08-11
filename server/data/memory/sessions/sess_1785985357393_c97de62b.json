@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985357393_c97de62b",
+  "userId": "load-user-0pjf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGBNWH3GWA5A28N3PVG6XA",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785985357675
+    },
+    {
+      "id": "01KZAGE5YJN9JR408Z46K41ADY",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985439698
+    },
+    {
+      "id": "01KZAGEHHYM6T981KDM74EEHR3",
+      "role": "assistant",
+      "content": "`whoami` 命令已执行成功，但返回了空输出。这可能是因为当前执行环境的 Shell 配置中用户信息未设置，或者输出被重定向了。\n\n如果你想确认当前用户身份，可以尝试执行其他命令（如 `id` 或 `echo $USER`）来交叉验证。需要我帮你试试吗？",
+      "timestamp": 1785985451582
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985357690,
+    "lastActiveAt": 1785985451582,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

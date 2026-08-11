@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618083_047b5a25",
+  "userId": "load-user-ebym",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN46KV7N4P9WBX692CAYZ",
+      "role": "user",
+      "content": "conn_msg_3",
+      "timestamp": 1785984618633
+    },
+    {
+      "id": "01KZAFNHKZ4XH381KSPTDYPQZP",
+      "role": "assistant",
+      "content": "Hello! I'm here and ready to help. How can I assist you today?",
+      "timestamp": 1785984632447
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618643,
+    "lastActiveAt": 1785984632447,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

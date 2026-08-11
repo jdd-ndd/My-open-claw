@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988213057_c6bb5ecc",
+  "userId": "load-user-emki",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK2TNNHGMT9A3TT78HDK4P",
+      "role": "user",
+      "content": "conn_msg_15",
+      "timestamp": 1785988213394
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988213407,
+    "lastActiveAt": 1785988213429,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

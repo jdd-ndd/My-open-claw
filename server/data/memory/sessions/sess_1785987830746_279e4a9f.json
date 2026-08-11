@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987830746_279e4a9f",
+  "userId": "user-hts28yb8p8",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJQ510Y6TX92KGMF0XN9FT",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785987830812
+    },
+    {
+      "id": "01KZAJQJCXYEBW9G7KZA9P1425",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息，但内容只有 \"concurrent message\"，我不太确定你需要什么帮助。是想了解并发消息处理相关的知识，还是在进行某种测试？请详细说明你的需求，我会尽力协助你。😊",
+      "timestamp": 1785987844510
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987830812,
+    "lastActiveAt": 1785987844510,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

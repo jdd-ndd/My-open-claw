@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984983665_4a02ad26",
+  "userId": "user-k9k8zwfp5c",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG08MH5TW33R8NPPVKPYNQ",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984983694
+    },
+    {
+      "id": "01KZAG178NZA5VAMZDQ99DVNTS",
+      "role": "assistant",
+      "content": "I received your \"concurrent message\" input. Could you clarify what you'd like me to do? If you're referencing a previous conversation or specific request, feel free to elaborate — I'm here to help!",
+      "timestamp": 1785985015061
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984983694,
+    "lastActiveAt": 1785985015061,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

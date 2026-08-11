@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My OpenClaw - Cover Style Previews</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #0b0d10;
+      color: #111;
+      font-family: "Inter", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    body {
+      padding: 28px;
+      display: grid;
+      gap: 40px;
+    }
+    .deck-title {
+      color: #f3f4f6;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .note {
+      color: #9ca3af;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    .slide {
+      position: relative;
+      width: min(100%, 1440px);
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 18px;
+      margin: 0 auto;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    }
+    .label {
+      color: #e5e7eb;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 auto 12px;
+      width: min(100%, 1440px);
+    }
+
+    /* Swiss */
+    .swiss {
+      background: #f7f7f2;
+      color: #0f172a;
+      padding: 64px 72px;
+    }
+    .swiss-grid {
+      position: absolute;
+      inset: 28px;
+      background-image:
+        linear-gradient(to right, rgba(15,23,42,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,23,42,0.06) 1px, transparent 1px);
+      background-size: calc(100% / 12) calc(100% / 8);
+      pointer-events: none;
+    }
+    .swiss .bar {
+      position: absolute;
+      left: 72px;
+      top: 72px;
+      width: 16px;
+      height: 160px;
+      background: #1477ff;
+    }
+    .swiss h1 {
+      position: relative;
+      margin: 110px 0 0 48px;
+      font-size: 80px;
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      max-width: 680px;
+    }
+    .swiss .sub {
+      position: relative;
+      margin: 26px 0 0 48px;
+      max-width: 470px;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #475569;
+    }
+    .swiss .meta {
+      position: absolute;
+      right: 72px;
+      top: 84px;
+      width: 250px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: left;
+    }
+    .swiss .footer {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      bottom: 56px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    /* Bauhaus */
+    .bauhaus {
+      background: #f0eadf;
+      overflow: hidden;
+    }
+    .bauhaus .circle-red {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #d62828;
+      left: 84px;
+      top: 90px;
+    }
+    .bauhaus .circle-blue {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: #2563eb;
+      right: 150px;
+      top: 82px;
+    }
+    .bauhaus .yellow-block {
+      position: absolute;
+      width: 360px;
+      height: 110px;
+      background: #f4c430;
+      right: 0;
+      bottom: 160px;
+    }
+    .bauhaus .black-line {
+      position: absolute;
+      height: 10px;
+      width: 640px;
+      background: #111827;
+      left: 230px;
+      top: 362px;
+      transform: rotate(-12deg);
+      transform-origin: left center;
+    }
+    .bauhaus .frame {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      top: 72px;
+      bottom: 72px;
+      border: 4px solid #111827;
+    }
+    .bauhaus h1 {
+      position: absolute;
+      left: 430px;
+      top: 150px;
+      margin: 0;
+      color: #111827;
+      font-size: 86px;
+      line-height: 0.95;
+      font-weight: 800;
+      max-width: 700px;
+      letter-spacing: -0.035em;
+    }
+    .bauhaus .sub {
+      position: absolute;
+      left: 432px;
+      top: 360px;
+      max-width: 520px;
+      color: #1f2937;
+      font-size: 24px;
+      line-height: 1.45;
+    }
+    .bauhaus .small {
+      position: absolute;
+      left: 92px;
+      bottom: 98px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: 0.08em;
+    }
+
+    /* Futuristic */
+    .future {
+      background:
+        radial-gradient(circle at 70% 30%, rgba(34,211,238,0.18), transparent 28%),
+        radial-gradient(circle at 25% 70%, rgba(59,130,246,0.18), transparent 30%),
+        linear-gradient(135deg, #081019 0%, #091520 45%, #050a12 100%);
+      color: #e0f2fe;
+    }
+    .future .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+    .future .ring {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(103,232,249,0.35);
+      border-radius: 50%;
+      right: 100px;
+      top: 90px;
+      box-shadow: 0 0 40px rgba(34,211,238,0.12);
+    }
+    .future .ring::after {
+      content: "";
+      position: absolute;
+      inset: 36px;
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 50%;
+    }
+    .future .panel {
+      position: absolute;
+      background: rgba(8, 19, 30, 0.5);
+      border: 1px solid rgba(125,211,252,0.22);
+      backdrop-filter: blur(4px);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03), 0 0 30px rgba(34,211,238,0.08);
+    }
+    .future .p1 { left: 84px; top: 84px; width: 210px; height: 78px; }
+    .future .p2 { left: 84px; top: 510px; width: 340px; height: 86px; }
+    .future .p3 { right: 92px; bottom: 78px; width: 260px; height: 120px; }
+    .future .node, .future .line {
+      position: absolute;
+      background: #22d3ee;
+      box-shadow: 0 0 14px rgba(34,211,238,0.65);
+    }
+    .future .node { width: 8px; height: 8px; border-radius: 50%; }
+    .future .line { height: 1px; }
+    .future .n1 { left: 320px; top: 310px; }
+    .future .n2 { left: 480px; top: 250px; }
+    .future .n3 { left: 680px; top: 330px; }
+    .future .n4 { left: 850px; top: 225px; }
+    .future .l1 { left: 324px; top: 314px; width: 160px; transform: rotate(-20deg); transform-origin: left center; }
+    .future .l2 { left: 484px; top: 254px; width: 200px; transform: rotate(23deg); transform-origin: left center; }
+    .future .l3 { left: 684px; top: 334px; width: 170px; transform: rotate(-32deg); transform-origin: left center; }
+    .future h1 {
+      position: absolute;
+      left: 84px;
+      top: 170px;
+      margin: 0;
+      font-size: 88px;
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      max-width: 620px;
+      text-shadow: 0 0 22px rgba(34,211,238,0.18);
+    }
+    .future .sub {
+      position: absolute;
+      left: 88px;
+      top: 390px;
+      max-width: 520px;
+      color: #b6d8e8;
+      font-size: 22px;
+      line-height: 1.55;
+    }
+
+    /* Glass */
+    .glass {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.22), transparent 22%),
+        radial-gradient(circle at 85% 25%, rgba(59,130,246,0.30), transparent 28%),
+        radial-gradient(circle at 70% 80%, rgba(16,185,129,0.20), transparent 24%),
+        linear-gradient(135deg, #0f172a 0%, #172554 42%, #1e3a8a 100%);
+      color: #eff6ff;
+    }
+    .glass .card {
+      position: absolute;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.24), inset 0 1px 0 rgba(255,255,255,0.18);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+    }
+    .glass .main {
+      left: 72px;
+      top: 82px;
+      width: 760px;
+      height: 510px;
+      padding: 56px;
+    }
+    .glass .side1 { right: 96px; top: 112px; width: 250px; height: 140px; }
+    .glass .side2 { right: 132px; top: 292px; width: 280px; height: 170px; }
+    .glass .side3 { right: 88px; bottom: 86px; width: 210px; height: 96px; }
+    .glass .chip {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.16);
+      font-size: 13px;
+      color: #dbeafe;
+      letter-spacing: 0.04em;
+    }
+    .glass h1 {
+      margin: 34px 0 0;
+      font-size: 88px;
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .glass .sub {
+      margin-top: 28px;
+      max-width: 540px;
+      font-size: 23px;
+      line-height: 1.6;
+      color: rgba(239,246,255,0.82);
+    }
+    .glass .mini-line {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+    }
+    .glass .side1 .mini-line:nth-child(1) { top: 26px; width: 70%; }
+    .glass .side1 .mini-line:nth-child(2) { top: 52px; width: 52%; }
+    .glass .side1 .mini-line:nth-child(3) { top: 84px; width: 82%; }
+    .glass .side2 .mini-line:nth-child(1) { top: 34px; width: 74%; }
+    .glass .side2 .mini-line:nth-child(2) { top: 68px; width: 88%; }
+    .glass .side2 .mini-line:nth-child(3) { top: 102px; width: 58%; }
+
+    /* Constructivist */
+    .construct {
+      background: #f7f3ee;
+      color: #111;
+      overflow: hidden;
+    }
+    .construct .diag-red {
+      position: absolute;
+      width: 880px;
+      height: 150px;
+      background: #c1121f;
+      transform: rotate(-19deg);
+      left: -120px;
+      top: 110px;
+    }
+    .construct .diag-black {
+      position: absolute;
+      width: 760px;
+      height: 90px;
+      background: #111;
+      transform: rotate(-19deg);
+      right: -150px;
+      bottom: 120px;
+    }
+    .construct .arrow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 54px solid transparent;
+      border-bottom: 54px solid transparent;
+      border-left: 120px solid #111;
+      left: 160px;
+      bottom: 132px;
+      transform: rotate(-8deg);
+    }
+    .construct .grid-lines::before,
+    .construct .grid-lines::after {
+      content: "";
+      position: absolute;
+      background: rgba(17,17,17,0.12);
+    }
+    .construct .grid-lines::before {
+      width: 2px;
+      top: 70px;
+      bottom: 70px;
+      left: 120px;
+    }
+    .construct .grid-lines::after {
+      height: 2px;
+      left: 70px;
+      right: 70px;
+      top: 110px;
+    }
+    .construct h1 {
+      position: absolute;
+      left: 118px;
+      top: 170px;
+      margin: 0;
+      font-size: 94px;
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      max-width: 760px;
+      text-transform: uppercase;
+    }
+    .construct .sub {
+      position: absolute;
+      left: 124px;
+      top: 420px;
+      max-width: 510px;
+      font-size: 24px;
+      line-height: 1.45;
+      color: #2d2d2d;
+    }
+    .construct .tag {
+      position: absolute;
+      right: 110px;
+      top: 122px;
+      background: #111;
+      color: #fff;
+      padding: 14px 18px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+    .construct .num {
+      position: absolute;
+      right: 118px;
+      bottom: 88px;
+      font-size: 140px;
+      font-weight: 900;
+      color: rgba(17,17,17,0.1);
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="deck-title">My OpenClaw 封面视觉方向预览</div>
+    <div class="note">以下 5 张均为第一页封面草图，只用于看风格方向，不代表最终整套排版细节。</div>
+  </div>
+
+  <div>
+    <div class="label">01 瑞士国际主义风</div>
+    <section class="slide swiss">
+      <div class="swiss-grid"></div>
+      <div class="bar"></div>
+      <div class="meta">
+        AI Agent Project<br />
+        Web / TUI / Gateway<br />
+        Tools / Memory / System Design
+      </div>
+      <h1>My<br />OpenClaw</h1>
+      <div class="sub">本地优先的双端协同 AI Agent 项目答辩</div>
+      <div class="footer">
+        <span>System Architecture / Module Design / Collaboration</span>
+        <span>2026</span>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">02 包豪斯现代主义风</div>
+    <section class="slide bauhaus">
+      <div class="frame"></div>
+      <div class="circle-red"></div>
+      <div class="circle-blue"></div>
+      <div class="yellow-block"></div>
+      <div class="black-line"></div>
+      <h1>My<br />OpenClaw</h1>
+      <div class="sub">一个由客户端、网关、智能体、工具与记忆共同构成的本地 AI 系统</div>
+      <div class="small">PROJECT DEFENSE PRESENTATION</div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">03 未来主义科技界面风</div>
+    <section class="slide future">
+      <div class="grid"></div>
+      <div class="ring"></div>
+      <div class="panel p1"></div>
+      <div class="panel p2"></div>
+      <div class="panel p3"></div>
+      <div class="node n1"></div>
+      <div class="node n2"></div>
+      <div class="node n3"></div>
+      <div class="node n4"></div>
+      <div class="line l1"></div>
+      <div class="line l2"></div>
+      <div class="line l3"></div>
+      <h1>My<br />OpenClaw</h1>
+      <div class="sub">Local-first AI Agent System with Web, TUI, Gateway, Tools and Memory</div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">04 Glassmorphism 玻璃拟态风</div>
+    <section class="slide glass">
+      <div class="card main">
+        <div class="chip">AI AGENT PRESENTATION</div>
+        <h1>My<br />OpenClaw</h1>
+        <div class="sub">以本地部署、双端协同、工具调用和记忆能力为核心的智能体项目展示</div>
+      </div>
+      <div class="card side1">
+        <div class="mini-line"></div>
+        <div class="mini-line"></div>
+        <div class="mini-line"></div>
+      </div>
+      <div class="card side2">
+        <div class="mini-line"></div>
+        <div class="mini-line"></div>
+        <div class="mini-line"></div>
+      </div>
+      <div class="card side3"></div>
+    </section>
+  </div>
+
+  <div>
+    <div class="label">05 新构成主义海报风</div>
+    <section class="slide construct">
+      <div class="diag-red"></div>
+      <div class="diag-black"></div>
+      <div class="arrow"></div>
+      <div class="grid-lines"></div>
+      <div class="tag">AI SYSTEM</div>
+      <h1>My<br />OpenClaw</h1>
+      <div class="sub">本地优先、模块协同、可持续扩展的 AI Agent 工程项目答辩展示</div>
+      <div class="num">01</div>
+    </section>
+  </div>
+</body>
+</html>

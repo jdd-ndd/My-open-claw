@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987957305_8fa163bd",
+  "userId": "load-user-t4ib",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0XV4M1WT99QZEGZ3RTJ",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785987957524
+    },
+    {
+      "id": "01KZAJXWJSDD7V47CRNDCGQ5RQ",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785988051545
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957584,
+    "lastActiveAt": 1785988051545,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

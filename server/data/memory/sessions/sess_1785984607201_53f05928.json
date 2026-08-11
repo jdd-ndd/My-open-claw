@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984607201_53f05928",
+  "userId": "load-user-p5lx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS6TSCKG7YT16R25SWR1",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785984607312
+    },
+    {
+      "id": "01KZAFNTSNBV8REWMEM4G3BSJN",
+      "role": "assistant",
+      "content": "这看起来像是系统调试信息或连接消息，而不是有意义的提问。请问有什么可以帮您的吗？",
+      "timestamp": 1785984641845
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607360,
+    "lastActiveAt": 1785984641845,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

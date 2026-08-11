@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988186952_c68caf16",
+  "userId": "load-user-elp5",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK217HJPQWE54K64BXZDE0",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785988187344
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988187356,
+    "lastActiveAt": 1785988187377,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

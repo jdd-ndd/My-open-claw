@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985064036_4af23ec9",
+  "userId": "load-user-n0n9",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2QADNZCD91QFNJE0RHXF",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985064100
+    },
+    {
+      "id": "01KZAG3N2C87ZNKF7J3X40STSJ",
+      "role": "assistant",
+      "content": "这看起来像是连接测试消息，内容重复且没有实际意义。请问您有什么需要帮助的吗？",
+      "timestamp": 1785985094732
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985064166,
+    "lastActiveAt": 1785985094732,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604198_cfb0fc55",
+  "userId": "load-user-6e1m",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPHXB24MM4ZNTAWH4FQM",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984604643
+    },
+    {
+      "id": "01KZAFPDB34PD68H2977WY8NFG",
+      "role": "assistant",
+      "content": "好的，这是项目根目录下 `index.md` 中的文件结构图：\n\n```\nMyOpenClaw/\n├── .env\n├── .env.example\n├── .gitignore\n├── AGENTS.md\n├── CLAUDE.md\n├── ecosystem.config.cjs\n├── package.json\n├── README.md\n├── agent/\n│   ├── blog-writer.yaml\n│   ├── code-reviewer.yaml\n│   └── general-assistant.yaml\n├── myopenclaw.yaml\n└── skills/\n    ├── code-review/\n    │   └── skill.md\n    ├── quick-setup/\n    │   └── skill.md\n    └── website-analyzer/\n        └── skill.md\n```\n\n这个结构展示了一个基于 MyOpenClaw 框架的智能体项目布局。需要我进一步说明某个部分，或者帮你完善 index.md 的其他内容吗？",
+      "timestamp": 1785984660835
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604662,
+    "lastActiveAt": 1785984660835,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

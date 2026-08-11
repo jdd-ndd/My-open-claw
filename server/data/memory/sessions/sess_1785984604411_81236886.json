@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984604411_81236886",
+  "userId": "load-user-r8mf",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMPJYKQPX483F40D4CX8B",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785984604644
+    },
+    {
+      "id": "01KZAFNTN7GANGQJA3TFE47T5H",
+      "role": "assistant",
+      "content": "收到一串乱码，请重新输入有效内容。",
+      "timestamp": 1785984641703
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984604683,
+    "lastActiveAt": 1785984641703,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

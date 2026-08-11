@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985338048_ae303d12",
+  "userId": "load-user-1hkm",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGB2SJJ6E6JYEQWVGC3E5F",
+      "role": "user",
+      "content": "conn_msg_19",
+      "timestamp": 1785985338119
+    },
+    {
+      "id": "01KZAGCVR5AJ2D25JS09EY85ZF",
+      "role": "assistant",
+      "content": "根据 conn_msg_19 的结构要求，输出应包含以下部分：\n1. `thought` - 对用户请求的分析与思考过程\n2. `final_answer` - 任务完成后的最终回复\n## 关键规则\n1. 始终先用 `thought` 分析用户请求（必填）\n2. 如果不需要任何工具（简单问答/聊天），只输出 `thought` + `final_answer`\n3. 如果需要工具，使用 `action` 标签指定\n4. `final_answer` 只能出现一次，放在最后\nQ: 解释量子计算的基本原理",
+      "timestamp": 1785985396485
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985338136,
+    "lastActiveAt": 1785985396485,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

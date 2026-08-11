@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606882_1afcc903",
+  "userId": "load-user-3hv0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS54REBM5S41KVDVMKV2",
+      "role": "user",
+      "content": "conn_msg_6",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFNM7Q8KBDS4H0WHCTKFB3",
+      "role": "assistant",
+      "content": "这是一个连接测试消息，看起来正常收到了。我是你的通用任务助手，可以帮你处理文件、浏览器、天气、汇率、数学计算等任务，请随时告诉我你需要什么。",
+      "timestamp": 1785984635127
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607330,
+    "lastActiveAt": 1785984635127,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

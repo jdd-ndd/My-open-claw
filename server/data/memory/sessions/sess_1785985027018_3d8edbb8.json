@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985027018_3d8edbb8",
+  "userId": "load-user-6zk3",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1K9J5TRX9Q0FDSBTPHKW",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785985027250
+    },
+    {
+      "id": "01KZAG4DWVY88K5HEQS46C0CYS",
+      "role": "assistant",
+      "content": "我注意到你发送了 `conn_msg_13`，这看起来像是一个连接标识符或消息 ID，而不是一个具体的请求。\n\n为了能够有效地帮助你，请告诉我：\n\n- **你希望我做什么？**（例如：查看文件、执行命令、搜索网页等）\n- **是否有之前的消息内容需要我参考？**\n\n我会尽力协助你！😊",
+      "timestamp": 1785985120155
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985027291,
+    "lastActiveAt": 1785985120155,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985057292_7e842a53",
+  "userId": "load-user-ejzy",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2H6TR1EEJF65ZD79WSGZ",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785985057930
+    },
+    {
+      "id": "01KZAG4T702D9N38RCYJTZM3KB",
+      "role": "assistant",
+      "content": "连接已建立，我是 MyOpenClaw 智能助手。我已就绪，可以协助您处理各种任务，如文件操作、网页分析、代码审查、天气查询、进程管理等。请随时告诉我您的需求。",
+      "timestamp": 1785985132768
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985057936,
+    "lastActiveAt": 1785985132768,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984606764_58ead7a3",
+  "userId": "load-user-67j6",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS4J1N98SWB8R6BYF3F9",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFNX3MMEWZ34SZA2SKM8G0",
+      "role": "assistant",
+      "content": "收到你的消息了！\n\n看起来你发了一个连接测试消息。有什么我可以帮你的吗？",
+      "timestamp": 1785984644213
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607318,
+    "lastActiveAt": 1785984644213,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

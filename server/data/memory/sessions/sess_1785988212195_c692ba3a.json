@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988212195_c692ba3a",
+  "userId": "load-user-sjbp",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK2TN4JKPZQVYBSWV9VCDF",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785988213392
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988213395,
+    "lastActiveAt": 1785988213412,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

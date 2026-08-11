@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987956177_c9f85e90",
+  "userId": "load-user-771j",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJV0TWFG6HGF76ZVAS1RZ9",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785987957517
+    },
+    {
+      "id": "01KZAJWQFKKVR8S9DNENSD6QN2",
+      "role": "assistant",
+      "content": "你好！我已连接并准备就绪。有什么我可以帮助你的吗？😊",
+      "timestamp": 1785988013555
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987957528,
+    "lastActiveAt": 1785988013555,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

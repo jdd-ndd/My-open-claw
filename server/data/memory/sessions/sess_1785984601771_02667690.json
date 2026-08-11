@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984601771_02667690",
+  "userId": "load-user-rs7u",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMM13EWWJ8A81NV5VGPB7",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785984602036
+    },
+    {
+      "id": "01KZAFP5XNZYNRP7V2N5CP1488",
+      "role": "assistant",
+      "content": "你好！我收到了你的消息 \"conn_msg_12\"。不过这看起来像是一个连接标识或测试消息，我无法从中识别出具体的任务或问题。你是想测试连接是否正常，还是有其他需要我帮忙的事情？请随时告诉我，我非常乐意协助你！ 😊",
+      "timestamp": 1785984653237
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984602070,
+    "lastActiveAt": 1785984653237,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

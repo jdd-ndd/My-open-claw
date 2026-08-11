@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984612570_13d2f878",
+  "userId": "load-user-7cfd",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMYKJ4BCZWMDFB9Q9712Y",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984612869
+    },
+    {
+      "id": "01KZAFPBDRB4RAJKH18TF2WXT1",
+      "role": "assistant",
+      "content": "你好！你发送了“conn_msg_11”，我不太确定你想让我做什么。如果你需要帮助，请详细描述你的需求，我会尽力协助。😊",
+      "timestamp": 1785984658872
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984612901,
+    "lastActiveAt": 1785984658872,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

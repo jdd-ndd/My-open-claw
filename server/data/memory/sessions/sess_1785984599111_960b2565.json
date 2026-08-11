@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984599111_960b2565",
+  "userId": "load-user-gaap",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHH3NP6ZFR9G7V5KVYYD",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785984599499
+    },
+    {
+      "id": "01KZAFNK5Z93ZHWEJAEP17AX32",
+      "role": "assistant",
+      "content": "已收到连接消息 conn_msg_7，连接正常。有什么我可以帮您的吗？",
+      "timestamp": 1785984634048
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599519,
+    "lastActiveAt": 1785984634048,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

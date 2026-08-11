@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032051_e4bdc91b",
+  "userId": "load-user-fnau",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1RE370JB0DG74JZ4VF3M",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985032558
+    },
+    {
+      "id": "01KZAG4Q32609GGB1VEGEGDHZT",
+      "role": "assistant",
+      "content": "已为您生成飞书项目 OpenAPI 的连接测试脚本 `feishu-test.py`，可以直接获取工具列表。\n\n您可以告诉我是否需要：\n- 指定其他应用权限？\n- 修改 Base URL 或其他连接参数？\n- 立即运行？",
+      "timestamp": 1785985129570
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032575,
+    "lastActiveAt": 1785985129570,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

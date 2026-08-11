@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984618018_27b97e1e",
+  "userId": "load-user-iq30",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFN46ATFWYJW1JJHFBP2V5",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785984618632
+    },
+    {
+      "id": "01KZAFP4BWM1JF83WX8J302DV8",
+      "role": "assistant",
+      "content": "👋 嗨！已收到你的连接测试消息（conn_msg_1），我在这里准备好了。请问有什么可以帮你的？比如：\n\n- 创建项目 / 代码审查\n- 查询天气、汇率、新闻\n- 打开网页分析内容\n- 执行系统命令或文件操作\n\n随时告诉我你的需求吧！",
+      "timestamp": 1785984651644
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984618637,
+    "lastActiveAt": 1785984651644,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

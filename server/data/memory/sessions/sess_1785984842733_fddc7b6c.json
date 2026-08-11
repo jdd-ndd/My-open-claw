@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984842733_fddc7b6c",
+  "userId": "user-871vlahw5f7",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFVZ0MYF66BG7DHQYBPZMG",
+      "role": "user",
+      "content": "concurrent message",
+      "timestamp": 1785984842770
+    },
+    {
+      "id": "01KZAFY1ZXTW80Z0JXA9WMDE9W",
+      "role": "assistant",
+      "content": "我收到了两条并发的相同消息\"concurrent message\"。看起来系统处理并发消息没有问题。请问您需要我为您做些什么？我可以帮助您执行各种任务，例如文件管理、执行命令、网页抓取、信息查询等。",
+      "timestamp": 1785984911357
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984842771,
+    "lastActiveAt": 1785984911357,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

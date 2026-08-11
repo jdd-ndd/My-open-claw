@@ -1,9 +1,13 @@
 # MyOpenClaw Memory 记忆模块
 
-> **版本**：v1.0.0  
-> **修订日期**：2026-07-21  
+> **版本**：v1.1.2  
+> **修订日期**：2026-08-04  
 > **修订人**：MyOpenClaw Core Team  
 > **文档状态**：正式发布
+
+---
+
+> **实现状态**：记忆模块已完整实现。MemoryManager 提供统一门面管理三层架构：SessionMemory（消息追加/压缩/过期清理）、VectorMemory（余弦相似度/欧氏距离/点积三种检索方式）、EmbeddingService（OpenAI 兼容 API + 中英文关键词回退）、PersistLayer（原子写入 + 备份恢复）。
 
 ---
 
@@ -137,7 +141,7 @@ interface SessionData {
   sessionId: string;
   /** 用户 ID */
   userId: string;
-  /** 渠道 ID（telegram/discord/webchat 等） */
+  /** 渠道 ID（webchat/qqbot/feishu/wechat/cli 等） */
   channelId: string;
   /** 绑定的 Agent ID */
   agentId: string;
@@ -1309,9 +1313,37 @@ async function cleanupExpiredMemories(
 
 ## 6. 配置说明
 
-### 6.1 配置文件结构
+### 6.1 配置文件位置
 
-Memory 配置位于 `config/memory.json`：
+Memory 模块配置集成在 Gateway 主配置文件中，位于 `server/config/config.yaml`：
+
+```yaml
+# ── Gateway 网关配置 ──
+gateway:
+  host: 127.0.0.1
+  port: 18780
+  heartbeatInterval: 30000
+  maxConnections: 1000
+  requestTimeout: 30000
+
+# ── 日志 ──
+logging:
+  level: info
+
+# ── 安全 ──
+security:
+  rateLimit:
+    max: 100
+    windowMs: 60000
+
+# ── 存储路径 ──
+storage:
+  dataDir: ./data              # 数据存储根目录，记忆数据存放在 ./data/memory/ 下
+```
+
+### 6.2 记忆模块设计配置（设计目标）
+
+完整版 Memory 配置将位于 `config/memory.json`，当前为设计目标：
 
 ```jsonc
 {
@@ -1433,7 +1465,7 @@ await memory.initialize();
 // 创建会话
 await memory.session.create('session-001', {
   userId: 'user-001',
-  channelId: 'telegram',
+  channelId: 'webchat',
   agentId: 'default',
 });
 

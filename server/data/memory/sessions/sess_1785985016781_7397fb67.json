@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985016781_7397fb67",
+  "userId": "load-user-55q0",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG197GT4CFV92WJ76CPRXZ",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985016921
+    },
+    {
+      "id": "01KZAG49EG40FKHJ679J280QFJ",
+      "role": "assistant",
+      "content": "我注意到你连续粘贴了 `conn_msg_16`。这是某个会话消息 ID 或者你想引用某条特定的消息吗？\n\n在当前对话中我没有办法直接通过这个 ID 获取到对应的内容。你可以：\n- 直接把那条消息的内容再发一次\n- 告诉我你想做什么，我来帮你处理\n\n请问你需要什么帮助？",
+      "timestamp": 1785985115600
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016974,
+    "lastActiveAt": 1785985115600,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

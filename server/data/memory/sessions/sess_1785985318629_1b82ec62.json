@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985318629_1b82ec62",
+  "userId": "load-user-8em8",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAFWG37X4CX6GZCMA3M8N",
+      "role": "user",
+      "content": "conn_msg_17",
+      "timestamp": 1785985318763
+    },
+    {
+      "id": "01KZAGEP770TY3SNV6KZAGGCWN",
+      "role": "assistant",
+      "content": "我来为你实时采集系统数据，汇总并生成一份综合报告。\n\n**1. 基础系统信息**\n<action name=\"exec/shell\" args='{\"command\":\"uname -a\"}'>",
+      "timestamp": 1785985456359
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985318777,
+    "lastActiveAt": 1785985456359,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

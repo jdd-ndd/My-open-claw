@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985037632_29c1f5f9",
+  "userId": "load-user-r36k",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XX61YXY40KGRN0MPW37",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985038158
+    },
+    {
+      "id": "01KZAG3AP316V94X0KC2WEJGSW",
+      "role": "assistant",
+      "content": "Conn_msg_4 已收到。请问有什么可以帮你的？",
+      "timestamp": 1785985084099
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038174,
+    "lastActiveAt": 1785985084099,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

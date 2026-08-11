@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985038008_4e68d60e",
+  "userId": "load-user-ifhe",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1XZ46ENE6MT1SABF0F3K",
+      "role": "user",
+      "content": "conn_msg_16",
+      "timestamp": 1785985038160
+    },
+    {
+      "id": "01KZAG5AQKWS65XN27F34WP065",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785985149683
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985038212,
+    "lastActiveAt": 1785985149683,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

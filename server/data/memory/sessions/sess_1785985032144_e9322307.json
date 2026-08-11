@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985032144_e9322307",
+  "userId": "load-user-9h6d",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG1REKJ87XQE55Y1DMPVMD",
+      "role": "user",
+      "content": "conn_msg_7",
+      "timestamp": 1785985032559
+    },
+    {
+      "id": "01KZAG40MBVWFV7NCKG5C368TE",
+      "role": "assistant",
+      "content": "抱歉，我没能理解你发的 \"conn_msg_7\" 是什么意思。能再详细说明一下你的需求吗？\n\n可以具体说说你想做的事，比如：\n\n- 想要我帮你**写代码、审查代码**？\n- 需要**查询实时信息**（天气、新闻、汇率等）？\n- 想要**操作本地文件**（读取、写入、删除）？\n- 想要**浏览器抓取网页内容**？\n- 还是只是想聊聊天？\n\n请告诉我你的具体需求，我会尽力帮你完成。",
+      "timestamp": 1785985106571
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985032584,
+    "lastActiveAt": 1785985106571,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985324527_42d718b7",
+  "userId": "load-user-rogx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP30C3AXKSFJ9TWDES9D",
+      "role": "user",
+      "content": "conn_msg_5",
+      "timestamp": 1785985325127
+    },
+    {
+      "id": "01KZAGDHBCR578KWYVWGBKCSTV",
+      "role": "assistant",
+      "content": "您好！我是 MyOpenClaw Assistant，您的通用任务处理智能助手。我已成功连接并就绪，可以随时为您处理各种任务。\n\n我可以帮您：\n- 📁 文件操作（读取、写入、删除、列出目录）\n- 💻 执行系统命令\n- 🌐 网页浏览与分析\n- 🧮 数学计算与单位换算\n- 💱 货币汇率查询\n- 🌤️ 天气查询\n- 🗺️ 路线规划\n- 📰 新闻头条获取\n- 💰 加密货币价格查询\n- 🔍 长期记忆检索\n\n请问有什么可以帮您的？",
+      "timestamp": 1785985418604
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325134,
+    "lastActiveAt": 1785985418604,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

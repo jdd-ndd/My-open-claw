@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985370730_e992f77c",
+  "userId": "load-user-2cmr",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGC3005FMZS11DH2VFZ7WK",
+      "role": "user",
+      "content": "conn_msg_12",
+      "timestamp": 1785985371098
+    },
+    {
+      "id": "01KZAGDJ940EJ5MBZDBZ4ZAXJ2",
+      "role": "assistant",
+      "content": "你好！我已成功连接并准备就绪。请问有什么可以帮你的吗？😊",
+      "timestamp": 1785985419556
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985371110,
+    "lastActiveAt": 1785985419556,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

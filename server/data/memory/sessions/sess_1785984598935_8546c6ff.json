@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984598935_8546c6ff",
+  "userId": "load-user-t4gn",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMHG9EFNSF4GRKZPTJXM2",
+      "role": "user",
+      "content": "conn_msg_1",
+      "timestamp": 1785984599499
+    },
+    {
+      "id": "01KZAFPP2B48FBRNXGVMM7H2H1",
+      "role": "assistant",
+      "content": "您好！我是 MyOpenClaw Assistant，可以帮您快速搭建项目。请问您想创建什么类型的项目呢？比如：\n\n- **前端项目**：React、Vue、Next.js 等\n- **后端项目**：Node.js (Express)、Python (Django/Flask)、Go 等\n- **全栈模板**：Next.js + TypeScript、Remix 等\n- **CLI 工具**、库项目、Monorepo 等\n\n您可以告诉我项目名称、技术栈和目录偏好，我会立刻为您生成结构并初始化配置文件。",
+      "timestamp": 1785984669771
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984599504,
+    "lastActiveAt": 1785984669771,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

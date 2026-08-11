@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984606941_88f1d799",
+  "userId": "load-user-qszx",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS5D3XNPV226NZTYK2WP",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785984607311
+    },
+    {
+      "id": "01KZAFPESHBAKT6S4KTZ6JGYWM",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785984662321
+    },
+    {
+      "id": "01KZAFPZF9MT7Y3ZHSV2H6C6TP",
+      "role": "assistant",
+      "content": "⚠️ 抱歉，存储长期记忆没有成功。回顾我的可用工具，当前环境中只有 **记忆检索（search）** 功能，没有 **记忆保存（save）** 工具，因此无法将项目介绍信写入长期记忆。\n\n不过这不影响正常使用：\n- 在当前会话中，我仍然可以看到我们之前的对话上下文，包括你发送的项目介绍信内容。\n- 如果你将来需要我回忆这些信息，可以再次提醒我，或者直接提出具体任务需求。\n\n请问有什么我可以帮你处理的？😊",
+      "timestamp": 1785984679401
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607336,
+    "lastActiveAt": 1785984679401,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

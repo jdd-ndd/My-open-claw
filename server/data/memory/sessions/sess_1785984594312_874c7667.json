@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785984594312_874c7667",
+  "userId": "load-user-2z9a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMCPSSDM2H4VG5S5GC50E",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785984594526
+    },
+    {
+      "id": "01KZAFPS75GJTTR25QRRKHB7XN",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785984672997
+    },
+    {
+      "id": "01KZAFQ37QXWS50PM7FXM4S3YT",
+      "role": "assistant",
+      "content": "抱歉，目前没有可用的对话历史记录。我只能看到当前这一轮对话。如果您需要回顾之前的内容，可以提供一些关键词，我可以尝试检索长期记忆。",
+      "timestamp": 1785984683255
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984594564,
+    "lastActiveAt": 1785984683255,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

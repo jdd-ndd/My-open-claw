@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985324490_f5e33104",
+  "userId": "load-user-0bug",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAGAP2ZEKC4ZMM8XEEW565A",
+      "role": "user",
+      "content": "conn_msg_4",
+      "timestamp": 1785985325127
+    },
+    {
+      "id": "01KZAGEJY5KM9BW5XJWDYHSAYA",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985452997
+    },
+    {
+      "id": "01KZAGEVZFKGTQZTAZ30THSJN3",
+      "role": "assistant",
+      "content": "<thought>\n用户要求分析百度的网页。上一步 browser/open 返回了空结果，可能是工具限制导致没有获取到页面内容。让我改用 browser/scrape 直接抓取百度首页的内容，以便进行分析。\n</thought>\n<action name=\"browser/scrape\" args='{\"url\":\"https://www.baidu.com\",\"format\":\"text\"}' />",
+      "timestamp": 1785985462255
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985325133,
+    "lastActiveAt": 1785985462255,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

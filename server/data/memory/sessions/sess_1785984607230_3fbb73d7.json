@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785984607230_3fbb73d7",
+  "userId": "load-user-tkwc",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMS6Z7F67A9TXZ6CBTAA0",
+      "role": "user",
+      "content": "conn_msg_18",
+      "timestamp": 1785984607313
+    },
+    {
+      "id": "01KZAFNJNQRY227D3DGKV7ZCY5",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785984633527
+    },
+    {
+      "id": "01KZAFPNW8CMHQV2K612155B7W",
+      "role": "user",
+      "content": "【工具执行结果】#1 失败\n\"\"",
+      "timestamp": 1785984669576
+    },
+    {
+      "id": "01KZAFQ2JC4T29K3YKAHN7AVHR",
+      "role": "assistant",
+      "content": "<action name=\"exec/shell\" args='{\"command\": \"ls -la /Users/shen/Documents/GitHub/\", \"timeout\": 10000}' />",
+      "timestamp": 1785984682572
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984607363,
+    "lastActiveAt": 1785984682572,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

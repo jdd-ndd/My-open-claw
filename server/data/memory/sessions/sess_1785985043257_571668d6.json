@@ -1,0 +1,32 @@
+{
+  "sessionId": "sess_1785985043257_571668d6",
+  "userId": "load-user-0qef",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23EM7TN01NAAFVDW0T3X",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985043844
+    },
+    {
+      "id": "01KZAG4G6H8AE6V5CREKWYPADH",
+      "role": "user",
+      "content": "【工具执行结果】#1 成功\n\"\"",
+      "timestamp": 1785985122513
+    },
+    {
+      "id": "01KZAG5GZPQQ2V6D4XM3Z9XW0B",
+      "role": "assistant",
+      "content": "经过多轮在长期记忆中的搜索，目前能找到的关于群聊 **\"conn_msg_2\"** 的上下文非常有限。记忆库中虽然有 `conn_msg_2` 的标记，但没有保存完整的消息内容和对话上下文。\n\n这可能意味着：\n\n1. **该群聊的上下文在更早的会话中**，但未被完整记录到长期记忆中。\n2. **记忆已过期或被覆盖**，导致无法检索到详细内容。\n3. **\"conn_msg_2\" 是另一个会话或系统的引用**，不在当前可访问的记忆范围内。\n\n### 建议：\n- 如果你记得这个群聊大概的**话题、参与者或讨论内容**，告诉我关键词，我可以再次精准搜索。\n- 如果这个群聊来自某个**外部平台**（如微信、钉钉、Slack 等），请提供更多背景，我可能通过其他方式帮你查找。\n- 或者你可以直接告诉我需要从上下文中找到什么**具体信息**，我来想办法帮你处理。\n\n有什么我可以进一步帮忙的吗？😊",
+      "timestamp": 1785985156086
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043853,
+    "lastActiveAt": 1785985156086,
+    "messageCount": 3,
+    "compressed": false
+  }
+}

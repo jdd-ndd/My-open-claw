@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985051054_3962978b",
+  "userId": "load-user-ckrz",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG2BAY9ERPKQ44521Z146J",
+      "role": "user",
+      "content": "conn_msg_2",
+      "timestamp": 1785985051902
+    },
+    {
+      "id": "01KZAG3BG6MJMYYE33SXJ60W4P",
+      "role": "assistant",
+      "content": "连接正常！👋 有什么我可以帮你的吗？",
+      "timestamp": 1785985084934
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985051912,
+    "lastActiveAt": 1785985084934,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

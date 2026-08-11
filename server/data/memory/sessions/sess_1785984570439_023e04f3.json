@@ -1,0 +1,38 @@
+{
+  "sessionId": "sess_1785984570439_023e04f3",
+  "userId": "user-a",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFKN37007NAG07X4KYX57R",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785984570467
+    },
+    {
+      "id": "01KZAFKRY22VNV0JQ3ETTJX3XG",
+      "role": "assistant",
+      "content": "你好！很高兴见到你！我是 MyOpenClaw Assistant，通用任务处理智能助手，可以帮你完成各种任务。有什么我可以帮助你的吗？",
+      "timestamp": 1785984574402
+    },
+    {
+      "id": "01KZAFVHY309VC8XREJHJKCF0N",
+      "role": "user",
+      "content": "hello",
+      "timestamp": 1785984829377
+    },
+    {
+      "id": "01KZAFVRD0BA59P2DX1CE0S429",
+      "role": "assistant",
+      "content": "你好！有什么需要帮忙的吗？无论是文件操作、网页分析、天气查询，还是其他任务，随时告诉我！😊",
+      "timestamp": 1785984836000
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984570467,
+    "lastActiveAt": 1785984836000,
+    "messageCount": 4,
+    "compressed": false
+  }
+}

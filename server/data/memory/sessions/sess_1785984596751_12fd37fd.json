@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785984596751_12fd37fd",
+  "userId": "load-user-uc7b",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAFMF4V47PXHEYCWTGDZCD1",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785984597042
+    },
+    {
+      "id": "01KZAFPHBHTADGTB0HX406Z7H0",
+      "role": "assistant",
+      "content": "当前请求的前10个词是：\n\n1. conn_msg_11\n2. conn_msg_11\n\n（当前请求一共只有这2个词）",
+      "timestamp": 1785984664945
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785984597074,
+    "lastActiveAt": 1785984664945,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

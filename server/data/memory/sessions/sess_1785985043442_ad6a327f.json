@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985043442_ad6a327f",
+  "userId": "load-user-sr1k",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG23FJR0CV6BQ5JP4QNJB0",
+      "role": "user",
+      "content": "conn_msg_8",
+      "timestamp": 1785985043845
+    },
+    {
+      "id": "01KZAG3RD9XDAPFX30MK764ZHA",
+      "role": "assistant",
+      "content": "这是一个连接消息标识符。看起来您可能是在测试连接或遇到了重复消息。\n\n我可以帮您做什么？例如：\n- 审查代码\n- 分析网页\n- 管理文件\n- 查询天气、新闻、汇率\n- 数学计算\n- 等等\n\n请告诉我您的需求。",
+      "timestamp": 1785985098153
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985043872,
+    "lastActiveAt": 1785985098153,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

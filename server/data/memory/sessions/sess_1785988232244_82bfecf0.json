@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_1785988232244_82bfecf0",
+  "userId": "load-user-myur",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAK3DHZE557KADX31WRFPY6",
+      "role": "user",
+      "content": "conn_msg_13",
+      "timestamp": 1785988232725
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785988232739,
+    "lastActiveAt": 1785988232767,
+    "messageCount": 1,
+    "compressed": false
+  }
+}

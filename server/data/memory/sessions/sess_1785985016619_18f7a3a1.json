@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785985016619_18f7a3a1",
+  "userId": "load-user-zrnk",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAG196PWHPECM8C5K7N2G6B",
+      "role": "user",
+      "content": "conn_msg_11",
+      "timestamp": 1785985016921
+    },
+    {
+      "id": "01KZAG4GEQSB72DGBMGYWJN580",
+      "role": "assistant",
+      "content": "您好！我收到了您的消息 \"conn_msg_11\"，但不太理解您的具体需求。这看起来像是一个内部标识符或测试代码。\n\n如果您需要帮助，请告诉我您想要完成的任务，我会很乐意协助您！例如：\n- 分析网页\n- 搭建项目\n- 代码审查\n- 天气查询\n- 文件操作等\n\n期待您的进一步说明！",
+      "timestamp": 1785985122775
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785985016957,
+    "lastActiveAt": 1785985122775,
+    "messageCount": 2,
+    "compressed": false
+  }
+}

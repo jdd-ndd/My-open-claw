@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_1785987919868_2dce2e97",
+  "userId": "load-user-926v",
+  "channelId": "webchat",
+  "agentId": "default",
+  "messages": [
+    {
+      "id": "01KZAJSWH5C0BK8V19Z55QXK03",
+      "role": "user",
+      "content": "conn_msg_14",
+      "timestamp": 1785987920280
+    },
+    {
+      "id": "01KZAJXAQ45F37F8A2YCACG5KR",
+      "role": "assistant",
+      "content": "用户没有指定具体路径，我先查看当前目录结构，同时搜索一下之前的对话记忆，看看有没有提到过网页文件夹的位置。\n\n<action name=\"exec/shell\" args='{\"command\": \"pwd && ls -la\", \"cwd\": \"/\"}'>\n<action name=\"memory_search/search\" args='{\"query\": \"网页文件夹 项目目录 web\", \"topK\": 5}'>",
+      "timestamp": 1785988033252
+    }
+  ],
+  "metadata": {
+    "createdAt": 1785987920330,
+    "lastActiveAt": 1785988033252,
+    "messageCount": 2,
+    "compressed": false
+  }
+}
