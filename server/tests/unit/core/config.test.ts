@@ -7,6 +7,21 @@ import { loadConfig, getConfig, clearConfigCache } from '../../../src/core/confi
 describe('Core - Config', () => {
   beforeEach(() => {
     clearConfigCache();
+    // 测试环境注入合法 env 避免 validator 抛 ConfigFatalError:
+    // - MYOC_LLM_APIKEY / MYOC_EMBEDDING_APIKEY 避免 apiKey 占位符 fatal
+    // - MYOC_NETWORK_HTTP_PORT 避免 ws/http port 撞 18780 fatal
+    // - MYOC_NETWORK_WS_PORT 强制 18780 避免 _e2e.test.ts 残留 19999
+    process.env.MYOC_LLM_APIKEY = 'test-key';
+    process.env.MYOC_EMBEDDING_APIKEY = 'test-embed-key';
+    process.env.MYOC_NETWORK_HTTP_PORT = '18790';
+    process.env.MYOC_NETWORK_WS_PORT = '18780';
+  });
+
+  afterEach(() => {
+    delete process.env.MYOC_LLM_APIKEY;
+    delete process.env.MYOC_EMBEDDING_APIKEY;
+    delete process.env.MYOC_NETWORK_HTTP_PORT;
+    delete process.env.MYOC_NETWORK_WS_PORT;
   });
 
   it('loadConfig 应返回包含 network 配置的对象', () => {

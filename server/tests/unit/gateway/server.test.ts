@@ -212,7 +212,8 @@ describe('Gateway - GatewayServer 单元测试', () => {
     let gw: GatewayServer;
 
     beforeEach(() => {
-      gw = new GatewayServer({ port: 18801 });
+      // 用 18901 高位端口避开前 3 套件 (9999/12345/18782-18787) 端口占用检测循环
+      gw = new GatewayServer({ port: 18901 });
     });
 
     afterEach(async () => {
@@ -232,7 +233,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
       expect(startedConfig.port).toBe(gw.config.port);
 
       await gw.stop();
-    }, 15_000);
+    }, 30_000);
 
     it('4.2 stop 应触发 stopped 事件', async () => {
       await gw.start();
