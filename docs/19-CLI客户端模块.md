@@ -635,6 +635,90 @@ myopenclaw ppt "产品介绍" --template business --output intro.pptx
 > PPT 模块通过 Gateway HTTP API (`/api/ppt/{themes,templates,make}`) 接入，
 > 后端 `server/src/modules/ppt/` 实现。
 
+### 5.10 `myopenclaw doctor`
+
+本地诊断命令，验证 Gateway 可达性、配置文件、工作区路径、运行时环境变量等。
+在升级、迁移或排查连接问题时，先跑一次 doctor 可以快速定位环境侧的故障。
+
+| 属性 | 说明 |
+|------|------|
+| **命令名称** | `doctor` |
+| **描述** | 跑本地诊断 (Gateway / workspace / env) |
+| **别名** | 无 |
+
+#### 用法示例
+
+```bash
+# 跑全套诊断 (text 模式)
+myopenclaw doctor
+
+# JSON 输出 (适合脚本/CI 解析)
+myopenclaw doctor --json
+
+# verbose 模式 (打印请求/响应细节)
+myopenclaw doctor --verbose
+
+# 自定义 Gateway 地址
+myopenclaw doctor --gateway http://192.168.1.10:18780
+```
+
+#### 诊断项 (12 项)
+
+| ID | 类别 | 说明 | critical |
+|----|------|------|----------|
+| `config-path` | 配置 | 报告当前生效的配置文件路径 | - |
+| `gateway-url` | 网络 | 验证 Gateway HTTP URL 协议 (http/https) | ✅ |
+| `websocket-url` | 网络 | 验证 Gateway WebSocket URL 协议 (ws/wss) | - |
+| `gateway-health` | 网络 | 调 `GET /api/health`, 期望 `status=healthy` | ✅ |
+| `gateway-status` | 运行时 | 调 `GET /api/status`, 报告 version/uptime/connections/agents | ✅ |
+| `workspace` | 工作区 | 从 cwd 或 CLI 模块路径向上找 `server/ + clients/ + config/` | - |
+| `skills-dir` | 工作区 | 检查 `server/skills/` 或 `MYOC_PROJECT_SKILLS_DIR` | - |
+| `memory-dir` | 工作区 | 检查 `server/data/memory/` 或 `MYOC_MEMORY_DIR` | - |
+| `channel-configs` | 渠道 | 扫 `config/channels/*.yaml` 报告 enabled 数量 | - |
+| `runtime-env` | 环境 | 检查 `DEEPSEEK_API_KEY` / `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` 至少有一个 | - |
+
+#### 退出码
+
+- `0` — 全部通过或仅 warn, 无 critical fail
+- `64` (`GATEWAY_UNREACHABLE`) — `gateway-health` 或 `gateway-status` 失败
+- `65` (`CONFIG_ERROR`) — 其他 critical fail
+
+#### 输出示例 (text 模式)
+
+```
+MyOpenClaw doctor: ready
+Gateway: http://127.0.0.1:18780
+WebSocket: ws://127.0.0.1:18780
+Workspace: D:\模板\My open claw
+Config: C:\Users\25044\.myopenclaw\config.json
+
+[PASS] Config file
+  C:\Users\25044\.myopenclaw\config.json
+[PASS] Gateway URL
+  http://127.0.0.1:18780
+[PASS] WebSocket URL
+  ws://127.0.0.1:18780
+[PASS] Gateway health
+  health=healthy
+[PASS] Gateway status
+  version=1.1.3, sessions=2, channels=3
+[PASS] Workspace root
+  D:\模板\My open claw
+[PASS] Skills directory
+  D:\模板\My open claw\server\skills
+[WARN] Memory directory
+  not found yet: D:\模板\My open claw\server\data\memory
+[PASS] Channel configs
+  4 config files found, 3 enabled
+[PASS] Runtime environment
+  1 common LLM credential variables detected
+
+10 passed, 1 warnings, 0 failed
+```
+
+> Doctor 实现位于 `clients/cli/src/commands/doctor.ts`，
+> 复用 `clients/cli/src/api/client.ts` 的 `checkHealth` / `getSystemStatus` HTTP 客户端。
+
 ---
 
 ## 6. 交互式对话模式详解
