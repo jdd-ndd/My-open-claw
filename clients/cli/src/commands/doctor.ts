@@ -324,10 +324,11 @@ function resolveWorkspaceInfo(): WorkspaceInfo {
 }
 
 function findWorkspaceRoot(startDirs: string[]): string | null {
+  const MAX_DEPTH = 20;
   for (const startDir of startDirs) {
     let current = resolve(startDir);
 
-    while (true) {
+    for (let depth = 0; depth < MAX_DEPTH; depth++) {
       const serverDir = path.join(current, 'server');
       const clientsDir = path.join(current, 'clients');
       const configDir = path.join(current, 'config');
