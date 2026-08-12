@@ -378,7 +378,7 @@ class ExpressionParser {
   /** 解析数字字面量 */
   private parseNumber(): number {
     const start = this.pos;
-    while (this.pos < this.input.length && /[0-9.eE+\-]/.test(this.input[this.pos])) {
+    while (this.pos < this.input.length && /[0-9.eE+-]/.test(this.input[this.pos])) {
       // 处理科学计数法中的 +/-
       if ((this.input[this.pos] === '+' || this.input[this.pos] === '-')) {
         // 仅在 e/E 后面才合法

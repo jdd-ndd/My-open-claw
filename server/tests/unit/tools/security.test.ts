@@ -11,7 +11,6 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { SecurityManager, resetSecurityManager } from '../../../src/tools/security/index.js';
-import { ToolRegistry } from '../../../src/tools/registry.js';
 import type { Tool, InvokeContext } from '../../../src/core/types/index.js';
 
 // ── 测试辅助 ──

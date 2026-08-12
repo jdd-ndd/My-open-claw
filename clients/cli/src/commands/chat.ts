@@ -245,6 +245,7 @@ async function runInteractiveChat(
   }
 
   // 主对话循环
+  // eslint-disable-next-line no-constant-condition -- 主循环, 由 break 退出
   while (true) {
     try {
       // 使用 inquirer 读取用户输入

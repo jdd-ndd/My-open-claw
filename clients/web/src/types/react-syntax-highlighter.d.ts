@@ -2,7 +2,7 @@
 // 这里是项目级补充,主要用 default export 包裹代码块
 
 declare module 'react-syntax-highlighter' {
-  import { CSSProperties, ReactNode } from 'react';
+  import type { CSSProperties, ReactNode } from 'react';
 
   export interface SyntaxHighlighterProps {
     language?: string;

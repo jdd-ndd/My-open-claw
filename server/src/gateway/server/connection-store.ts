@@ -7,7 +7,7 @@
  * @module @myopenclaw/server/gateway/server
  */
 
-import { WebSocket } from 'ws';
+import type { WebSocket } from 'ws';
 
 /**
  * 连接元数据

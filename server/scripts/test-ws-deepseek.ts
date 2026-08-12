@@ -27,7 +27,6 @@ function sendRequest(ws: WebSocket, id: string, content: string) {
 function connect(): Promise<void> {
   return new Promise((resolve, reject) => {
     const ws = new WebSocket(WS_URL);
-    let accumulated = '';
 
     ws.on('open', () => {
       console.log('[√] WebSocket 已连接\n');

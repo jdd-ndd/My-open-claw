@@ -11,7 +11,8 @@
 
 import { createLogger } from '../core/utils/logger.js';
 import { ErrorCode, AppError } from '../core/errors/index.js';
-import { SecurityManager, getSecurityManager } from './security/index.js';
+import type { SecurityManager} from './security/index.js';
+import { getSecurityManager } from './security/index.js';
 import type {
   Tool,
   ToolResult,

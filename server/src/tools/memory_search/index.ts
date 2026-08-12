@@ -11,7 +11,7 @@
  */
 
 import { createLogger } from '../../core/utils/logger.js';
-import { VectorMemory } from '../../memory/vector.js';
+import type { VectorMemory } from '../../memory/vector.js';
 import type { Tool, ToolResult, InvokeContext, JSONSchema } from '../../core/types/index.js';
 import type { VectorSearchOptions } from '../../memory/types.js';
 

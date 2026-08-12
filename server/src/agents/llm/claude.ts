@@ -13,10 +13,11 @@ import { createLogger } from '../../core/utils/logger.js';
 import { retry } from '../../core/utils/retry.js';
 import { now } from '../../core/utils/time.js';
 import { ErrorCode } from '../../core/errors/index.js';
+import type {
+  LLMErrorCodeType} from './errors.js';
 import {
   LLMError,
   LLMErrorCode,
-  LLMErrorCodeType,
   LLMTimeoutError,
   NotSupportedLLMError,
   isRetryableLLMError,

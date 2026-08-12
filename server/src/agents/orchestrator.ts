@@ -43,7 +43,7 @@ import {
 } from './run-options.js';
 import type { LoopPhase, LoopStepEvent } from './loop/index.js';
 import { MockToolRegistry, MockSkillRegistry, MockVectorMemory, MockSessionMemory } from './mock.js';
-import { ToolRegistry } from '../tools/registry.js';
+import type { ToolRegistry } from '../tools/registry.js';
 import { SkillRegistry } from '../skills/registry.js';
 import { SessionMemory, VectorMemory } from '../memory/index.js';
 import type { HookPipeline } from '../hooks/pipeline.js';
@@ -401,7 +401,7 @@ export class AgentOrchestrator {
     const plannerContext = this.buildPlannerContext(input);
 
     // ── 当前消息列表（贯穿多轮迭代） ──
-    let currentMessages: LLMMessage[] = [
+    const currentMessages: LLMMessage[] = [
       {
         role: 'system',
         content: this.buildSystemPrompt(input),

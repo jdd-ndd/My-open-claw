@@ -15,7 +15,8 @@
  */
 
 import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
-import { PptError, PptModule } from './index.js';
+import type { PptModule } from './index.js';
+import { PptError } from './index.js';
 import { createLogger } from '../../core/utils/logger.js';
 
 const log = createLogger('modules:ppt');
@@ -200,7 +201,7 @@ export function registerPptRoutes(
       try {
         const buffer = await pptModule.generatePptx(req.body);
         const filename = (req.body.filename || 'presentation').replace(
-          /[^\w\-]+/g,
+          /[^\w-]+/g,
           '_',
         );
 

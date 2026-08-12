@@ -15,7 +15,7 @@
 
 import { createLogger } from '../core/utils/logger.js';
 import { generateId } from '../core/utils/id.js';
-import { PersistLayer } from './persist.js';
+import type { PersistLayer } from './persist.js';
 import type {
   SessionData,
   SessionMessage,

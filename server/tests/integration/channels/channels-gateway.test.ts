@@ -11,8 +11,7 @@
  * @module server/tests/integration/channels
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { EventEmitter } from 'node:events';
+import { describe, it, expect, beforeEach } from 'vitest';
 
 // 导入实际模块
 import { ChannelManager } from '../../../src/channels/manager.js';
@@ -90,7 +89,7 @@ class MockQQBotProvider implements ChannelProvider {
     this.currentState = State.STOPPED;
   }
 
-  async sendMessage(_target: MessageTarget, message: OutboundMessage): Promise<SendMessageResult> {
+  async sendMessage(_target: MessageTarget, _message: OutboundMessage): Promise<SendMessageResult> {
     this.stats.messagesSent++;
     this.stats.lastMessageSentAt = Date.now();
     return {
@@ -141,23 +140,12 @@ class MockQQBotProvider implements ChannelProvider {
 }
 
 // ══════════════════════════════════════════════════════════════
-// Mock Agent（模拟 Agent 回复）
-// ══════════════════════════════════════════════════════════════
-
-interface MockAgentReply {
-  channelId: string;
-  target: MessageTarget;
-  message: OutboundMessage;
-}
-
-// ══════════════════════════════════════════════════════════════
 // Tests
 // ══════════════════════════════════════════════════════════════
 
 describe('Channels + Gateway 集成测试', () => {
   let channelManager: ChannelManager;
   let messageRouter: MessageRouter;
-  let stateManager: StateManager;
   let storage: MemoryStorage;
 
   beforeEach(() => {

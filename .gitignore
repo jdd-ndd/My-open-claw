@@ -47,3 +47,12 @@ temp/
 # Test runs and runtime will populate server/data/ — never commit.
 server/data/
 
+# Worktrees (each .worktrees/* is its own branch working tree)
+.worktrees/
+
+# Local trash (mavis-trash substitute — recoverable from .trash/)
+.trash/
+
+# HTML scratch files (resume_web.html, exports, etc.)
+*.html
+

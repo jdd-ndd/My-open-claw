@@ -4,7 +4,7 @@
  * @module server/tests/unit/channels
  */
 
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import {
   canTransition, transition, safeTransition,
   isRunningState, canBecomeRunning, isTerminalState, isErrorState,

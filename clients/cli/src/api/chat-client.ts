@@ -31,7 +31,7 @@ export async function runChatExchange(
 
   return new Promise((resolve, reject) => {
     let settled = false;
-    let timeoutHandle: ReturnType<typeof setTimeout> | undefined;
+    const timeoutHandle: ReturnType<typeof setTimeout> | undefined = undefined;
     let responsePayload: Record<string, unknown> | undefined;
     let resolvedSessionId = options.sessionId;
     const deltas: ChatDeltaPayload[] = [];

@@ -18,8 +18,8 @@
 
 import { createLogger } from '../core/utils/logger.js';
 import { generateId } from '../core/utils/id.js';
-import { EmbeddingService } from './embedding.js';
-import { PersistLayer } from './persist.js';
+import type { EmbeddingService } from './embedding.js';
+import type { PersistLayer } from './persist.js';
 import type {
   VectorMemoryEntry,
   VectorStoreInput,

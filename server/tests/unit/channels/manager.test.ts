@@ -4,10 +4,10 @@
  * @module server/tests/unit/channels
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { ChannelManager } from '../../../src/channels/manager.js';
 import { ChannelLifecycleState as State } from '../../../src/channels/types.js';
-import type { ChannelProvider, LegacyChannelProvider } from '../../../src/channels/base.js';
+import type { ChannelProvider } from '../../../src/channels/base.js';
 import type {
   ChannelConfig,
   ChannelStatus,
@@ -30,9 +30,7 @@ function createMockProvider(
   capabilities?: Partial<ChannelCapabilities>,
 ): ChannelProvider {
   let state = State.UNINITIALIZED;
-  let ctx: ChannelContext | null = null;
   const stats = createDefaultChannelStats();
-  let onMsg: ((message: InboundMessage) => void) | null = null;
 
   return {
     id,
@@ -183,7 +181,7 @@ describe('ChannelManager', () => {
       await manager.startAll();
 
       const result = await manager.sendToChannel('qqbot', { chatType: 'private', userId: 'user1' }, {
-        messageType: { textMessage: true } as unknown as import('../../../src/channels/types.js').MessageType,
+        messageType: { textMessage: true } as unknown as import('../../../src/channels/types.js').MessageType, // eslint-disable-line @typescript-eslint/consistent-type-imports
         text: 'Hello',
       });
 
@@ -192,7 +190,7 @@ describe('ChannelManager', () => {
 
     it('向未运行的渠道发送消息应返回失败', async () => {
       const result = await manager.sendToChannel('nonexistent', { chatType: 'private' }, {
-        messageType: { textMessage: true } as unknown as import('../../../src/channels/types.js').MessageType,
+        messageType: { textMessage: true } as unknown as import('../../../src/channels/types.js').MessageType, // eslint-disable-line @typescript-eslint/consistent-type-imports
         text: 'Hello',
       });
 

@@ -415,7 +415,7 @@ export class SessionManager extends EventEmitter {
       createdAt: Number(row.created_at ?? 0),
       updatedAt: Number(row.updated_at ?? row.last_active ?? row.created_at ?? 0),
       lastActiveAt: Number(row.last_active ?? 0),
-      pinnedAt: row.pinned_at == null ? null : Number(row.pinned_at),
+      pinnedAt: row.pinned_at === null || row.pinned_at === undefined ? null : Number(row.pinned_at),
       status: (row.status as Session['status']) ?? 'active',
       messageIds: [],
       metadata: this.parseMetadata(row.metadata),

@@ -10,7 +10,7 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { mkdtempSync, writeFileSync, rmSync, mkdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { loadConfig, clearConfigCache, getConfig } from '../../../src/core/config/loader.js';
 import { ConfigFatalError } from '../../../src/core/config/errors.js';

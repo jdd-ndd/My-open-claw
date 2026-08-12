@@ -344,10 +344,10 @@ export class Planner {
 }
 
 function matchTag(input: string, tag: string): string | undefined {
-  const selfCloseRegex = new RegExp(`<${tag}([^>]*?)\/\s*>`, 'i');
+  const selfCloseRegex = new RegExp(`<${tag}([^>]*?)/\\s*>`, 'i');
   const selfCloseMatch = input.match(selfCloseRegex);
   if (selfCloseMatch) return selfCloseMatch[1].trim();
-  const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\/${tag}>`, 'i');
+  const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`, 'i');
   const match = input.match(regex);
   return match?.[1]?.trim();
 }

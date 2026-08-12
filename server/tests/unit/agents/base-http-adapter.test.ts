@@ -5,10 +5,8 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { BaseOpenAICompatibleAdapter } from '../../../src/agents/llm/base-http-adapter.js';
 import { LLMError, LLMErrorCode } from '../../../src/agents/llm/errors.js';
 import type {
-  LLMAdapter,
   LLMAdapterConfig,
   LLMChatInput,
-  LLMChatOutput,
 } from '../../../src/agents/llm/types.js';
 
 class TestAdapter extends BaseOpenAICompatibleAdapter {

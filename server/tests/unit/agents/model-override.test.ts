@@ -112,11 +112,11 @@ describe('agents/llm - P1.3 input.options.model override', () => {
       apiKey: 'sk',
     });
     // 消耗 stream 触发 fetch
-    for await (const _ of adapter.streamChat({
+    for await (const chunk of adapter.streamChat({
       messages: [{ role: 'user', content: 'ping' }],
       options: { model: 'deepseek-v4-flash' },
     })) {
-      // drain
+      void chunk; // drain
     }
     const body = JSON.parse(fetchMock.mock.calls[0][1].body);
     expect(body.model).toBe('deepseek-v4-flash');
