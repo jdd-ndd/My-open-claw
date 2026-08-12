@@ -21,10 +21,11 @@ import type {
   LLMContentPart,
   LLMStreamChunk,
 } from './types.js';
+import type {
+  LLMErrorCodeType} from './errors.js';
 import {
   LLMError,
   LLMErrorCode,
-  LLMErrorCodeType,
   LLMTimeoutError,
   NotSupportedLLMError,
   isRetryableLLMError,

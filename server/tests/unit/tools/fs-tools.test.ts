@@ -11,7 +11,7 @@ import {
   FsDeleteTool,
   FsListDirTool,
 } from '../../../src/tools/fs/index.js';
-import { existsSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync, rmSync, readFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import type { InvokeContext } from '../../../src/core/types/index.js';
@@ -102,7 +102,6 @@ describe('文件操作工具集 (fs/)', () => {
         { path: testFile, content: 'line2\n', append: true },
         testContext,
       );
-      const { readFileSync } = require('node:fs');
       const content = readFileSync(testFile, 'utf-8');
       expect(content).toBe('line1\nline2\n');
     });
@@ -203,8 +202,8 @@ describe('文件操作工具集 (fs/)', () => {
       expect((result.data as any)?.deleted).toBeDefined();
       // 验证目录已被删除（延迟检查，Windows 上可能有异步清理延迟）
       try {
-        const stat = require('node:fs').statSync(dirToRemove);
         // 如果还存在，可能被系统进程占用（跳过断言但记录日志）
+        statSync(dirToRemove);
       } catch {
         // 文件不存在（符合预期）
       }

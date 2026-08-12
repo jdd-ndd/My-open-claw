@@ -4,17 +4,12 @@
  * @module server/tests/unit/gateway
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { EventEmitter } from 'node:events';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { MemoryStorage } from '../../../src/gateway/core/storage.js';
 import { SessionManager } from '../../../src/gateway/sessions/index.js';
 import { MessageRouter } from '../../../src/gateway/routing/index.js';
-import type { AgentConfig } from '../../../src/gateway/routing/index.js';
-import type { NormalizedMessage } from '../../../src/gateway/sessions/types.js';
 import { StateManager } from '../../../src/gateway/state/index.js';
-import { AuditLogger } from '../../../src/gateway/audit/index.js';
-import { TaskScheduler } from '../../../src/gateway/scheduler/index.js';
-import { SecuritySandbox } from '../../../src/gateway/security/index.js';
+import type { NormalizedMessage } from '../../../src/gateway/sessions/types.js';
 
 // ══════════════════════════════════════════════════════════════
 // MemoryStorage — 异常场景

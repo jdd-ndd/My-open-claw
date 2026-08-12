@@ -9,7 +9,7 @@
  * @module @myopenclaw/server/core/config
  */
 
-import { ZodError } from 'zod';
+import type { ZodError } from 'zod';
 
 export type ConfigErrorLevel = 'fatal' | 'warning' | 'info';
 

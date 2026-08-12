@@ -6,6 +6,9 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
+import * as fs from 'node:fs';
+import * as os from 'node:os';
+import * as path from 'node:path';
 import { SkillLoader } from '../../../src/skills/loader.js';
 import { SkillRegistry } from '../../../src/skills/registry.js';
 import type { Skill } from '../../../src/skills/types.js';
@@ -40,9 +43,6 @@ describe('Skills 技能模块', () => {
       ].join('\n');
 
       // 通过 parseSkillMd (private) 测试，使用临时文件
-      const fs = require('node:fs');
-      const path = require('node:path');
-      const os = require('node:os');
       const tmpFile = path.join(os.tmpdir(), `test-skill-${Date.now()}.md`);
       fs.writeFileSync(tmpFile, md);
 
@@ -63,9 +63,6 @@ describe('Skills 技能模块', () => {
     });
 
     it('无 YAML frontmatter 时应使用默认值和标题', () => {
-      const fs = require('node:fs');
-      const path = require('node:path');
-      const os = require('node:os');
       const tmpFile = path.join(os.tmpdir(), `test-skill2-${Date.now()}.md`);
       fs.writeFileSync(tmpFile, '# 日报生成\n\n生成每日总结报告。');
 
@@ -85,9 +82,6 @@ describe('Skills 技能模块', () => {
     });
 
     it('scanAndLoad 应扫描目录加载所有 SKILL.md', () => {
-      const fs = require('node:fs');
-      const path = require('node:path');
-      const os = require('node:os');
       const skillsDir = path.join(os.tmpdir(), `test-skills-${Date.now()}`);
       fs.mkdirSync(path.join(skillsDir, 'skill-a'), { recursive: true });
       fs.mkdirSync(path.join(skillsDir, 'skill-b'), { recursive: true });

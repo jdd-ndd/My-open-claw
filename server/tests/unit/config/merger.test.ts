@@ -2,7 +2,7 @@
  * Merger 工具测试(deepMerge + applyEnvOverrides)
  */
 
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { deepMerge, applyEnvOverrides } from '../../../src/core/config/merger.js';
 
 describe('deepMerge — 对象', () => {

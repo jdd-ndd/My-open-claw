@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
-import { CLIWebSocketClient, WebSocketEvent } from './websocket.js';
+import type { CLIWebSocketClient } from './websocket.js';
+import { WebSocketEvent } from './websocket.js';
 import type { AttachmentInfo, ChatDeltaPayload, ChatDonePayload, ResponseMessage } from './types.js';
 import { SHARED_USER_ID } from '../config/sync-defaults.js';
 
@@ -30,7 +31,7 @@ export async function runChatExchange(
 
   return new Promise((resolve, reject) => {
     let settled = false;
-    let timeoutHandle: ReturnType<typeof setTimeout> | undefined;
+    const timeoutHandle: ReturnType<typeof setTimeout> | undefined = undefined;
     let responsePayload: Record<string, unknown> | undefined;
     let resolvedSessionId = options.sessionId;
     const deltas: ChatDeltaPayload[] = [];

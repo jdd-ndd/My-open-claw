@@ -100,7 +100,7 @@ export class QQBotChannel implements ChannelProvider {
   private context: ChannelContext | null = null;
 
   // ---- 连接 ----
-  private ws: import('ws').WebSocket | null = null;
+  private ws: import('ws').WebSocket | null = null; // eslint-disable-line @typescript-eslint/consistent-type-imports
   private heartbeatTimer: ReturnType<typeof setInterval> | null = null;
   private reconnectManager: ReconnectManager | null = null;
 

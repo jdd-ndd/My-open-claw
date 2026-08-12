@@ -162,12 +162,9 @@ describe('跨模块集成 — 全面测试', () => {
 
       await channelManager.startAll();
 
-      const inboundMsg: InboundMessage = {
-        messageId: 'int_001', channelId: 'webchat', userId: 'u1',
-        username: 'TestUser', chatType: 'private',
-        messageType: MessageType.TEXT, text: '端到端测试',
-        raw: {}, timestamp: Date.now(),
-      };
+      // 模拟消息进入渠道
+      // (inboundMsg payload intentionally omitted - test verifies routing context only)
+      void null;
 
       // 模拟消息进入渠道
       const status = channelManager.getChannelStatus('webchat');

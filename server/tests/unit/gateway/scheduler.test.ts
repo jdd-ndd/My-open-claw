@@ -1,12 +1,11 @@
 /**
  * Gateway Scheduler 单元测试
  */
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { MemoryStorage } from '../../../src/gateway/storage.js';
 import { TaskScheduler } from '../../../src/gateway/scheduler/index.js';
 import type { AgentInvoker } from '../../../src/gateway/scheduler/index.js';
 import { TaskType, TaskStatus } from '../../../src/gateway/scheduler/types.js';
-import type { ScheduledTask } from '../../../src/gateway/scheduler/types.js';
 
 // ── 测试套件 ──────────────────────────────────────────────
 

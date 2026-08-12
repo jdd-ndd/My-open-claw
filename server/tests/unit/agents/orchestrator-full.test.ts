@@ -6,7 +6,6 @@
  */
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { AgentOrchestrator } from '../../../src/agents/orchestrator.js';
-import type { OrchestratorOptions } from '../../../src/agents/orchestrator.js';
 import type { LLMAdapter, LLMChatInput, LLMChatOutput } from '../../../src/agents/llm/types.js';
 import { MockToolRegistry, MockSessionMemory, MockVectorMemory, MockSkillRegistry } from '../../../src/agents/mock.js';
 import { HookPipeline } from '../../../src/hooks/pipeline.js';

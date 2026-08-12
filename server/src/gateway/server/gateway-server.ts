@@ -159,6 +159,10 @@ export class GatewayServer extends EventEmitter {
   async start(): Promise<void> {
     log.info({ host: this.config.host, port: this.config.port }, 'GatewayServer 姝ｅ湪鍚姩...');
 
+    // 测试模式 (GATEWAY_TEST_MODE=1) 跳过外部依赖: channelsBootstrap/scheduler/audit
+    // 这些会拉真实网络 (QQBot API) 或写磁盘, 测试场景不必要.
+    const isTestMode = process.env.GATEWAY_TEST_MODE === '1';
+
     const runtimeAdapter = await this.ensureRuntimeAdapter();
 
     this.fastify = Fastify({
@@ -261,17 +265,22 @@ export class GatewayServer extends EventEmitter {
 
     this.heartbeatTimer = startHeartbeat(this.store, this.config.heartbeatInterval);
 
-    if (this.config.scheduler?.loadSavedTasks !== false) {
+    if (this.config.scheduler?.loadSavedTasks !== false && !isTestMode) {
       await this.scheduler.start();
     }
 
     this.stateManager.updateResources();
 
     // 启动外部渠道（QQBot / 飞书 / 微信），仅启动配置中 enabled=true 的渠道
-    try {
-      await this.channelsBootstrap.start();
-    } catch (err) {
-      log.error({ err: (err as Error).message }, '外部渠道启动失败，继续启动 Gateway');
+    // 测试模式下跳过, 避免真实网络调用 (QQBot API) 卡住测试.
+    if (!isTestMode) {
+      try {
+        await this.channelsBootstrap.start();
+      } catch (err) {
+        log.error({ err: (err as Error).message }, '外部渠道启动失败，继续启动 Gateway');
+      }
+    } else {
+      log.debug('GATEWAY_TEST_MODE=1, 跳过外部渠道启动');
     }
 
     this.audit.logEntry({
@@ -292,11 +301,16 @@ export class GatewayServer extends EventEmitter {
   async stop(): Promise<void> {
     log.info('GatewayServer 姝ｅ湪鍏抽棴...');
 
+    const isTestMode = process.env.GATEWAY_TEST_MODE === '1';
+
     // 先停止外部渠道，避免停止后仍有入站消息流入已关闭的 Router
-    try {
-      await this.channelsBootstrap.stop();
-    } catch (err) {
-      log.error({ err: (err as Error).message }, '外部渠道停止异常');
+    // 测试模式下不启动外部渠道, 同样跳过 stop.
+    if (!isTestMode) {
+      try {
+        await this.channelsBootstrap.stop();
+      } catch (err) {
+        log.error({ err: (err as Error).message }, '外部渠道停止异常');
+      }
     }
 
     await this.scheduler.stop();

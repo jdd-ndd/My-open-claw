@@ -1,7 +1,7 @@
 /**
  * LLMAdapterFactory 单元测试
  */
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { LLMAdapterFactory } from '../../../src/agents/llm/factory.js';
 import { DeepSeekAdapter } from '../../../src/agents/llm/deepseek.js';
 import { OpenAIAdapter } from '../../../src/agents/llm/openai.js';
@@ -160,7 +160,7 @@ describe('agents/llm - LLMAdapterFactory', () => {
           return 0;
         }
       }
-      LLMAdapterFactory.register('custom', (cfg) => new CustomAdapter());
+      LLMAdapterFactory.register('custom', (_cfg) => new CustomAdapter());
       const adapter = LLMAdapterFactory.create({
         provider: 'custom' as never,
         model: 'm',

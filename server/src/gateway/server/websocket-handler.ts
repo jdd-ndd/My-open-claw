@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { WebSocket } from 'ws';
+import type { WebSocket } from 'ws';
 import type { EventEmitter } from 'node:events';
 import { createLogger } from '../../core/utils/logger.js';
 import type { MessageRouter } from '../routing/index.js';

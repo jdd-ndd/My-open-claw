@@ -6,7 +6,7 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { ToolRegistry } from '../../../src/tools/registry.js';
-import type { Tool, ToolResult, InvokeContext, JSONSchema } from '../../../src/core/types/index.js';
+import type { Tool, ToolResult, InvokeContext } from '../../../src/core/types/index.js';
 
 // ── 测试用工具工厂 ──
 

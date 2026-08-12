@@ -1,7 +1,7 @@
 /**
  * UnifiedLLMAdapter 单元测试
  */
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { UnifiedLLMAdapter } from '../../../src/agents/llm/llm-adapter.js';
 import { LLMError, LLMErrorCode } from '../../../src/agents/llm/errors.js';
 import type { LLMAdapter, LLMChatInput, LLMChatOutput } from '../../../src/agents/llm/types.js';

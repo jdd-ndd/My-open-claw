@@ -5,7 +5,7 @@
 
 # 19. CLI 客户端模块
 
-> **开发状态**：已完整实现。CLI 客户端位于 `clients/cli/`，基于 Commander 12.x，提供 8 个子命令（chat/send/sessions/tools/skills/config/status/logs），支持 Shell 补全（Bash/Zsh/Fish）、交互式对话、管道输入和 JSON 输出模式。
+> **开发状态**：已完整实现。CLI 客户端位于 `clients/cli/`，基于 Commander 12.x，提供 9 个子命令（chat/send/sessions/tools/skills/config/status/logs/ppt），支持 Shell 补全（Bash/Zsh/Fish）、交互式对话、管道输入和 JSON 输出模式。
 
 ## 目录
 
@@ -22,6 +22,7 @@
   - [5.6 `myopenclaw config`](#56-myopenclaw-config)
   - [5.7 `myopenclaw status`](#57-myopenclaw-status)
   - [5.8 `myopenclaw logs`](#58-myopenclaw-logs)
+  - [5.9 `myopenclaw ppt`](#59-myopenclaw-ppt)
 - [6. 交互式对话模式详解](#6-交互式对话模式详解)
 - [7. Gateway API 封装](#7-gateway-api-封装)
 - [8. 配置文件管理](#8-配置文件管理)
@@ -595,6 +596,44 @@ myopenclaw logs --lines 100 --level error
 # 查看最近 1 小时的日志
 myopenclaw logs --since 1h
 ```
+
+---
+
+### 5.9 `myopenclaw ppt`
+
+PPTX 演示文稿生成命令，基于 LLM 大纲 + 模板引擎生成 .pptx 文件。
+
+| 属性 | 说明 |
+|------|------|
+| **命令名称** | `ppt` |
+| **描述** | 生成 PPTX 演示文稿（基于 LLM 大纲） |
+| **别名** | `slides` |
+
+#### 用法示例
+
+```bash
+# 根据自然语言主题生成 PPT
+myopenclaw ppt "2026 Q3 季度复盘" --slides 8
+
+# 从 Markdown 大纲生成
+myopenclaw ppt --outline ./deck.md --theme tech --output deck.pptx
+
+# 指定模板
+myopenclaw ppt "产品介绍" --template business --output intro.pptx
+```
+
+#### 选项
+
+| 选项 | 别名 | 类型 | 默认值 | 说明 |
+|------|------|------|--------|------|
+| `--outline` | `-o` | `string` | - | 从 Markdown 文件读取大纲 |
+| `--slides` | `-n` | `number` | `6` | 幻灯片数量 |
+| `--theme` | `-t` | `string` | `default` | 主题（`default` / `tech` / `business` / `minimal`） |
+| `--template` | 无 | `string` | - | 模板文件路径 |
+| `--output` | 无 | `string` | `output.pptx` | 输出文件路径 |
+
+> PPT 模块通过 Gateway HTTP API (`/api/ppt/{themes,templates,make}`) 接入，
+> 后端 `server/src/modules/ppt/` 实现。
 
 ---
 

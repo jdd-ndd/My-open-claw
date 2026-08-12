@@ -1,6 +1,6 @@
 import { EventEmitter } from 'node:events';
 import { createLogger } from '../../core/utils/logger.js';
-import { SessionManager } from '../sessions/index.js';
+import type { SessionManager } from '../sessions/index.js';
 import type {
   NormalizedMessage,
   RoutingRule,
@@ -60,13 +60,13 @@ export class MessageRouter extends EventEmitter {
     if (!matchedRule) {
       log.warn(
         { channelId: message.channelId, userId: message.userId },
-        'No routing rule matched',
+        '未找到匹配的路由规则',
       );
       this.emit('route:unmatched', message);
       return {
         matched: false,
         message,
-        reason: `No routing rule matched: channelId=${message.channelId}, userId=${message.userId}`,
+        reason: `未找到匹配的路由规则: channelId=${message.channelId}, userId=${message.userId}`,
       };
     }
 
