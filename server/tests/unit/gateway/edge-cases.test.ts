@@ -9,9 +9,6 @@ import { MemoryStorage } from '../../../src/gateway/core/storage.js';
 import { SessionManager } from '../../../src/gateway/sessions/index.js';
 import { MessageRouter } from '../../../src/gateway/routing/index.js';
 import { StateManager } from '../../../src/gateway/state/index.js';
-import { AuditLogger } from '../../../src/gateway/audit/index.js';
-import { TaskScheduler } from '../../../src/gateway/scheduler/index.js';
-import { SecuritySandbox } from '../../../src/gateway/security/index.js';
 import type { NormalizedMessage } from '../../../src/gateway/sessions/types.js';
 
 // ══════════════════════════════════════════════════════════════

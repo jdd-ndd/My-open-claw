@@ -18,7 +18,7 @@ import { ChannelManager } from '../../../src/channels/manager.js';
 import { MessageRouter } from '../../../src/gateway/routing/index.js';
 import { SessionManager } from '../../../src/gateway/sessions/index.js';
 import { MemoryStorage } from '../../../src/gateway/core/storage.js';
-import { StateManager } from '../../../src/gateway/state/index.js';
+
 import { toNormalizedMessage } from '../../../src/channels/base.js';
 import {
   MessageType,
@@ -158,7 +158,6 @@ describe('Channels + Gateway 集成测试', () => {
     const sessions = new SessionManager(storage);
     sessions.initDatabase();
     messageRouter = new MessageRouter(sessions);
-    stateManager = new StateManager('1.0.0-test');
 
     // 注册默认 Agent 路由规则
     messageRouter.loadRules([
