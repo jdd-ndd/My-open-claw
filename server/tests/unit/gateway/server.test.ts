@@ -14,6 +14,13 @@ import type { GatewayMessage, RequestMessage, ResponseMessage, EventMessage } fr
 // 也不 loadSavedTasks, start/stop 链路只验证网关骨架逻辑.
 beforeAll(() => {
   process.env.GATEWAY_TEST_MODE = '1';
+  // 注入合法 env 避免 new GatewayServer → ensureRuntimeAdapter → createLLMAdapterStatic
+  // → loadConfig → validateStartupConfig 抛 ConfigFatalError (CI clean env 没这些变量).
+  // 与 server/tests/unit/core/config.test.ts beforeEach 保持对称.
+  process.env.MYOC_LLM_APIKEY = 'test-key';
+  process.env.MYOC_EMBEDDING_APIKEY = 'test-embed-key';
+  process.env.MYOC_NETWORK_HTTP_PORT = '18790';
+  process.env.MYOC_NETWORK_WS_PORT = '18780';
 });
 
 // ─── 工具函数 ───────────────────────────────────
