@@ -18,6 +18,7 @@
  * - config:  配置管理
  * - status:  系统状态查询
  * - logs:    日志查看
+ * - doctor:  系统诊断 (gateway / workspace / env)
  *
  * @module cli
  */
@@ -34,13 +35,14 @@ import { createConfigCommand } from './commands/config.js';
 import { createStatusCommand } from './commands/status.js';
 import { createLogsCommand } from './commands/logs.js';
 import { createPptCommand } from './commands/ppt.js';
+import { createDoctorCommand } from './commands/doctor.js';
 import { OutputFormatter } from './utils/output.js';
 import { ExitCode } from './utils/errors.js';
 
 /**
  * CLI 版本号
  */
-const CLI_VERSION = '1.1.0';
+const CLI_VERSION = '1.1.4';
 
 /**
  * MyOpenClaw CLI 主函数
@@ -125,6 +127,7 @@ async function main(): Promise<void> {
   program.addCommand(createStatusCommand(config));
   program.addCommand(createLogsCommand(config));
   program.addCommand(createPptCommand(config));
+  program.addCommand(createDoctorCommand(config));
 
   // ── 步骤 6: 添加补全命令 ──
   // 生成 Shell 补全脚本
@@ -238,6 +241,10 @@ _myopenclaw_completions() {
       COMPREPLY=(\\$(compgen -W "themes templates make --theme --spec --out --help" -- "\${cur}"))
       return 0
       ;;
+    doctor)
+      COMPREPLY=(\\$(compgen -W "--help" -- "\${cur}"))
+      return 0
+      ;;
   esac
 
   # 全局选项补全
@@ -272,6 +279,7 @@ _myopenclaw() {
     'status:系统状态查询'
     'logs:日志查看'
     'ppt:PPT制作'
+    'doctor:系统诊断'
     'completions:生成Shell补全脚本'
     'help:显示帮助信息'
   )
@@ -363,7 +371,7 @@ complete -c myopenclaw -n "not __myopenclaw_use_command" \\
     -s j -l json -d '以JSON格式输出' \\
     -s v -l verbose -d '显示详细日志' \\
     -l no-color -d '禁用颜色输出' \\
-    -f -a "chat send sessions tools skills config status logs ppt completions" \\
+    -f -a "chat send sessions tools skills config status logs ppt doctor completions" \\
     -d '子命令'
 
 # chat 命令补全
@@ -402,6 +410,9 @@ complete -c myopenclaw -n "__myopenclaw_use_command; and __fish_use_subcommand p
     -s t -l theme -r -d '主题ID' \\
     -s s -l spec -r -d 'JSON规格文件路径' \\
     -s o -l out -r -d '输出文件路径'
+
+# doctor 命令补全 (继承全局选项, 无专属参数)
+complete -c myopenclaw -n "__myopenclaw_use_command; and __fish_use_subcommand doctor"
 `;
 }
 

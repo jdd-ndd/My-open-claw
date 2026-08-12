@@ -12,6 +12,7 @@ import {
   Trash2,
   ArrowUpDown,
   Radio,
+  ShieldCheck,
 } from 'lucide-react';
 import { useSession } from '@/hooks/useSession';
 import { cn } from '@/utils/cn';
@@ -96,6 +97,18 @@ export const Sidebar: React.FC = () => {
         >
           <MessageSquarePlus className="h-4 w-4 transition-transform group-hover:scale-110" />
           <span>新建会话</span>
+          <ChevronRight className="ml-auto h-3.5 w-3.5 opacity-60 transition-transform group-hover:translate-x-0.5" />
+        </button>
+      </div>
+
+      <div className="px-4 pb-2">
+        <button
+          type="button"
+          onClick={() => navigate('/system')}
+          className="group flex w-full items-center gap-2.5 rounded-2xl border border-border/60 bg-background/40 px-4 py-2.5 text-sm font-medium text-foreground/80 transition-all duration-200 hover:border-border hover:bg-background/70"
+        >
+          <ShieldCheck className="h-4 w-4 text-muted-foreground transition-transform group-hover:scale-110" />
+          <span>System overview</span>
           <ChevronRight className="ml-auto h-3.5 w-3.5 opacity-60 transition-transform group-hover:translate-x-0.5" />
         </button>
       </div>
@@ -254,7 +267,7 @@ export const Sidebar: React.FC = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-[11px] font-medium text-foreground/80">MyOpenClaw</span>
-            <span className="text-[10px] text-muted-foreground">v1.0</span>
+            <span className="text-[10px] text-muted-foreground">v1.1.3</span>
           </div>
         </div>
       </div>
