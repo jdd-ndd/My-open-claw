@@ -1,8 +1,8 @@
-{
+﻿{
   "name": "myopenclaw",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": true,
-  "description": "MyOpenClaw - 本地优先、自托管的开源 AI Agent 框架",
+  "description": "MyOpenClaw - 鏈湴浼樺厛銆佽嚜鎵樼鐨勫紑婧?AI Agent 妗嗘灦",
   "license": "MIT",
   "author": "MyOpenClaw Core Team",
   "repository": {
