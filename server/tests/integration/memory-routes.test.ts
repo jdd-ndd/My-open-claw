@@ -13,7 +13,7 @@
  * @module server/tests/integration
  */
 
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -22,6 +22,17 @@ import { MemoryManager } from '../../src/memory/manager.js';
 import { AgentRuntimeAdapter } from '../../src/gateway/server/agent-runtime-adapter.js';
 import { registerHttpRoutes } from '../../src/gateway/server/http-routes.js';
 import type { MemoryMessage } from '../../src/gateway/sessions/types.js';
+
+// AgentRuntimeAdapter 同步构造时即使传 memory, 仍会调 createLLMAdapter → loadConfig
+// → validateStartupConfig 抛 ConfigFatalError (CI clean env 没这些变量). 跟 server.test.ts
+// beforeAll 同款: 注入合法 env 让校验通过. 我们只测 memory 路由, 不会真用 LLM.
+beforeAll(() => {
+  process.env.GATEWAY_TEST_MODE = '1';
+  process.env.MYOC_LLM_APIKEY = 'test-key';
+  process.env.MYOC_EMBEDDING_APIKEY = 'test-embed-key';
+  process.env.MYOC_NETWORK_HTTP_PORT = '18790';
+  process.env.MYOC_NETWORK_WS_PORT = '18780';
+});
 
 const tempDirs: string[] = [];
 
