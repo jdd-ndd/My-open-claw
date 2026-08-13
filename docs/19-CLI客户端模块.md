@@ -749,6 +749,50 @@ Config: C:\Users\25044\.myopenclaw\config.json
 
 ---
 
+### 5.11 `openclaw memory` (v1.1.8+)
+
+Memory 管理命令, 接 v1.1.6 暴露的 5 个 `/api/memory/*` 端点, 是 v1.1.7 Web Memory UI 的 CLI 镜像 + 自动化入口。
+
+| 属性 | 说明 |
+|------|------|
+| **命令名称** | `memory` (`mem` 别名) |
+| **描述** | 列出 / 搜索 / 查看 / 删除 memory sessions + vectors |
+| **数据源** | HTTP API `/api/memory/*` |
+
+#### 用法
+
+```bash
+# 列出 memory sessions (顶部概览: 活跃数 / vector 数 / embedding 配置)
+myopenclaw memory list
+myopenclaw memory list --limit 10
+
+# 语义检索 long-term vectors
+myopenclaw memory search "项目 deadline"
+myopenclaw memory search "preferences" --topK 3 --threshold 0.5
+myopenclaw memory search "preferences" --session chat-7a2f
+
+# 显示 session 详情 (含所有 messages)
+myopenclaw memory show chat-7a2f
+
+# 删除 (危险, 默认走 confirm, --force 跳过)
+myopenclaw memory clear chat-7a2f              # 删 session
+myopenclaw memory clear vec-abc-123 --vector   # 删 vector
+myopenclaw memory clear chat-7a2f --force      # 不问直接删
+
+# 所有 subcommand 都支持 --json (CI 友好, 跟 doctor 一致)
+myopenclaw --json memory list
+myopenclaw --json memory search "deadline" > results.json
+```
+
+#### 输出
+
+- **text 模式** (默认): 概览 + 表格 (id / user / channel-agent / messages / last active), search 模式按 score 排序
+- **JSON 模式** (`--json`): 完整 JSON, 给 `jq` / Python 脚本解析
+
+> Memory 实现位于 `clients/cli/src/commands/memory.ts`，复用 doctor 的 `--json` + text/table 双输出模式 + 错误条提示。
+
+---
+
 ## 6. 交互式对话模式详解
 
 `myopenclaw chat` 命令是 CLI 客户端最复杂的交互场景，它需要在命令行环境中实现持续的多轮对话。
