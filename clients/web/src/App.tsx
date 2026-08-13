@@ -9,6 +9,7 @@ import { useWebSocket } from '@/hooks/useWebSocket';
 import { Sparkles } from 'lucide-react';
 import { PptStudio } from '@/views/PptStudio';
 import { SystemOverview } from '@/views/SystemOverview';
+import { Memory } from '@/views/Memory';
 
 function ChatPage() {
   const { currentSessionId, ensureSession, switchSession, sessions } = useSession();
@@ -99,6 +100,14 @@ export default function App() {
             element={
               <AppLayout>
                 <SystemOverview />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/memory"
+            element={
+              <AppLayout>
+                <Memory />
               </AppLayout>
             }
           />

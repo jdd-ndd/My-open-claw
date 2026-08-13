@@ -13,6 +13,7 @@ import {
   ArrowUpDown,
   Radio,
   ShieldCheck,
+  Database,
 } from 'lucide-react';
 import { useSession } from '@/hooks/useSession';
 import { cn } from '@/utils/cn';
@@ -109,6 +110,15 @@ export const Sidebar: React.FC = () => {
         >
           <ShieldCheck className="h-4 w-4 text-muted-foreground transition-transform group-hover:scale-110" />
           <span>System overview</span>
+          <ChevronRight className="ml-auto h-3.5 w-3.5 opacity-60 transition-transform group-hover:translate-x-0.5" />
+        </button>
+        <button
+          type="button"
+          onClick={() => navigate('/memory')}
+          className="mt-2 group flex w-full items-center gap-2.5 rounded-2xl border border-border/60 bg-background/40 px-4 py-2.5 text-sm font-medium text-foreground/80 transition-all duration-200 hover:border-border hover:bg-background/70"
+        >
+          <Database className="h-4 w-4 text-muted-foreground transition-transform group-hover:scale-110" />
+          <span>Memory</span>
           <ChevronRight className="ml-auto h-3.5 w-3.5 opacity-60 transition-transform group-hover:translate-x-0.5" />
         </button>
       </div>
