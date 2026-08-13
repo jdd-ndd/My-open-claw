@@ -14,7 +14,9 @@ import { ExitCode, handleErrorAndExit } from '../utils/errors.js';
 
 type CheckStatus = 'pass' | 'warn' | 'fail';
 
-interface DoctorCommandOptions {}
+interface DoctorCommandOptions {
+  json?: boolean;
+}
 
 interface GlobalOptions {
   gateway?: string;
@@ -45,9 +47,12 @@ const REQUIRED_RUNTIME_ENV = ['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ANTHROPIC_A
 export function createDoctorCommand(config: MyOpenClawConfig): Command {
   return new Command('doctor')
     .description('run local diagnostics for gateway, runtime, and workspace')
-    .action(async (_options: DoctorCommandOptions, command: Command) => {
+    .option('--json', 'Output as machine-readable JSON (CI/monitoring friendly)')
+    .action(async (options: DoctorCommandOptions, command: Command) => {
       const globalOpts = (command.parent?.opts() as GlobalOptions) || {};
-      const formatter = new OutputFormatter(globalOpts.json ? 'json' : 'text');
+      // Local --json overrides global --json, otherwise fall back to global
+      const useJson = options.json === true || globalOpts.json === true;
+      const formatter = new OutputFormatter(useJson ? 'json' : 'text');
 
       try {
         await runDoctor(globalOpts, config, formatter);
@@ -91,7 +96,17 @@ async function runDoctor(
   const summary = summarizeResults(results, gatewayUrl, websocketUrl, workspace, configPath);
 
   if (formatter.format === 'json') {
-    formatter.print(summary);
+    // Wrap with schema header + exit code hint so CI / monitoring can parse
+    // the result without needing to know the internal summary shape.
+    const exitCode = selectExitCode(results);
+    const payload = {
+      schema: 'myopenclaw/doctor/v1',
+      timestamp: new Date().toISOString(),
+      ok: summary.ok,
+      exitCode,
+      summary,
+    };
+    formatter.print(payload);
   } else {
     renderDoctorReport(summary);
   }
