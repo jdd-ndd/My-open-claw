@@ -1,6 +1,6 @@
 {
   "name": "myopenclaw",
-  "version": "1.0.0",
+  "version": "1.1.5",
   "private": true,
   "description": "MyOpenClaw - 本地优先、自托管的开源 AI Agent 框架",
   "license": "MIT",
@@ -25,6 +25,7 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
     "test": "npm run test --workspace @myopenclaw/server",
+    "tag": "node scripts/tag.mjs",
     "clean": "rimraf dist coverage .turbo",
     "env:check": "node scripts/env-check.mjs"
   },

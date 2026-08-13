@@ -267,7 +267,9 @@ export const Sidebar: React.FC = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-[11px] font-medium text-foreground/80">MyOpenClaw</span>
-            <span className="text-[10px] text-muted-foreground">v1.1.4</span>
+            <span className="text-[10px] text-muted-foreground">
+              v{import.meta.env.VITE_APP_VERSION ?? 'dev'}
+            </span>
           </div>
         </div>
       </div>
