@@ -1,8 +1,12 @@
 packages:
   - "server"
   - "clients/*"
+# pnpm 11 引入了 allowBuilds 审批机制, 在 .npmrc ignore-scripts=true 时
+# 必须明确列出每个有 postinstall 的 dep 是 true (允许跑) 还是 false (不跑).
+# v1.1.9: 我们不依赖这些 postinstall 副作用 (依赖 prebuilt binary), 全部 false.
+# 配合 .npmrc 的 ignore-scripts=true 双重保险.
 allowBuilds:
-  cpu-features: set this to true or false
-  esbuild: set this to true or false
-  protobufjs: set this to true or false
-  ssh2: set this to true or false
+  cpu-features: false
+  esbuild: false
+  protobufjs: false
+  ssh2: false

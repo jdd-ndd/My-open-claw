@@ -1,6 +1,6 @@
 {
   "name": "myopenclaw",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "private": true,
   "description": "MyOpenClaw - local-first self-hosted open-source AI Agent framework",
   "author": "MyOpenClaw Core Team",
@@ -26,7 +26,10 @@
     "test": "npm run test --workspace @myopenclaw/server",
     "tag": "node scripts/tag.mjs",
     "clean": "rimraf dist coverage .turbo",
-    "env:check": "node scripts/env-check.mjs"
+    "env:check": "node scripts/env-check.mjs",
+    "release:check": "node scripts/release-check.mjs",
+    "release:check:full": "node scripts/release-check.mjs --full",
+    "release:check:build": "node scripts/release-check.mjs --build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
