@@ -1,8 +1,23 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+
+// 从根 package.json 读版本号, 注入到 import.meta.env.VITE_APP_VERSION.
+// 这样每次 release bump root version 后, 重新 build Sidebar 就会自动更新, 不会忘改.
+const here = dirname(fileURLToPath(import.meta.url));
+// vite.config.ts 在 clients/web/, 仓库根在 2 层之上 (clients/web → clients → repo root).
+// 注意: worktree 的 .git 引用在 repo root, 但 vite bundle 临时文件也在 clients/web/ 下,
+// 所以 `..` `..` 永远指向 worktree 的 repo root.
+const rootPkg = JSON.parse(
+  readFileSync(resolve(here, '..', '..', 'package.json'), 'utf8'),
+) as { version: string };
 
 export default defineConfig({
+  define: {
+    'import.meta.env.VITE_APP_VERSION': JSON.stringify(rootPkg.version),
+  },
   plugins: [react()],
   resolve: {
     alias: {

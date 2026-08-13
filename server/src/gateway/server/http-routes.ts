@@ -998,6 +998,169 @@ export async function registerHttpRoutes(
     };
   });
 
+  // ─────────────────────────────────────────────────────────────────────
+  // Memory 模块 API (v1.1.6+)
+  // 把藏在 gateway 里的 MemoryManager 暴露成可观测可操作的 REST API,
+  // 为后续 Web Memory 管理 UI / CLI memory 命令做基础。
+  // ─────────────────────────────────────────────────────────────────────
+
+  fastify.get('/api/memory/sessions', {
+    schema: {
+      description: '列出 memory 模块中的会话 (支持 userId / channelId 过滤)',
+      tags: ['Memory'],
+      querystring: {
+        type: 'object',
+        properties: {
+          userId: { type: 'string' },
+          channelId: { type: 'string' },
+        },
+      },
+      response: okResponse,
+    },
+  }, async () => {
+    const memory = runtimeAdapter?.getMemory();
+    if (!memory) {
+      return { ok: false, error: { code: 500001, message: 'Memory runtime unavailable', retryable: false } };
+    }
+
+    const list = await memory.session.list();
+    return {
+      ok: true,
+      data: {
+        total: list.length,
+        activeCount: memory.session.activeCount,
+        sessions: list,
+      },
+    };
+  });
+
+  fastify.delete('/api/memory/sessions/:id', {
+    schema: {
+      description: '删除 memory 模块中的指定会话',
+      tags: ['Memory'],
+      response: {
+        ...okResponse,
+        404: errorResponse,
+      },
+    },
+  }, async (request, reply) => {
+    const { id } = request.params as { id: string };
+    const memory = runtimeAdapter?.getMemory();
+    if (!memory) {
+      return { ok: false, error: { code: 500001, message: 'Memory runtime unavailable', retryable: false } };
+    }
+
+    // SessionMemory.delete 返回 void, 先 read 确认存在再删
+    const existing = await memory.session.read(id);
+    if (!existing) {
+      reply.status(404);
+      return { ok: false, error: { code: 500002, message: 'Memory session not found', retryable: false } };
+    }
+    await memory.session.delete(id);
+    return { ok: true, data: { deleted: id } };
+  });
+
+  fastify.get('/api/memory/vectors/search', {
+    schema: {
+      description: '在 memory 长期向量记忆中做语义检索',
+      tags: ['Memory'],
+      querystring: {
+        type: 'object',
+        required: ['q'],
+        properties: {
+          q: { type: 'string', minLength: 1 },
+          topK: { type: 'number', minimum: 1, maximum: 50, default: 5 },
+          threshold: { type: 'number', minimum: 0, maximum: 1, default: 0 },
+          sessionId: { type: 'string' },
+          type: { type: 'string' },
+        },
+      },
+      response: okResponse,
+    },
+  }, async (request) => {
+    const query = request.query as {
+      q: string;
+      topK?: number;
+      threshold?: number;
+      sessionId?: string;
+      type?: string;
+    };
+    const memory = runtimeAdapter?.getMemory();
+    if (!memory) {
+      return { ok: false, error: { code: 500001, message: 'Memory runtime unavailable', retryable: false } };
+    }
+
+    const results = await memory.vector.search(query.q, {
+      topK: query.topK,
+      threshold: query.threshold,
+      sessionId: query.sessionId,
+      type: query.type as 'conversation' | 'task' | 'knowledge' | undefined,
+    });
+
+    return {
+      ok: true,
+      data: {
+        query: query.q,
+        total: results.length,
+        results,
+      },
+    };
+  });
+
+  fastify.delete('/api/memory/vectors/:id', {
+    schema: {
+      description: '删除 memory 长期向量记忆中的指定条目',
+      tags: ['Memory'],
+      response: {
+        ...okResponse,
+        404: errorResponse,
+      },
+    },
+  }, async (request, reply) => {
+    const { id } = request.params as { id: string };
+    const memory = runtimeAdapter?.getMemory();
+    if (!memory) {
+      return { ok: false, error: { code: 500001, message: 'Memory runtime unavailable', retryable: false } };
+    }
+
+    const ok = await memory.vector.delete(id);
+    if (!ok) {
+      reply.status(404);
+      return { ok: false, error: { code: 500003, message: 'Memory vector entry not found', retryable: false } };
+    }
+    return { ok: true, data: { deleted: id } };
+  });
+
+  fastify.get('/api/memory/stats', {
+    schema: {
+      description: 'memory 模块整体统计 (session 数 / vector 数 / embedding 状态)',
+      tags: ['Memory'],
+      response: okResponse,
+    },
+  }, async () => {
+    const memory = runtimeAdapter?.getMemory();
+    if (!memory) {
+      return { ok: false, error: { code: 500001, message: 'Memory runtime unavailable', retryable: false } };
+    }
+
+    return {
+      ok: true,
+      data: {
+        sessions: {
+          active: memory.session.activeCount,
+        },
+        vectors: {
+          total: memory.vector.size,
+        },
+        embedding: {
+          provider: memory.embedding.provider,
+          available: memory.embedding.available,
+          dimension: memory.embedding.getDimension(),
+        },
+      },
+    };
+  });
+
   fastify.delete('/api/sessions/:id', {
     schema: {
       description: '关闭指定会话',
