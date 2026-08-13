@@ -36,13 +36,14 @@ import { createStatusCommand } from './commands/status.js';
 import { createLogsCommand } from './commands/logs.js';
 import { createPptCommand } from './commands/ppt.js';
 import { createDoctorCommand } from './commands/doctor.js';
+import { createMemoryCommand } from './commands/memory.js';
 import { OutputFormatter } from './utils/output.js';
 import { ExitCode } from './utils/errors.js';
 
 /**
  * CLI 版本号
  */
-const CLI_VERSION = '1.1.4';
+const CLI_VERSION = '1.1.5';
 
 /**
  * MyOpenClaw CLI 主函数
@@ -128,6 +129,7 @@ async function main(): Promise<void> {
   program.addCommand(createLogsCommand(config));
   program.addCommand(createPptCommand(config));
   program.addCommand(createDoctorCommand(config));
+  program.addCommand(createMemoryCommand(config));
 
   // ── 步骤 6: 添加补全命令 ──
   // 生成 Shell 补全脚本
@@ -195,7 +197,7 @@ _myopenclaw_completions() {
   cur="\${COMP_WORDS[COMP_CWORD]}"
   prev="\${COMP_WORDS[COMP_CWORD-1]}"
 
-  commands="chat send sessions tools skills config status logs ppt completions help"
+  commands="chat send sessions memory tools skills config status logs ppt doctor completions help"
 
   opts="--gateway --websocket --json --verbose --no-color --help --version"
 
@@ -215,6 +217,10 @@ _myopenclaw_completions() {
       ;;
     sessions)
       COMPREPLY=(\\$(compgen -W "list list-all create delete switch rename clear --title --limit --help" -- "\${cur}"))
+      return 0
+      ;;
+    memory)
+      COMPREPLY=(\\$(compgen -W "list search show clear --topK --threshold --session --vector --force --limit --help" -- "\${cur}"))
       return 0
       ;;
     tools)
@@ -273,6 +279,7 @@ _myopenclaw() {
     'chat:进入交互式对话模式'
     'send:发送单条消息'
     'sessions:会话管理'
+    'memory:Memory管理(v1.1.8+ list/search/show/clear)'
     'tools:工具管理'
     'skills:技能管理'
     'config:配置管理'
@@ -318,6 +325,17 @@ _myopenclaw() {
             '(-w --wait)'{-w,--wait}'[超时时间]:seconds' \\
             '(-h --help)'{-h,--help}'[显示帮助]' \\
             '1:message:message'
+          ;;
+        memory)
+          _arguments \\
+            '1:action:(list search show clear)' \\
+            '2:target:target' \\
+            '--topK[topK]:n' \\
+            '--threshold[threshold]:n' \\
+            '--session[限定sessionId]:id' \\
+            '--vector[clear模式:删除vector]' \\
+            '-f[跳过确认]' \\
+            '-l[返回数量限制]:n'
           ;;
       esac
       ;;
@@ -371,7 +389,7 @@ complete -c myopenclaw -n "not __myopenclaw_use_command" \\
     -s j -l json -d '以JSON格式输出' \\
     -s v -l verbose -d '显示详细日志' \\
     -l no-color -d '禁用颜色输出' \\
-    -f -a "chat send sessions tools skills config status logs ppt doctor completions" \\
+    -f -a "chat send sessions memory tools skills config status logs ppt doctor completions" \\
     -d '子命令'
 
 # chat 命令补全
@@ -393,6 +411,15 @@ complete -c myopenclaw -n "__myopenclaw_use_command; and __fish_use_subcommand s
 complete -c myopenclaw -n "__myopenclaw_use_command; and __fish_use_subcommand sessions" \\
     -s t -l title -r -d '会话标题' \\
     -s l -l limit -r -d '返回数量限制'
+
+# memory 命令补全
+complete -c myopenclaw -n "__myopenclaw_use_command; and __fish_use_subcommand memory" \\
+    -l topK -r -d '语义检索topK (1-50)' \\
+    -l threshold -r -d '语义检索阈值 (0-1)' \\
+    -l session -r -d '限定sessionId' \\
+    -l vector -d 'clear模式:删除vector' \\
+    -s f -l force -d '跳过确认' \\
+    -s l -l limit -r -d 'list返回数量限制'
 
 # status 命令补全
 complete -c myopenclaw -n "__myopenclaw_use_command; and __fish_use_subcommand status" \\
