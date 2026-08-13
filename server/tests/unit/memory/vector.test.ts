@@ -1,30 +1,11 @@
-import { afterEach, describe, expect, it } from 'vitest';
-import { mkdtempSync, rmSync } from 'node:fs';
-import { join } from 'node:path';
-import { tmpdir } from 'node:os';
+import { describe, expect, it } from 'vitest';
 import { VectorMemory } from '../../../src/memory/vector.js';
 import { EmbeddingService } from '../../../src/memory/embedding.js';
-import { PersistLayer } from '../../../src/memory/persist.js';
-
-const tempDirs: string[] = [];
-
-function createTempDir(): string {
-  const dir = mkdtempSync(join(tmpdir(), 'vector-memory-'));
-  tempDirs.push(dir);
-  return dir;
-}
 
 function createEmbedding(): EmbeddingService {
   // 强制走 keyword 回退模式, 避免网络依赖
   return new EmbeddingService({ provider: 'local' });
 }
-
-afterEach(() => {
-  while (tempDirs.length > 0) {
-    const dir = tempDirs.pop();
-    if (dir) rmSync(dir, { recursive: true, force: true });
-  }
-});
 
 describe('VectorMemory', () => {
   it('stores entries and retrieves them by id', async () => {
