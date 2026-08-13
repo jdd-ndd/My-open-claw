@@ -1,6 +1,6 @@
 {
   "name": "myopenclaw",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "description": "MyOpenClaw - local-first self-hosted open-source AI Agent framework",
   "author": "MyOpenClaw Core Team",
