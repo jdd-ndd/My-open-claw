@@ -47,6 +47,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({ open, onClose, cur
           <button
             type="button"
             onClick={onClose}
+            aria-label="Close settings"
             className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
           >
             <X className="h-4 w-4" />
