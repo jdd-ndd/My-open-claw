@@ -2,8 +2,7 @@
   "name": "myopenclaw",
   "version": "1.1.7",
   "private": true,
-  "description": "MyOpenClaw - 閺堫剙婀存导妯哄帥閵嗕浇鍤滈幍妯碱吀閻ㄥ嫬绱戝┃?AI Agent 濡楀棙鐏?,
-  "license": "MIT",
+  "description": "MyOpenClaw - local-first self-hosted open-source AI Agent framework",
   "author": "MyOpenClaw Core Team",
   "repository": {
     "type": "git",
