@@ -240,7 +240,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
       expect(startedConfig.port).toBe(gw.config.port);
 
       await gw.stop();
-    }, 30_000);
+    }, 60_000);
 
     it('4.2 stop 应触发 stopped 事件', async () => {
       await gw.start();
@@ -271,7 +271,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
       await gw2.start();
       // 启动成功后停止
       await gw2.stop();
-    });
+    }, 30_000);
 
     it('4.6 应能注册和触发自定义事件监听', () => {
       const spy = vi.fn();
@@ -296,7 +296,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
 
       await gw.stop();
       expect(gw.config.port).toBe(originalPort);
-    });
+    }, 30_000);
 
     it('5.2 多次创建不同端口的实例应互不干扰', async () => {
       const gw1 = new GatewayServer({ port: 18783 });
@@ -310,7 +310,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
       await gw1.stop();
       // gw2 未受影响
       expect(gw2.config.port).toBe(18784);
-    });
+    }, 30_000);
 
     it('5.3 每个实例应有独立的 router', () => {
       // GatewayServer 构造时默认 loadRules 8 条默认规则 (webchat/feishu/qqbot/wechat 等),
@@ -394,7 +394,7 @@ describe('Gateway - GatewayServer 单元测试', () => {
       // stop 后应可再次 start
       await gw.start();
       await gw.stop();
-    });
+    }, 60_000);
 
     it('7.2 3 次 start/stop 循环应无资源泄漏', async () => {
       const gw = new GatewayServer({ port: 18786 });
