@@ -662,7 +662,7 @@ myopenclaw doctor --verbose
 myopenclaw doctor --gateway http://192.168.1.10:18780
 ```
 
-#### 诊断项 (12 项)
+#### 诊断项 (10 项)
 
 | ID | 类别 | 说明 | critical |
 |----|------|------|----------|
@@ -715,6 +715,34 @@ Config: C:\Users\25044\.myopenclaw\config.json
 
 10 passed, 1 warnings, 0 failed
 ```
+
+#### 输出示例 (JSON 模式, v1.1.5+)
+
+`--json` 模式输出带 schema header, 方便 CI / 监控脚本解析:
+
+```json
+{
+  "schema": "myopenclaw/doctor/v1",
+  "timestamp": "2026-08-13T03:00:00.000Z",
+  "ok": true,
+  "exitCode": 0,
+  "summary": {
+    "ok": true,
+    "totalChecks": 12,
+    "passed": 11,
+    "warnings": 1,
+    "failed": 0,
+    "failedCritical": 0,
+    "checks": [
+      { "id": "config-path", "status": "pass", "message": "...", "critical": false },
+      { "id": "gateway-health", "status": "pass", "message": "health=healthy", "critical": true }
+    ]
+  }
+}
+```
+
+顶层 `schema` / `timestamp` / `exitCode` 是稳定的, 内部 `summary.checks` 可能随检查项增减而变。
+历史兼容性: 旧消费者只读 `summary` 字段仍然能工作, 新消费者可以靠 `schema` 字段做版本判断。
 
 > Doctor 实现位于 `clients/cli/src/commands/doctor.ts`，
 > 复用 `clients/cli/src/api/client.ts` 的 `checkHealth` / `getSystemStatus` HTTP 客户端。
